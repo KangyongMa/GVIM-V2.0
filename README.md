@@ -13,7 +13,7 @@ The GVIM 2.0 demo video should be attached to the GitHub release page because th
 Local packaged copy:
 
 ```text
-Demo Of GVIM2.0.mp4
+media/Demo_Of_GVIM2.0.mp4
 ```
 
 ## Visual Summary
@@ -64,27 +64,27 @@ The front-end verified demonstrations include:
 
 ```text
 .
-├── GVIM2.0-system/
-│   ├── backend/                         # FastAPI / LangGraph / DeerFlow backend code
-│   ├── frontend/                        # GVIM web front end
-│   ├── skills/                          # Chemistry, materials, literature, plotting, and utility skills
-│   ├── scripts/                         # Windows startup scripts
-│   ├── config.example.yaml              # Example configuration
-│   ├── extensions_config.example.json   # Example extension configuration
-│   └── start-deerflow-production.cmd    # Windows production startup entry point
-├── paper_frontend_verified_package/
-│   ├── submission_files/                # Manuscript, Supporting Information, and evidence manifests
-│   ├── frontend_thread_records/         # Archived front-end task inputs, scripts, and outputs
-│   ├── publication_figures_600dpi/      # Final high-resolution publication figures
-│   ├── source_data_and_results/         # Benchmark and figure source data
-│   ├── posthoc_gold_scoring/            # Deterministic scoring records
-│   └── reproducibility_code/            # Final reproducibility scripts and demo code
-├── mcp/
-│   └── colab-mcp-main/                  # Colab MCP source snapshot
-├── figures/                            # README display copies of final figures
-├── RELEASE_FILE_MANIFEST.csv           # File-level release manifest
-├── ZIP_SHA256.txt                      # Checksum for the prepared zip archive
-└── PACKAGING_NOTES.md                  # Packaging and exclusion notes
+|-- GVIM2.0-system/
+|   |-- backend/                         # FastAPI / LangGraph / DeerFlow backend code
+|   |-- frontend/                        # GVIM web front end
+|   |-- skills/                          # Chemistry, materials, literature, plotting, and utility skills
+|   |-- scripts/                         # Windows startup scripts
+|   |-- config.example.yaml              # Example configuration
+|   |-- extensions_config.example.json   # Example extension configuration
+|   `-- start-deerflow-production.cmd    # Windows production startup entry point
+|-- paper_frontend_verified_package/
+|   |-- submission_files/                # Manuscript, Supporting Information, and evidence manifests
+|   |-- frontend_thread_records/         # Archived front-end task inputs, scripts, and outputs
+|   |-- publication_figures_600dpi/      # Final high-resolution publication figures
+|   |-- source_data_and_results/         # Benchmark and figure source data
+|   |-- posthoc_gold_scoring/            # Deterministic scoring records
+|   `-- reproducibility_code/            # Final reproducibility scripts and demo code
+|-- mcp/
+|   `-- colab-mcp-main/                  # Colab MCP source snapshot
+|-- figures/                            # README display copies of final figures
+|-- RELEASE_FILE_MANIFEST.csv           # File-level release manifest
+|-- ZIP_SHA256.txt                      # Checksum for the prepared zip archive
+`-- PACKAGING_NOTES.md                  # Packaging and exclusion notes
 ```
 
 ## Manuscript and Supporting Information
