@@ -1,4 +1,4 @@
-# GVIM 2.0: A Front-End Verified Scientific Agent System for Chemistry and Materials Research
+# GVIM 2.0: A Multi-Agent Research System for Chemistry and Materials Science
 
 GVIM 2.0 is a DeerFlow-based scientific-agent system designed for chemistry and materials research workflows. This repository contains the code snapshot, front-end verified demonstrations, manuscript source data, publication figures, Supporting Information, and reproducibility files associated with the GVIM 2.0 study.
 
