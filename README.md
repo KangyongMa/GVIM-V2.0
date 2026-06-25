@@ -6,11 +6,11 @@ The repository is organized to make the reported results auditable: the manuscri
 
 ## Demo Video
 
-The GVIM 2.0 demo video should be attached to the GitHub release page because the original MP4 is larger than GitHub's 100 MB per-file repository limit:
+The GVIM 2.0 front-end workflow demonstration is available on YouTube:
 
-[Download the GVIM 2.0 demo video from Releases](https://github.com/KangyongMa/GVIM-V2.0/releases/download/v2.0/Demo_Of_GVIM2.0.mp4)
+[Watch the GVIM 2.0 demo video](https://youtu.be/wADY7T9_G-s)
 
-Local packaged copy:
+A local packaged copy is also retained in the prepared release folder:
 
 ```text
 media/Demo_Of_GVIM2.0.mp4
