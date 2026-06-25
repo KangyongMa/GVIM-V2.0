@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-06-09T08:59:16.133441Z",
+  "source_kind": "deepseek_flash_api_only",
+  "source_run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined",
+  "suite": "chemllmbench",
+  "subset": "ChemLLMBench public-extension-40 subset",
+  "scoring_rule": "ChemLLMBench task-specific answer-key metric; property prediction uses Yes/No accuracy; Suzuki component selection uses exact match to the optimal candidate SMILES. Deterministic parser fixed before evaluation.",
+  "total": 13,
+  "correct": 6,
+  "accuracy": 0.46153846153846156,
+  "parse_empty": 0,
+  "by_type": {
+    "binary_property_prediction": {
+      "correct": 4,
+      "total": 6,
+      "accuracy": 0.6666666666666666
+    },
+    "candidate_selection": {
+      "correct": 2,
+      "total": 7,
+      "accuracy": 0.2857142857142857
+    }
+  },
+  "by_topic": {
+    "property_prediction/BACE": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0
+    },
+    "property_prediction/BBBP": {
+      "correct": 0,
+      "total": 2,
+      "accuracy": 0.0
+    },
+    "property_prediction/ClinTox": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "property_prediction/HIV": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0
+    },
+    "reagent_selection/ligand_sample": {
+      "correct": 0,
+      "total": 2,
+      "accuracy": 0.0
+    },
+    "reagent_selection/reagent_sample": {
+      "correct": 1,
+      "total": 3,
+      "accuracy": 0.3333333333333333
+    },
+    "reagent_selection/solvent_sample": {
+      "correct": 1,
+      "total": 2,
+      "accuracy": 0.5
+    }
+  },
+  "wrong_indices": [
+    28,
+    29,
+    34,
+    36,
+    38,
+    39,
+    40
+  ],
+  "output_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\chemllmbench-official-score-2026-06-09T08-59-16-138440Z"
+}

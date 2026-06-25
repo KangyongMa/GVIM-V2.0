@@ -1,0 +1,9 @@
+{
+  "thread_id": "9ae4e85f-542b-4f94-9294-81189cf220be",
+  "raw_download_sha256": "f66bca3fce59791c60a2ae402fbdff3dfb3b40072850c036fd123afdf59648c4",
+  "crlf_canonical_sha256": "f2589c916135b0a934ac4ed23ec18b73b7cec99d2d94c686113fe325fece6e24",
+  "manifest_sha256": "f2589c916135b0a934ac4ed23ec18b73b7cec99d2d94c686113fe325fece6e24",
+  "semantic_csv_hash_verified_after_newline_canonicalization": true,
+  "raw_bytes_line_ending": "LF",
+  "manifest_hash_line_ending": "CRLF"
+}

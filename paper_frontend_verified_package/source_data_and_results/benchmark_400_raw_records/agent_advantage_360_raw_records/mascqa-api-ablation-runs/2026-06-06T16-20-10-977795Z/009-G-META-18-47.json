@@ -1,0 +1,72 @@
+{
+  "idx": 9,
+  "uuid": "G-META-18-47",
+  "global_idx": 245,
+  "source_id": "G-META-18-47",
+  "topic": "Magnetism",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:20:28.823708Z",
+  "finished_at": "2026-06-06T16:20:30.712686Z",
+  "latency_ms": 1889,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 517
+  },
+  "final_text": "[ANSWER]1735.2[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]1735.2[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 142,
+    "completion_tokens": 10,
+    "total_tokens": 152,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 142
+  },
+  "error": null,
+  "raw_response": {
+    "id": "e50c9a5f-6bd1-4935-b5c4-ad1a239dadb3",
+    "object": "chat.completion",
+    "created": 1780762830,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]1735.2[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 142,
+      "completion_tokens": 10,
+      "total_tokens": 152,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 142
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

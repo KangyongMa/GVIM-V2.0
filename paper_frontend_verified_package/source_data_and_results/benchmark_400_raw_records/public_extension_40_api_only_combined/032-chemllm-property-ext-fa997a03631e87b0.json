@@ -1,0 +1,72 @@
+{
+  "idx": 32,
+  "uuid": "chemllm-property-ext-fa997a03631e87b0",
+  "topic": "property_prediction/ClinTox",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-09T08:53:52.983261Z",
+  "finished_at": "2026-06-09T08:53:55.418186Z",
+  "latency_ms": 2435,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 302
+  },
+  "final_text": "[ANSWER]No[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]No[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 99,
+    "completion_tokens": 7,
+    "total_tokens": 106,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 99
+  },
+  "error": null,
+  "raw_response": {
+    "id": "d27266aa-9470-43d2-a149-b6f34e2468a5",
+    "object": "chat.completion",
+    "created": 1780995236,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]No[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 99,
+      "completion_tokens": 7,
+      "total_tokens": 106,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 99
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-runs\\2026-06-09T08-51-54-442088Z\\032-chemllm-property-ext-fa997a03631e87b0.json",
+  "_source_segment": "main_api_run"
+}

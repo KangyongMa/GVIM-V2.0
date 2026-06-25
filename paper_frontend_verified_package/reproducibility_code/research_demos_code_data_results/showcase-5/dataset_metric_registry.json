@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "goal": "Bind each showcase demo to public datasets or published-label sources and standard objective metrics.",
+  "metric_policy": {
+    "no_subjective_scoring": true,
+    "gold_standard_rule": "Gold labels must come from public datasets, official benchmark folds, published supplementary labels, or deterministic labels derived from public structures/spectra. DeerFlow must not see gold labels during front-end execution.",
+    "evaluation_rule": "Independent scripts compare DeerFlow artifacts with held-out gold labels using standard metrics."
+  },
+  "registry": [
+    {
+      "demo_id": "materials_xrd_phase_identification",
+      "recommended_dataset": "COD-derived CIF candidate set with simulated unknown XRD patterns; optional RRUFF empirical mineral XRD subset when raw peak files are available.",
+      "public_sources": [
+        {
+          "name": "Crystallography Open Database",
+          "url": "https://www.crystallography.net/cod/",
+          "role": "Public crystal structures in CIF format; gold material identity is the COD ID or formula."
+        },
+        {
+          "name": "RRUFF Database",
+          "url": "https://rruff.info/",
+          "role": "Empirical mineral spectra, chemistry, and XRD records for real-sample phase identification."
+        }
+      ],
+      "gold_standard": {
+        "label": "true_candidate_id",
+        "construction": "For simulated tasks, choose one public CIF as the hidden true phase, simulate its powder XRD, optionally add controlled peak noise/dropout, then mix with distractor CIFs. For empirical RRUFF tasks, use the RRUFF mineral/sample identity as the label.",
+        "hidden_from_agent": true
+      },
+      "primary_metrics": ["top_1_accuracy", "top_k_accuracy", "precision", "recall", "peak_position_mae"],
+      "secondary_workflow_metrics": ["frontend_submission_success", "tool_call_coverage", "artifact_generation_success_rate", "json_csv_parse_rate"]
+    },
+    {
+      "demo_id": "matbench_materials_property_modeling",
+      "recommended_dataset": "Matbench v0.1 task such as matbench_expt_gap for composition-to-band-gap regression or matbench_glass for classification.",
+      "public_sources": [
+        {
+          "name": "Matbench",
+          "url": "https://github.com/materialsproject/matbench",
+          "role": "Official materials property prediction benchmark with curated tasks and folds."
+        }
+      ],
+      "gold_standard": {
+        "label": "official Matbench target column and fold split",
+        "construction": "Use official Matbench task data and folds. DeerFlow receives only train data and test features; evaluator keeps test labels.",
+        "hidden_from_agent": true
+      },
+      "primary_metrics": ["mae", "rmse", "r2", "roc_auc", "f1"],
+      "secondary_workflow_metrics": ["frontend_submission_success", "execution_success_rate", "repair_success_rate", "artifact_generation_success_rate"]
+    },
+    {
+      "demo_id": "moleculenet_molecular_property_workflow",
+      "recommended_dataset": "MoleculeNet BBBP/HIV/ClinTox/Tox21 for classification or ESOL/FreeSolv for regression; local ChemLLMBench copies can be used when source revision is recorded.",
+      "public_sources": [
+        {
+          "name": "MoleculeNet",
+          "url": "https://moleculenet.org/",
+          "role": "Official molecular machine learning benchmark family."
+        },
+        {
+          "name": "MoleculeNet paper",
+          "url": "https://pubs.rsc.org/en/content/articlelanding/2018/sc/c7sc02664a",
+          "role": "Defines molecular ML tasks, splits, featurizations, and recommended metrics."
+        }
+      ],
+      "gold_standard": {
+        "label": "official property labels",
+        "construction": "Use scaffold/fixed train-test split. DeerFlow receives train labels and test SMILES only; evaluator keeps held-out labels.",
+        "hidden_from_agent": true
+      },
+      "primary_metrics": ["roc_auc", "pr_auc", "accuracy", "f1", "rmse", "mae"],
+      "secondary_workflow_metrics": ["valid_smiles_rate", "frontend_submission_success", "execution_success_rate", "artifact_generation_success_rate"]
+    },
+    {
+      "demo_id": "spectra_to_structure_regression",
+      "recommended_dataset": "Azobenzene IR/Raman spectra to C-N=N-C dihedral labels from the d5sc08794e paper data or its released repository.",
+      "public_sources": [
+        {
+          "name": "d5sc08794e local paper",
+          "url": "Paper/d5sc08794e.pdf",
+          "role": "Reference workflow and metrics: spectra-to-dihedral prediction with MAE and correlation."
+        }
+      ],
+      "gold_standard": {
+        "label": "DFT or released dihedral angle",
+        "construction": "Use released spectrum-angle pairs. DeerFlow receives train spectra/angles and held-out spectra only; evaluator keeps held-out angles.",
+        "hidden_from_agent": true
+      },
+      "primary_metrics": ["mae", "rmse", "r2", "pearson_r"],
+      "secondary_workflow_metrics": ["frontend_submission_success", "execution_success_rate", "repair_success_rate", "artifact_generation_success_rate"]
+    },
+    {
+      "demo_id": "literature_extraction_to_dataset",
+      "recommended_dataset": "DIVE-style annotated materials extraction set, paper supplementary annotations, or a small public benchmark subset with manually annotated fields.",
+      "public_sources": [
+        {
+          "name": "d5sc09921h local paper",
+          "url": "Paper/d5sc09921h.pdf",
+          "role": "Reference workflow and metrics: extraction accuracy/completeness and precision/recall/F1."
+        }
+      ],
+      "gold_standard": {
+        "label": "manual annotation table",
+        "construction": "Use an existing public annotation table when available. If no public annotation exists, this demo is workflow-only and must not be reported as a formal quantitative score.",
+        "hidden_from_agent": true
+      },
+      "primary_metrics": ["field_precision", "field_recall", "field_f1", "record_exact_match", "numeric_mae", "unit_normalization_accuracy"],
+      "secondary_workflow_metrics": ["source_span_hit_rate", "frontend_submission_success", "artifact_generation_success_rate", "json_csv_parse_rate"]
+    }
+  ]
+}

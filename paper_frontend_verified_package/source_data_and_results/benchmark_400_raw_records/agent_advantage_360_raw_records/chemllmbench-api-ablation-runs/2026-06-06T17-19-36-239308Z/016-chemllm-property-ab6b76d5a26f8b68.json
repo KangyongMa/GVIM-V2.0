@@ -1,0 +1,74 @@
+{
+  "idx": 16,
+  "uuid": "chemllm-property-ab6b76d5a26f8b68",
+  "global_idx": 336,
+  "source_id": "chemllm-property-ab6b76d5a26f8b68",
+  "topic": "property_prediction/HIV",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_chemllmbench_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T17:20:05.996023Z",
+  "finished_at": "2026-06-06T17:20:08.210814Z",
+  "latency_ms": 2215,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 307
+  },
+  "final_text": "[ANSWER]No[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]No[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 97,
+    "completion_tokens": 7,
+    "total_tokens": 104,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 97
+  },
+  "error": null,
+  "raw_response": {
+    "id": "092d8921-ebfc-465c-8b07-688d30a57727",
+    "object": "chat.completion",
+    "created": 1780766408,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]No[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 97,
+      "completion_tokens": 7,
+      "total_tokens": 104,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 97
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_record_file": "",
+  "_source_kind": "deepseek_flash_api_only"
+}

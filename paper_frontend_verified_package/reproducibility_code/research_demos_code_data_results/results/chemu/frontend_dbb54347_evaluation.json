@@ -1,0 +1,102 @@
+{
+  "benchmark": "ChEMU 2020 Task 1 sample v3",
+  "task": "chemical synthesis named entity extraction",
+  "exact_match": {
+    "true_positives": 67,
+    "predicted": 72,
+    "gold": 92,
+    "precision": 0.9305555555555556,
+    "recall": 0.7282608695652174,
+    "f1": 0.8170731707317073
+  },
+  "relaxed_match": {
+    "true_positives": 69,
+    "predicted": 72,
+    "gold": 92,
+    "precision": 0.9583333333333334,
+    "recall": 0.75,
+    "f1": 0.8414634146341463
+  },
+  "per_label_exact_match": {
+    "EXAMPLE_LABEL": {
+      "true_positives": 6,
+      "predicted": 6,
+      "gold": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "OTHER_COMPOUND": {
+      "true_positives": 13,
+      "predicted": 14,
+      "gold": 22,
+      "precision": 0.9285714285714286,
+      "recall": 0.5909090909090909,
+      "f1": 0.7222222222222223
+    },
+    "REACTION_PRODUCT": {
+      "true_positives": 13,
+      "predicted": 13,
+      "gold": 13,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "REAGENT_CATALYST": {
+      "true_positives": 2,
+      "predicted": 3,
+      "gold": 7,
+      "precision": 0.6666666666666666,
+      "recall": 0.2857142857142857,
+      "f1": 0.4
+    },
+    "SOLVENT": {
+      "true_positives": 7,
+      "predicted": 8,
+      "gold": 8,
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1": 0.875
+    },
+    "STARTING_MATERIAL": {
+      "true_positives": 5,
+      "predicted": 5,
+      "gold": 8,
+      "precision": 1.0,
+      "recall": 0.625,
+      "f1": 0.7692307692307693
+    },
+    "TEMPERATURE": {
+      "true_positives": 3,
+      "predicted": 5,
+      "gold": 10,
+      "precision": 0.6,
+      "recall": 0.3,
+      "f1": 0.4
+    },
+    "TIME": {
+      "true_positives": 6,
+      "predicted": 6,
+      "gold": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "YIELD_OTHER": {
+      "true_positives": 6,
+      "predicted": 6,
+      "gold": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "YIELD_PERCENT": {
+      "true_positives": 6,
+      "predicted": 6,
+      "gold": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  }
+}

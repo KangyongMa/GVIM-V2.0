@@ -1,0 +1,18 @@
+{
+  "data_path": "benchmarks/_sources/ChemLLMBench/data/property_prediction/BBBP.csv",
+  "dataset": "BBBP",
+  "demo_id": "bbbp_property_prediction",
+  "metrics": {
+    "accuracy": 0.8507109004739336,
+    "f1": 0.9001584786053882,
+    "pr_auc": 0.9643040393913859,
+    "roc_auc": 0.9013198757763975
+  },
+  "model": "Morgan fingerprint + balanced logistic regression",
+  "n_test": 422,
+  "n_total": 2039,
+  "n_train": 1617,
+  "positive_rate_test": 0.7630331753554502,
+  "problem": "Blood-brain barrier penetration classification from SMILES",
+  "split": "deterministic Bemis-Murcko scaffold split"
+}

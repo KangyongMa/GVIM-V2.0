@@ -1,0 +1,73 @@
+{
+  "count": 40,
+  "ok": 40,
+  "errors": 0,
+  "empty_responses": 0,
+  "usage_total": {
+    "prompt_tokens": 10158,
+    "completion_tokens": 725,
+    "total_tokens": 10883,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 10158
+  },
+  "by_topic": {
+    "property_prediction/BBBP": {
+      "count": 8,
+      "ok": 8,
+      "errors": 0
+    },
+    "property_prediction/BACE": {
+      "count": 4,
+      "ok": 4,
+      "errors": 0
+    },
+    "property_prediction/HIV": {
+      "count": 4,
+      "ok": 4,
+      "errors": 0
+    },
+    "property_prediction/ClinTox": {
+      "count": 4,
+      "ok": 4,
+      "errors": 0
+    },
+    "reagent_selection/reagent_sample": {
+      "count": 7,
+      "ok": 7,
+      "errors": 0
+    },
+    "reagent_selection/solvent_sample": {
+      "count": 7,
+      "ok": 7,
+      "errors": 0
+    },
+    "reagent_selection/ligand_sample": {
+      "count": 6,
+      "ok": 6,
+      "errors": 0
+    }
+  },
+  "by_split": {
+    "chemllmbench": {
+      "count": 40,
+      "ok": 40,
+      "errors": 0
+    }
+  },
+  "by_type": {
+    "binary_property_prediction": {
+      "count": 20,
+      "ok": 20,
+      "errors": 0
+    },
+    "candidate_selection": {
+      "count": 20,
+      "ok": 20,
+      "errors": 0
+    }
+  },
+  "run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\chemllmbench-api-ablation-runs\\2026-06-06T17-19-36-239308Z",
+  "base_url": "https://api.deepseek.com",
+  "model": "deepseek-v4-flash",
+  "finished_at": "2026-06-06T17:21:04.436244Z"
+}

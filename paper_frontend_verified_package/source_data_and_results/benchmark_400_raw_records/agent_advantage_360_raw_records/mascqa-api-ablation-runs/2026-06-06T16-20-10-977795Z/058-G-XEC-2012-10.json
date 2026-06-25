@@ -1,0 +1,72 @@
+{
+  "idx": 58,
+  "uuid": "G-XEC-2012-10",
+  "global_idx": 294,
+  "source_id": "G-XEC-2012-10",
+  "topic": "Miscellaneous",
+  "mini_split": "mascqa",
+  "question_type": "MATCH",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:23:29.012945Z",
+  "finished_at": "2026-06-06T16:23:31.810363Z",
+  "latency_ms": 2797,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 615
+  },
+  "final_text": "Thermal diffusivity has units of m²/s, so P-2.  \nFracture toughness has units of N·m⁻³/², so Q-4.  \nSurface energy has units of J/m², so R-5.  \nMagnetic permeability has units of H/m, so S-1.  \n\nThe correct match is P-2, Q-4, R-5, S-1, which corresponds to option (B).\n\n[ANSWER]B[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "Thermal diffusivity has units of m²/s, so P-2.  \nFracture toughness has units of N·m⁻³/², so Q-4.  \nSurface energy has units of J/m², so R-5.  \nMagnetic permeability has units of H/m, so S-1.  \n\nThe correct match is P-2, Q-4, R-5, S-1, which corresponds to option (B).\n\n[ANSWER]B[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 225,
+    "completion_tokens": 102,
+    "total_tokens": 327,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 225
+  },
+  "error": null,
+  "raw_response": {
+    "id": "d7919552-9c73-47ce-827c-b99f6604ff25",
+    "object": "chat.completion",
+    "created": 1780763010,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Thermal diffusivity has units of m²/s, so P-2.  \nFracture toughness has units of N·m⁻³/², so Q-4.  \nSurface energy has units of J/m², so R-5.  \nMagnetic permeability has units of H/m, so S-1.  \n\nThe correct match is P-2, Q-4, R-5, S-1, which corresponds to option (B).\n\n[ANSWER]B[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 225,
+      "completion_tokens": 102,
+      "total_tokens": 327,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 225
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

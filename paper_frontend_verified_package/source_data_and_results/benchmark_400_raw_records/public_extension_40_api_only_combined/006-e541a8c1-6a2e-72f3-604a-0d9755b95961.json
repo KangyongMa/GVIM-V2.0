@@ -1,0 +1,72 @@
+{
+  "idx": 6,
+  "uuid": "e541a8c1-6a2e-72f3-604a-0d9755b95961",
+  "topic": "toxicity_and_safety",
+  "mini_split": "chembench-full",
+  "question_type": "multiple_choice",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-09T08:52:13.554122Z",
+  "finished_at": "2026-06-09T08:52:15.909674Z",
+  "latency_ms": 2356,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 759
+  },
+  "final_text": "[ANSWER]D, E, F[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]D, E, F[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 181,
+    "completion_tokens": 11,
+    "total_tokens": 192,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 181
+  },
+  "error": null,
+  "raw_response": {
+    "id": "b83de3d5-2863-474c-940a-3614d3a74725",
+    "object": "chat.completion",
+    "created": 1780995137,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]D, E, F[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 181,
+      "completion_tokens": 11,
+      "total_tokens": 192,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 181
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-runs\\2026-06-09T08-51-54-442088Z\\006-e541a8c1-6a2e-72f3-604a-0d9755b95961.json",
+  "_source_segment": "main_api_run"
+}

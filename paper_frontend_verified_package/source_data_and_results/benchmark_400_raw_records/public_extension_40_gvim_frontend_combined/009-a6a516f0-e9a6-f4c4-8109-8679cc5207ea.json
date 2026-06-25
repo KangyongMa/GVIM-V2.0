@@ -1,0 +1,31 @@
+{
+  "idx": 9,
+  "uuid": "a6a516f0-e9a6-f4c4-8109-8679cc5207ea",
+  "topic": "technical_chemistry",
+  "mini_split": "chembench-full",
+  "question_type": "multiple_choice",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-09T07:09:03.683Z",
+  "finished_at": "2026-06-09T07:09:22.040Z",
+  "latency_ms": 18357,
+  "page_url": "http://localhost:3000/workspace/chats/1a4b5d35-db62-49f2-9336-82bb92ffcfaa",
+  "thread_id": "1a4b5d35-db62-49f2-9336-82bb92ffcfaa",
+  "run_id": "9349a04f-18be-442e-b9df-79501868fff7",
+  "final_text": "[ANSWER]D[/ANSWER]",
+  "stream_final_text": "[ANSWER]D[/ANSWER]",
+  "ui_final_text": "[ANSWER]D[/ANSWER]",
+  "stream_event_count": 44,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/1a4b5d35-db62-49f2-9336-82bb92ffcfaa/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a multiple choice question about chemistry.\\nPlease answer by responding with the letter of the correct answer.\\n\\nQuestion: Consider N plug flow reactors connected in series, with V_i being the volume of the i-th reactor and F_0 being the feed rate of component A. If the fractional conversion of component A leaving reactor i is X_i, which of the following statements is correct?\\n\\nOptions:\\nA. The fractional conversion of component A leaving the first reactor is always greater than the fractional conversion leaving the last reactor\\nB. The fractional conversion of component A leaving the last reactor in series is always less than the fractional conversion leaving the first reactor\\nC. The total volume V of N plug flow reactors in series gives a different conversion than a single plug flow reactor of volume V\\nD. The total volume V of N plug flow reactors in series gives the same conversion as a single plug flow reactor of volume V\\n\\nYou MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].\\nFor example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing.\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"1a4b5d35-db62-49f2-9336-82bb92ffcfaa\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": [],
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-runs\\2026-06-09T07-05-32-885Z\\009-a6a516f0-e9a6-f4c4-8109-8679cc5207ea.json",
+  "_source_segment": "first_segment"
+}

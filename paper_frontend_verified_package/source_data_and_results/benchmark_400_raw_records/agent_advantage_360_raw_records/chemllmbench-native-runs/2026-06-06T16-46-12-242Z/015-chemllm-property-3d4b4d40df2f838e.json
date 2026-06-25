@@ -1,0 +1,164 @@
+{
+  "idx": 15,
+  "uuid": "chemllm-property-3d4b4d40df2f838e",
+  "topic": "property_prediction/HIV",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T16:57:35.783Z",
+  "finished_at": "2026-06-06T16:58:17.692Z",
+  "latency_ms": 41909,
+  "page_url": "http://localhost:3000/workspace/chats/e25b14b8-d048-48eb-95b8-25f949d09f25",
+  "thread_id": "e25b14b8-d048-48eb-95b8-25f949d09f25",
+  "run_id": "6d1485e7-e08d-42a9-b109-ae7a580a6dc8",
+  "final_text": "Now let me evaluate this molecule against known HIV replication inhibitor pharmacophores:\n\n**Molecule Properties:**\n- **MW**: 195.1 Da\n- **clogP**: 1.47\n- **TPSA**: 67.48 Å²\n- **HBA**: 2, **HBD**: 2\n- **RotB**: 1\n- **Rings**: 2 (both alicyclic)\n- **Fraction csp³**: 0.80 (highly saturated)\n\n**Analysis against HIV pharmacophores:**\n\n1. **NNRTIs** (e.g., diarylpyrimidines like etravirine): Require aromatic/heteroaromatic rings and halogen substituents — this molecule has zero aromatic rings, no match.\n\n2. **NRTIs** (nucleoside analogs): Require a nucleobase-like heterocycle with a sugar/pseudosugar moiety — no such groups present.\n\n3. **Protease Inhibitors** (e.g., hydroxyethylamine isosteres): Require transition-state isostere motifs and large hydrophobic groups — not present.\n\n4. **Integrase Strand Transfer Inhibitors** (INSTIs like dolutegravir, raltegravir): Require diketo acid or metal-chelating motifs (e.g., 3-hydroxypyrimidin-4-one, 1,3-oxazole-4-carboxylic acid) embedded in large polyheterocyclic systems — this molecule is a small bicyclic hydrazone-carboxamide, far too simple.\n\n5. **Entry/Fusion/Capsid Inhibitors**: While some are smaller molecules, the specific pharmacophores (e.g., lenacapavir's complex polycyclic system) have no overlap here.\n\nThe molecule is a small, saturated bicyclic hydrazone-carboxamide derivative with no known HIV-relevant pharmacophore features. It lacks the aromatic/heteroaromatic systems, metal-chelating groups, or nucleoside-mimetic scaffolds characteristic of all known classes of HIV replication inhibitors.\n\n[ANSWER]No[/ANSWER]",
+  "stream_final_text": "Now let me evaluate this molecule against known HIV replication inhibitor pharmacophores:\n\n**Molecule Properties:**\n- **MW**: 195.1 Da\n- **clogP**: 1.47\n- **TPSA**: 67.48 Å²\n- **HBA**: 2, **HBD**: 2\n- **RotB**: 1\n- **Rings**: 2 (both alicyclic)\n- **Fraction csp³**: 0.80 (highly saturated)\n\n**Analysis against HIV pharmacophores:**\n\n1. **NNRTIs** (e.g., diarylpyrimidines like etravirine): Require aromatic/heteroaromatic rings and halogen substituents — this molecule has zero aromatic rings, no match.\n\n2. **NRTIs** (nucleoside analogs): Require a nucleobase-like heterocycle with a sugar/pseudosugar moiety — no such groups present.\n\n3. **Protease Inhibitors** (e.g., hydroxyethylamine isosteres): Require transition-state isostere motifs and large hydrophobic groups — not present.\n\n4. **Integrase Strand Transfer Inhibitors** (INSTIs like dolutegravir, raltegravir): Require diketo acid or metal-chelating motifs (e.g., 3-hydroxypyrimidin-4-one, 1,3-oxazole-4-carboxylic acid) embedded in large polyheterocyclic systems — this molecule is a small bicyclic hydrazone-carboxamide, far too simple.\n\n5. **Entry/Fusion/Capsid Inhibitors**: While some are smaller molecules, the specific pharmacophores (e.g., lenacapavir's complex polycyclic system) have no overlap here.\n\nThe molecule is a small, saturated bicyclic hydrazone-carboxamide derivative with no known HIV-relevant pharmacophore features. It lacks the aromatic/heteroaromatic systems, metal-chelating groups, or nucleoside-mimetic scaffolds characteristic of all known classes of HIV replication inhibitors.\n\n[ANSWER]No[/ANSWER]",
+  "ui_final_text": "Now let me evaluate this molecule against known HIV replication inhibitor pharmacophores:Molecule Properties:\nMW: 195.1 Da\nclogP: 1.47\nTPSA: 67.48 Å²\nHBA: 2, HBD: 2\nRotB: 1\nRings: 2 (both alicyclic)\nFraction csp³: 0.80 (highly saturated)\nAnalysis against HIV pharmacophores:\nNNRTIs (e.g., diarylpyrimidines like etravirine): Require aromatic/heteroaromatic rings and halogen substituents — this molecule has zero aromatic rings, no match.\n\nNRTIs (nucleoside analogs): Require a nucleobase-like heterocycle with a sugar/pseudosugar moiety — no such groups present.\n\n\nProtease Inhibitors (e.g., hydroxyethylamine isosteres): Require transition-state isostere motifs and large hydrophobic groups — not present.\n\n\nIntegrase Strand Transfer Inhibitors (INSTIs like dolutegravir, raltegravir): Require diketo acid or metal-chelating motifs (e.g., 3-hydroxypyrimidin-4-one, 1,3-oxazole-4-carboxylic acid) embedded in large polyheterocyclic systems — this molecule is a small bicyclic hydrazone-carboxamide, far too simple.\n\n\nEntry/Fusion/Capsid Inhibitors: While some are smaller molecules, the specific pharmacophores (e.g., lenacapavir's complex polycyclic system) have no overlap here.\n\nThe molecule is a small, saturated bicyclic hydrazone-carboxamide derivative with no known HIV-relevant pharmacophore features. It lacks the aromatic/heteroaromatic systems, metal-chelating groups, or nucleoside-mimetic scaffolds characteristic of all known classes of HIV replication inhibitors.Answer: No",
+  "stream_event_count": 554,
+  "tool_events": [
+    {
+      "event": "on_tool_end",
+      "name": "gvim-science_gvim_rdkit_descriptors",
+      "run_id": "019e9dde-91a2-7301-874c-dd8cc2728906",
+      "parent_ids": [
+        "019e9dde-919e-79f3-8bd3-f67bef789558"
+      ],
+      "tags": [
+        "seq:step:1"
+      ],
+      "metadata": {},
+      "data": {
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"success\": true,\n  \"tool_key\": \"rdkit_descriptors\",\n  \"domain\": \"chemistry\",\n  \"tool_result\": {\n    \"success\": true,\n    \"version\": \"3.0\",\n    \"analysis_type\": \"rdkit_descriptors\",\n    \"source\": \"rdkit_native_descriptors\",\n    \"smiles\": \"CC1(C)C(=NNC(N)=O)C2CCC1C2\",\n    \"canonical_smiles\": \"CC1(C)C(=NNC(N)=O)C2CCC1C2\",\n    \"descriptors\": {\n      \"molecular_formula\": \"C10H17N3O\",\n      \"molecular_weight\": 195.1372,\n      \"average_molecular_weight\": 195.266,\n      \"logp\": 1.4668,\n      \"tpsa\": 67.48,\n      \"hba\": 2,\n      \"hbd\": 2,\n      \"rotatable_bonds\": 1,\n      \"num_rings\": 2,\n      \"num_aromatic_rings\": 0,\n      \"heavy_atom_count\": 14,\n      \"formal_charge\": 0,\n      \"fraction_csp3\": 0.8\n    },\n    \"data_quality\": {\n      \"computed_from\": \"smiles\",\n      \"engine\": \"rdkit\",\n      \"external_database_lookup\": false,\n      \"experimental\": false\n    }\n  },\n  \"science_artifacts\": []\n}",
+              "id": "lc_c8c6d33a-984d-40ad-8f40-aee4dbbd7b17"
+            }
+          ],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "gvim-science_gvim_rdkit_descriptors",
+          "id": null,
+          "tool_call_id": "call_00_dXgt05TqtMz4eFxrpo264117",
+          "artifact": {
+            "structured_content": {
+              "success": true,
+              "tool_key": "rdkit_descriptors",
+              "domain": "chemistry",
+              "tool_result": {
+                "success": true,
+                "version": "3.0",
+                "analysis_type": "rdkit_descriptors",
+                "source": "rdkit_native_descriptors",
+                "smiles": "CC1(C)C(=NNC(N)=O)C2CCC1C2",
+                "canonical_smiles": "CC1(C)C(=NNC(N)=O)C2CCC1C2",
+                "descriptors": {
+                  "molecular_formula": "C10H17N3O",
+                  "molecular_weight": 195.1372,
+                  "average_molecular_weight": 195.266,
+                  "logp": 1.4668,
+                  "tpsa": 67.48,
+                  "hba": 2,
+                  "hbd": 2,
+                  "rotatable_bonds": 1,
+                  "num_rings": 2,
+                  "num_aromatic_rings": 0,
+                  "heavy_atom_count": 14,
+                  "formal_charge": 0,
+                  "fraction_csp3": 0.8
+                },
+                "data_quality": {
+                  "computed_from": "smiles",
+                  "engine": "rdkit",
+                  "external_database_lookup": false,
+                  "experimental": false
+                }
+              },
+              "science_artifacts": []
+            }
+          },
+          "status": "success"
+        }
+      }
+    },
+    {
+      "event": "on_tool_end",
+      "name": "gvim-science_gvim_rdkit_descriptors",
+      "run_id": "019e9dde-91a2-7301-874c-dd8cc2728906",
+      "parent_ids": [
+        "019e9dde-919e-79f3-8bd3-f67bef789558"
+      ],
+      "tags": [
+        "seq:step:1"
+      ],
+      "metadata": {},
+      "data": {
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"success\": true,\n  \"tool_key\": \"rdkit_descriptors\",\n  \"domain\": \"chemistry\",\n  \"tool_result\": {\n    \"success\": true,\n    \"version\": \"3.0\",\n    \"analysis_type\": \"rdkit_descriptors\",\n    \"source\": \"rdkit_native_descriptors\",\n    \"smiles\": \"CC1(C)C(=NNC(N)=O)C2CCC1C2\",\n    \"canonical_smiles\": \"CC1(C)C(=NNC(N)=O)C2CCC1C2\",\n    \"descriptors\": {\n      \"molecular_formula\": \"C10H17N3O\",\n      \"molecular_weight\": 195.1372,\n      \"average_molecular_weight\": 195.266,\n      \"logp\": 1.4668,\n      \"tpsa\": 67.48,\n      \"hba\": 2,\n      \"hbd\": 2,\n      \"rotatable_bonds\": 1,\n      \"num_rings\": 2,\n      \"num_aromatic_rings\": 0,\n      \"heavy_atom_count\": 14,\n      \"formal_charge\": 0,\n      \"fraction_csp3\": 0.8\n    },\n    \"data_quality\": {\n      \"computed_from\": \"smiles\",\n      \"engine\": \"rdkit\",\n      \"external_database_lookup\": false,\n      \"experimental\": false\n    }\n  },\n  \"science_artifacts\": []\n}",
+              "id": "lc_c8c6d33a-984d-40ad-8f40-aee4dbbd7b17"
+            }
+          ],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "gvim-science_gvim_rdkit_descriptors",
+          "id": null,
+          "tool_call_id": "call_00_dXgt05TqtMz4eFxrpo264117",
+          "artifact": {
+            "structured_content": {
+              "success": true,
+              "tool_key": "rdkit_descriptors",
+              "domain": "chemistry",
+              "tool_result": {
+                "success": true,
+                "version": "3.0",
+                "analysis_type": "rdkit_descriptors",
+                "source": "rdkit_native_descriptors",
+                "smiles": "CC1(C)C(=NNC(N)=O)C2CCC1C2",
+                "canonical_smiles": "CC1(C)C(=NNC(N)=O)C2CCC1C2",
+                "descriptors": {
+                  "molecular_formula": "C10H17N3O",
+                  "molecular_weight": 195.1372,
+                  "average_molecular_weight": 195.266,
+                  "logp": 1.4668,
+                  "tpsa": 67.48,
+                  "hba": 2,
+                  "hbd": 2,
+                  "rotatable_bonds": 1,
+                  "num_rings": 2,
+                  "num_aromatic_rings": 0,
+                  "heavy_atom_count": 14,
+                  "formal_charge": 0,
+                  "fraction_csp3": 0.8
+                },
+                "data_quality": {
+                  "computed_from": "smiles",
+                  "engine": "rdkit",
+                  "external_database_lookup": false,
+                  "experimental": false
+                }
+              },
+              "science_artifacts": []
+            }
+          },
+          "status": "success"
+        }
+      }
+    }
+  ],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/e25b14b8-d048-48eb-95b8-25f949d09f25/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench property-prediction task.\\nAnswer only Yes or No inside [ANSWER] and [/ANSWER].\\n\\nTask: Can this molecule inhibit HIV replication?\\nSMILES: CC1(C)C(=NNC(N)=O)C2CCC1C2\\nActivity test class: CI\\n\\nUse exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"e25b14b8-d048-48eb-95b8-25f949d09f25\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

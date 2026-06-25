@@ -1,0 +1,126 @@
+{
+  "generated_at_utc": "2026-06-09T08:59:53.447017Z",
+  "experiment": "public_extension_40_full_system_vs_deepseek_api_only_ablation",
+  "api_only_submission": {
+    "method": "direct DeepSeek chat completions API; no GVIM/DeerFlow frontend, backend route, memory, tools, or workflow orchestration",
+    "model": "deepseek-v4-flash",
+    "temperature": 0.0,
+    "thinking": "disabled",
+    "records": {
+      "total": 40,
+      "ok": 40,
+      "errors": 0,
+      "empty_responses": 0,
+      "finish_reason_counts": {
+        "stop": 40
+      },
+      "replaced_indices": [
+        14
+      ]
+    },
+    "usage_total": {
+      "prompt_tokens": 8060,
+      "completion_tokens": 3638,
+      "total_tokens": 11698,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 8060
+    },
+    "run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined"
+  },
+  "scores_by_official_source": {
+    "ChemBench": {
+      "api_only": {
+        "n": 14,
+        "correct": 10,
+        "accuracy_percent": 71.43,
+        "parse_empty_count": 0,
+        "score_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\chembench-official-score-2026-06-09T08-58-26-445295Z"
+      },
+      "full_system": {
+        "n": 14,
+        "correct": 9,
+        "accuracy_percent": 64.29,
+        "parse_empty_count": 0
+      }
+    },
+    "MaScQA": {
+      "api_only": {
+        "n": 13,
+        "correct": 8,
+        "accuracy_percent": 61.54,
+        "parse_empty_count": 0,
+        "wrong_indices": [
+          16,
+          17,
+          20,
+          21,
+          24
+        ],
+        "score_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\mascqa-official-score-2026-06-09T08-59-16-134441Z"
+      },
+      "full_system": {
+        "n": 13,
+        "correct": 12,
+        "accuracy_percent": 92.31,
+        "parse_empty_count": 0,
+        "wrong_indices": [
+          17
+        ]
+      }
+    },
+    "ChemLLMBench": {
+      "api_only": {
+        "n": 13,
+        "correct": 6,
+        "accuracy_percent": 46.15,
+        "parse_empty_count": 0,
+        "wrong_indices": [
+          28,
+          29,
+          34,
+          36,
+          38,
+          39,
+          40
+        ],
+        "score_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\chemllmbench-official-score-2026-06-09T08-59-16-138440Z"
+      },
+      "full_system": {
+        "n": 13,
+        "correct": 7,
+        "accuracy_percent": 53.85,
+        "parse_empty_count": 0,
+        "wrong_indices": [
+          30,
+          31,
+          34,
+          36,
+          38,
+          39
+        ]
+      }
+    }
+  },
+  "descriptive_cross_suite_aggregate": {
+    "warning": "Descriptive only because official scoring rules differ across source benchmarks.",
+    "api_only": {
+      "correct": 24,
+      "total": 40,
+      "accuracy_percent": 60.0
+    },
+    "full_system": {
+      "correct": 28,
+      "total": 40,
+      "accuracy_percent": 70.0
+    },
+    "delta_full_minus_api_percentage_points": 10.0
+  },
+  "artifacts": {
+    "api_results_jsonl": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\results.jsonl",
+    "api_summary_json": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\summary.json",
+    "api_chembench_score_summary": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\chembench-official-score-2026-06-09T08-58-26-445295Z\\score_summary.json",
+    "api_mascqa_score_summary": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\mascqa-official-score-2026-06-09T08-59-16-134441Z\\score_summary.json",
+    "api_chemllmbench_score_summary": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\chemllmbench-official-score-2026-06-09T08-59-16-138440Z\\score_summary.json",
+    "full_system_summary": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\public_extension_40_full_score_summary.json"
+  }
+}

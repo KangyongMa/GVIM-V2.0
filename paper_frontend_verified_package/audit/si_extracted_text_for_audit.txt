@@ -1,0 +1,332 @@
+Supporting Information
+GVIM 2.0: A Multi-Agent Research System for Chemistry and Materials Science
+Kangyong Ma
+College of Physics and Electronic Information Engineering, Zhejiang Normal University, Jinhua 321000, China
+
+Contents
+S1. Scope, evidence levels and claim boundaries
+S2. Public 400-task benchmark
+S3. Task-native chemistry and materials evaluation workflows
+S4. Retrospective BACE fixed-budget active discovery
+S5. Matbench experimental band-gap case
+S6. BACE1 temporal external validation
+S7. Reproducibility, software and artifact provenance
+S8. Metric definitions
+S9. Limitations
+S10. Supporting references
+S1. Scope, evidence levels and claim boundaries
+This Supporting Information documents only evaluations supported by archived GVIM artifacts or public benchmark source data. The study contains three evidence levels: public question-answer benchmarks, task-native evaluation workflows with externally defined gold standards, and retrospective discovery or temporal-validation studies using public labels. No expert subjective score is used as a primary endpoint, and no result is presented as laboratory synthesis, biological assay, or prospective experimental validation.
+Table S1. Evidence classes and permitted claims.
+
+S2. Public 400-task benchmark
+The suite contains 250 ChemBench, 97 MaScQA and 53 ChemLLMBench questions. Each source was scored by its native answer key or task-specific rule. Because these rules differ, the 400-question total is descriptive; per-benchmark outcomes are the primary interpretable units. The same-base comparison used the identical 400 questions for GVIM and the DeepSeek API-only setting.
+Table S2. Benchmark composition and same-base results.
+
+The paired contingency table contained 268 both-correct, 57 GVIM-only, 17 API-only and 58 both-wrong outcomes. The paired difference was 10.0 percentage points, with a bootstrap 95% CI of 6.0–14.25 percentage points and exact two-sided McNemar p = 3.40 × 10⁻⁶.
+Table S3. Additional complete API-only reference runs on the 400-task suite.
+
+S3. Task-native chemistry and materials evaluation workflows
+Each reported workflow is linked to an archived GVIM front-end thread and is scored against a public or publisher-defined reference. Matbench steels is limited to official fold 0: the front end used internal shuffled five-fold cross-validation on the 249-row fold-0 training partition, refitted the selected model, and predicted 63 unlabeled fold-0 test records. The separate local official-five-fold rerun is excluded from the manuscript evidence because it was not executed through the GVIM front end.
+Table S4. Artifact-supported task-native evaluations.
+
+S3.1 Regression workflows
+For ESOL, the front end performed scaffold-aware five-fold cross-validation, selected RandomForest, and generated frozen predictions for 254 unlabeled test molecules; post-hoc scoring against withheld public labels gave MAE = 0.603, RMSE = 0.741 and R² = 0.739. For Matbench steels, the front end processed official fold 0 only and generated frozen predictions for 63 unlabeled test alloys; post-hoc scoring gave MAE = 111.444 MPa, RMSE = 164.320 MPa and R² = 0.684. The Matbench steels evidence is therefore a single-fold front-end demonstration rather than the full Matbench five-fold protocol.
+S3.2 Extraction and retrieval workflows
+Reaction-table extraction used the publisher JATS XML table as gold and evaluated 105 cells (21 rows). Exact precision, recall and F1 were each 0.981 and row accuracy was 0.905. The MassBank workflow ranked candidate molecular identities for five queries using public InChIKey labels, giving top-1 accuracy 0.800, top-3 and top-5 accuracy 1.000, and MRR 0.900. ChEMU Task 1 sample v3 contained 92 gold spans; exact precision/recall/F1 were 0.931/0.728/0.817 and relaxed F1 was 0.841.
+S4. Retrospective BACE fixed-budget active discovery
+The public library contained 1,513 molecules. High-activity targets were the top 5% by pIC50 (n = 79). Each of 20 seeds began with 30 random observations and queried batches of 10 to a total budget of 150. The surrogate was ExtraTreesRegressor(n_estimators=200, max_depth=15). Unqueried labels were not available to model fitting or acquisition and were used only as the retrospective oracle and for final scoring.
+Table S5. BACE fixed-budget endpoint metrics (mean ± SD across 20 seeds).
+
+Paired bootstrap intervals used 10,000 resamples of per-seed endpoint differences. Greedy-surrogate minus random Recall@150 had a 95% CI of 0.189–0.260; UCB minus random had a 95% CI of 0.225–0.284.
+S5. Matbench experimental band-gap case
+The archived front-end case used Matbench v0.1 matbench_expt_gap (n = 4,604) with 98 precomputed composition descriptors. HistGradientBoostingRegressor was evaluated by KFold(n_splits=5, shuffle=True, random_state=18012019). The retrospective active-discovery component defined the top 5% experimental-gap materials as targets and used three seeds, 30 initial random observations, batches of 10 and a total budget of 150.
+Table S6. Per-fold Matbench experimental band-gap regression metrics.
+
+Across folds, MAE was 0.4513 ± 0.0170 eV, RMSE was 0.8049 ± 0.0456 eV, and R² was 0.6854 ± 0.0445. At 150 queries, random and greedy-surrogate Recall@150 were 0.0332 and 0.2626, respectively. The paired recall improvement was 0.2294 with bootstrap 95% CI 0.2208–0.2381.
+S6. BACE1 temporal external validation
+S6.1 Data split and phase gate
+ChEMBL target CHEMBL4822 records were filtered to standardized BACE1 IC50 measurements and aggregated by compound. Stage 1 used 5,296 compounds associated with documents published through 2015. Records from 2016–2017 were excluded as a buffer. The external set contained 1,598 compounds associated with documents from 2018 onward after exact molecule overlap removal by InChIKey; 1,275 compounds were scaffold-novel. The external gold file was withheld until Stage 1 had written predictions and a prediction manifest.
+Table S7. Stage-1 scaffold-grouped cross-validation metrics.
+
+RandomForest was selected by mean validation MAE and refit on all historical compounds using random seed 42. The model used Morgan FP radius=2, 1024bits + 8 RDKit descriptors and 100 trees with n_jobs = 1. Stage-1 runtime was 436.16 s.
+S6.2 Independent metric recomputation
+Table S8. Post-2018 external regression performance.
+
+Table S9. Prespecified top-decile recovery at a 10% selection budget.
+
+Independent local recomputation from external_predictions_with_gold.csv reproduced the selected-model values: MAE = 0.8214935, RMSE = 1.0278495 and R² = 0.3687357. The file contained 1,598 unique compound_id values, no missing values and a zero maximum absolute difference between Stage-1 selected predictions and the predictions carried into the Stage-2 merged file.
+S6.3 Frozen-prediction integrity audit
+The Stage-1 manifest records SHA-256 f2589c916135b0a934ac4ed23ec18b73b7cec99d2d94c686113fe325fece6e24. The HTTP artifact download used LF line endings and had raw SHA-256 f66bca3fce59791c60a2ae402fbdff3dfb3b40072850c036fd123afdf59648c4. Converting only line endings to CRLF, without changing CSV fields or values, yielded SHA-256 f2589c916135b0a934ac4ed23ec18b73b7cec99d2d94c686113fe325fece6e24, which exactly matches the manifest. This newline-sensitive distinction is retained here rather than reporting raw-byte identity. Semantic prediction identity was additionally verified by a one-to-one compound_id merge and zero maximum absolute prediction difference.
+S7. Reproducibility, software and artifact provenance
+S7.1 Explicitly enabled chemistry and materials Skills
+The repository contained 147 discoverable SKILL.md files at package finalization. Table S10 reports only the six chemistry/materials Skills explicitly marked enabled in extensions_config.json. A Skill is an instruction and tool-routing contract rather than an independent scientific algorithm; citations therefore refer to the underlying software or database used for the corresponding scientific operation. The complete repository inventory is supplied as source_data/skills_inventory.csv.
+Table S10. Core domain Skills explicitly configured as enabled and their scientific foundations.
+
+S7.2 Complete Skill catalogue
+Table S11 lists every SKILL.md definition discovered under skills/public and skills/custom. The configuration label distinguishes the six explicit enablement records from catalogue entries without an explicit override. Catalogue presence demonstrates an available instruction module, not experimental use, successful execution, preinstallation of every optional dependency, or independent validation of the capability. References for the six chemistry/materials Skills are given in Table S10; other entries retain their declared license or repository provenance rather than being assigned an unsupported scholarly citation.
+Table S11. Complete repository Skill catalogue at package finalization (n = 147).
+
+S7.3 Software versions and artifact provenance
+Table S12. Software recorded by the BACE1 temporal Stage-1 manifest.
+
+Table S13. Key local artifacts and SHA-256 identifiers.
+
+The temporal-validation front-end thread identifier was 9ae4e85f-542b-4f94-9294-81189cf220be. Other explicitly archived front-end identifiers include 9dc67557-7d82-476d-80e0-381b7af1e76f (reaction-table extraction), abe44a97-e5a9-4ba3-bbf3-6206ab9d7c12 (MS/MS retrieval), dbb54347-66bc-4244-8177-bdf441383454 (ChEMU), fff9cae7-3467-496d-af05-0585c99fd993 (BACE active discovery), and a6600dc1-8a72-46d1-97c0-d6ce0020c7f6 (Matbench band-gap case). Thread identifiers are reported only where directly recorded in the archived workflow history.
+S8. Metric definitions
+MAE = n⁻¹ Σᵢ |yᵢ − ŷᵢ|.
+RMSE = [n⁻¹ Σᵢ (yᵢ − ŷᵢ)²]¹ᐟ².
+R² = 1 − Σᵢ(yᵢ − ŷᵢ)² / Σᵢ(yᵢ − ȳ)².
+Precision = TP/(TP + FP), recall = TP/(TP + FN), and F1 is their harmonic mean.
+Top-k accuracy is the fraction of queries for which the gold identity appears among the first k ranked candidates; MRR is the mean reciprocal rank of the gold candidate.
+Recall@k is the fraction of prespecified target compounds recovered within k queries or selections.
+EF@k = (target fraction among selected compounds)/(target fraction in the full evaluation library).
+S9. Limitations
+All discovery cases are retrospective and use public labels; no new compound or material was experimentally validated.
+The task-native extraction and retrieval demonstrations are small, fixed evaluations intended to demonstrate workflow execution rather than establish competitive specialized task models.
+The 400-task aggregate combines benchmarks with different native scoring rules and must remain descriptive.
+The BACE1 temporal model retains non-random enrichment for scaffold-novel compounds but shows higher prediction error and systematic underprediction of some highly active novel chemotypes.
+Complete agent-baseline and component-ablation experiments remain necessary before attributing all gains to a specific GVIM module.
+S10. Supporting references
+S1. Mirza, A. et al. A framework for evaluating the chemical knowledge and reasoning abilities of large language models against the expertise of chemists. Nat. Chem. 2025, 17, 1027–1034.
+S2. Zaki, M.; Krishnan, N. A. MaScQA: investigating materials science knowledge of large language models. Digit. Discov. 2024, 3, 313–327.
+S3. Wu, Z. et al. MoleculeNet: a benchmark for molecular machine learning. Chem. Sci. 2018, 9, 513–530.
+S4. Dunn, A. et al. Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm. npj Comput. Mater. 2020, 6, 138.
+S5. Delaney, J. S. ESOL: estimating aqueous solubility directly from molecular structure. J. Chem. Inf. Comput. Sci. 2004, 44, 1000–1005.
+S6. Horai, H. et al. MassBank: a public repository for sharing mass spectral data for life sciences. J. Mass Spectrom. 2010, 45, 703–714.
+S7. Nguyen, D. Q. et al. ChEMU: named entity recognition and event extraction of chemical reactions from patents. ECIR 2020, 572–579.
+S8. Gaulton, A. et al. ChEMBL: a large-scale bioactivity database for drug discovery. Nucleic Acids Res. 2012, 40, D1100–D1107.
+S9. Karulin, B.; Kozhevnikov, M. Ketcher: web-based chemical structure editor. J. Cheminform. 2011, 3 (Suppl. 1), P3. https://doi.org/10.1186/1758-2946-3-S1-P3.
+S10. Landrum, G. RDKit: Open-source cheminformatics software. https://www.rdkit.org (accessed 21 June 2026).
+S11. Ong, S. P. et al. Python Materials Genomics (pymatgen): a robust, open-source Python library for materials analysis. Comput. Mater. Sci. 2013, 68, 314–319. https://doi.org/10.1016/j.commatsci.2012.10.028.
+S12. Jain, A. et al. Commentary: The Materials Project: a materials genome approach to accelerating materials innovation. APL Mater. 2013, 1, 011002. https://doi.org/10.1063/1.4812323.
+S13. Andersen, C. W. et al. OPTIMADE, an API for exchanging materials data. Sci. Data 2021, 8, 217. https://doi.org/10.1038/s41597-021-00974-z.
+S14. Kim, S. et al. PubChem 2023 update. Nucleic Acids Res. 2023, 51, D1373–D1380. https://doi.org/10.1093/nar/gkac956.
+Evidence class | Primary endpoint | Permitted interpretation
+Public benchmark | Native answer-key accuracy | Knowledge/reasoning performance under benchmark rules
+Task-native workflow | MAE, RMSE, R², precision, recall, F1, top-k, MRR | Ability to execute an auditable data-to-result workflow
+Retrospective discovery | Recall@k, EF@k, prediction error | Prioritization within a public labelled library
+Temporal external validation | External MAE/RMSE/R² and top-decile recovery | Generalization to later non-overlapping public compounds
+Benchmark | n | GVIM | API-only | GVIM (%) | API-only (%)
+ChemBench | 250 | 204/250 | 189/250 | 81.60 | 75.60
+MaScQA | 97 | 94/97 | 73/97 | 96.91 | 75.26
+ChemLLMBench | 53 | 27/53 | 23/53 | 50.94 | 43.40
+Descriptive total | 400 | 325/400 | 285/400 | 81.25 | 71.25
+Model | Correct | Accuracy (%) | Run status
+meta-llama/llama-4-scout-17b-16e-instruct | 291/400 | 72.75 | {'ok': 400}
+llama-3.3-70b-versatile | 260/400 | 65.00 | {'ok': 400}
+qwen/qwen3-32b | 245/400 | 61.25 | {'ok': 399, 'truncated': 1}
+llama-3.1-8b-instant | 169/400 | 42.25 | {'ok': 393, 'truncated': 7}
+Workflow | Gold/dataset | Objective result
+ESOL solubility prediction | MoleculeNet ESOL | MAE=0.603, RMSE=0.741, R²=0.739; n_test=254
+Matbench steels fold 0 | Matbench v0.1 matbench_steels | MAE=111.444 MPa, RMSE=164.320 MPa, R²=0.684; n_test=63
+MinerU reaction-table extraction | Publisher JATS XML table nanomaterials-12-01070-t002 | Exact precision=0.981, recall=0.981, F1=0.981, row accuracy=0.905
+MS/MS candidate retrieval | MassBank InChIKey identity from public MassBank-data records | Top-1=0.800, Top-3=1.000, Top-5=1.000, MRR=0.900; n_queries=5
+ChEMU entity extraction | ChEMU 2020 Task 1 sample v3 | Exact P/R/F1=0.931/0.728/0.817; relaxed F1=0.841; gold spans=92
+BACE active discovery | bace_active_discovery.csv | Random Recall@150=0.109, UCB Recall@150=0.363, EF@150=3.664, 95% CI=0.225-0.284
+Matbench band-gap main case | Matbench v0.1 matbench_expt_gap | MAE=0.4513±0.0170 eV, RMSE=0.8049±0.0456 eV, R²=0.6854±0.0445; greedy Recall@150=0.2626
+Policy | Recall@150 | Hit rate@150 | EF@150 | Best pIC50@150
+random | 0.109 ± 0.040 | 0.057 ± 0.021 | 1.098 ± 0.398 | 9.129 ± 0.491
+greedy surrogate | 0.333 ± 0.085 | 0.175 ± 0.045 | 3.358 ± 0.857 | 9.365 ± 0.583
+ucb surrogate | 0.363 ± 0.056 | 0.191 ± 0.030 | 3.664 ± 0.570 | 9.559 ± 0.632
+Fold | MAE (eV) | RMSE (eV) | R²
+0 | 0.4585 | 0.8223 | 0.6224
+1 | 0.4261 | 0.7488 | 0.7547
+2 | 0.4756 | 0.8819 | 0.6659
+3 | 0.4397 | 0.7741 | 0.7105
+4 | 0.4568 | 0.7974 | 0.6736
+Model | Fold | MAE | RMSE | R²
+Ridge | 0 | 0.6640 | 0.8524 | 0.4713
+Ridge | 1 | 0.6736 | 0.8675 | 0.4657
+Ridge | 2 | 0.6910 | 0.8961 | 0.4621
+Ridge | mean | 0.6762 | 0.8720 | 0.4664
+Ridge | std | 0.0137 | 0.0222 | 0.0046
+RandomForest | 0 | 0.5701 | 0.7415 | 0.5999
+RandomForest | 1 | 0.5642 | 0.7368 | 0.6146
+RandomForest | 2 | 0.6018 | 0.7910 | 0.5809
+RandomForest | mean | 0.5787 | 0.7564 | 0.5985
+RandomForest | std | 0.0202 | 0.0300 | 0.0169
+ExtraTrees | 0 | 0.6292 | 0.8362 | 0.4911
+ExtraTrees | 1 | 0.6201 | 0.8339 | 0.5063
+ExtraTrees | 2 | 0.6348 | 0.8373 | 0.5304
+ExtraTrees | mean | 0.6280 | 0.8358 | 0.5093
+ExtraTrees | std | 0.0074 | 0.0017 | 0.0198
+Model | MAE | RMSE | R² | Pearson r
+RandomForest | 0.8215 | 1.0278 | 0.3687 | 0.6690
+Ridge | 0.9534 | 1.2235 | 0.1055 | 0.5938
+Mean Baseline | 1.1845 | 1.3712 | -0.1234 | -0.0000
+Subset | n | k | Actives | Hits | Recall | EF
+all external | 1598 | 160 | 161 | 42 | 0.2609 | 2.6054
+known scaffold | 323 | 33 | 33 | 14 | 0.4242 | 4.1524
+novel scaffold | 1275 | 128 | 142 | 35 | 0.2465 | 2.4552
+Skill | Verified role and boundary | Skill file under skills/public/ | Scientific foundation
+chemistry-studio-ketcher | Molecule/reaction canvas preparation; not route validation | chemistry-studio-ketcher/SKILL.md | Ketcher [S9]; RDKit [S10]
+chemistry-structure-resolution | Name/identifier resolution before downstream analysis | chemistry-structure-resolution/SKILL.md | PubChem [S14]; RDKit [S10]
+rdkit-molecular-analysis | Descriptors, similarity, standardization, scaffolds, reaction QC and conformers | rdkit-molecular-analysis/SKILL.md | RDKit [S10]
+materials-core | Formula/structure, XRD and precursor calculations; not phase-purity proof | materials-core/SKILL.md | pymatgen [S11]
+materials-evidence-project | Database-backed stability, band-gap and formation-energy evidence | materials-evidence-project/SKILL.md | Materials Project [S12]; OPTIMADE [S13]; PubChem [S14]
+science-upload-autopilot | Routes uploaded scientific files to deterministic tools and reports evidence gaps | science-upload-autopilot/SKILL.md | This work; delegates to [S10-S14]
+Skill | Class | Configuration | Declared capability | Declared source/license
+academic-paper | custom | catalogued | 12-agent academic paper writing pipeline. 10 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure). 6 paper types, 5… | local custom Skill
+academic-paper-reviewer | custom | catalogued | Multi-perspective academic paper review with dynamic reviewer personas. Simulates 5 independent reviewers (EIC + 3 peer reviewers + Devil's Advocate) with field-specific… | local custom Skill
+academic-pipeline | custom | catalogued | Orchestrator for the full academic research pipeline: research to write to integrity check to review to revise to re-review to re-revise to final integrity check to finalize.… | local custom Skill
+nature-academic-search | custom | catalogued | Multi-source literature search, citation verification, MeSH search strategy, citation file management (.nbib/.ris/.bib conversion), and reference management (BibTeX, related… | local custom Skill
+nature-citation | custom | catalogued | Add strict Nature/CNS citations to manuscript text by splitting long passages into citable segments, searching only accepted flagship and subjournal titles from Nature Portfolio… | local custom Skill
+nature-data | custom | catalogued | Prepare, audit, or revise Nature-ready Data Availability statements, data repository plans, dataset citations, and FAIR metadata checklists for manuscripts. Use when the user… | local custom Skill
+nature-figure | custom | catalogued | Submission-grade Nature/high-impact journal figure workflow for Python or R. Use whenever the user asks to create, revise, audit, or polish manuscript figures, multi-panel… | local custom Skill
+nature-paper2ppt | custom | catalogued | Build a complete but efficient Nature-style Chinese PPTX presentation from a scientific paper, preprint, PDF, article text, abstract, figure legends, or reading notes. Use this… | local custom Skill
+nature-polishing | custom | catalogued | Polish, restructure, or translate academic prose into Nature-leaning English using writing-strategy principles, curated Nature/Nature Communications article patterns, and… | local custom Skill
+nature-reader | custom | catalogued | Build full-paper Chinese-English side-by-side, figure/table-aware, source-grounded Markdown readers for journal or conference papers from PDF, DOI, arXiv, publisher HTML, or… | local custom Skill
+nature-response | custom | catalogued | Draft, audit, or revise point-by-point reviewer response letters for Nature-family manuscript revisions. Use when the user provides reviewer comments, editor decision letters… | local custom Skill
+nature-writing | custom | catalogued | Draft, restructure, or plan Nature-style manuscript sections from author-provided claims, results, figures, notes, or Chinese drafts. Use when the user wants to write or rebuild… | local custom Skill
+academic-paper-review | public | catalogued | Use this skill when the user requests to review, analyze, critique, or summarize academic papers, research articles, preprints, or scientific publications. Supports comprehensive… | repository Skill definition
+adme-prediction | public | catalogued | ADME 性质预测工具。预测分子的吸收、分布、代谢、排泄性质，包括 Caco-2 通透性、PAMPA、HIA、Pgp 抑制、生物利用度、亲脂性等。使用 Morgan 指纹 + Random Forest/XGBoost。当用户提到 ADME 预测、药物性质、通透性、吸收、代谢等时触发。 | repository Skill definition
+aeon | public | catalogued | This skill should be used for time series machine learning tasks including | BSD-3-Clause license
+astropy | public | catalogued | Comprehensive Python library for astronomy and astrophysics. This skill | BSD-3-Clause license
+bgpt-paper-search | public | catalogued | Search scientific papers and retrieve structured experimental data extracted | MIT
+bootstrap | public | catalogued | Generate a personalized SOUL.md through a warm, adaptive onboarding conversation. Trigger when the user wants to create, set up, or initialize their AI partner's identity — e.g.… | repository Skill definition
+boron-nmr-predict | public | catalogued | Predict 11B (boron-11) NMR chemical shift for boron-containing molecules | repository Skill definition
+chart-visualization | public | catalogued | This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on… | repository Skill definition
+chem-data-extractor | public | catalogued | Extract structured chemical compound characterization data from chemistry\ | repository Skill definition
+chemical-file-converter | public | catalogued | 化学文件格式转换工具。支持 .xyz, .gjf (Gaussian), .mol, .sdf, .pdb, .mol2 等格式互转。使用 | repository Skill definition
+chemistry-structure-resolution | public | explicitly enabled | Resolve chemical names, Chinese compound names, IUPAC names, common names, CAS-like identifiers, PubChem identifiers, SMILES, InChI, and ambiguous molecule descriptions into… | repository Skill definition
+chemistry-studio-ketcher | public | explicitly enabled | Natural-language Chemistry Studio workflow for drawing molecules, reactions, retrosynthesis sketches, and route drafts in Ketcher. Use when the user asks to draw, load, sketch… | repository Skill definition
+cirq | public | catalogued | Google quantum computing framework. Use when targeting Google Quantum | Apache-2.0 license
+citation-management | public | catalogued | Comprehensive citation management for academic research. Search Google | MIT License
+claude-to-deerflow | public | catalogued | Interact with DeerFlow AI agent platform via its HTTP API. Use this skill when the user wants to send messages or questions to DeerFlow for research/analysis, start a DeerFlow… | repository Skill definition
+code-documentation | public | catalogued | Use this skill when the user requests to generate, create, or improve documentation for code, APIs, libraries, repositories, or software projects. Supports README generation, API… | repository Skill definition
+consciousness-council | public | catalogued | Run a multi-perspective Mind Council deliberation on any question, decision, | MIT license
+consulting-analysis | public | catalogued | Use this skill when the user requests to generate, create, or write professional research reports including but not limited to market analysis, consumer insights, brand analysis… | repository Skill definition
+dask | public | catalogued | Distributed computing for larger-than-RAM pandas/NumPy workflows. Use | BSD-3-Clause license
+data-analysis | public | catalogued | Use this skill when the user uploads Excel (.xlsx/.xls) or CSV files and wants to perform data analysis, generate statistics, create summaries, pivot tables, SQL queries, or any… | repository Skill definition
+database-lookup | public | catalogued | Search 78 public scientific, biomedical, materials science, and economic | repository Skill definition
+deep-research | public | catalogued | Use this skill instead of WebSearch for ANY question requiring web research. Trigger on queries like "what is X", "explain X", "compare X and Y", "research X", or before content… | repository Skill definition
+docx | public | catalogued | Use this skill whenever the user wants to create, read, edit, or manipulate | Proprietary. LICENSE.txt has complete terms
+exploratory-data-analysis | public | catalogued | Perform comprehensive exploratory data analysis on scientific data files | MIT license
+find-skills | public | catalogued | Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending… | repository Skill definition
+fluidsim | public | catalogued | Framework for computational fluid dynamics simulations using Python. | CeCILL FREE SOFTWARE LICENSE AGREEMENT
+frontend-design | public | catalogued | Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or… | Complete terms in LICENSE.txt
+generate-image | public | catalogued | Generate or edit images using AI models (FLUX, Nano Banana 2). Use for | MIT license
+geomaster | public | catalogued | Comprehensive geospatial science skill covering remote sensing, GIS, | MIT License
+geometry-optimizer | public | catalogued | 使用半经验方法 (xTB) 对分子三维结构进行几何优化，支持 SMILES 自动转 3D、XYZ 文件输入，输出优化后坐标、能量、收敛状态。 | repository Skill definition
+geopandas | public | catalogued | Python library for working with geospatial vector data including shapefiles, | BSD-3-Clause license
+get-available-resources | public | catalogued | This skill should be used at the start of any computationally intensive | MIT license
+github-deep-research | public | catalogued | Conduct multi-round deep research on any GitHub Repo. Use when users request comprehensive analysis, timeline reconstruction, competitive analysis, or in-depth investigation of… | repository Skill definition
+gjf-to-xyz | public | catalogued | Convert Gaussian gjf input files to XYZ format. | repository Skill definition
+hypogenic | public | catalogued | Automated LLM-driven hypothesis generation and testing on tabular datasets. | MIT license
+hypothesis-generation | public | catalogued | Structured hypothesis formulation from observations. Use when you have | MIT license
+image-generation | public | catalogued | Use this skill when the user requests to generate, create, imagine, or visualize images including characters, scenes, products, or any visual content. Supports structured prompts… | repository Skill definition
+infographics | public | catalogued | Create professional infographics using Nano Banana Pro AI with smart | repository Skill definition
+ir-spectra-simulation | public | catalogued | Compute and visualize IR Spectra from input SMILES or XYZ file with MLatom. | repository Skill definition
+iso-13485-certification | public | catalogued | Comprehensive toolkit for preparing ISO 13485 certification documentation | MIT license
+iupac-to-smiles | public | catalogued | 将 IUPAC 化学名称转换为 SMILES 字符串。完全使用 OPSIN API，支持聚合物智能解析。 | repository Skill definition
+labarchive-integration | public | catalogued | Electronic lab notebook API integration. Access notebooks, manage entries/attachments, | Unknown
+latex-posters | public | catalogued | Create professional research posters in LaTeX using beamerposter, tikzposter, | repository Skill definition
+literature-parsing | public | catalogued | Convert PDF literature to Markdown using MinerU API. GVIM/DeerFlow uses API mode by default, so the local mineru package is not required. | repository Skill definition
+literature-review | public | catalogued | Conduct comprehensive, systematic literature reviews using multiple academic | MIT license
+markdown-mermaid-writing | public | catalogued | Comprehensive markdown and Mermaid diagram writing skill. Use when creating | Apache-2.0
+market-research-reports | public | catalogued | Generate comprehensive market research reports (50+ pages) in the style | MIT license
+markitdown | public | catalogued | Convert files and office documents to Markdown. Supports PDF, DOCX, PPTX, | MIT license
+matchms | public | catalogued | Spectral similarity and compound identification for metabolomics. Use | Apache-2.0 license
+materials-core | public | explicitly enabled | Package-backed materials science workflows for formulas, structures, XRD, precursor stoichiometry, units, spectra, local environments, and composition descriptors. Use when the… | repository Skill definition
+materials-evidence-project | public | explicitly enabled | Evidence-first materials database workflow for Materials Project, OPTIMADE, PubChem reference records, X-ray references, scattering references, stability, band gaps, formation… | repository Skill definition
+matlab | public | catalogued | MATLAB and GNU Octave numerical computing for matrix operations, data | For MATLAB (https://www.mathworks.com/pricing-licensing.html) and for Octave
+matplotlib | public | catalogued | Low-level plotting library for full customization. Use when you need | https://github.com/matplotlib/matplotlib/tree/main/LICENSE
+md-vib-spectra-simulation | public | catalogued | Compute vibrational spectra from MD trajectory — power spectrum (velocity | repository Skill definition
+modal | public | catalogued | Cloud computing platform for running Python on GPUs and serverless infrastructure. | Apache-2.0
+mol-2d-viewer | public | catalogued | 将 SMILES 或化学名称转换为分子 2D 结构图。支持普通分子和聚合物 2D 结构绘制。 | repository Skill definition
+mol-3d-viewer | public | catalogued | 将 SMILES 或化学名称转换为分子 3D 结构。支持生成 SDF 文件、3D 分子图片和可交互 HTML 网页（可旋转观察）。 | repository Skill definition
+mol-image-to-smiles | public | catalogued | 将分子结构图片转换为 SMILES 字符串。使用 DECIMER 和 MolNextR 模型进行图像识别。 | repository Skill definition
+mol-paper-renderer | public | catalogued | 论文级分子渲染工具。使用 xyzrender 生成出版质量的 SVG、PNG、PDF 和 GIF 动画。支持过渡态、非共价相互作用、分子轨道、晶体结构等高级功能。 | repository Skill definition
+molecular-dynamics | public | catalogued | Run and analyze molecular dynamics simulations with OpenMM and MDAnalysis. | MIT
+molecular-properties-predictor | public | catalogued | 预测小分子多种物化性质（沸点、折射率、密度、黏度、表面张力等），当前已真实接入 bamboo_mixer 单分子物性模型后端。 | repository Skill definition
+ms-spectra-simulation | public | catalogued | Predict and visualize MS/MS spectra from a single SMILES using the fioRa | repository Skill definition
+networkx | public | catalogued | Comprehensive toolkit for creating, analyzing, and visualizing complex | 3-clause BSD license
+newsletter-generation | public | catalogued | Use this skill when the user requests to generate, create, write, or draft a newsletter, email digest, weekly roundup, industry briefing, or curated content summary. Supports… | repository Skill definition
+nmr-prediction | public | catalogued | Predict liquid-phase ¹H and ¹³C NMR chemical shifts from a SMILES string | repository Skill definition
+open-notebook | public | catalogued | Self-hosted, open-source alternative to Google NotebookLM for AI-powered | MIT
+opentrons-integration | public | catalogued | Official Opentrons Protocol API for OT-2 and Flex robots. Use when writing | Unknown
+optimize-for-gpu | public | catalogued | GPU-accelerate Python code using CuPy, Numba CUDA, Warp, cuDF, cuML, | repository Skill definition
+paper-lookup | public | catalogued | Search 10 academic paper databases via their REST APIs to find research | repository Skill definition
+paperzilla | public | catalogued | Chat with your agent about projects, recommendations, and canonical papers | MIT
+parallel-web | public | catalogued | Search the web, extract URL content, and run deep research using the | MIT license
+pdf | public | catalogued | Use this skill whenever the user wants to do anything with PDF files. | Proprietary. LICENSE.txt has complete terms
+pdf-dft-extractor | public | catalogued | Extract DFT coordinate blocks from PDF supplementary information via MinerU API and generate Gaussian .gjf files. | repository Skill definition
+peer-review | public | catalogued | Structured manuscript/grant review with checklist-based evaluation. Use | MIT license
+pennylane | public | catalogued | Hardware-agnostic quantum ML framework with automatic differentiation. | Apache-2.0 license
+perplexity-search | public | catalogued | Perform AI-powered web searches with real-time information using Perplexity | MIT license
+pka-predictor | public | catalogued | 预测小分子的 pKa，支持 custom 启发式后端和 Uni-pKa 单文件权重后端（Bohrium notebook 路线）。 | repository Skill definition
+podcast-generation | public | catalogued | Use this skill when the user requests to generate, create, or produce podcasts from text content. Converts written content into a two-host conversational podcast audio format… | repository Skill definition
+polars | public | catalogued | Fast in-memory DataFrame library for datasets that fit in RAM. Use when | https://github.com/pola-rs/polars/blob/main/LICENSE
+ppt-generation | public | catalogued | Use this skill when the user requests to generate, create, or make presentations (PPT/PPTX). Creates visually rich slides by generating images for each slide and composing them… | repository Skill definition
+pptx | public | catalogued | Use this skill any time a .pptx file is involved in any way — as input, | Proprietary. LICENSE.txt has complete terms
+pptx-posters | public | catalogued | Create research posters using HTML/CSS that can be exported to PDF or | MIT license
+protocolsio-integration | public | catalogued | Integration with protocols.io API for managing scientific protocols. | Unknown
+pufferlib | public | catalogued | High-performance reinforcement learning framework optimized for speed | MIT license
+pylabrobot | public | catalogued | Vendor-agnostic lab automation framework. Use when controlling multiple | MIT license
+pymatgen | public | catalogued | Materials science toolkit. Crystal structures (CIF, POSCAR), phase diagrams, | MIT license
+pymc | public | catalogued | Bayesian modeling with PyMC. Build hierarchical models, MCMC (NUTS), | Apache License, Version 2.0
+pymoo | public | catalogued | Multi-objective optimization framework. NSGA-II, NSGA-III, MOEA/D, Pareto | Apache-2.0 license
+pyopenms | public | catalogued | Complete mass spectrometry analysis platform. Use for proteomics workflows | 3 clause BSD license
+pytorch-lightning | public | catalogued | Deep learning framework (PyTorch Lightning). Organize PyTorch code into | Apache-2.0 license
+pyzotero | public | catalogued | Interact with Zotero reference management libraries using the pyzotero | MIT License
+qiskit | public | catalogued | IBM quantum computing framework. Use when targeting IBM Quantum hardware, | Apache-2.0 license
+qutip | public | catalogued | Quantum physics simulation library for open quantum systems. Use when | BSD-3-Clause license
+raman-spectra-simulation | public | catalogued | Compute and visualize Raman Spectra from input SMILES or XYZ file with | repository Skill definition
+rdkit | public | catalogued | Cheminformatics toolkit for fine-grained molecular control. SMILES/SDF | BSD-3-Clause license
+rdkit-molecular-analysis | public | explicitly enabled | RDKit-backed molecular analysis for descriptors, similarity, standardization, scaffolds, fragments, substructure checks, reaction QC, and 3D conformer generation. Use for… | repository Skill definition
+reaction-data-extraction | public | catalogued | Extract chemistry reaction tables and reaction conditions from PDF literature using MinerU API plus rule-based parsing. | repository Skill definition
+research-grants | public | catalogued | Write competitive research proposals for NSF, NIH, DOE, DARPA, and Taiwan | MIT license
+research-lookup | public | catalogued | Look up current research information using the Parallel Chat API (primary) | MIT license
+scholar-evaluation | public | catalogued | Systematically evaluate scholarly work using the ScholarEval framework, | MIT license
+science-upload-autopilot | public | explicitly enabled | Auto-route uploaded or pasted chemistry/materials data such as CIF, POSCAR, XYZ, CSV formula tables, SMILES lists, XRD peak tables, and XY spectra through GVIM science tools… | repository Skill definition
+scientific-brainstorming | public | catalogued | Creative research ideation and exploration. Use for open-ended brainstorming | MIT license
+scientific-critical-thinking | public | catalogued | Evaluate scientific claims and evidence quality. Use for assessing experimental | MIT license
+scientific-schematics | public | catalogued | Create publication-quality scientific diagrams using Nano Banana 2 AI | MIT license
+scientific-slides | public | catalogued | Build slide decks and presentations for research talks. Use this for | MIT license
+scientific-visualization | public | catalogued | Meta-skill for publication-ready figures. Use when creating journal submission | MIT license
+scientific-writing | public | catalogued | Core skill for the deep research and writing tool. Write scientific manuscripts | MIT license
+scikit-learn | public | catalogued | Machine learning in Python with scikit-learn. Use when working with supervised | BSD-3-Clause license
+seaborn | public | catalogued | Statistical visualization with pandas integration. Use for quick exploration | BSD-3-Clause license
+shap | public | catalogued | Model interpretability and explainability using SHAP (SHapley Additive | MIT license
+simpy | public | catalogued | Process-based discrete-event simulation framework in Python. Use this | MIT license
+skill-creator | public | catalogued | Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run… | repository Skill definition
+smiles-to-iupac | public | catalogued | 将 SMILES 字符串转换为 IUPAC 化学名称。使用 PubChem、NCI/CADD、STOUT、RDKit-InChI 多种方法智能转换。 | repository Skill definition
+stable-baselines3 | public | catalogued | Production-ready reinforcement learning algorithms (PPO, SAC, DQN, TD3, | MIT license
+statistical-analysis | public | catalogued | Guided statistical analysis with test selection and reporting. Use when | MIT license
+statsmodels | public | catalogued | Statistical models library for Python. Use when you need specific model | BSD-3-Clause license
+surface-tension-predictor | public | catalogued | 基于 SMILES 提供与 surfactant（表面活性剂）任务相关的表面张力参考预测，支持 baseline 启发式后端与 public_joblib | repository Skill definition
+surprise-me | public | catalogued | Create a delightful, unexpected "wow" experience for the user by dynamically discovering and creatively combining other enabled skills. Triggers when the user says "surprise me"… | repository Skill definition
+sympy | public | catalogued | Use this skill when working with symbolic mathematics in Python. This | https://github.com/sympy/sympy/blob/master/LICENSE
+systematic-literature-review | public | catalogued | Use this skill when the user wants a systematic literature review, survey, or synthesis across multiple academic papers on a topic. Also covers annotated bibliographies and… | repository Skill definition
+timesfm-forecasting | public | catalogued | Zero-shot time series forecasting with Google's TimesFM foundation model. | Apache-2.0 license
+torch-geometric | public | catalogued | Guide for building Graph Neural Networks with PyTorch Geometric (PyG). | repository Skill definition
+transformers | public | catalogued | This skill should be used when working with pre-trained transformer models | Apache-2.0 license
+umap-learn | public | catalogued | UMAP dimensionality reduction. Fast nonlinear manifold learning for 2D/3D | BSD-3-Clause license
+usfiscaldata | public | catalogued | Query the U.S. Treasury Fiscal Data API for federal financial data including | MIT
+uv-vis-spectrum-simulation | public | catalogued | UV-Vis spectrum from SMILES via UV-adVISor (https://spectra.collaborationspharma.com/). | repository Skill definition
+vaex | public | catalogued | Use this skill for processing and analyzing large tabular datasets (billions | MIT license
+venue-templates | public | catalogued | Access comprehensive LaTeX templates, formatting requirements, and submission | MIT license
+vercel-deploy | public | catalogued | Deploy applications and websites to Vercel. Use this skill when the user requests deployment actions such as "Deploy my app", "Deploy this to production", "Create a preview… | repository Skill definition
+video-generation | public | catalogued | Use this skill when the user requests to generate, create, or imagine videos. Supports structured prompts and reference image for guided generation. | repository Skill definition
+web-design-guidelines | public | catalogued | Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best… | repository Skill definition
+what-if-oracle | public | catalogued | Run structured What-If scenario analysis with multi-branch possibility | MIT license
+xlsx | public | catalogued | Use this skill any time a spreadsheet file is the primary input or output. | Proprietary. LICENSE.txt has complete terms
+xrd-spectra-simulation | public | catalogued | XRD spectrum from CIF structure file using pymatgen (Cu Kα). | repository Skill definition
+zarr-python | public | catalogued | Chunked N-D arrays for cloud storage. Compressed arrays, parallel I/O, | MIT license
+Component | Version
+python | 3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]
+numpy | 2.4.6
+pandas | 2.3.3
+scikit-learn | 1.8.0
+rdkit | 2026.03.2
+Artifact | SHA-256
+research-demos/results/fast_ml_showcase/frontend_esol_scaffold_aware.json | 093daf7b8f53f2a8aad7f5e9bf562a16bfd43eb4c7c250e88cfcf80a0da9edf5
+research-demos/results/fast_ml_showcase/frontend_steels_single_run_recheck.json | 2e6df9eae07be3dac1fbbf6b69183f5a1b6b3e38db67639942a747ecaa528950
+research-demos/results/matbench_steels_5fold/independent_evaluation.json | d51de3b172bee43067aced669fa533ee1fbf8c9896390b64757429d3eb695c6e
+research-demos/results/mineru_reaction_table/frontend_9dc67557_evaluation.json | b548fcfc82598ca423fb1b94e62cf3386246b3b8d191b49757d7659b3ee58583
+research-demos/results/msms_retrieval/frontend_abe44a97_evaluation.json | b313f8461f29818d4a4ebf623e7b0626e4d3f2829ce34acd77db2ab613754a1c
+research-demos/results/chemu/frontend_dbb54347_evaluation.json | 1d77462d9fccd1b085305dc8963cf5fcfbc3ce9ff1de6a12fd708f16392f8fb5
+research-demos/results/frontend_bace_fff9cae7/metrics.json | 1672a1884ccea0c053cbd705879ee7334d2543364687b8bd76f354a082659bcd
+research-demos/results/frontend_fast_features_a6600dc1/metrics.json | 47fdcd6fdd5b9326fd49428f4123074afaf49df45aa27ffa3591cb64589ddf92
+research-demos/results/frontend_bace_temporal_9ae4e85f/metrics.json | 01bafe6f4c349a4cc4f3022d627101a7eba259330e9fdd2e06b57803a6fce19c
+research-demos/results/frontend_bace_temporal_9ae4e85f/prediction_manifest.json | bf1f4355d64df56e25d9843d07d4b38f33a4df3ab7c2c98767e067f921effccb

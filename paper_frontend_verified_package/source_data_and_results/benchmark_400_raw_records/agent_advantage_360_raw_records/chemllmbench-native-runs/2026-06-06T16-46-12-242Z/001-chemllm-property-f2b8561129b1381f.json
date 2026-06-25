@@ -1,0 +1,29 @@
+{
+  "idx": 1,
+  "uuid": "chemllm-property-f2b8561129b1381f",
+  "topic": "property_prediction/BBBP",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T16:46:12.542Z",
+  "finished_at": "2026-06-06T16:46:48.693Z",
+  "latency_ms": 36151,
+  "page_url": "http://localhost:3000/workspace/chats/4aaae023-a11b-48a0-ab3b-c97ceba986dc",
+  "thread_id": "4aaae023-a11b-48a0-ab3b-c97ceba986dc",
+  "run_id": "42dab067-05ad-49b4-a6be-8b0f96ec2da6",
+  "final_text": "Let me think about this molecule. The SMILES is:\n\n```\nCC1=C(N2[C@H](SC1)[C@H](NC(=O)[C@H](N)c3ccccc3)C2=O)C(O)=O\n```\n\nThis is a cephalosporin-like β-lactam antibiotic structure (contains a cephem core with a carboxylic acid group, a thiazine ring, and a β-lactam ring). \n\nKey properties affecting BBB penetration:\n- Has a carboxylic acid (COOH) group → negatively charged at physiological pH → poor CNS penetration\n- Contains multiple polar groups (carboxylic acid, amide, primary amine)\n- Has a thiazine ring with sulfur\n- Molecular weight is moderately high for a small molecule\n\nPenicillin/cephalosporin antibiotics generally have very poor blood-brain barrier penetration due to their polarity and charged functional groups (especially the carboxylic acid). Most β-lactam antibiotics are actively transported out of the CNS.\n\n[ANSWER]No[/ANSWER]",
+  "stream_final_text": "Let me think about this molecule. The SMILES is:\n\n```\nCC1=C(N2[C@H](SC1)[C@H](NC(=O)[C@H](N)c3ccccc3)C2=O)C(O)=O\n```\n\nThis is a cephalosporin-like β-lactam antibiotic structure (contains a cephem core with a carboxylic acid group, a thiazine ring, and a β-lactam ring). \n\nKey properties affecting BBB penetration:\n- Has a carboxylic acid (COOH) group → negatively charged at physiological pH → poor CNS penetration\n- Contains multiple polar groups (carboxylic acid, amide, primary amine)\n- Has a thiazine ring with sulfur\n- Molecular weight is moderately high for a small molecule\n\nPenicillin/cephalosporin antibiotics generally have very poor blood-brain barrier penetration due to their polarity and charged functional groups (especially the carboxylic acid). Most β-lactam antibiotics are actively transported out of the CNS.\n\n[ANSWER]No[/ANSWER]",
+  "ui_final_text": "Let me think about this molecule. The SMILES is:CC1=C(N2[C@H](SC1)[C@H](NC(=O)[C@H](N)c3ccccc3)C2=O)C(O)=O\nCC1=C(N2[C@H](SC1)[C@H](NC(=O)[C@H](N)c3ccccc3)C2=O)C(O)=O\nThis is a cephalosporin-like β-lactam antibiotic structure (contains a cephem core with a carboxylic acid group, a thiazine ring, and a β-lactam ring).Key properties affecting BBB penetration:\nHas a carboxylic acid (COOH) group → negatively charged at physiological pH → poor CNS penetration\nContains multiple polar groups (carboxylic acid, amide, primary amine)\nHas a thiazine ring with sulfur\nMolecular weight is moderately high for a small molecule\nPenicillin/cephalosporin antibiotics generally have very poor blood-brain barrier penetration due to their polarity and charged functional groups (especially the carboxylic acid). Most β-lactam antibiotics are actively transported out of the CNS.Answer: No",
+  "stream_event_count": 247,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/4aaae023-a11b-48a0-ab3b-c97ceba986dc/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench property-prediction task.\\nAnswer only Yes or No inside [ANSWER] and [/ANSWER].\\n\\nTask: Does this molecule penetrate the blood-brain barrier?\\nSMILES: CC1=C(N2[C@H](SC1)[C@H](NC(=O)[C@H](N)c3ccccc3)C2=O)C(O)=O\\n\\nUse exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"4aaae023-a11b-48a0-ab3b-c97ceba986dc\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

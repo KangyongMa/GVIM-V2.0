@@ -1,0 +1,17 @@
+{
+  "benchmark": "MassBank MS/MS candidate retrieval mini-benchmark",
+  "source": "MassBank-data Eawag records",
+  "source_api": "https://api.github.com/repos/MassBank/MassBank-data/contents/Eawag?per_page=100",
+  "query_file": "query_spectra.mgf",
+  "library_file": "reference_library.mgf",
+  "n_queries": 5,
+  "n_library_spectra": 15,
+  "gold_rule": "A hit is correct when the ranked candidate has the same MassBank InChIKey as the query.",
+  "recommended_similarity": "normalized peak cosine with 0.1 Da fragment m/z tolerance",
+  "metrics": [
+    "top-1 accuracy",
+    "top-3 accuracy",
+    "top-5 accuracy",
+    "MRR"
+  ]
+}

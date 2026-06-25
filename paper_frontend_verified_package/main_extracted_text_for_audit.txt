@@ -1,0 +1,519 @@
+GVIM 2.0: A Multi-Agent Research System for Chemistry and Materials Science
+Kangyong
+ Ma
+1*
+1.
+ 
+College of Physics and Electronic Information 
+Engineering,Zhejiang
+ Normal University
+,
+ 
+Jinhua 
+City 
+321000
+, China.
+E-mail address: 
+kangyongma@outlook.com(K.y.Ma)
+；
+kangyongma@
+gmail
+.com
+ORCID:
+ 
+0000-0001-6948-2560
+Ab
+str
+act
+Large language models are becoming useful interfaces for chemistry and materials research, but rigorous scientific use requires more than conversational ability: agents must retrieve domain knowledge, select tools, execute workflows, produce reusable artifacts, and be evaluated with objective task-native metrics. Here we present GVIM 2.0, a multi-agent research system for chemistry and materials science. In a 400-question public benchmark suite spanning ChemBench, MaScQA, and ChemLLMBench, the full GVIM workflow answered 325/400 questions correctly (81.25%), compared with 285/400 (71.25%) for a same-base API-only setting; the paired gain was 10.0 percentage points (McNemar exact p = 3.40 × 10⁻⁶; bootstrap 95% CI, 6.00–14.25 percentage points). We further evaluate five task-native evaluation workflows initiated from the GVIM front end, covering molecular solubility prediction, steel yield-strength prediction, reaction-table extraction, MS/MS spectral retrieval, and chemical entity extraction. These evaluation workflows use public gold standards and objective metrics including MAE, RMSE, R², precision, recall, F1, and top-k accuracy. Two retrospective fixed-budget discovery cases further evaluated BACE inhibitor and Matbench experimental band-gap prioritization. In an additional blinded temporal BACE1 validation, a model selected on 5,296 historical compounds was evaluated on 1,598 non-overlapping post-2018 compounds, achieving MAE = 0.822, RMSE = 1.028, R² = 0.369 and EF10 = 2.61; EF10 remained 2.46 for 1,275 scaffold-novel compounds. Together, these results position GVIM 2.0 as a reproducible platform for tool-augmented chemical and materials informatics, while also 
+identifying the additional prospective validation and competitive baselines needed for a high-impact chemistry submission.
+Toc
+1. Introduction
+For a long time, the development of chemistry and materials science has relied primarily on researchers’ empirical judgment, heuristic rules, theoretical models, computational simulations, and extensive trial-and-error experimentation. Osaro et al. 
+[1]
+ noted that materials discovery and chemical synthesis were historically guided by empirical knowledge, manually curated databases, phase diagrams, design charts, heuristic principles, and expert intuition. Li et al. 
+[2]
+ described the evolution of materials research as a progression from intuition-driven trial-and-error exploration, to theoretical models based on thermodynamics and physical laws, and subsequently to computational simulation- and artificial intelligence-assisted research paradigms. Gupta et al. 
+[3]
+ also pointed out that materials discovery has long depended on intuition, experimentation, and serendipity, whereas recent AI frameworks are providing more systematic, efficient, and robust strategies for materials design. Whether in molecular design, reaction-condition optimization, or new-materials screening, researchers must search vast chemical and compositional spaces for candidate systems with desired properties, while conventional manual experimentation is unable to systematically explore such enormous spaces 
+[1–3]
+. Moreover, materials properties are often governed by multiscale coupling from atomic structures and microstructures to macroscopic morphologies. The relationships among molecular structures, synthetic routes, experimental conditions, materials compositions, and final properties are highly nonlinear, making traditional approaches based on empirical experience and single theoretical models prone to long development cycles, high costs, high failure rates, and limited reproducibility 
+[1–3]
+. Accordingly, artificial intelligence, particularly machine learning and deep learning, is driving chemistry and materials research from experience-driven practice toward a data-driven, algorithm-assisted, and intelligently optimized research paradigm 
+[1–4]
+.
+It should be noted that the application of AI in chemistry and materials science did not begin with ChatGPT. Earlier approaches, including expert systems, quantitative structure–activity relationship (QSAR) models, support vector machines, random forests, deep neural networks, graph neural networks, and machine-learning potentials, have already played important roles in molecular property prediction, drug discovery, reaction prediction, materials 
+screening, and high-throughput computation 
+[1,5]
+. Ramos et al. 
+[5]
+ reviewed that expert systems such as DENDRAL were used to infer molecular structures from mass spectrometry data, QSAR models were developed to predict relationships between chemical structures and activities, and later methods such as neural networks, support vector machines, random forests, and graph neural networks were gradually introduced into cheminformatics, drug discovery, molecular property prediction, and synthesis prediction. Mroz et al. 
+[4]
+ further noted that AI is expanding from accelerating computation and exploring chemical space to experimental planning, data-characterization pipelines, and laboratory automation, thereby exerting a cross-disciplinary impact on chemical research. Therefore, the current generation of AI technologies represented by large language models and agents should be understood as a new stage in the long-term development of AI4Chem and AI4Mat, rather than as a simple replacement for existing domain-specific models and computational methods.
+The rapid development of large language models (LLMs) is closely associated with the Transformer architecture. The Transformer proposed by Vaswani et al. 
+[6]
+ is built upon the attention mechanism and overcomes the limitations of traditional recurrent neural networks and convolutional neural networks in sequence modeling, making it a key technical foundation for modern LLMs. After OpenAI released ChatGPT in November 2022, conversational LLMs entered public awareness through natural-language interaction, enabling researchers to perform tasks such as literature summarization, code generation, problem decomposition, preliminary experimental planning, and scientific writing assistance using ordinary language 
+[7]
+. Pei et al. 
+[8]
+ noted that, since the release of ChatGPT, applications of NLP and LLMs in materials science have attracted rapidly increasing attention, with related studies covering literature mining, knowledge graphs, materials recommendation, automated materials discovery, and sustainable materials design. Unlike conventional machine-learning models, which typically rely on structured data, manual feature engineering, and task-specific modeling, LLMs can process natural language, chemical language, semi-structured experimental records, and scientific literature, thereby providing a new technical basis for research assistance across tools, data sources, and tasks
+ [5,8]
+.
+Chemistry and materials science inherently rely on language to record, communicate, and 
+reproduce experimental knowledge. Scientific papers, patents, laboratory records, reaction procedures, materials formulations, and safety protocols contain substantial tacit knowledge in textual form. Accordingly, NLP and LLMs are particularly suitable for extracting structured knowledge from scientific texts, including physical quantities, materials compositions, synthesis conditions, reaction pathways, named entities, performance metrics, and experimental observations 
+[8–10]
+. Pei et al. 
+[8]
+ pointed out that NLP and language models can extract information from large volumes of text and support materials discovery, knowledge-graph construction, and sustainable materials design. 
+Dagdelen
+ et al.
+ [9] 
+demonstrated that fine-tuned LLMs can extract structured domain knowledge from complex scientific texts, thereby enabling the construction of larger-scale scientific databases. Polak et al. 
+[10]
+ further showed that general-purpose language models, combined with human supervision and prompt engineering, can extract materials data from full-text materials science papers and reduce the programming and domain-expertise barriers associated with data extraction. These studies indicate that the scientific value of LLMs lies not only in text generation, but also in transforming unstructured knowledge into searchable, computable, and reusable data resources.
+Meanwhile, generative artificial intelligence is profoundly influencing molecular design and inverse problems in chemistry. Many chemical research tasks are essentially inverse problems, in which molecular structures, materials compositions, or synthetic routes must be identified from desired target properties. Conventional approaches usually rely on repeated cycles of “conception–synthesis/measurement–evaluation”, whereas variational autoencoders, generative adversarial networks, reinforcement learning, Bayesian optimization, diffusion models, and LLM-based molecular generation methods provide new possibilities for accelerating this cycle 
+[11]
+. Sumita et al. 
+[11]
+ systematically reviewed the development of AI for small-molecule design and noted that molecular generative AI is becoming an important tool for addressing inverse chemical problems, although its practical application remains constrained by training-data quality, synthetic accessibility, experimental validation, and actual performance improvement. Jablonka et al. 
+[12]
+ showed that properly fine-tuned LLMs can be applied to molecular and materials property prediction as well as reaction-yield prediction. Guo et al.
+ [13] 
+evaluated LLMs on eight chemistry-related benchmark tasks and found that LLMs can be competitive in some tasks but still show clear limitations in complex tasks such as reaction 
+prediction. Therefore, the general language ability of LLMs should not be directly equated with reliable chemical reasoning; their chemical applications still require task-level evaluation, experimental validation, and verification using domain-specific tools.
+Although LLMs possess powerful natural-language interaction capabilities, relying solely on knowledge encoded in model parameters is insufficient for rigorous scientific research. Because model training data are temporally limited and the generation process may produce hallucinations, incorrect citations, and untraceable reasoning, LLM-based systems for scientific applications must be integrated with external knowledge sources, databases, and domain-specific tools. Retrieval-augmented generation (RAG) introduces retrieved evidence from external documents or databases into the generation process, thereby partially mitigating outdated knowledge, factual errors, and the lack of source traceability. Lewis et al.
+ [14]
+ proposed the RAG framework, which combines parametric memory with non-parametric external retrieval and generates more specific and factual text in knowledge-intensive natural-language processing tasks. Gao et al. 
+[15]
+ systematically reviewed RAG techniques and highlighted RAG as an important approach for improving the factuality, updatability, and interpretability of LLMs. Pei et al. 
+[8]
+ also noted that, in materials science, RAG and knowledge graphs can enhance the reliability of LLM outputs and reduce the risk of hallucination.
+Beyond RAG, tool use and agent technologies are further transforming LLMs from text-generation models into executors of scientific research workflows. Toolformer, proposed by Schick et al. 
+[16]
+, demonstrated that language models can learn when to invoke external APIs, how to pass parameters, and how to incorporate returned results into subsequent generation. The 
+ReAct
+ framework proposed by Yao et al. 
+[17]
+ alternates reasoning traces and action steps, enabling models to access external knowledge bases or environmental information during inference and dynamically update task plans. Wang et al.
+ [18] 
+conceptualized LLM-based autonomous agents as systems composed of perception, memory, planning, action, and tool-use modules, and noted that such agents are expanding from task execution in closed environments to complex scenarios in natural sciences and engineering. At the infrastructure level, interoperability protocols such as the Model Context Protocol (MCP) have begun to standardize connections between AI applications and external data sources or tool systems, 
+providing an emerging engineering foundation for tool orchestration and context management in agent systems 
+[19].
+ Together, these advances indicate that the integration of LLMs with RAG, tool use, memory mechanisms, and task-planning modules is accelerating the development of agentic workflows, enabling AI systems to progressively coordinate information retrieval, reasoning and analysis, tool invocation, and task execution.
+In chemistry, representative LLM-based agent systems have already demonstrated considerable potential for scientific assistance. 
+ChemCrow
+, proposed by Bran et al.
+ [20]
+, integrates an LLM with 18 expert-designed chemistry tools to construct a chemistry-oriented agent for organic synthesis, drug discovery, and materials design. 
+Coscientist
+, developed by Boiko et al. 
+[21]
+, further illustrates the potential of LLM systems for autonomous chemical research by demonstrating capabilities in synthesis planning, public-data retrieval, hardware-documentation search, code execution, automated-equipment control, and experimental optimization. These studies suggest that the core value of LLMs lies not merely in answering chemical questions, but in serving as natural-language interfaces and task-planning engines that connect literature, databases, computational models, experimental platforms, and human experts. Ramos et al. 
+[5] 
+also emphasized that when LLMs are integrated with tools for searching synthetic procedures, querying experimental properties, and controlling robotic synthesis and characterization systems, autonomous agents become highly compatible with chemical automation research. Accordingly, the development of chemical agents should not be limited to answer generation, but should instead focus on closed-loop research workflows for real scientific tasks, including retrieval, reasoning, tool use, validation, and report generation.
+In materials science, AI is evolving along two parallel trajectories: task-specific AI and generalist AI. Task-specific AI is typically used for property prediction, structural characterization, experimental optimization, and materials screening, whereas generalist AI places greater emphasis on knowledge representation, reasoning and planning, tool orchestration, and human–AI collaboration. Li et al. 
+[2]
+ described AI4Mat as two complementary pathways: task-specific AI functions as a “solver” for specific scientific problems, while generalist AI acts as a “coordinator” that connects knowledge, tools, and workflows; together, these pathways point toward automated materials discovery and self-
+driving laboratories. This framework suggests that future intelligent systems for chemistry and materials science should not simply replace domain-specific models with a single general model, but should instead integrate domain models, knowledge bases, experimental data, simulation tools, and agentic workflows
+ [2,8]
+. Pei et al. 
+[8]
+ also emphasized that the potential of language models in materials research lies not only in text processing, but also in their integration with knowledge graphs, RAG, automated experimentation, and sustainable materials design.
+Automated experimentation and self-driving laboratories represent important directions in AI for Chemistry and AI for Materials. Self-driving laboratories generally integrate robotic experimental platforms, online characterization systems, data-analysis software, and decision-making algorithms, enabling closed-loop experimental design, execution, real-time analysis, and parameter optimization. Tom et al. 
+[22]
+ noted that self-driving laboratories can significantly accelerate chemistry and materials discovery through experimental-process automation and autonomous experimental planning. 
+Häse
+ et al. 
+[23]
+ discussed the role of next-generation self-driving laboratories in experimental optimization and automated discovery; Burger et al. 
+[24]
+ demonstrated a mobile robotic chemist for autonomous search of photocatalytic systems; 
+Kusne
+ et al. 
+[25] 
+showed Bayesian active learning in closed-loop materials discovery; Raccuglia et al. 
+[26] 
+demonstrated that failed experimental data can also support machine-learning-assisted materials discovery; Granda et al. 
+[27]
+ used machine learning to control an organic-synthesis robot in the search for new reactivity; MacLeod et al. 
+[28]
+ constructed a self-driving laboratory for accelerated thin-film materials discovery; and Shields et al. 
+[29]
+ demonstrated the value of Bayesian optimization in chemical reaction optimization. Together, these studies indicate that the integration of AI with automated experimental platforms is driving chemistry and materials research from offline prediction toward online decision-making and closed-loop validation.
+However, the direct application of LLMs, agents, and automated experimentation to real scientific workflows still faces several challenges. First, LLMs may produce hallucinations, incorrect citations, unstable reasoning, and irreproducible outputs, which are particularly risky in chemistry and materials research because erroneous reaction suggestions, materials formulations, or safety judgments may lead to experimental failure or safety hazards 
+[5,8,13,30]
+. 
+Ji et al. 
+[30]
+ systematically reviewed hallucination in natural-language generation and showed that generative models may produce content that is inconsistent with sources or factually incorrect. Bender et al. 
+[31]
+ also discussed potential risks of large-scale language models from the perspectives of data, bias, and environmental costs. Second, chemical and materials data are highly heterogeneous; experimental conditions, failed experiments, negative results, and process parameters are often incompletely recorded, leading to data bias in model training and validation 
+[1,3,26]
+. Ramos et al.
+ [5]
+ emphasized that LLM applications in chemistry still face challenges related to data quality, model interpretability, standardized benchmarks, and insufficient experimental validation. Gupta et al. 
+[3] 
+also noted that the further development of materials AI remains constrained by data quality, data availability, model generalizability, and limited extrapolation capability in real discovery scenarios. Therefore, LLM and agent systems for chemistry and materials science must establish traceable data sources, reliable tool-use mechanisms, clear boundaries for human supervision, and multi-level model-evaluation frameworks.
+Accordingly, next-generation AI systems for chemistry and materials research should move beyond single question-answering models toward intelligent scientific assistants that are retrievable, verifiable, tool-augmented, process-traceable, and capable of collaboration with human experts. Such systems need to integrate the natural-language interaction capability of LLMs, the literature-tracing ability of RAG, the structured representation of knowledge graphs, the reliable prediction capability of domain-specific computational tools, and the task-planning and execution capability of agents. Compared with traditional machine-learning models, these systems can cover the complete scientific workflow of problem formulation, evidence retrieval, hypothesis generation, tool invocation, result analysis, and report generation. Compared with ordinary chatbots, their core requirements are stronger domain reliability, source traceability, experimental safety, and scientific reproducibility.
+ 
+Therefore, motivated by the aforementioned research demands and emerging development trends, this study builds upon the DeerFlow 2.0 framework 
+[41]
+ to design and implement GVIM 2.0, an intelligent research assistant tailored for chemistry and materials science. The system is centered around domain-specific Skills
+ [42]
+, which serve as reusable capability modules for integrating computational chemistry, materials analysis, machine learning modeling, scientific visualization, literature processing, and other 
+scientific research tools. By leveraging the task understanding and planning capabilities of large language models, GVIM 2.0 enables the automatic decomposition of complex research tasks, intelligent tool orchestration, and workflow execution. Through the construction of end-to-end scientific workflows spanning literature review, data analysis, scientific computation, and research report generation, GVIM 2.0 provides researchers with a reliable, scalable, and highly customizable platform for intelligent scientific research support.
+1.1 System Design and Evaluation Rationale
+GVIM 2.0 is designed as a workflow-level research assistant rather than a stand-alone question-answering model. A typical run starts from the web front end, where the user provides a scientific task, uploads data files, and requests concrete output artifacts. The agent then decomposes the task, selects domain skills or computational tools, executes scripts when needed, writes intermediate and final files, and returns a traceable report. This design follows the same general direction as recent chemistry and materials agent studies: the value of the agent is assessed through the quality of the scientific workflow and its final objective outputs, not by an ad hoc impression of whether the conversation appears fluent [20-25,32,33].
+For this reason, the present evaluation deliberately separates two forms of evidence. First, broad public benchmark tests measure chemistry and materials knowledge, reasoning, and domain-specific problem solving. Second, task-native evaluation workflows evaluate whether GVIM can organize complete scientific workflows that produce measurable outputs such as prediction errors, extraction F1 scores, retrieval top-k accuracy, or active-search enrichment factors. No subjective custom score is used as a primary metric.
+Figure 1. Experimental design and evaluation workflow of GVIM 2.0. The study combines a paired 400-task public benchmark with five front-end-initiated task-native demonstrations, two retrospective fixed-budget discovery cases, and one two-stage temporal external-validation case. Endpoints are based on native answer keys, public labels, publisher-defined gold data, or deterministic task-family metrics. No expert subjective grading or prospective wet-lab validation is claimed.
+2. Benchmark Evaluation on Public Chemistry and Materials Tasks
+We evaluated GVIM on 400 public chemistry and materials questions assembled from ChemBench, MaScQA, and ChemLLMBench [13,34,35]. The suite combines the previously completed 360-question evaluation with an additional 40-question public extension. All 
+questions were submitted through the GVIM workflow, and scoring followed the native answer-key or task-specific rule for each benchmark. To isolate the contribution of the agentic workflow, we compared the full GVIM system with a same-base API-only setting that used the underlying model without the GVIM workflow layer.
+Table 1. Public benchmark performance of GVIM 2.0 and the same-base API-only baseline.
+Benchmark
+N
+GVIM correct
+GVIM (%)
+API-only correct
+API-only (%)
+ChemBench
+250
+204/250
+81.60
+189/250
+75.60
+MaScQA
+97
+94/97
+96.91
+73/97
+75.26
+ChemLLMBench
+53
+27/53
+50.94
+23/53
+43.40
+Descriptive total
+400
+325/400
+81.25
+285/400
+71.25
+Across all 400 questions, GVIM improved the descriptive total accuracy from 71.25% to 81.25%. The paired analysis showed 57 cases solved only by GVIM and 17 cases solved only by the API-only baseline. This corresponds to a paired improvement of 10.00 percentage points, with a McNemar exact two-sided p value of 3.40 × 10⁻⁶ and a bootstrap 95% confidence interval of 6.00–14.25 percentage points. These results support the claim that domain workflow organization, tool use, and verification provide measurable gains over a direct model-call baseline.
+Figure 2. Public benchmark performance of GVIM. (a) Correct-response accuracy for ChemBench, MaScQA, ChemLLMBench, and the descriptive 400-question total for the same-base DeepSeek API-only setting and the full GVIM workflow; numbers above bars are percentages. (b) Accuracy of four additional API-only reference models on the identical 400-question suite; the vertical line marks GVIM full-system accuracy (81.25%). (c) Paired outcome matrix for GVIM versus the same-base API-only setting. The paired difference was 10.0 percentage points (bootstrap 95% CI, 6.00–14.25 percentage points; exact two-sided McNemar p = 3.40 × 10⁻⁶). Because the source benchmarks use different native scoring rules, the total is reported descriptively and per-benchmark results remain the primary units of interpretation.
+3. Task-Native Evaluation Workflows with Objective Metrics
+To test whether GVIM can execute complete scientific workflows rather than only answer questions, we audited front-end thread records spanning chemistry, materials science, literature extraction, spectral retrieval, and chemical information extraction. For ESOL and Matbench steels fold 0, the front end generated frozen predictions from unlabeled test inputs; held-out metrics were calculated only afterward by joining those predictions to withheld public labels. The other demonstrations were scored from archived front-end artifacts using public or publisher-defined references and standard task-family metrics: MAE, RMSE, and R² for regression; precision, recall, and F1 for extraction; and top-k accuracy and mean reciprocal rank for retrieval.
+Table 2. Verified front-end demonstrations and objective endpoint metrics. Held-out ESOL and Matbench steels fold-0 metrics were computed post hoc from frozen front-end predictions; they were not available to the agent during execution.
+Evaluation workflow
+Reference standard
+Objective endpoint
+Scale
+ESOL solubility
+MoleculeNet ESOL
+MAE = 0.603; RMSE = 0.741; R² = 0.739
+n = 254
+Matbench steels fold 0
+Matbench v0.1 official fold 0; frozen predictions scored post hoc
+MAE = 111.444 MPa; RMSE = 164.320 MPa; R² = 0.684
+n = 63
+Reaction table extraction
+Publisher JATS XML
+Exact P/R/F1 = 0.981/0.981/0.981; row accuracy = 0.905
+105 cells
+MS/MS retrieval
+MassBank InChIKey
+Top-1 = 0.800; Top-3 = 1.000; Top-5 = 1.000; MRR = 0.900
+5 queries
+ChEMU entity extraction
+ChEMU Task 1 sample
+Exact P/R/F1 = 0.931/0.728/0.817; relaxed F1 = 0.841
+92 spans
+The verified workflows show complementary aspects of the system. ESOL and Matbench steels fold 0 assess lightweight molecular and materials property-prediction workflows [36-38]. The steels thread does not constitute an official Matbench five-fold front-end evaluation: only official fold 0 was uploaded, while a shuffled five-fold split of its 249-row training partition was used internally for model selection. Reaction-table extraction uses publisher XML as the gold standard, MS/MS retrieval uses public MassBank InChIKey identities, and ChEMU uses exact and relaxed span scoring [39,40]. ChEMU recall remains lower than precision and is presented as evidence of task coverage rather than state-of-the-art named-entity recognition.
+Figure 3. Task-native chemistry and materials demonstrations initiated through the GVIM front end. (a) MoleculeNet ESOL: frozen predictions for 254 unlabeled test molecules were scored afterward against withheld public labels (MAE = 0.603, RMSE = 0.741, R² = 0.739). (b) Matbench steels official fold 0: frozen predictions for 63 unlabeled test alloys were scored afterward against withheld labels (MAE = 111.444 MPa, RMSE = 164.320 MPa, R² = 0.684). This is not a complete official five-fold Matbench front-end evaluation. (c) Publisher-JATS reaction-table extraction over 105 cells. (d) MassBank candidate retrieval over five queries. (e) ChEMU entity extraction over 92 gold spans. (f) Coverage of the five workflow types. Metrics are task-native and are not pooled into a custom aggregate score.
+4. Retrospective Active Discovery of BACE Inhibitor Candidates
+As a more research-like case study, we evaluated whether GVIM can organize a retrospective active-discovery workflow for high-activity beta-site amyloid precursor protein cleaving enzyme 1 (BACE) inhibitor candidates. The public BACE molecular property dataset was treated as a closed candidate library with pIC50 as the activity label [36]. High-activity targets were defined as the top 5% of molecules by pIC50. Starting from 30 randomly queried 
+molecules, each policy selected batches of 10 candidates up to a total budget of 150 queries over 20 random seeds. During each simulated run, model training and candidate selection used only labels that had already been 
+queried; the remaining pIC50 values were used only as the oracle when a molecule was selected and for final metric computation.
+Table 3. Retrospective BACE active-discovery performance under a fixed query budget.
+Policy
+Recall@150
+Hit rate@150
+EF@150
+Best pIC50@150
+Random
+0.109
+0.057
+1.098
+9.129
+Greedy-surrogate ET
+0.333
+0.175
+3.358
+9.365
+UCB-surrogate ET
+0.363
+0.191
+3.664
+9.559
+In the completed GVIM front-end run, the UCB ExtraTrees surrogate policy increased Recall@150 from 0.109 for random selection to 0.363, corresponding to an enrichment factor of 3.664. The bootstrap 95% confidence interval for UCB minus random Recall@150 was 0.225–0.284, using 10,000 paired per-seed bootstrap resamples. The workflow was launched from GVIM's user-facing interface and produced the required JSON, CSV, PNG, and Markdown artifacts. The case should be described as retrospective virtual screening with public gold labels, not as experimental validation of new inhibitors.
+Figure 4. Retrospective BACE active discovery under a fixed query budget using public pIC50 labels. High-activity targets were the top 5% of 1,513 molecules (n = 79). Each run began with 30 random queries and selected batches of 10 up to 150 queries using an ExtraTrees surrogate; 20 random seeds were used. (a) Recall@150, (b) enrichment factor@150, and (c) best recovered pIC50 for random, greedy-surrogate and upper-confidence-bound policies. Bars show means, points show individual seeds, and error bars show ±1 SD; the dashed line in (b) denotes random-prevalence enrichment (EF = 1). (d) Mean recall improvement over random with 95% confidence intervals from 10,000 paired per-seed bootstrap resamples. Public labels were revealed only when queried and for final retrospective evaluation; no wet-lab validation is claimed.
+5. Validated GVIM Front-End Evaluation Artifacts
+The following table records the current chemistry and materials evaluation workflows that are supported by local GVIM output artifacts. Values in the manuscript should be traced to these files rather than to manual or subjective scoring.
+Table 4. Verified GVIM front-end artifacts and objective metrics. Direct-output metrics are distinguished from post-hoc scoring of frozen front-end predictions against withheld public gold labels.
+Evaluation workflow
+Reference dataset or standard
+Artifact-derived objective metrics
+ESOL solubility prediction
+MoleculeNet ESOL
+MAE = 0.603; RMSE = 0.741; R² = 0.739; n = 254
+Matbench steels fold 0
+Matbench v0.1 official fold 0; front-end predictions with post-hoc withheld-label scoring
+MAE = 111.444 MPa; RMSE = 164.320 MPa; R² = 0.684; n = 63
+MinerU reaction-table extraction
+Publisher JATS XML table nanomaterials-12-01070-t002
+Exact precision = 0.981; recall = 0.981; F1 = 0.981; row accuracy = 0.905
+MS/MS candidate retrieval
+MassBank InChIKey identity from public MassBank-data records
+Top-1 = 0.800; Top-3 = 1.000; Top-5 = 1.000; MRR = 0.900; n_queries = 5
+ChEMU entity extraction
+ChEMU 2020 Task 1 sample v3
+Exact P/R/F1 = 0.931/0.728/0.817; relaxed F1 = 0.841; gold spans = 92
+BACE active discovery
+bace_active_discovery.csv
+Random Recall@150 = 0.109; UCB Recall@150 = 0.363; EF@150 = 3.664; 95% CI = 0.225–0.284
+Matbench band-gap main case
+Matbench v0.1 matbench_expt_gap
+MAE = 0.4513 ± 0.0170 eV; RMSE = 0.8049 ± 0.0456 eV; R² = 0.6854 ± 0.0445; greedy Recall@150 = 0.2626
+BACE1 temporal external validation
+ChEMBL CHEMBL4822; ≤2015 training and ≥2018 non-overlapping external compounds
+MAE=0.8215, RMSE=1.0278, R²=0.3687; Recall@10%=0.2609; EF10=2.6054; n_external=1,598
+6. Retrospective Materials Discovery of Wide-Band-Gap Inorganic Compounds
+A second front-end case was run as a materials-focused case study using the GVIM chat thread a6600dc1-8a72-46d1-97c0-d6ce0020c7f6. The task used the public Matbench v0.1 matbench_expt_gap dataset as a closed retrospective library and asked the agent to organize both property modelling and active-discovery evaluation from uploaded input files. The archived GVIM outputs are stored under research-demos/results/frontend_fast_features_a6600dc1 and are used directly here.
+Figure 5. Retrospective Matbench experimental band-gap discovery case generated from real GVIM front-end artifacts. (a) Five-fold prediction parity for 4,604 experimentally measured inorganic compounds. (b) Per-fold MAE, RMSE, and R² under the recorded KFold rule. (
+c,d
+) Fixed-budget and trajectory-level recovery of top-5% wide-band-gap targets. (e) Enrichment of selected candidates relative to the full candidate library.
+Table 5. Matbench experimental band-gap discovery artifact summary.
+Item
+Value from GVIM artifact
+Dataset
+Matbench v0.1 matbench_expt_gap; n = 4604 compounds; target = gap_expt_eV
+Feature set
+98 precomputed composition descriptors from the uploaded fast-feature table
+Model and CV rule
+HistGradientBoostingRegressor; KFold(n_splits = 5, shuffle = True, random_state = 18012019)
+Regression metrics
+MAE = 0.4513 ± 0.0170 eV; RMSE = 0.8049 ± 0.0456 eV; R² = 0.6854 ± 0.0445
+Active-discovery target
+Top 5% highest-gap materials; threshold = 3.7385 eV; n_top5 = 231
+Active-discovery settings
+Seeds = [0, 1, 2]; initial_random_size = 30; batch_size = 10; total query budget = 150; policies = random and greedy_surrogate
+Recall@150
+Random = 0.0332 ± 0.0180; greedy_surrogate = 0.2626 ± 0.0250; difference = 0.2294 with 95% CI 0.2208–0.2381
+Hit rate and best gap
+Hit rate@150: random = 0.0511, greedy = 0.4044; best gap@150: random = 7.013 eV, greedy = 9.033 eV
+Runtime and provenance
+runtime = 73.8 s; data_hash = 178a3b4a4009
+Output files
+metrics.json; predictions_5fold.csv; active_discovery_trajectories.csv; selected_candidates.csv; element_enrichment.csv; source_data_regression.csv; source_data_active_discovery.csv; figure_regression_parity.png; figure_active_discovery_recall.png; report.md
+The archived GVIM output shows that the lightweight composition-only model achieved a shuffled five-fold KFold MAE of 0.4513 eV and R² of 0.6854 on all 4,604 records. This was executed by the front-end thread and is distinct from the Matbench steels fold-0 case. In the retrospective active-discovery simulation, greedy_surrogate increased Recall@150 from 0.0332 to 0.2626. Because only three seeds were run, the reported paired bootstrap interval of 0.2208-0.2381 is treated as exploratory and descriptive rather than as strong inferential evidence.
+Table 6. Per-fold regression performance for the Matbench experimental band-gap case.
+Fold
+MAE (eV)
+RMSE (eV)
+R²
+0
+0.4585
+0.8223
+0.6224
+1
+0.4261
+0.7488
+0.7547
+2
+0.4756
+0.8819
+0.6659
+3
+0.4397
+0.7741
+0.7105
+4
+0.4568
+0.7974
+0.6736
+Element-enrichment analysis in the generated report identified the strongest selected-versus-background enrichment for 
+frac_B
+ (5.64x), 
+frac_H
+ (5.55x), 
+frac_O
+ (3.48x), 
+has_oxygen
+ (3.46x), and 
+frac_Rb
+ (2.08x). This result should be interpreted as a retrospective prioritization pattern in a public dataset, not as experimental validation or as a claim of newly synthesized materials.
+The generated report explicitly records the limitation that the study is retrospective, uses a fixed experimental-gap oracle, and does not claim new synthesis. This wording is retained because it is essential for a high-level chemistry or materials submission.
+7. Temporal External Validation of BACE1 Activity
+To test temporal generalization under a stronger label-isolation protocol, we performed a two-stage front-end workflow for human BACE1 (ChEMBL target CHEMBL4822). Stage 1 used 5,296 compounds associated with documents published through 2015 for all feature design and model selection. Measurements from 2016–2017 were excluded as a temporal buffer, and 1,598 non-overlapping compounds associated with documents from 2018 onward formed the external set. Exact molecule overlap was removed by InChIKey; 1,275 external compounds (79.8%) were scaffold-novel relative to training. External pIC50 labels were not provided during Stage 1.
+Model selection used three-fold GroupKFold grouped by Murcko scaffold with Morgan fingerprints (radius 2, 1,024 bits) and eight RDKit descriptors. RandomForestRegressor was selected by the lowest mean validation MAE (0.579 ± 0.016), compared with Ridge (0.676) and ExtraTrees (0.628). After predictions were frozen, Stage 2 joined the public external labels by compound_id without retraining. The selected model achieved MAE = 0.822, RMSE = 1.028, and R² = 0.369, outperforming Ridge (MAE = 0.953, R² = 0.105) and the mean baseline (MAE = 1.185, R² = -0.123).
+At a 10% screening budget, the model recovered 42 of 161 top-decile external actives (Recall@10% = 0.261; EF10 = 2.61). Known-scaffold compounds gave Recall@10% = 0.424 and EF10 = 4.15, whereas the scaffold-novel subset retained non-random prioritization (Recall@10% = 0.246; EF10 = 2.46) but showed higher prediction error. These findings support retrospective temporal prioritization while also quantifying the loss of extrapolative accuracy for new chemotypes; they do not constitute prospective inhibitor discovery or experimental validation.
+Table 7. Prespecified BACE1 temporal external-validation endpoints derived from the frozen GVIM front-end artifacts.
+Endpoint
+Model/subset
+Value
+Scope
+Scaffold CV MAE
+RandomForest
+0.579 ± 0.016
+3 folds
+External regression
+RandomForest
+MAE 0.822; RMSE 1.028; R² 0.369
+n = 1,598
+External regression
+Ridge
+MAE 0.953; RMSE 1.224; R² 0.105
+n = 1,598
+Top-10% screening
+All external
+Recall 0.261; EF 2.61
+k = 160
+Top-10% screening
+Known scaffold
+Recall 0.424; EF 4.15
+n = 323
+Top-10% screening
+Novel scaffold
+Recall 0.246; EF 2.46
+n = 1,275
+Figure 6. Blinded temporal external validation of BACE1 activity using public ChEMBL labels. Historical compounds associated with documents through 2015 were used for model selection, 2016–2017 measurements were excluded, and non-overlapping compounds from 2018 onward formed the external set. (a) Three-fold Murcko-scaffold GroupKFold MAE for the prespecified candidate models; bars show fold means and error bars show ±1 SD. (b) Frozen RandomForest predictions versus external pIC50 for known and novel scaffolds; the dashed line is y = x. (c) MAE and RMSE for known- and novel-scaffold subsets. (d) Recall of top-decile actives at a 10% selection budget; labels report the corresponding enrichment factor. External labels were introduced only after predictions were saved; all endpoints are retrospective.
+8. Discussion
+The current evidence supports three claims. First, GVIM improves public benchmark performance relative to a same-base API-only baseline, suggesting that workflow organization and domain-oriented execution add measurable value beyond the base model. Second, the system can initiate and complete heterogeneous chemistry and materials workflows from the front end, including machine learning, data extraction, spectral retrieval, and active search. Third, the use of objective metrics makes the evaluation workflows reproducible and reviewable: each reported number is derived from public labels, public benchmark rules, publisher XML, or established ranked-retrieval protocols.
+At the same time, the current manuscript should not overstate the system as a state-of-the-art chemistry or materials discovery engine. The 400-question benchmark is broad but does not by itself prove autonomous research capability. Some evaluation workflows are intentionally small to control computational cost, and the ChEMU entity extraction result is useful as a workflow evaluation case but not yet competitive with specialized information extraction systems. Stronger publication claims will require frozen prompts, additional agent baselines, component ablations, tool-use accuracy analysis, and a central scientific case that produces a new curated resource, a validated candidate set, or a quantitative structure-property insight.
+The temporal BACE1 experiment adds a stricter test of generalization to the workflow evidence. The reduced performance on scaffold-novel compounds is scientifically informative: the agent completed the blinded data-to-model-to-evaluation chain and recovered top-decile activity above random, but the quantitative gap shows that workflow completion does not remove the extrapolation limits of fingerprint-based models. This distinction between system-level execution and model-level scientific validity is central to the intended use of GVIM.
+9. Methods
+9.1 Benchmark construction and scoring
+The benchmark suite contained 400 public chemistry and materials questions: 250 ChemBench questions, 97 MaScQA questions, and 53 ChemLLMBench questions. GVIM outputs and API-only outputs were scored with the native answer key or benchmark-specific scoring rule for each task family. Because the three sources use different scoring definitions, the 400-question total is reported as a descriptive aggregate, while per-benchmark results remain the primary interpretable units.
+9.2 Task-native workflow scoring
+Regression workflows used MAE, RMSE, and R² on held-out labeled data. Extraction workflows used exact or relaxed precision, recall, and F1 after deterministic normalization where appropriate. Retrieval workflows used top-k accuracy and mean reciprocal rank. These metrics are standard task-family metrics and are not custom subjective scores.
+9.3 Statistical analysis
+For paired benchmark comparison, we used exact McNemar testing on the full-vs-API contingency table and bootstrap confidence intervals for the paired accuracy difference. For active discovery, endpoint differences between active search and random selection were summarized across random seeds and evaluated with bootstrap confidence intervals.
+9.4 BACE1 temporal external-validation protocol
+Public ChEMBL BACE1 IC50 records were standardized to pIC50 and aggregated by compound. Training compounds were restricted to document years ≤2015; 2016–2017 records were excluded; and external compounds were restricted to document years ≥2018. Exact molecule overlap was removed by InChIKey. Model selection used only the historical training file and three-fold GroupKFold grouped by Bemis–Murcko scaffold. Candidate models were Ridge, RandomForestRegressor and ExtraTreesRegressor using Morgan fingerprints (radius 2, 1,024 bits) plus eight RDKit descriptors. The prespecified selection criterion was mean validation MAE.
+The selected model was refit to all historical compounds and generated external_predictions.csv before gold labels were supplied. Stage 2 verified row alignment and the frozen prediction content, joined labels one-to-one by compound_id, and did not retrain or tune a model. MAE, RMSE and R² used their standard definitions. For ranking evaluation, actives were the highest external pIC50 decile and the query set was the highest predicted-pIC50 decile, with deterministic compound_id tie breaking. Recall@10% was the fraction of top-decile actives recovered; EF10 divided the selected-set active fraction by external active prevalence. Metrics were recomputed separately for all, known-scaffold and scaffold-novel compounds.
+10. Limitations and Remaining Work
+The current data support a strong systems and workflow-evaluation manuscript, but a Chemical Science submission needs a central scientific result beyond platform performance.
+The API-only comparison should be expanded to include agent baselines such as original DeerFlow, generic 
+ReAct
+, GVIM without chemistry/materials skills, and GVIM without verification.
+The tool-use layer should be evaluated explicitly with tool-selection accuracy, parameter accuracy, successful execution rate, cost, latency, and failure-mode analysis.
+The five evaluation workflows should be frozen as preregistered evaluation prompts with archived input files, outputs, and source data to reduce any perception of cherry-picking.
+The strongest next step is a larger scientific case that links literature/data extraction, model building, virtual screening, and independent public-data or computational validation.
+11. References
+[1] Osaro, E.; Karpinski, N.; 
+Alornyo
+, S.; 
+Ighalo
+, J. O. Artificial intelligence in materials science and chemistry: Past, present and future trajectories. Materials Today Chemistry, 2025, 49, 103115. DOI: 10.1016/j.mtchem.2025.103115.
+[2] Li, Y.; Wang, S.; Wang, J.; Qian, L.; Zhang, J. Artificial Intelligence for Materials Science: Transforming Research Paradigms. Chemical Reviews, 2026. DOI: 10.1021/acs.chemrev.6c00012.
+[3] Gupta, K. K.; Barman, S.; Sankar, A.; Dey, S.; Mukhopadhyay, T. Artificial Intelligence in Materials by Design: Critical Review and Perspectives on Materials Informatics to Generative and Agentic Intelligence. Archives of Computational Methods in Engineering, 2026, 33, 6015–6045. DOI: 10.1007/s11831-025-10486-3.
+[4] Mroz, A. M.; Basford, A. R.; Hastedt, F.; et al. Cross-disciplinary perspectives on the potential for artificial intelligence across chemistry. Chemical Society Reviews, 2025, 54, 5433–5469. DOI: 10.1039/d5cs00146c.
+[5] Ramos, M. C.; Collison, C. J.; White, A. D. A review of large language models and autonomous agents in chemistry. Chemical Science, 2025, 16, 2514–2572. DOI: 10.1039/d4sc03921a.
+[6] Vaswani, A.; 
+Shazeer
+, N.; Parmar, N.; et al. Attention Is All You Need. Advances in Neural Information Processing Systems, 2017, 30.
+[7] OpenAI. Introducing ChatGPT. 2022.
+[8] Pei, Z.; Yin, J.; Zhang, J. Language models for materials discovery and sustainability: Progress, challenges, and opportunities. Progress in Materials Science, 2025, 154, 101495. DOI: 10.1016/j.pmatsci.2025.101495.
+[9] 
+Dagdelen
+, J.; Dunn, A.; Lee, S.; et al. Structured information extraction from scientific text with large language models. Nature Communications, 2024, 15, 1418. DOI: 10.1038/s41467-024-45563-x.
+[10] Polak, M. P.; Schilter, O.; Le, T. Q.; et al. Flexible, model-agnostic method for materials data extraction from text using general purpose language models. Digital Discovery, 2024, 3, 1221–1235. DOI: 10.1039/d4dd00016a.
+[11] Sumita, M.; Ishida, S.; 
+Yoshizoe
+, K.; Tamura, R.; 
+Terayama
+, K.; Tsuda, K. Molecular Design with Artificial Intelligence: Progress and Perspectives for Small Molecules. Chemical Reviews, 2026, 126, 3007–3054. DOI: 10.1021/acs.chemrev.5c00689.
+[12] Jablonka, K. M.; Schwaller, P.; Ortega-Guerrero, A.; Smit, B. Leveraging large language models for predictive chemistry. Nature Machine Intelligence, 2024, 6, 161–169. DOI: 10.1038/s42256-023-00788-1.
+[13] Guo, T.; Gu, Y.; Yang, X.; et al. What can large language models do in chemistry? A comprehensive benchmark on eight tasks. Advances in Neural Information Processing Systems, 2023, 36, 59662–59688.
+[14] Lewis, P.; Perez, E.; 
+Piktus
+, A.; et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. Advances in Neural Information Processing Systems, 2020, 33, 9459–9474.
+[15] Gao, Y.; Xiong, Y.; Gao, X.; et al. Retrieval-Augmented Generation for Large Language Models: A Survey. arXiv:2312.10997, 2023.
+[16] Schick, T.; Dwivedi-Yu, J.; 
+Dessì
+, R.; et al. Toolformer: Language Models Can Teach Themselves to Use Tools. Advances in Neural Information Processing Systems, 2023, 36.
+[17] Yao, S.; Zhao, J.; Yu, D.; et al. 
+ReAct
+: Synergizing Reasoning and Acting in Language Models. International Conference on Learning Representations, 2023.
+[18] Wang, L.; Ma, C.; Feng, X.; et al. A survey on large language model based autonomous agents. Frontiers of Computer Science, 2024, 18, 186345. DOI: 10.1007/s11704-024-40231-1.
+[19] Anthropic. Introducing the Model Context Protocol. 2024.
+[20] Bran, A. M.; Cox, S.; Schilter, O.; Baldassari, C.; White, A. D.; Schwaller, P. Augmenting large language models with chemistry tools. Nature Machine Intelligence, 2024, 6, 525–535. DOI: 10.1038/s42256-024-00832-8.
+[21] Boiko, D. A.; MacKnight, R.; Kline, B.; Gomes, G. Autonomous chemical research with large language models. Nature, 2023, 624, 570–578. DOI: 10.1038/s41586-023-06792-0.
+[22] Tom, G.; Schmid, S. P.; Baird, S. G.; et al. Self-Driving Laboratories for Chemistry and Materials Science. Chemical Reviews, 2024, 124, 9633–9732. DOI: 10.1021/acs.chemrev.4c00055.
+[23] 
+Häse
+, F.; Roch, L. M.; 
+Aspuru
+-Guzik, A. Next-generation experimentation with self-driving laboratories. Trends in Chemistry, 2019, 1, 282–291. DOI: 10.1016/j.trechm.2019.02.007.
+[24] Burger, B.; Maffettone, P. M.; Gusev, V. V.; et al. A mobile robotic chemist. Nature, 2020, 583, 237–241. DOI: 10.1038/s41586-020-2442-2.
+[25] 
+Kusne
+, A. G.; Yu, H.; Wu, C.; et al. On-the-fly closed-loop materials discovery via Bayesian active learning. Nature Communications, 2020, 11, 5966. DOI: 10.1038/s41467-020-19597-w.
+[26] Raccuglia, P.; Elbert, K. C.; Adler, P. D. F.; et al. Machine-learning-assisted materials discovery using failed experiments. Nature, 2016, 533, 73–76. DOI: 10.1038/nature17439.
+[27] Granda, J. M.; 
+Donina
+, L.; Dragone, V.; Long, D.-L.; Cronin, L. Controlling an organic synthesis robot with machine learning to search for new reactivity. Nature, 2018, 559, 377–381. DOI: 10.1038/s41586-018-0307-8.
+[28] MacLeod, B. P.; Parlane, F. G. L.; Morrissey, T. D.; et al. Self-driving laboratory for accelerated discovery of thin-film materials. Science Advances, 2020, 6, eaaz8867. DOI: 10.1126/sciadv.aaz8867.
+[29] Shields, B. J.; Stevens, J.; Li, J.; et al. Bayesian reaction optimization as a tool for chemical synthesis. Nature, 2021, 590, 89–96. DOI: 10.1038/s41586-021-03213-y.
+[30] Ji, Z.; Lee, N.; 
+Frieske
+, R.; et al. Survey of Hallucination in Natural Language Generation. ACM Computing Surveys, 2023, 55, 1–38. DOI: 10.1145/3571730.
+[31] Bender, E. M.; Gebru, T.; McMillan-Major, A.; 
+Shmitchell
+, S. On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 2021, 610–623. DOI: 10.1145/3442188.3445922.
+[32] Zhang, D.; Jia, X.; Tran, H. B.; Jang, S. H.; Zhang, L.; Sato, R.; Hashimoto, Y.; Sato, T.; Konno, K.; 
+Orimo
+, S.; Li, H. "DIVE" into hydrogen storage materials discovery with AI agents. Chem. Sci., 2026, 17, 3031. DOI: 10.1039/D5SC09921H.
+[33] Shen, Y.; Wang, L.; Huang, Y.; Zhang, X.; Huang, M.; Li, H.; He, J.; Cai, A.; Wang, Y.; Smith, P. E. S.; Jiang, J.; Zhu, Z.; Chen, L. Unlocking azobenzene isomerization mechanisms via an LLM agent-driven workflow integrating simulation, experiment, and machine learning. Chem. Sci., 2026. DOI: 10.1039/D5SC08794E.
+[34] Mirza, A.; 
+Alampara
+, N.; 
+Kunchapu
+, S.; et al. A framework for evaluating the chemical knowledge and reasoning abilities of large language models against the expertise of chemists. Nat. Chem., 2025, 17, 1027-1034. DOI: 10.1038/s41557-025-01815-x.
+[35] Zaki, M.; Krishnan, N. A. MaScQA: investigating materials science knowledge of large language models. Digit. 
+Discov
+., 2024, 3, 313-327. DOI: 10.1039/D3DD00188A.
+[36] Wu, Z.; Ramsundar, B.; Feinberg, E. N.; et al. MoleculeNet: a benchmark for molecular machine learning. Chem. Sci., 2018, 9, 513-530. DOI: 10.1039/C7SC02664A.
+[37] Dunn, A.; Wang, Q.; Ganose, A.; Dopp, D.; Jain, A. Benchmarking materials property prediction 
+methods: the Matbench test set and 
+Automatminer
+ reference algorithm. 
+npj
+ 
+Comput
+. Mater., 2020, 6, 138. DOI: 10.1038/s41524-020-00406-3.
+[38] Delaney, J. S. ESOL: estimating aqueous solubility directly from molecular structure. J. Chem. Inf. 
+Comput
+. Sci., 2004, 44, 1000-1005. DOI: 10.1021/ci034243x.
+[39] Horai, H.; Arita, M.; Kanaya, S.; et al. MassBank: a public repository for sharing mass spectral data for life sciences. J. Mass 
+Spectrom
+., 2010, 45, 703-714. DOI: 10.1002/jms.1777.
+[40] Nguyen, D. Q.; Zhai, Z.; Yoshikawa, H.; Fang, B.; 
+Druckenbrodt
+, C.; Thorne, C.; 
+Hoessel
+, R.; 
+Akhondi
+, S. A.; Cohn, T.; Baldwin, T.; 
+Verspoor
+, K. ChEMU: named entity recognition and event extraction of chemical reactions from patents. In Advances in Information Retrieval, ECIR 2020; Springer, 2020; pp 572-579. DOI: 10.1007/978-3-030-45442-5_74.
+[41]
+ ByteDance, “DeerFlow: Deep Exploration and Efficient Research Flow,” GitHub Repository. Available: 
+https://github.com/bytedance/deer-flow
+[42]
+ Anthropic. Agent Skills. GitHub Repository. 
+Available:https
+://github.com/
+anthropics
+/skills

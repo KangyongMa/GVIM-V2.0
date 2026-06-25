@@ -1,0 +1,20 @@
+{
+  "hidden_gold": "E:\\Demo of GVIM\\deer-flow-mainnew\\research-demos\\showcase-5\\runtime\\matbench_materials_property_modeling\\gold\\matbench_expt_gap_5fold_gold.csv",
+  "official_fold_rule": "KFold(n_splits=5, shuffle=True, random_state=18012019)",
+  "prediction_columns": [
+    "fold",
+    "row_id",
+    "composition",
+    "predicted_gap_eV"
+  ],
+  "required_outputs": [
+    "predictions.csv",
+    "run_metadata.json",
+    "report.md"
+  ],
+  "standard_metrics": [
+    "MAE",
+    "RMSE",
+    "R2"
+  ]
+}

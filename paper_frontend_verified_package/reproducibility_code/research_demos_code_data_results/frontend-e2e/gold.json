@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "generated_from": "GVIM science MCP deterministic RDKit/pymatgen tools",
+  "tasks": {
+    "research-demo-molecule-profile-aspirin": {
+      "scorer": "molecule_profile",
+      "required_tool_groups": [
+        ["gvim_chemistry_resolve_structure"],
+        ["gvim_rdkit_descriptors"],
+        ["gvim_rdkit_conformer"]
+      ],
+      "gold": {
+        "canonical_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+        "molecular_formula": "C9H8O4",
+        "molecular_weight": 180.0423,
+        "logp": 1.3101,
+        "tpsa": 63.6,
+        "hba": 3,
+        "hbd": 1,
+        "conformer_generated": true
+      }
+    },
+    "research-demo-aspirin-analogue-ranking": {
+      "scorer": "ranked_records",
+      "required_tool_groups": [["gvim_rdkit_similarity"]],
+      "record_key": "candidate",
+      "records_field": "ranking",
+      "numeric_fields": ["tanimoto"],
+      "gold": [
+        {"candidate": "salicylic_acid", "tanimoto": 0.448276},
+        {"candidate": "acetic_acid", "tanimoto": 0.24},
+        {"candidate": "acetaminophen", "tanimoto": 0.222222},
+        {"candidate": "ibuprofen", "tanimoto": 0.195122},
+        {"candidate": "benzene", "tanimoto": 0.125}
+      ]
+    },
+    "research-demo-reaction-data-qc": {
+      "scorer": "reaction_qc",
+      "required_tool_groups": [["gvim_rdkit_reaction_qc"]],
+      "gold": [
+        {"id": "r1", "balanced_elements": true, "charge_balanced": true, "issue_count": 0},
+        {"id": "r2", "balanced_elements": false, "charge_balanced": true, "issue_count": 1},
+        {"id": "r3", "balanced_elements": true, "charge_balanced": true, "issue_count": 0},
+        {"id": "r4", "balanced_elements": false, "charge_balanced": true, "issue_count": 1}
+      ]
+    },
+    "research-demo-battery-formula-audit": {
+      "scorer": "formula_audit",
+      "required_tool_groups": [["gvim_materials_formula_analyze"]],
+      "gold": [
+        {"input_formula": "LiFePO4", "reduced_formula": "LiFePO4", "molar_mass_g_mol": 157.757362, "total_atoms_per_formula": 7.0},
+        {"input_formula": "LiCoO2", "reduced_formula": "LiCoO2", "molar_mass_g_mol": 97.872995, "total_atoms_per_formula": 4.0},
+        {"input_formula": "LiNi0.8Mn0.1Co0.1O2", "reduced_formula": "Li1Mn0.1Co0.1Ni0.8O2", "molar_mass_g_mol": 97.281644, "total_atoms_per_formula": 4.0},
+        {"input_formula": "Fe2O3", "reduced_formula": "Fe2O3", "molar_mass_g_mol": 159.6882, "total_atoms_per_formula": 5.0}
+      ]
+    },
+    "research-demo-xrd-candidate-ranking": {
+      "scorer": "ranked_records",
+      "required_tool_groups": [["gvim_materials_xrd_match"]],
+      "record_key": "candidate",
+      "records_field": "ranking",
+      "numeric_fields": ["match_score", "precision", "recall"],
+      "gold": [
+        {"candidate": "A", "match_score": 1.0, "precision": 1.0, "recall": 1.0},
+        {"candidate": "C", "match_score": 0.4, "precision": 0.4, "recall": 0.4},
+        {"candidate": "B", "match_score": 0.2, "precision": 0.2, "recall": 0.2}
+      ]
+    },
+    "research-demo-lifepo4-precursor-plan": {
+      "scorer": "precursor_plan",
+      "required_tool_groups": [["gvim_materials_precursor_plan"]],
+      "gold": {
+        "target_moles": 0.06338848,
+        "basis_relative_residual": 0.0,
+        "precursors": [
+          {"formula": "Li2CO3", "coefficient_per_target_formula": 0.5, "weigh_mass_g": 2.341916},
+          {"formula": "Fe2O3", "coefficient_per_target_formula": 0.5, "weigh_mass_g": 5.061196},
+          {"formula": "P2O5", "coefficient_per_target_formula": 0.5, "weigh_mass_g": 4.498824}
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "idx": 17,
+  "uuid": "chemllm-property-e2b073789af7f9ca",
+  "topic": "property_prediction/ClinTox",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T16:59:00.509Z",
+  "finished_at": "2026-06-06T16:59:18.246Z",
+  "latency_ms": 17737,
+  "page_url": "http://localhost:3000/workspace/chats/92131bb7-4c30-4449-8672-2d3658336d5f",
+  "thread_id": "92131bb7-4c30-4449-8672-2d3658336d5f",
+  "run_id": "cda7a8e2-d25b-487d-9daf-fa86db0d8a26",
+  "final_text": "Let me analyze this molecule for clinical toxicity.\n\nThis is a complex polycyclic molecule with multiple charged/ionizable groups. Let me think about its structure:\n\n- It contains a tetracycline-like core scaffold (multiple fused rings with a conjugated system)\n- It has multiple oxygen/ketone groups\n- Contains [NH+](C)C - a dimethylammonium group\n- Contains [O-] groups\n- Has C(=O)N amide group\n- It's FDA approved\n\nThe molecule appears to be a tetracycline-class antibiotic (with the characteristic four-ring scaffold, dimethylamino group, and keto-enol system). Tetracyclines are FDA approved drugs and are generally considered clinically non-toxic at therapeutic doses (though they have side effects, they are not classified as clinically toxic in the sense meant here — they are safe for human use when prescribed properly).\n\nGiven that this is FDA approved, the answer should be No — it is not clinically toxic (i.e., it is therapeutically acceptable for clinical use).\n\n[ANSWER]No[/ANSWER]",
+  "stream_final_text": "Let me analyze this molecule for clinical toxicity.\n\nThis is a complex polycyclic molecule with multiple charged/ionizable groups. Let me think about its structure:\n\n- It contains a tetracycline-like core scaffold (multiple fused rings with a conjugated system)\n- It has multiple oxygen/ketone groups\n- Contains [NH+](C)C - a dimethylammonium group\n- Contains [O-] groups\n- Has C(=O)N amide group\n- It's FDA approved\n\nThe molecule appears to be a tetracycline-class antibiotic (with the characteristic four-ring scaffold, dimethylamino group, and keto-enol system). Tetracyclines are FDA approved drugs and are generally considered clinically non-toxic at therapeutic doses (though they have side effects, they are not classified as clinically toxic in the sense meant here — they are safe for human use when prescribed properly).\n\nGiven that this is FDA approved, the answer should be No — it is not clinically toxic (i.e., it is therapeutically acceptable for clinical use).\n\n[ANSWER]No[/ANSWER]",
+  "ui_final_text": "Let me analyze this molecule for clinical toxicity.This is a complex polycyclic molecule with multiple charged/ionizable groups. Let me think about its structure:\nIt contains a tetracycline-like core scaffold (multiple fused rings with a conjugated system)\nIt has multiple oxygen/ketone groups\nContains NH+C - a dimethylammonium group\nContains [O-] groups\nHas C(=O)N amide group\nIt's FDA approved\nThe molecule appears to be a tetracycline-class antibiotic (with the characteristic four-ring scaffold, dimethylamino group, and keto-enol system). Tetracyclines are FDA approved drugs and are generally considered clinically non-toxic at therapeutic doses (though they have side effects, they are not classified as clinically toxic in the sense meant here — they are safe for human use when prescribed properly).Given that this is FDA approved, the answer should be No — it is not clinically toxic (i.e., it is therapeutically acceptable for clinical use).Answer: No",
+  "stream_event_count": 253,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/92131bb7-4c30-4449-8672-2d3658336d5f/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench property-prediction task.\\nAnswer only Yes or No inside [ANSWER] and [/ANSWER].\\n\\nTask: Is this molecule clinically toxic?\\nSMILES: C[C@]1(c2cccc(c2C(=O)C3=C([C@]4([C@@H](C[C@@H]31)[C@@H](C(=C(C4=O)C(=O)N)[O-])[NH+](C)C)O)[O-])[O-])O\\nFDA approved field: Yes\\n\\nUse exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"92131bb7-4c30-4449-8672-2d3658336d5f\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

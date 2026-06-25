@@ -1,0 +1,72 @@
+{
+  "idx": 33,
+  "uuid": "G-META-13-29",
+  "global_idx": 269,
+  "source_id": "G-META-13-29",
+  "topic": "Atomic structure",
+  "mini_split": "mascqa",
+  "question_type": "MCQS-NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:21:27.192162Z",
+  "finished_at": "2026-06-06T16:21:29.871049Z",
+  "latency_ms": 2679,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 435
+  },
+  "final_text": "The maximum linear density along [110] suggests a face-centered cubic (FCC) structure, where the [110] direction has the highest atomic density.  \nFor FCC, the (100) plane has a packing density (planar atomic packing factor) of 0.79.\n\n[ANSWER]C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "The maximum linear density along [110] suggests a face-centered cubic (FCC) structure, where the [110] direction has the highest atomic density.  \nFor FCC, the (100) plane has a packing density (planar atomic packing factor) of 0.79.\n\n[ANSWER]C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 120,
+    "completion_tokens": 64,
+    "total_tokens": 184,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 120
+  },
+  "error": null,
+  "raw_response": {
+    "id": "ffcfb37d-77bb-441a-908a-a12570a1e628",
+    "object": "chat.completion",
+    "created": 1780762889,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The maximum linear density along [110] suggests a face-centered cubic (FCC) structure, where the [110] direction has the highest atomic density.  \nFor FCC, the (100) plane has a packing density (planar atomic packing factor) of 0.79.\n\n[ANSWER]C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 120,
+      "completion_tokens": 64,
+      "total_tokens": 184,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 120
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

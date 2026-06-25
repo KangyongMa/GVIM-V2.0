@@ -1,0 +1,42 @@
+{
+  "batch_size": 5,
+  "budget": 60,
+  "data_path": "benchmarks/_sources/ChemLLMBench/data/property_prediction/BACE.csv",
+  "demo_id": "bace_active_search",
+  "initial_size": 20,
+  "inspiration": "Reasoning-guided active search in s41524-026-02139-1",
+  "metrics": {
+    "random": {
+      "best_pIC50_at_budget_mean": 8.74859931,
+      "enrichment_factor_at_budget_mean": 0.4728125,
+      "queries_to_first_hit_mean": 57.8,
+      "success_at_budget": 0.2,
+      "target_recall_at_budget_mean": 0.01875
+    },
+    "ucb_surrogate": {
+      "best_pIC50_at_budget_mean": 9.047802469999999,
+      "enrichment_factor_at_budget_mean": 1.5760416666666668,
+      "queries_to_first_hit_mean": 48.9,
+      "success_at_budget": 0.6,
+      "target_recall_at_budget_mean": 0.0625
+    }
+  },
+  "n_candidates": 1513,
+  "n_features": 363,
+  "n_targets": 16,
+  "problem": "Closed-loop discovery of high-activity BACE inhibitor candidates",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "target_definition": "pIC50 >= dataset 99% quantile",
+  "target_threshold_pIC50": 8.995032923999995
+}

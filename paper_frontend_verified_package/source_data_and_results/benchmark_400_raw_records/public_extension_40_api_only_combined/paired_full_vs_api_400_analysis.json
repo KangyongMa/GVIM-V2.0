@@ -1,0 +1,15 @@
+{
+  "n": 400,
+  "full_correct": 325,
+  "api_correct": 285,
+  "both_correct": 268,
+  "full_only_correct": 57,
+  "api_only_correct": 17,
+  "both_wrong": 58,
+  "paired_delta_percentage_points": 10.0,
+  "mcnemar_exact_two_sided_p": 3.3971668169915196e-06,
+  "paired_bootstrap_95_ci_percentage_points": [
+    6.0,
+    14.249999999999998
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "idx": 29,
+  "uuid": "G-META-15-41",
+  "topic": "Transport phenomena",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T14:49:48.073Z",
+  "finished_at": "2026-06-06T14:50:05.892Z",
+  "latency_ms": 17819,
+  "page_url": "http://localhost:3000/workspace/chats/3dad59c8-f72c-41f7-a937-85b2d2158b60",
+  "thread_id": "3dad59c8-f72c-41f7-a937-85b2d2158b60",
+  "run_id": "d187ac8b-b51f-48f6-87bc-68b49b528a45",
+  "final_text": "Let me solve this step by step.\n\nFor diffusion-controlled homogenization, the diffusion distance follows: x ∝ √(Dt). For the same extent of homogenization, x is constant, so:\n\nDt = constant\n\nTherefore: D₁ × t₁ = D₂ × t₂\n\nGiven:\n- D₁ (at 1273 K) = 10⁻¹⁹ m²/s\n- t₁ (at 1273 K) = 10 hours\n- D₂ (at 1373 K) = 10⁻¹⁸ m²/s\n- t₂ = ?\n\nD₁t₁ = D₂t₂\n(10⁻¹⁹)(10) = (10⁻¹⁸)(t₂)\nt₂ = (10⁻¹⁹ × 10) / 10⁻¹⁸\nt₂ = 10⁻¹⁸ / 10⁻¹⁸ = 1 hour\n\n[ANSWER]1[/ANSWER]",
+  "stream_final_text": "Let me solve this step by step.\n\nFor diffusion-controlled homogenization, the diffusion distance follows: x ∝ √(Dt). For the same extent of homogenization, x is constant, so:\n\nDt = constant\n\nTherefore: D₁ × t₁ = D₂ × t₂\n\nGiven:\n- D₁ (at 1273 K) = 10⁻¹⁹ m²/s\n- t₁ (at 1273 K) = 10 hours\n- D₂ (at 1373 K) = 10⁻¹⁸ m²/s\n- t₂ = ?\n\nD₁t₁ = D₂t₂\n(10⁻¹⁹)(10) = (10⁻¹⁸)(t₂)\nt₂ = (10⁻¹⁹ × 10) / 10⁻¹⁸\nt₂ = 10⁻¹⁸ / 10⁻¹⁸ = 1 hour\n\n[ANSWER]1[/ANSWER]",
+  "ui_final_text": "Let me solve this step by step.For diffusion-controlled homogenization, the diffusion distance follows: x ∝ √(Dt). For the same extent of homogenization, x is constant, so:Dt = constantTherefore: D₁ × t₁ = D₂ × t₂Given:\nD₁ (at 1273 K) = 10⁻¹⁹ m²/s\nt₁ (at 1273 K) = 10 hours\nD₂ (at 1373 K) = 10⁻¹⁸ m²/s\nt₂ = ?\nD₁t₁ = D₂t₂\n(10⁻¹⁹)(10) = (10⁻¹⁸)(t₂)\nt₂ = (10⁻¹⁹ × 10) / 10⁻¹⁸\nt₂ = 10⁻¹⁸ / 10⁻¹⁸ = 1 hourAnswer: 1",
+  "stream_event_count": 230,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/3dad59c8-f72c-41f7-a937-85b2d2158b60/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a MaScQA materials science benchmark question (NUM).\\nAnswer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.\\n\\nQuestion: Given: Diffusivity, $D_(1373K)$ = $10^(-18)m^2s^(-1) and $D_(1273K) = 10^(-19)m^2s^(-1). It takes 10 hours to homogenize an alloy at 1273 K. The time required (in hours) to achieve the same extent of homogenization at 1373 K is?\\n\\nUse exactly this final format: [ANSWER]<answer>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"3dad59c8-f72c-41f7-a937-85b2d2158b60\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

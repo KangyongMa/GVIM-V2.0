@@ -1,0 +1,72 @@
+{
+  "idx": 55,
+  "uuid": "G-META-13-32",
+  "global_idx": 291,
+  "source_id": "G-META-13-32",
+  "topic": "Material manufacturing",
+  "mini_split": "mascqa",
+  "question_type": "MATCH",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:23:21.673843Z",
+  "finished_at": "2026-06-06T16:23:23.480578Z",
+  "latency_ms": 1807,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 558
+  },
+  "final_text": "[ANSWER]C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 206,
+    "completion_tokens": 7,
+    "total_tokens": 213,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 206
+  },
+  "error": null,
+  "raw_response": {
+    "id": "60e0c712-4457-4196-b776-b7d6cd6531ed",
+    "object": "chat.completion",
+    "created": 1780763003,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 206,
+      "completion_tokens": 7,
+      "total_tokens": 213,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 206
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

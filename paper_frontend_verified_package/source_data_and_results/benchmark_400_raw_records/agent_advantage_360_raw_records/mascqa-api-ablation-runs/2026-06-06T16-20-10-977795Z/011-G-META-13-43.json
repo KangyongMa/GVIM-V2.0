@@ -1,0 +1,72 @@
+{
+  "idx": 11,
+  "uuid": "G-META-13-43",
+  "global_idx": 247,
+  "source_id": "G-META-13-43",
+  "topic": "Material Applications",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:20:33.133881Z",
+  "finished_at": "2026-06-06T16:20:35.455093Z",
+  "latency_ms": 2321,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 335
+  },
+  "final_text": "[ANSWER]74[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]74[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 80,
+    "completion_tokens": 7,
+    "total_tokens": 87,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 80
+  },
+  "error": null,
+  "raw_response": {
+    "id": "f58a165f-04c5-451b-9a78-2375820e2ad7",
+    "object": "chat.completion",
+    "created": 1780762835,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]74[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 80,
+      "completion_tokens": 7,
+      "total_tokens": 87,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 80
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

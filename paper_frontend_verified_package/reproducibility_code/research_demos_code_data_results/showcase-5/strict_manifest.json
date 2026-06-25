@@ -1,0 +1,165 @@
+{
+  "schema_version": "2026-06-12.strict-v1",
+  "purpose": "Paper-facing chemistry/materials showcase demos with public benchmark or paper-derived gold standards.",
+  "selection_rules": [
+    "Every demo must start from the DeerFlow front end.",
+    "Every demo must produce machine-readable artifacts.",
+    "Gold labels must come from public benchmark data, official splits, expert annotations, or published paper data.",
+    "Primary and secondary metrics must be standard scientific or benchmark metrics, not subjective custom scores.",
+    "Workflow completion can be logged as run metadata, but it must not be reported as a scientific evaluation metric."
+  ],
+  "demos": [
+    {
+      "id": "matbench_materials_property_modeling",
+      "domain": "materials_machine_learning",
+      "external_framework": "Matbench",
+      "source_urls": [
+        "https://docs.materialsproject.org/services/ml-and-ai-applications/matbench",
+        "https://github.com/materialsproject/matbench"
+      ],
+      "front_end_input": [
+        "One isolated predefined Matbench fold per front-end session",
+        "Fold-specific manifest",
+        "Labeled training CSV and unlabeled test CSV"
+      ],
+      "hidden_gold": "Retained Matbench target labels for the uploaded test fold.",
+      "required_outputs": [
+        "predictions.csv",
+        "run_metadata.json",
+        "report.md"
+      ],
+      "primary_metrics": [
+        "MAE"
+      ],
+      "secondary_metrics": [
+        "RMSE",
+        "R2"
+      ],
+      "superiority_claim": "Shows DeerFlow can autonomously organize a materials ML workflow from uploaded data to benchmark-style predictions and plots."
+    },
+    {
+      "id": "matbench_discovery_materials_screening",
+      "domain": "materials_discovery",
+      "external_framework": "Matbench Discovery",
+      "source_urls": [
+        "https://matbench-discovery.materialsproject.org/"
+      ],
+      "front_end_input": [
+        "candidate materials table or structures",
+        "allowed descriptors or model scores defined by the public task",
+        "task instruction to rank/screen stable materials"
+      ],
+      "hidden_gold": "PBE DFT reference stability/energy labels from Matbench Discovery.",
+      "required_outputs": [
+        "screening_ranking.csv",
+        "discovery_metrics.json",
+        "screening_report.md",
+        "precision_recall_or_rank_plot.png"
+      ],
+      "primary_metrics": [
+        "F1",
+        "DAF",
+        "MAE"
+      ],
+      "secondary_metrics": [
+        "precision",
+        "recall",
+        "R2",
+        "RMSE"
+      ],
+      "superiority_claim": "Shows DeerFlow can support materials screening/discovery rather than only property regression."
+    },
+    {
+      "id": "moleculenet_molecular_property_workflow",
+      "domain": "chemistry_machine_learning",
+      "external_framework": "MoleculeNet",
+      "source_urls": [
+        "https://moleculenet.org/",
+        "https://pubs.rsc.org/en/content/articlehtml/2018/sc/c7sc02664a"
+      ],
+      "front_end_input": [
+        "MoleculeNet dataset subset such as BBBP, BACE, HIV, ClinTox, ESOL, or FreeSolv",
+        "SMILES table without hidden test labels",
+        "split metadata such as scaffold split"
+      ],
+      "hidden_gold": "Official molecular property labels from MoleculeNet data.",
+      "required_outputs": [
+        "molecular_predictions.csv",
+        "molecular_metrics.json",
+        "roc_pr_or_parity_plot.png",
+        "error_analysis.md"
+      ],
+      "primary_metrics": [
+        "ROC-AUC",
+        "PR-AUC",
+        "RMSE",
+        "MAE"
+      ],
+      "secondary_metrics": [
+        "F1",
+        "accuracy"
+      ],
+      "superiority_claim": "Shows chemistry-specific tool use through SMILES validation, RDKit features, modeling, and error analysis."
+    },
+    {
+      "id": "spectra_to_structure_regression",
+      "domain": "chemistry_spectroscopy",
+      "external_framework": "Published spectroscopy-to-structure workflow",
+      "source_urls": [
+        "Paper/d5sc08794e.pdf"
+      ],
+      "front_end_input": [
+        "IR/Raman spectra table",
+        "train/test split metadata",
+        "test spectra without hidden dihedral labels"
+      ],
+      "hidden_gold": "Published or released C-N=N-C dihedral angles.",
+      "required_outputs": [
+        "spectra_predictions.csv",
+        "spectra_metrics.json",
+        "parity_plot.png",
+        "spectral_regions_report.md"
+      ],
+      "primary_metrics": [
+        "MAE",
+        "Pearson r"
+      ],
+      "secondary_metrics": [
+        "RMSE",
+        "R2"
+      ],
+      "superiority_claim": "Shows DeerFlow can handle domain-specific spectroscopy preprocessing and structure-property regression."
+    },
+    {
+      "id": "matsci_nlp_sofc_extraction",
+      "domain": "materials_text_mining",
+      "external_framework": "MatSci-NLP or SOFC-Exp",
+      "source_urls": [
+        "https://aclanthology.org/2020.acl-main.116/",
+        "https://aclanthology.org/2023.acl-long.201.pdf"
+      ],
+      "front_end_input": [
+        "materials science article snippets or full text from the benchmark",
+        "target schema for entities, relations, or slots",
+        "test documents without hidden annotations"
+      ],
+      "hidden_gold": "Expert annotations from SOFC-Exp or MatSci-NLP converted to the selected schema.",
+      "required_outputs": [
+        "extracted_records.json",
+        "extracted_records.csv",
+        "extraction_metrics_ready.json",
+        "extraction_audit.md"
+      ],
+      "primary_metrics": [
+        "micro-F1",
+        "macro-F1"
+      ],
+      "secondary_metrics": [
+        "precision",
+        "recall",
+        "exact_match"
+      ],
+      "superiority_claim": "Shows DeerFlow can convert literature into structured, source-traceable materials data using public annotations."
+    }
+  ]
+}

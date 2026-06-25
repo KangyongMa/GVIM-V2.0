@@ -1,0 +1,72 @@
+{
+  "idx": 65,
+  "uuid": "G-META-18-1",
+  "global_idx": 301,
+  "source_id": "G-META-18-1",
+  "topic": "Fluid",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:23:47.197454Z",
+  "finished_at": "2026-06-06T16:23:50.567385Z",
+  "latency_ms": 3370,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 798
+  },
+  "final_text": "For liquid metals, the thermal diffusivity is much larger than the kinematic viscosity, meaning the Prandtl number (Pr = ν/α) is very small.  \nIn boundary layer theory, the ratio of thermal to velocity boundary layer thickness is approximately proportional to Pr^{-1/3} for laminar flow over a flat plate.  \nSince Pr is small, δₜ is larger than δᵥ.\n\n[ANSWER]A[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "For liquid metals, the thermal diffusivity is much larger than the kinematic viscosity, meaning the Prandtl number (Pr = ν/α) is very small.  \nIn boundary layer theory, the ratio of thermal to velocity boundary layer thickness is approximately proportional to Pr^{-1/3} for laminar flow over a flat plate.  \nSince Pr is small, δₜ is larger than δᵥ.\n\n[ANSWER]A[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 215,
+    "completion_tokens": 91,
+    "total_tokens": 306,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 215
+  },
+  "error": null,
+  "raw_response": {
+    "id": "ba47c8b8-4803-4b72-94d7-df058e32ee98",
+    "object": "chat.completion",
+    "created": 1780763029,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "For liquid metals, the thermal diffusivity is much larger than the kinematic viscosity, meaning the Prandtl number (Pr = ν/α) is very small.  \nIn boundary layer theory, the ratio of thermal to velocity boundary layer thickness is approximately proportional to Pr^{-1/3} for laminar flow over a flat plate.  \nSince Pr is small, δₜ is larger than δᵥ.\n\n[ANSWER]A[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 215,
+      "completion_tokens": 91,
+      "total_tokens": 306,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 215
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

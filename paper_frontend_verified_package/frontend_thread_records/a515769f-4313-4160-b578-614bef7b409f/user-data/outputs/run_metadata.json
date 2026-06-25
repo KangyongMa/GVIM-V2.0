@@ -1,0 +1,88 @@
+{
+  "task": "aqueous solubility regression (MoleculeNet ESOL)",
+  "random_seed": 20260614,
+  "descriptor_count": 12,
+  "descriptor_names": [
+    "MolWt",
+    "LogP",
+    "NumHDonors",
+    "NumHAcceptors",
+    "NumRotatableBonds",
+    "TPSA",
+    "RingCount",
+    "FractionCSP3",
+    "NumAromaticRings",
+    "NumSaturatedRings",
+    "NumHeteroatoms",
+    "HeavyAtomCount"
+  ],
+  "n_train_raw": 874,
+  "n_test_raw": 254,
+  "n_train_after_rdkit": 874,
+  "n_test_after_rdkit": 254,
+  "baseline": "TrainingMean",
+  "baseline_metrics": {
+    "model": "TrainingMean",
+    "mae": 2.0323,
+    "rmse": 2.4915,
+    "r2": -0.2309,
+    "n_folds": 5
+  },
+  "scaffold_cv_results": [
+    {
+      "model": "TrainingMean",
+      "mae": 2.0323,
+      "rmse": 2.4915,
+      "r2": -0.2309,
+      "n_folds": 5
+    },
+    {
+      "model": "Ridge",
+      "mae": 0.829,
+      "rmse": 1.046,
+      "r2": 0.783,
+      "n_folds": 5
+    },
+    {
+      "model": "LinearOLS",
+      "mae": 0.8302,
+      "rmse": 1.0469,
+      "r2": 0.7827,
+      "n_folds": 5
+    },
+    {
+      "model": "RandomForest",
+      "mae": 0.6429,
+      "rmse": 0.8541,
+      "r2": 0.8554,
+      "n_folds": 5
+    }
+  ],
+  "selected_model": "RandomForest",
+  "selected_model_metrics": {
+    "model": "RandomForest",
+    "mae": 0.6429,
+    "rmse": 0.8541,
+    "r2": 0.8554,
+    "n_folds": 5
+  },
+  "selection_criterion": "lowest validation RMSE",
+  "cross_validation": {
+    "type": "deterministic Bemis-Murcko scaffold-aware",
+    "n_folds": 5,
+    "guarantee": "molecules sharing a scaffold never split across folds"
+  },
+  "preprocessing": {
+    "standard_scaler": "fitted independently within each validation fold"
+  },
+  "sanity_checks": {
+    "predictions_have_no_nan": true,
+    "prediction_range_plausible": true,
+    "training_descriptor_success_rate": 1.0,
+    "test_descriptor_success_rate": 1.0,
+    "all_ok": true
+  },
+  "execution_time_seconds": 11.49,
+  "python_version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+  "reproducibility": "Deterministic via fixed random_seed=20260614 and hash-based scaffold sorting.  RDKit descriptors are fully deterministic.  Requires same library versions (rdkit, sklearn, numpy, pandas) for bitwise replication."
+}

@@ -1,0 +1,31 @@
+{
+  "idx": 4,
+  "uuid": "4c6761f9-2789-7209-154d-832701b9ced6",
+  "topic": "materials_science",
+  "mini_split": "chembench-full",
+  "question_type": "multiple_choice",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-09T07:07:03.784Z",
+  "finished_at": "2026-06-09T07:07:23.153Z",
+  "latency_ms": 19369,
+  "page_url": "http://localhost:3000/workspace/chats/7acd933f-a735-4de2-bc74-d4cde3bef5f8",
+  "thread_id": "7acd933f-a735-4de2-bc74-d4cde3bef5f8",
+  "run_id": "d34ed01b-a241-4284-988b-b176e6f355d4",
+  "final_text": "[ANSWER]A,D[/ANSWER]",
+  "stream_final_text": "[ANSWER]A,D[/ANSWER]",
+  "ui_final_text": "[ANSWER]A,D[/ANSWER]",
+  "stream_event_count": 45,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/7acd933f-a735-4de2-bc74-d4cde3bef5f8/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a multiple choice question about chemistry.\\nPlease answer by responding with the letter of the correct answer.\\n\\nQuestion: To synthesize A-B-A block copolymers that should have the same end groups, which of the following techniques are best suited?\\n\\nOptions:\\nA. Bifunctional initiator\\nB. Coupling of living AB chains\\nC. Free Radical Polymerization\\nD. Sequential monomer addition\\n\\nYou MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].\\nFor example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing.\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"7acd933f-a735-4de2-bc74-d4cde3bef5f8\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": [],
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-runs\\2026-06-09T07-05-32-885Z\\004-4c6761f9-2789-7209-154d-832701b9ced6.json",
+  "_source_segment": "first_segment"
+}

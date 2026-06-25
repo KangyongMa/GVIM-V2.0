@@ -1,0 +1,9 @@
+directory,file_count,size_mb
+submission_files,4,8.04
+publication_figures_600dpi,13,7.47
+frontend_thread_records,76,11.89
+posthoc_gold_scoring,5,0.00
+excluded_non_frontend,2,0.00
+reproducibility_code\manuscript_and_figure_scripts,25,0.26
+reproducibility_code\research_demos_code_data_results,241,9.49
+source_data_and_results,663,152.03

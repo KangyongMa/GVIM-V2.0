@@ -1,0 +1,30 @@
+{
+  "benchmark": "ChEMU 2020 Task 1 sample v3",
+  "task": "chemical synthesis named entity extraction",
+  "source_url": "https://raw.githubusercontent.com/chemu-patent-ie/chemu-patent-ie.github.io/master/chemu_sample/chemu_sample.v3.zip",
+  "annotation_guideline_url": "https://chemu-patent-ie.github.io/resources/Annotation_Guidelines_CLEF2020_ChEMU_task1.pdf",
+  "input_file": "chemu_ner_input.jsonl",
+  "n_documents": 6,
+  "n_characters": 4156,
+  "entity_labels": [
+    "EXAMPLE_LABEL",
+    "REACTION_PRODUCT",
+    "STARTING_MATERIAL",
+    "REAGENT_CATALYST",
+    "SOLVENT",
+    "OTHER_COMPOUND",
+    "TIME",
+    "TEMPERATURE",
+    "YIELD_OTHER",
+    "YIELD_PERCENT"
+  ],
+  "prediction_format": "JSONL with doc_id and entities(label,start,end,text)",
+  "official_metrics": [
+    "exact-match precision",
+    "exact-match recall",
+    "exact-match F1",
+    "relaxed-match precision",
+    "relaxed-match recall",
+    "relaxed-match F1"
+  ]
+}

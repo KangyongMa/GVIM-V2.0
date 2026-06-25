@@ -1,0 +1,74 @@
+{
+  "idx": 22,
+  "uuid": "chemllm-selection-87a8fc53d2b4961a",
+  "global_idx": 342,
+  "source_id": "chemllm-selection-87a8fc53d2b4961a",
+  "topic": "reagent_selection/reagent_sample",
+  "mini_split": "chemllmbench",
+  "question_type": "candidate_selection",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_chemllmbench_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T17:20:18.066093Z",
+  "finished_at": "2026-06-06T17:20:20.237122Z",
+  "latency_ms": 2171,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 1132
+  },
+  "final_text": "[ANSWER]Brc1ccc2ncccc2c1[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]Brc1ccc2ncccc2c1[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 335,
+    "completion_tokens": 16,
+    "total_tokens": 351,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 335
+  },
+  "error": null,
+  "raw_response": {
+    "id": "7dd17c18-42a3-4791-ace9-6e339fc66d87",
+    "object": "chat.completion",
+    "created": 1780766420,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]Brc1ccc2ncccc2c1[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 335,
+      "completion_tokens": 16,
+      "total_tokens": 351,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 335
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_record_file": "",
+  "_source_kind": "deepseek_flash_api_only"
+}

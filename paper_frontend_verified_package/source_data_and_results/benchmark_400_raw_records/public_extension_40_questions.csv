@@ -1,0 +1,426 @@
+global_idx,suite,suite_idx,source_id,topic,question_type,scoring_protocol,prompt
+1,chembench-full,1,9572d4dc-e11c-4ba0-7eca-6351ad998bf9,materials_science,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: What advantages does solution polymerization have over substance polymerization?
+
+Options:
+A. Good dissipation of the heat of reaction
+B. High viscosity
+C. Poor dissipation of the heat of reaction
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+2,chembench-full,2,6aac494a-a15e-d2b3-0bf2-2a0756cf579e,materials_science,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: The degree of polymerization of a polystyrene is given as 10000. What is the approximate molecular mass of this polymer?
+
+Options:
+A. 1E4 g mol^{-1}
+B. 1E6 g mol^{-1}
+C. 1E9 g mol^{-1}
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+3,chembench-full,3,9db412b3-3b79-8d61-6a8e-13d0e7c56c94,materials_science,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: What can be inferred from the triple point of ethyne (C2H2), which is recorded as 192.4 K and 1.2 atm?
+
+Options:
+A. A sample of ethyne at 192.4 K must have a pressure of 1.2 atm
+B. Solid ethyne is less dense than liquid ethyne
+C. Solid ethyne is not thermodynamically stable at 193.0 K
+D. Solid ethyne sublimes rather than melting at 1 atm pressure
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+4,chembench-full,4,4c6761f9-2789-7209-154d-832701b9ced6,materials_science,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: To synthesize A-B-A block copolymers that should have the same end groups, which of the following techniques are best suited?
+
+Options:
+A. Bifunctional initiator
+B. Coupling of living AB chains
+C. Free Radical Polymerization
+D. Sequential monomer addition
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+5,chembench-full,5,e0d79cc0-12b8-79aa-9a94-bc8f260eec45,toxicity_and_safety,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: Heroin has a pK_a value of 7.6 and cocaine has a pK_a value of 8.6. Nasal mucosa has a pH value of 7.4. How and from which substance can absorption be increased?
+
+Options:
+A. of cocaine with a basic additive
+B. of heroin with a more acidic additive compound
+C. of heroin with liposomes
+D. of none of the substances
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+6,chembench-full,6,e541a8c1-6a2e-72f3-604a-0d9755b95961,toxicity_and_safety,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: Which of the following compounds are capable of producing hazardous explosive peroxides?
+
+Options:
+A. cyclohexene
+B. cyclooctene
+C. decalin
+D. ethyl ether
+E. isopropyl ether
+F. para dioxane
+G. tetralin
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+7,chembench-full,7,884e9206-c6c3-81da-b2b3-892da544ca50,toxicity_and_safety,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: Which of the following instruments is most sensitive and reliable for detecting flammable residues in the laboratory?
+
+Options:
+A. Gas chromatography
+B. IR spectroscopy
+C. Neutron activation analysis
+D. Thin layer chromatography
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+8,chembench-full,8,00f17264-6fb7-3de6-20c9-e3813ccf90fc,technical_chemistry,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: One of the deviations from the plug flow systems is caused by whirlpools and other similar behaviors that can happen inside the reactor. Which of the following statements describes the correct steps to properly model a real reactor that behaves like this plug flow system?
+
+Options:
+A. Include both axial and radial dispersion terms to the original plug flow system, and then solve the energy balance
+B. Include both axial and radial dispersion terms to the original plug flow system, and then solve the mass balance
+C. Only include the radial dispersion term since the axial term is already described by the plug flow system
+D. Solve the balances, and then add the radial dispersion term that is not included in the original plug flow system
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+9,chembench-full,9,a6a516f0-e9a6-f4c4-8109-8679cc5207ea,technical_chemistry,multiple_choice,chembench_official_package_parser_metrics,"The following is a multiple choice question about chemistry.
+Please answer by responding with the letter of the correct answer.
+
+Question: Consider N plug flow reactors connected in series, with V_i being the volume of the i-th reactor and F_0 being the feed rate of component A. If the fractional conversion of component A leaving reactor i is X_i, which of the following statements is correct?
+
+Options:
+A. The fractional conversion of component A leaving the first reactor is always greater than the fractional conversion leaving the last reactor
+B. The fractional conversion of component A leaving the last reactor in series is always less than the fractional conversion leaving the first reactor
+C. The total volume V of N plug flow reactors in series gives a different conversion than a single plug flow reactor of volume V
+D. The total volume V of N plug flow reactors in series gives the same conversion as a single plug flow reactor of volume V
+
+You MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing."
+10,chembench-full,10,f50b5d88-306d-059f-fee9-5a8ce8f775c3,analytical_chemistry,open_numeric,chembench_official_package_parser_metrics,"The following is a question about chemistry.
+
+Question: What is the number of peaks in the 1H NMR spectrum of a molecule with SMILES O=C1OCC2CC1C2?
+
+You MUST include the final answer within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is only one number. Always answer in exactly this format, with ONE NUMBER between the two tags, even if you are unsure. Use dots as decimal separator. We require this because we use automatic parsing."
+11,chembench-full,11,9ab2af1f-3272-c12e-a0f3-748256475da7,analytical_chemistry,open_numeric,chembench_official_package_parser_metrics,"The following is a question about chemistry.
+
+Question: What is the number of peaks in the 1H NMR spectrum of a molecule with SMILES OCC1=CNC(=O)C1=O?
+
+You MUST include the final answer within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is only one number. Always answer in exactly this format, with ONE NUMBER between the two tags, even if you are unsure. Use dots as decimal separator. We require this because we use automatic parsing."
+12,chembench-full,12,1c51a48c-962b-2223-fa47-2e33ef9b835f,physical_chemistry,open_numeric,chembench_official_package_parser_metrics,"The following is a question about chemistry.
+
+Question: Assume all processes take place at 298 K. The enthalpy change of formation of CH4(g) is -74.8 kJ mol^{-1} and of H2O(l) is -285.8 kJ mol^{-1}. What is the standard enthalpy change of combustion of H2 in kJ mol^{-1}?
+
+You MUST include the final answer within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is only one number. Always answer in exactly this format, with ONE NUMBER between the two tags, even if you are unsure. Use dots as decimal separator. We require this because we use automatic parsing."
+13,chembench-full,13,46ad7b58-775e-1059-4d81-ffbbd06ddc7c,inorganic_chemistry,open_numeric,chembench_official_package_parser_metrics,"The following is a question about chemistry.
+
+Question: NO2 is a brownish-red gas in equilibrium with a colorless gas N2Ox. What is the value of x?
+
+You MUST include the final answer within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is only one number. Always answer in exactly this format, with ONE NUMBER between the two tags, even if you are unsure. Use dots as decimal separator. We require this because we use automatic parsing."
+14,chembench-full,14,25644cb8-6b49-3a91-e145-51fcb782cfd6,organic_chemistry,open_numeric,chembench_official_package_parser_metrics,"The following is a question about chemistry.
+
+Question: How many structural isomers (excluding stereochemistry) are there for C4H8O?
+
+You MUST include the final answer within the following tags: [ANSWER] and [/ANSWER].
+For example, '[ANSWER]<answer>[/ANSWER]', where <answer> is only one number. Always answer in exactly this format, with ONE NUMBER between the two tags, even if you are unsure. Use dots as decimal separator. We require this because we use automatic parsing."
+15,mascqa,1,G-META-16-38,Material manufacturing,NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (NUM).
+Answer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.
+
+Question: Mould heat flux ($q_m$) for billet casters is expressed (in SI unit) as a function of distance below the meniscus (z). $q_m$ (z) = [2.67 - 0.33$(z/U_(c))^(0.5)$] * $10^6$. If mould length ($L_m$) is 0.8 m and casting speed ($U_c$) is 0.2 $m.s^(-1)$, the average mould flux (in MW.$m^(-2)$) is?
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+16,mascqa,2,G-META-16-39,Material manufacturing,NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (NUM).
+Answer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.
+
+Question: In BOF steelmaking, 5 metric ton of lime containing 90 wt.% CaO is used to refine 100 metric ton of hot metal containing 93.2 wt.% Fe. The slag produced during refining contains 40 wt.% CaO and 22 wt.% FeO. Neglecting material losses, the yield of Fe (in %) is?
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+17,mascqa,3,G-META-16-52,Material manufacturing,NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (NUM).
+Answer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.
+
+Question: In a sand-mould, a sprue of 0.25 m height and a top cross-section area of 2.2 $m^2$ is provided to maintain the melt flow rate at 4 $m^3.s^(-1)$. To prevent aspiration of molten metal, the maximum cross-section area (in $m^2$) at the base of the sprue is?
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+18,mascqa,4,G-META-17-34,Material manufacturing,NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (NUM).
+Answer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.
+
+Question: During the end blow period in LD steelmaking, the de-carburization rate is expressed by the equation: dC/dt = -(c-c*). Here, c and c* are the instantaneous and equilibrium concentration of carbon in steel respectively, in units of wt.%. Given that c* = 0.04 wt.% and c( t = 0 min) = 0.4 wt.%, the concentration of carbon in steel (in wt.%) at t= 1 min is? (answer up to three decimal places)
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+19,mascqa,5,G-META-17-37,Material manufacturing,NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (NUM).
+Answer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.
+
+Question: In primary steelmaking, dissolved oxygen(O) reacts with carbon (C) to produce CO(g), at 1atm pressure according to the reaction: C + O = CO(g). The equilibrium constant for this reaction is: logK = (1160/T) + 2.003, where T is in Kelvin. Assuming Henrian activity coefficient of both O and C to be unity, the dissolved oxygen content (in wt.%) of a plain carbon steel melt with 0.7 wt.% C at 1600° C is?(answer up tp four decimal places)
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+20,mascqa,6,G-META-17-53,Material manufacturing,NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (NUM).
+Answer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.
+
+Question: Assume that exponent (n) is Chvorinov's equation is 2. Total time for solidication of a cubic casting of dimensions 5.0cm * 5.0cm * 5.0cm is 1.6 min. A cylindrical riser with diameter to height ratio 0.5 is required so that the time for solidification of riser is 3.2 min. Applying Chvorinov's rule, the height of rise (in cm) is? (answer up tp two decimal places)
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+21,mascqa,7,G-META-17-54,Material manufacturing,NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (NUM).
+Answer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.
+
+Question: A 250 mm thick slab of a nickel alloy is subjected to cold rolling using a roll of diameter 450 mm. If the angle of bite during rolling is 10°, the maximum possible reduction (in mm) during rolling is?(answer up to two decimal places)
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+22,mascqa,8,G-META-13-51,Thermodynamics,MCQS-NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (MCQS-NUM).
+Answer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.
+
+Question: Integral enthalpy of mixing (in J/mol) of liquid (Cu, Zn) solution can be approximated by mix $ΔH^(mix)$ = -19250 * $χ_(Cu)$ * $χ_(Zn)$. Assuming regular solution behaviour, the solution parameter (in J/mol) is  (A) -19250 (B) -9625 (C) 13.75 (D) 2315.4
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+23,mascqa,9,G-META-16-54,Thermodynamics,MCQS-NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (MCQS-NUM).
+Answer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.
+
+Question: A liquid phase sintered SiC-Ni composite has a solid-solid grain boundary energy ($γ_(SiC-SiC)$) of 0.80 $J.m^(-2)$ and a solid-liquid ($γ_(SiC-Ni)$) interfacial energy of 0.45 $J.m^(-2)$. For a SiC grain size of 20 µm, the average interparticle (SiC-SiC) neck size (in µm) is:  (A) 3.03 (B) 4.28 (C) 9.16 (D) 18.32
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+24,mascqa,10,G-META-17-55,Thermodynamics,MCQS-NUM,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (MCQS-NUM).
+Answer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.
+
+Question: Given: Melting points of tungsten and nickel are 3410°C and 1453°C, respectively. W-Ni compact is prepared by liquid phase sintering at 1500° C. If the size of tungsten grains is 40 µm and the interfacial tungsten -tungsten and tungsten- nickel energies are 0.52 and 0.30 $J.m^(-2)$ respectively, the predicted avergae neck size (in µm) of sintered tungsten grain is:  (A) 10 (B) 15 (C) 20 (D) 25
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+25,mascqa,11,G-XEC-2012-11,Material characterization,MATCH,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (MATCH).
+Answer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.
+
+Question: Match the characterization techniques in Column I with the options in Column II:  Column I : [P.Scanning tunneling microscopy, Q. Scanning electron microscopy, R. Transmission electron microscopy, S. Atomic force microscopy]  Column II : [1. No vacuum required, 2. Backscattered electrons, 3. Photoelectrons, 4. Atomically sharp tip, 5. Sub-Angstrom resolution]    Options: (A) P-4, Q-2, R-5, S-1 (B) P-1, Q-3, R-4, S-5 (C) P-2, Q-4, R-1, S-5 (D) P-5, Q-1, R-2, S-4
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+26,mascqa,12,G-XEC-2013-12,Material characterization,MATCH,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (MATCH).
+Answer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.
+
+Question: Match the microscopes listed in Column I with their principle of operation listed in Column II:  Coloumn I: [P. Scanning Electron Microscope (SEM), Q. Transmission Electron Microscope(TEM), R. Scanning Tunnelling Microscope (STM), S. Atomic Force Microscope (AFM)]  Coloumn II: [1. van der Waals forces between atoms, 2. electrons to jump across a potential barrier, 3. diffraction of electrons, 4. detection of secondary electrons, 5. photo emission of electrons]    Options: (A) P-2, Q-5, R-3, S-1 (B) P-3, Q-4, R-5, S-2 (C) P-4, Q-3, R-2, S-1 (D) P-4, Q-3, R-5, S-2
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+27,mascqa,13,G-META-16-23,Material testing,MCQS,MaScQA published answer-key accuracy; deterministic parser fixed before evaluation,"The following is a MaScQA materials science benchmark question (MCQS).
+Answer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.
+
+Question: For dye-penetrant test, identify the CORRECT statement  (A) Pre- and post-cleaning of parts are not required (B) Internal defects can be detected (C) Surface oxides helps in crack identification (D) Dye with low contact angle is required
+
+Use exactly this final format: [ANSWER]<answer>[/ANSWER]."
+28,chemllmbench,1,chemllm-property-ext-e10ae4d05fcb8765,property_prediction/BBBP,binary_property_prediction,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench property-prediction task.
+Answer only Yes or No inside [ANSWER] and [/ANSWER].
+
+Task: Does this molecule penetrate the blood-brain barrier?
+SMILES: [C@H]23C1=C(C=C(C(CCCCCC)(C)C)C=C1O)OC([C@@H]2CCC(C3)=O)(C)C
+
+Use exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER]."
+29,chemllmbench,2,chemllm-property-ext-99873cdb81096a2d,property_prediction/BBBP,binary_property_prediction,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench property-prediction task.
+Answer only Yes or No inside [ANSWER] and [/ANSWER].
+
+Task: Does this molecule penetrate the blood-brain barrier?
+SMILES: C1=CC(=CC=C1C(C2=CC=CC=C2)SCCN(C)C)SCCCC
+
+Use exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER]."
+30,chemllmbench,3,chemllm-property-ext-edd9b399a31d7951,property_prediction/BACE,binary_property_prediction,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench property-prediction task.
+Answer only Yes or No inside [ANSWER] and [/ANSWER].
+
+Task: Can this molecule inhibit BACE1?
+SMILES: Clc1cc(cnc1)-c1cc2c(CC(CC23N=C(OC3)N)(C)C)cc1
+
+Use exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER]."
+31,chemllmbench,4,chemllm-property-ext-7f1fd81c47e14237,property_prediction/HIV,binary_property_prediction,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench property-prediction task.
+Answer only Yes or No inside [ANSWER] and [/ANSWER].
+
+Task: Can this molecule inhibit HIV replication?
+SMILES: COc1ccc(N2C(=O)C3CC(c4ccc(Br)cc4)c4c([nH]c5ccccc45)C3C2=O)cc1
+Activity test class: CI
+
+Use exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER]."
+32,chemllmbench,5,chemllm-property-ext-fa997a03631e87b0,property_prediction/ClinTox,binary_property_prediction,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench property-prediction task.
+Answer only Yes or No inside [ANSWER] and [/ANSWER].
+
+Task: Is this molecule clinically toxic?
+SMILES: CCc1c([nH]c2c1C(=O)C(CC2)C[NH+]3CCOCC3)C
+FDA approved field: Yes
+
+Use exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER]."
+33,chemllmbench,6,chemllm-property-ext-a5e9e7981b2d27c8,property_prediction/ClinTox,binary_property_prediction,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench property-prediction task.
+Answer only Yes or No inside [ANSWER] and [/ANSWER].
+
+Task: Is this molecule clinically toxic?
+SMILES: Cn1c(nnn1)SCC2=C(N3[C@@H]([C@@H](C3=O)NC(=O)/C(=N\OC)/c4csc(n4)N)SC2)C(=O)[O-]
+FDA approved field: Yes
+
+Use exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER]."
+34,chemllmbench,7,chemllm-selection-ext-4fb298ce83774186,reagent_selection/reagent_sample,candidate_selection,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench Suzuki reaction component-selection task.
+Return only the selected candidate SMILES inside [ANSWER] and [/ANSWER].
+
+You are an expert chemist. Given selected one reactant, two reagents and solvent of a Suzuki reaction, predict the optimal reactant that maximize the yield with the rest of reaction components by using your experienced chemical reactant selection knowledge. No explanations and other information. Only return the reactant smiles from the given list. Please strictly follow the format, the template are provided as follows:
+Given the rest of reaction components:
+reactant: reactant 1
+ ligand: ligand 1
+ base: base 1
+ solvent: solvent 1 
+Reactant list: reactant1,reactant2,reactant3,.etc
+Optimal reactant: reactant2 
+
+Given the rest of reaction components:
+reactant: Cc1ccc2c(cnn2C2CCCCO2)c1B(O)O
+ligand: CN(C)Cc1ccc(P(C(C)(C)C)C(C)(C)C)cc1
+solvent: CO
+base: [OH-].[Na+]  
+Reactants list for selection:
+Brc1ccc2ncccc2c1,O=S(=O)(Oc1cnc2ccccc2c1)C(F)(F)F,Ic1ccc2ncccc2c1
+Optimal reactant:
+
+Use exactly this final format: [ANSWER]<selected SMILES>[/ANSWER]."
+35,chemllmbench,8,chemllm-selection-ext-344b758d2af86e66,reagent_selection/reagent_sample,candidate_selection,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench Suzuki reaction component-selection task.
+Return only the selected candidate SMILES inside [ANSWER] and [/ANSWER].
+
+You are an expert chemist. Given selected one reactant, two reagents and solvent of a Suzuki reaction, predict the optimal reactant that maximize the yield with the rest of reaction components by using your experienced chemical reactant selection knowledge. No explanations and other information. Only return the reactant smiles from the given list. Please strictly follow the format, the template are provided as follows:
+Given the rest of reaction components:
+reactant: reactant 1
+ ligand: ligand 1
+ base: base 1
+ solvent: solvent 1 
+Reactant list: reactant1,reactant2,reactant3,.etc
+Optimal reactant: reactant2 
+
+Given the rest of reaction components:
+reactant: Cc1ccc2c(cnn2C2CCCCO2)c1Br
+ligand: c1ccc(P(c2ccccc2)c2ccccc2)cc1
+solvent: CO
+base: [OH-].[Na+]  
+Reactants list for selection:
+F[B-](F)(F)c1ccc2ncccc2c1,CC1(C)OB(c2ccc3ncccc3c2)OC1(C)C
+Optimal reactant:
+
+Use exactly this final format: [ANSWER]<selected SMILES>[/ANSWER]."
+36,chemllmbench,9,chemllm-selection-ext-f2ed6faa67085ff8,reagent_selection/reagent_sample,candidate_selection,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench Suzuki reaction component-selection task.
+Return only the selected candidate SMILES inside [ANSWER] and [/ANSWER].
+
+You are an expert chemist. Given selected one reactant, two reagents and solvent of a Suzuki reaction, predict the optimal reactant that maximize the yield with the rest of reaction components by using your experienced chemical reactant selection knowledge. No explanations and other information. Only return the reactant smiles from the given list. Please strictly follow the format, the template are provided as follows:
+Given the rest of reaction components:
+reactant: reactant 1
+ ligand: ligand 1
+ base: base 1
+ solvent: solvent 1 
+Reactant list: reactant1,reactant2,reactant3,.etc
+Optimal reactant: reactant2 
+
+Given the rest of reaction components:
+reactant: CC(C)c1cc(C(C)C)c(-c2ccccc2P(C2CCCCC2)C2CCCCC2)c(C(C)C)c1
+ligand: CC#N
+solvent: [OH-].[K+]
+base: Brc1ccc2ncccc2c1  
+Reactants list for selection:
+Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1,Cc1ccc2c(cnn2C2CCCCO2)c1[B-](F)(F)F.[K+],Cc1ccc2c(cnn2C2CCCCO2)c1Br
+Optimal reactant:
+
+Use exactly this final format: [ANSWER]<selected SMILES>[/ANSWER]."
+37,chemllmbench,10,chemllm-selection-ext-eaa6abb6b83d5a34,reagent_selection/solvent_sample,candidate_selection,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench Suzuki reaction component-selection task.
+Return only the selected candidate SMILES inside [ANSWER] and [/ANSWER].
+
+You are an expert chemist. Given selected two reactants, two reagents of a Suzuki reaction, predict the optimal solvent that maximize the yield with the rest of reaction components by using your experienced chemical solvent selection knowledge. No explanations and other information. Only return the solvent smiles from the given list. Please strictly follow the format, the template are provided as follows:
+Given the rest of reaction components:
+reactant: reactant 1
+reactant: reactant 2
+ligand: ligand 1
+base: base 1 
+solvent list: solvent 1,solvent 2,solvent 3,.etc
+Optimal solvent: solvent 2 
+
+Given the rest of reaction components:
+reactant 1: O=S(=O)(Oc1cnc2ccccc2c1)C(F)(F)F
+reactant 2: Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1
+ligand: CC1(C)c2cccc(P(c3ccccc3)c3ccccc3)c2Oc2c(P(c3ccccc3)c3ccccc3)cccc21
+base: CCN(CC)CC  
+Solvent list for selection:
+C1CCOC1,CN(C)C=O,CO
+Optimal solvent:
+
+Use exactly this final format: [ANSWER]<selected SMILES>[/ANSWER]."
+38,chemllmbench,11,chemllm-selection-ext-8723136f64c81ae7,reagent_selection/solvent_sample,candidate_selection,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench Suzuki reaction component-selection task.
+Return only the selected candidate SMILES inside [ANSWER] and [/ANSWER].
+
+You are an expert chemist. Given selected two reactants, two reagents of a Suzuki reaction, predict the optimal solvent that maximize the yield with the rest of reaction components by using your experienced chemical solvent selection knowledge. No explanations and other information. Only return the solvent smiles from the given list. Please strictly follow the format, the template are provided as follows:
+Given the rest of reaction components:
+reactant: reactant 1
+reactant: reactant 2
+ligand: ligand 1
+base: base 1 
+solvent list: solvent 1,solvent 2,solvent 3,.etc
+Optimal solvent: solvent 2 
+
+Given the rest of reaction components:
+reactant 1: O=S(=O)(Oc1cnc2ccccc2c1)C(F)(F)F
+reactant 2: Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1
+ligand: CC(C)(C)P(C(C)(C)C)C(C)(C)C
+base: [OH-].[Na+]  
+Solvent list for selection:
+C1CCOC1,CN(C)C=O,CO
+Optimal solvent:
+
+Use exactly this final format: [ANSWER]<selected SMILES>[/ANSWER]."
+39,chemllmbench,12,chemllm-selection-ext-467f1178068dee80,reagent_selection/ligand_sample,candidate_selection,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench Suzuki reaction component-selection task.
+Return only the selected candidate SMILES inside [ANSWER] and [/ANSWER].
+
+You are an expert chemist. Given selected two reactants, one reagent and solvent of a Suzuki reaction, predict the optimal ligand that maximize the yield with the rest of reaction components by using your experienced chemical ligand selection knowledge. No explanations and other information. Only return the ligand smiles from the given list. Please strictly follow the format, the template are provided as follows:
+Given the rest of reaction components:
+reactant: reactant 1
+reactant: reactant 2
+base: base 1
+solvent: solvent 1 
+Ligand list: ligand1,ligand2,ligand3,.etc
+Optimal reactant: ligand2 
+
+Given the rest of reaction components:
+reactant 1: Ic1ccc2ncccc2c1
+reactant 2: Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1
+base: CN(C)C=O
+solvent: CCN(CC)CC  
+Ligand list for selection:
+c1ccc(P(c2ccccc2)c2ccccc2)cc1,CN(C)Cc1ccc(P(C(C)(C)C)C(C)(C)C)cc1,C1CCC(P(C2CCCCC2)C2CCCCC2)CC1,Cc1ccccc1P(c1ccccc1C)c1ccccc1C,CCCCP(C12CC3CC(CC(C3)C1)C2)C12CC3CC(CC(C3)C1)C2,COc1cccc(OC)c1-c1ccccc1P(C1CCCCC1)C1CCCCC1,CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C,CC(C)c1cc(C(C)C)c(-c2ccccc2P(C2CCCCC2)C2CCCCC2)c(C(C)C)c1,C1=C[C@H]2[Fe][C@@H]1[C]2P(c1ccccc1)c1ccccc1,CC1(C)c2cccc(P(c3ccccc3)c3ccccc3)c2Oc2c(P(c3ccccc3)c3ccccc3)cccc21
+Optimal ligand:
+
+Use exactly this final format: [ANSWER]<selected SMILES>[/ANSWER]."
+40,chemllmbench,13,chemllm-selection-ext-c841a25f1676123b,reagent_selection/ligand_sample,candidate_selection,ChemLLMBench task-specific answer-key metric; deterministic parser fixed before evaluation,"The following is a ChemLLMBench Suzuki reaction component-selection task.
+Return only the selected candidate SMILES inside [ANSWER] and [/ANSWER].
+
+You are an expert chemist. Given selected two reactants, one reagent and solvent of a Suzuki reaction, predict the optimal ligand that maximize the yield with the rest of reaction components by using your experienced chemical ligand selection knowledge. No explanations and other information. Only return the ligand smiles from the given list. Please strictly follow the format, the template are provided as follows:
+Given the rest of reaction components:
+reactant: reactant 1
+reactant: reactant 2
+base: base 1
+solvent: solvent 1 
+Ligand list: ligand1,ligand2,ligand3,.etc
+Optimal reactant: ligand2 
+
+Given the rest of reaction components:
+reactant 1: F[B-](F)(F)c1ccc2ncccc2c1
+reactant 2: Cc1ccc2c(cnn2C2CCCCO2)c1Br
+base: CC#N
+solvent: CCN(CC)CC  
+Ligand list for selection:
+c1ccc(P(c2ccccc2)c2ccccc2)cc1,CN(C)Cc1ccc(P(C(C)(C)C)C(C)(C)C)cc1,C1CCC(P(C2CCCCC2)C2CCCCC2)CC1,Cc1ccccc1P(c1ccccc1C)c1ccccc1C,CCCCP(C12CC3CC(CC(C3)C1)C2)C12CC3CC(CC(C3)C1)C2,COc1cccc(OC)c1-c1ccccc1P(C1CCCCC1)C1CCCCC1,CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C,CC(C)c1cc(C(C)C)c(-c2ccccc2P(C2CCCCC2)C2CCCCC2)c(C(C)C)c1,C1=C[C@H]2[Fe][C@@H]1[C]2P(c1ccccc1)c1ccccc1,CC1(C)c2cccc(P(c3ccccc3)c3ccccc3)c2Oc2c(P(c3ccccc3)c3ccccc3)cccc21
+Optimal ligand:
+
+Use exactly this final format: [ANSWER]<selected SMILES>[/ANSWER]."

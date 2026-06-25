@@ -1,0 +1,29 @@
+{
+  "idx": 80,
+  "uuid": "G-META-13-11",
+  "topic": "Phase transition",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T15:55:57.500Z",
+  "finished_at": "2026-06-06T15:56:12.609Z",
+  "latency_ms": 15109,
+  "page_url": "http://localhost:3000/workspace/chats/5e634dd6-97d1-4b02-897d-c07968d94b62",
+  "thread_id": "5e634dd6-97d1-4b02-897d-c07968d94b62",
+  "run_id": "529c013d-7fb0-409b-9b60-c95358a4d89b",
+  "final_text": "[ANSWER]D[/ANSWER]",
+  "stream_final_text": "[ANSWER]D[/ANSWER]",
+  "ui_final_text": "Answer: D",
+  "stream_event_count": 43,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/5e634dd6-97d1-4b02-897d-c07968d94b62/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a MaScQA materials science benchmark question (MCQS).\\nAnswer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.\\n\\nQuestion: When two phases α and β in an alloy are in thermodynamic equilibrium, then   (A) $(c_p)^(α)$ = $(c_p)^(β)$ (B) $(V_m)^(α)$ = $(V_m)^(β)$ (C) $(G_m)^(α)$ = $(G_m)^(β)$ (D) $(μ_i)^(α)$ = $(μ_i)^(β)$\\n\\nUse exactly this final format: [ANSWER]<answer>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"5e634dd6-97d1-4b02-897d-c07968d94b62\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

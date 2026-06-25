@@ -1,0 +1,164 @@
+{
+  "idx": 7,
+  "uuid": "chemllm-property-ff57afebabb97633",
+  "topic": "property_prediction/BBBP",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T16:51:54.886Z",
+  "finished_at": "2026-06-06T16:52:30.498Z",
+  "latency_ms": 35612,
+  "page_url": "http://localhost:3000/workspace/chats/4c775cab-8068-4201-84ba-851cccdfdeab",
+  "thread_id": "4c775cab-8068-4201-84ba-851cccdfdeab",
+  "run_id": "99252f18-d7e8-4bf4-8b8d-99569bbe12c2",
+  "final_text": "Now I have all the key descriptors. Let me apply the BBB penetration rules:\n\n**Molecular Properties:**\n- **MW**: 471.5 Da → **Exceeds CNS threshold of 450 Da** ❌\n- **clogP**: -0.73 → Very hydrophilic (far below CNS optimal range 1.5-4.0) ❌\n- **TPSA**: 163.33 Å² → **Far exceeds CNS threshold of 90 Å²** ❌\n- **HBD**: 2 → Exceeds the favorable HBD = 0 ❌\n- **HBA**: 11 → Exceeds CNS limit ❌\n- **Rotatable bonds**: 9 → **Exceeds CNS limit of 8** ❌\n\nThis molecule violates multiple critical CNS drug-like rules: MW > 450 Da, TPSA > 90 Å² (163 Å² is very high), clogP is highly negative (-0.73), and rotatable bonds > 8. These properties indicate the molecule is too polar and too large to cross the BBB via passive diffusion.\n\n[ANSWER]No[/ANSWER]",
+  "stream_final_text": "Now I have all the key descriptors. Let me apply the BBB penetration rules:\n\n**Molecular Properties:**\n- **MW**: 471.5 Da → **Exceeds CNS threshold of 450 Da** ❌\n- **clogP**: -0.73 → Very hydrophilic (far below CNS optimal range 1.5-4.0) ❌\n- **TPSA**: 163.33 Å² → **Far exceeds CNS threshold of 90 Å²** ❌\n- **HBD**: 2 → Exceeds the favorable HBD = 0 ❌\n- **HBA**: 11 → Exceeds CNS limit ❌\n- **Rotatable bonds**: 9 → **Exceeds CNS limit of 8** ❌\n\nThis molecule violates multiple critical CNS drug-like rules: MW > 450 Da, TPSA > 90 Å² (163 Å² is very high), clogP is highly negative (-0.73), and rotatable bonds > 8. These properties indicate the molecule is too polar and too large to cross the BBB via passive diffusion.\n\n[ANSWER]No[/ANSWER]",
+  "ui_final_text": "Now I have all the key descriptors. Let me apply the BBB penetration rules:Molecular Properties:\nMW: 471.5 Da → Exceeds CNS threshold of 450 Da ❌\nclogP: -0.73 → Very hydrophilic (far below CNS optimal range 1.5-4.0) ❌\nTPSA: 163.33 Å² → Far exceeds CNS threshold of 90 Å² ❌\nHBD: 2 → Exceeds the favorable HBD = 0 ❌\nHBA: 11 → Exceeds CNS limit ❌\nRotatable bonds: 9 → Exceeds CNS limit of 8 ❌\nThis molecule violates multiple critical CNS drug-like rules: MW > 450 Da, TPSA > 90 Å² (163 Å² is very high), clogP is highly negative (-0.73), and rotatable bonds > 8. These properties indicate the molecule is too polar and too large to cross the BBB via passive diffusion.Answer: No",
+  "stream_event_count": 345,
+  "tool_events": [
+    {
+      "event": "on_tool_end",
+      "name": "gvim-science_gvim_rdkit_descriptors",
+      "run_id": "019e9dd9-5b6c-7b11-9c48-cb8a829c5ff5",
+      "parent_ids": [
+        "019e9dd9-5b68-77a3-b269-5fb800727fe8"
+      ],
+      "tags": [
+        "seq:step:1"
+      ],
+      "metadata": {},
+      "data": {
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"success\": true,\n  \"tool_key\": \"rdkit_descriptors\",\n  \"domain\": \"chemistry\",\n  \"tool_result\": {\n    \"success\": true,\n    \"version\": \"3.0\",\n    \"analysis_type\": \"rdkit_descriptors\",\n    \"source\": \"rdkit_native_descriptors\",\n    \"smiles\": \"CO[C@]1(NC(=O)CSCC#N)[C@H]2SCC(=C(N2C1=O)C(O)=O)CSc3nnnn3C\",\n    \"canonical_smiles\": \"CO[C@@]1(NC(=O)CSCC#N)C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@@H]21\",\n    \"descriptors\": {\n      \"molecular_formula\": \"C15H17N7O5S3\",\n      \"molecular_weight\": 471.0453,\n      \"average_molecular_weight\": 471.546,\n      \"logp\": -0.7283,\n      \"tpsa\": 163.33,\n      \"hba\": 11,\n      \"hbd\": 2,\n      \"rotatable_bonds\": 9,\n      \"num_rings\": 3,\n      \"num_aromatic_rings\": 1,\n      \"heavy_atom_count\": 30,\n      \"formal_charge\": 0,\n      \"fraction_csp3\": 0.533333\n    },\n    \"data_quality\": {\n      \"computed_from\": \"smiles\",\n      \"engine\": \"rdkit\",\n      \"external_database_lookup\": false,\n      \"experimental\": false\n    }\n  },\n  \"science_artifacts\": []\n}",
+              "id": "lc_6231d583-c729-48b0-b87b-c7a3555602b7"
+            }
+          ],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "gvim-science_gvim_rdkit_descriptors",
+          "id": null,
+          "tool_call_id": "call_00_9WWqwUD5lXZGforfl5A59279",
+          "artifact": {
+            "structured_content": {
+              "success": true,
+              "tool_key": "rdkit_descriptors",
+              "domain": "chemistry",
+              "tool_result": {
+                "success": true,
+                "version": "3.0",
+                "analysis_type": "rdkit_descriptors",
+                "source": "rdkit_native_descriptors",
+                "smiles": "CO[C@]1(NC(=O)CSCC#N)[C@H]2SCC(=C(N2C1=O)C(O)=O)CSc3nnnn3C",
+                "canonical_smiles": "CO[C@@]1(NC(=O)CSCC#N)C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@@H]21",
+                "descriptors": {
+                  "molecular_formula": "C15H17N7O5S3",
+                  "molecular_weight": 471.0453,
+                  "average_molecular_weight": 471.546,
+                  "logp": -0.7283,
+                  "tpsa": 163.33,
+                  "hba": 11,
+                  "hbd": 2,
+                  "rotatable_bonds": 9,
+                  "num_rings": 3,
+                  "num_aromatic_rings": 1,
+                  "heavy_atom_count": 30,
+                  "formal_charge": 0,
+                  "fraction_csp3": 0.533333
+                },
+                "data_quality": {
+                  "computed_from": "smiles",
+                  "engine": "rdkit",
+                  "external_database_lookup": false,
+                  "experimental": false
+                }
+              },
+              "science_artifacts": []
+            }
+          },
+          "status": "success"
+        }
+      }
+    },
+    {
+      "event": "on_tool_end",
+      "name": "gvim-science_gvim_rdkit_descriptors",
+      "run_id": "019e9dd9-5b6c-7b11-9c48-cb8a829c5ff5",
+      "parent_ids": [
+        "019e9dd9-5b68-77a3-b269-5fb800727fe8"
+      ],
+      "tags": [
+        "seq:step:1"
+      ],
+      "metadata": {},
+      "data": {
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"success\": true,\n  \"tool_key\": \"rdkit_descriptors\",\n  \"domain\": \"chemistry\",\n  \"tool_result\": {\n    \"success\": true,\n    \"version\": \"3.0\",\n    \"analysis_type\": \"rdkit_descriptors\",\n    \"source\": \"rdkit_native_descriptors\",\n    \"smiles\": \"CO[C@]1(NC(=O)CSCC#N)[C@H]2SCC(=C(N2C1=O)C(O)=O)CSc3nnnn3C\",\n    \"canonical_smiles\": \"CO[C@@]1(NC(=O)CSCC#N)C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@@H]21\",\n    \"descriptors\": {\n      \"molecular_formula\": \"C15H17N7O5S3\",\n      \"molecular_weight\": 471.0453,\n      \"average_molecular_weight\": 471.546,\n      \"logp\": -0.7283,\n      \"tpsa\": 163.33,\n      \"hba\": 11,\n      \"hbd\": 2,\n      \"rotatable_bonds\": 9,\n      \"num_rings\": 3,\n      \"num_aromatic_rings\": 1,\n      \"heavy_atom_count\": 30,\n      \"formal_charge\": 0,\n      \"fraction_csp3\": 0.533333\n    },\n    \"data_quality\": {\n      \"computed_from\": \"smiles\",\n      \"engine\": \"rdkit\",\n      \"external_database_lookup\": false,\n      \"experimental\": false\n    }\n  },\n  \"science_artifacts\": []\n}",
+              "id": "lc_6231d583-c729-48b0-b87b-c7a3555602b7"
+            }
+          ],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "gvim-science_gvim_rdkit_descriptors",
+          "id": null,
+          "tool_call_id": "call_00_9WWqwUD5lXZGforfl5A59279",
+          "artifact": {
+            "structured_content": {
+              "success": true,
+              "tool_key": "rdkit_descriptors",
+              "domain": "chemistry",
+              "tool_result": {
+                "success": true,
+                "version": "3.0",
+                "analysis_type": "rdkit_descriptors",
+                "source": "rdkit_native_descriptors",
+                "smiles": "CO[C@]1(NC(=O)CSCC#N)[C@H]2SCC(=C(N2C1=O)C(O)=O)CSc3nnnn3C",
+                "canonical_smiles": "CO[C@@]1(NC(=O)CSCC#N)C(=O)N2C(C(=O)O)=C(CSc3nnnn3C)CS[C@@H]21",
+                "descriptors": {
+                  "molecular_formula": "C15H17N7O5S3",
+                  "molecular_weight": 471.0453,
+                  "average_molecular_weight": 471.546,
+                  "logp": -0.7283,
+                  "tpsa": 163.33,
+                  "hba": 11,
+                  "hbd": 2,
+                  "rotatable_bonds": 9,
+                  "num_rings": 3,
+                  "num_aromatic_rings": 1,
+                  "heavy_atom_count": 30,
+                  "formal_charge": 0,
+                  "fraction_csp3": 0.533333
+                },
+                "data_quality": {
+                  "computed_from": "smiles",
+                  "engine": "rdkit",
+                  "external_database_lookup": false,
+                  "experimental": false
+                }
+              },
+              "science_artifacts": []
+            }
+          },
+          "status": "success"
+        }
+      }
+    }
+  ],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/4c775cab-8068-4201-84ba-851cccdfdeab/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench property-prediction task.\\nAnswer only Yes or No inside [ANSWER] and [/ANSWER].\\n\\nTask: Does this molecule penetrate the blood-brain barrier?\\nSMILES: CO[C@]1(NC(=O)CSCC#N)[C@H]2SCC(=C(N2C1=O)C(O)=O)CSc3nnnn3C\\n\\nUse exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"4c775cab-8068-4201-84ba-851cccdfdeab\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

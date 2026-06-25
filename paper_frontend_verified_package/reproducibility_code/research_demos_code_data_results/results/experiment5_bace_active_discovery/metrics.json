@@ -1,0 +1,101 @@
+{
+  "batch_size": 10,
+  "budget": 150,
+  "data_path": "benchmarks/_sources/ChemLLMBench/data/property_prediction/BACE.csv",
+  "dataset": "BACE molecular property dataset as distributed with ChemLLMBench",
+  "demo_id": "experiment5_bace_active_discovery",
+  "gold_standard": "public pIC50 values",
+  "initial_size": 30,
+  "metrics": {
+    "greedy_surrogate": {
+      "best_pIC50_at_budget_mean": 9.238356725,
+      "enrichment_factor_at_budget_mean": 3.3132784810126585,
+      "hit_rate_at_budget_mean": 0.173,
+      "queries_to_first_hit_mean": 31.0,
+      "success_at_budget": 1.0,
+      "target_recall_at_budget_mean": 0.3284810126582278,
+      "target_recall_at_budget_std": 0.0867780084822028,
+      "top_20_gold_targets_ever_selected": 18.0
+    },
+    "random": {
+      "best_pIC50_at_budget_mean": 9.141533475,
+      "enrichment_factor_at_budget_mean": 0.9703628691983124,
+      "hit_rate_at_budget_mean": 0.05066666666666667,
+      "queries_to_first_hit_mean": 31.5,
+      "success_at_budget": 1.0,
+      "target_recall_at_budget_mean": 0.09620253164556963,
+      "target_recall_at_budget_std": 0.03191755205652372,
+      "top_20_gold_targets_ever_selected": 19.0
+    },
+    "ucb_surrogate": {
+      "best_pIC50_at_budget_mean": 9.294434794999999,
+      "enrichment_factor_at_budget_mean": 3.204751054852321,
+      "hit_rate_at_budget_mean": 0.1673333333333333,
+      "queries_to_first_hit_mean": 31.0,
+      "success_at_budget": 1.0,
+      "target_recall_at_budget_mean": 0.3177215189873418,
+      "target_recall_at_budget_std": 0.06505211734297565,
+      "top_20_gold_targets_ever_selected": 19.0
+    }
+  },
+  "n_candidates": 1513,
+  "n_features_after_preprocessing": 363,
+  "n_targets": 79,
+  "output_files": {
+    "budget_metrics": "budget_metrics.svg",
+    "final_seed_metrics": "final_seed_metrics.csv",
+    "final_selected_candidates": "final_selected_candidates.csv",
+    "recall_curve": "active_discovery_recall_curve.svg",
+    "report": "report.md",
+    "trajectories": "trajectories.csv"
+  },
+  "paired_deltas": {
+    "ucb_minus_random_enrichment_factor_at_budget_ci95": [
+      1.959877637130802,
+      2.540818565400844
+    ],
+    "ucb_minus_random_enrichment_factor_at_budget_mean": 2.2343881856540087,
+    "ucb_minus_random_recall_at_budget_ci95": [
+      0.19430379746835444,
+      0.2518987341772152
+    ],
+    "ucb_minus_random_recall_at_budget_mean": 0.22151898734177214
+  },
+  "policies": [
+    "random",
+    "greedy_surrogate",
+    "ucb_surrogate"
+  ],
+  "problem": "Retrospective active discovery of high-activity BACE inhibitor candidates",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "surrogate_model": {
+    "max_features": 0.35,
+    "model": "ExtraTreesRegressor",
+    "n_estimators": 30,
+    "ucb_weight": 0.75
+  },
+  "target_definition": "pIC50 >= dataset 95% quantile",
+  "target_fraction": 0.05221414408460013,
+  "target_threshold_pIC50": 8.3979397
+}

@@ -1,0 +1,72 @@
+{
+  "idx": 42,
+  "uuid": "G-META-13-31",
+  "global_idx": 278,
+  "source_id": "G-META-13-31",
+  "topic": "Material manufacturing",
+  "mini_split": "mascqa",
+  "question_type": "MCQS-NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:22:26.978928Z",
+  "finished_at": "2026-06-06T16:22:30.806659Z",
+  "latency_ms": 3828,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 630
+  },
+  "final_text": "We have 150 gearwheels total:  \n- 112 within tolerance  \n- 21 below tolerance  \n- Rest above tolerance = 150 - (112 + 21) = 17 above tolerance  \n\nProbability of first below tolerance:  \n\\( \\frac{21}{150} \\)  \n\nAfter removing one below, 149 remain, with 17 above tolerance.  \nProbability of second above tolerance:  \n\\( \\frac{17}{149} \\)  \n\nCombined probability:  \n\\[\n\\frac{21}{150} \\times \\frac{17}{149} = \\frac{357}{22350} \\approx 0.01597\n\\]  \n\nThat rounds to 0.016.  \n\n[ANSWER]A[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "We have 150 gearwheels total:  \n- 112 within tolerance  \n- 21 below tolerance  \n- Rest above tolerance = 150 - (112 + 21) = 17 above tolerance  \n\nProbability of first below tolerance:  \n\\( \\frac{21}{150} \\)  \n\nAfter removing one below, 149 remain, with 17 above tolerance.  \nProbability of second above tolerance:  \n\\( \\frac{17}{149} \\)  \n\nCombined probability:  \n\\[\n\\frac{21}{150} \\times \\frac{17}{149} = \\frac{357}{22350} \\approx 0.01597\n\\]  \n\nThat rounds to 0.016.  \n\n[ANSWER]A[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 157,
+    "completion_tokens": 150,
+    "total_tokens": 307,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 157
+  },
+  "error": null,
+  "raw_response": {
+    "id": "5ba723a6-e1d8-4a8c-b91d-9feaea90a214",
+    "object": "chat.completion",
+    "created": 1780762948,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "We have 150 gearwheels total:  \n- 112 within tolerance  \n- 21 below tolerance  \n- Rest above tolerance = 150 - (112 + 21) = 17 above tolerance  \n\nProbability of first below tolerance:  \n\\( \\frac{21}{150} \\)  \n\nAfter removing one below, 149 remain, with 17 above tolerance.  \nProbability of second above tolerance:  \n\\( \\frac{17}{149} \\)  \n\nCombined probability:  \n\\[\n\\frac{21}{150} \\times \\frac{17}{149} = \\frac{357}{22350} \\approx 0.01597\n\\]  \n\nThat rounds to 0.016.  \n\n[ANSWER]A[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 157,
+      "completion_tokens": 150,
+      "total_tokens": 307,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 157
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

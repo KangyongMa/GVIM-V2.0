@@ -1,0 +1,72 @@
+{
+  "idx": 37,
+  "uuid": "G-META-12-7",
+  "global_idx": 273,
+  "source_id": "G-META-12-7",
+  "topic": "Fluid",
+  "mini_split": "mascqa",
+  "question_type": "MCQS-NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:21:50.474379Z",
+  "finished_at": "2026-06-06T16:21:52.997189Z",
+  "latency_ms": 2523,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 499
+  },
+  "final_text": "The no-slip condition in fluid mechanics states that the fluid velocity at a solid boundary equals the velocity of the boundary.  \nSince the plate moves at 0.01 m/s, the fluid at the interface also moves at 0.01 m/s.\n\n[ANSWER]B[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "The no-slip condition in fluid mechanics states that the fluid velocity at a solid boundary equals the velocity of the boundary.  \nSince the plate moves at 0.01 m/s, the fluid at the interface also moves at 0.01 m/s.\n\n[ANSWER]B[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 145,
+    "completion_tokens": 59,
+    "total_tokens": 204,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 145
+  },
+  "error": null,
+  "raw_response": {
+    "id": "8e2958b6-82f8-4ca7-b3cc-b6c0858b2b9a",
+    "object": "chat.completion",
+    "created": 1780762912,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The no-slip condition in fluid mechanics states that the fluid velocity at a solid boundary equals the velocity of the boundary.  \nSince the plate moves at 0.01 m/s, the fluid at the interface also moves at 0.01 m/s.\n\n[ANSWER]B[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 145,
+      "completion_tokens": 59,
+      "total_tokens": 204,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 145
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

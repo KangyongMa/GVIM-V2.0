@@ -1,0 +1,18 @@
+{
+  "benchmark": "MoleculeNet ESOL",
+  "id_column": "molecule_id",
+  "input_column": "smiles",
+  "n_test": 254,
+  "n_train": 874,
+  "source_url": "https://raw.githubusercontent.com/deepchem/deepchem/master/datasets/delaney-processed.csv",
+  "split_rule": "deterministic Bemis-Murcko scaffold split, test_fraction=0.2",
+  "standard_metrics": [
+    "MAE",
+    "RMSE",
+    "R2"
+  ],
+  "target_column": "log_solubility",
+  "task": "aqueous solubility regression",
+  "test_csv": "esol_test_unlabeled.csv",
+  "train_csv": "esol_train.csv"
+}

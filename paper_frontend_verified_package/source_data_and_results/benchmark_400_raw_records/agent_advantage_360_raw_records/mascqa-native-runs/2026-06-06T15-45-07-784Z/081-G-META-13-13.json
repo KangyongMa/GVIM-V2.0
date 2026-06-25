@@ -1,0 +1,29 @@
+{
+  "idx": 81,
+  "uuid": "G-META-13-13",
+  "topic": "Phase transition",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T15:56:13.902Z",
+  "finished_at": "2026-06-06T15:56:29.395Z",
+  "latency_ms": 15493,
+  "page_url": "http://localhost:3000/workspace/chats/a56503b8-00ff-4ab9-875b-0b8395c96291",
+  "thread_id": "a56503b8-00ff-4ab9-875b-0b8395c96291",
+  "run_id": "b3c10633-cfd5-4e59-b8e8-35e8e936c368",
+  "final_text": "[ANSWER]A[/ANSWER]",
+  "stream_final_text": "[ANSWER]A[/ANSWER]",
+  "ui_final_text": "Answer: A",
+  "stream_event_count": 44,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/a56503b8-00ff-4ab9-875b-0b8395c96291/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a MaScQA materials science benchmark question (MCQS).\\nAnswer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.\\n\\nQuestion: In the Ellingham diagram for oxides, C-CO line cuts the M-MO line at temperature $T_1$ and the M′-M′O line at a higher temperature $T_2$. At a temperature greater than $T_1$ and less than $T_2$, carbon can reduce  (A) MO (B) both MO and M′O (C) M′O (D) neither MO nor M′O \\n\\nUse exactly this final format: [ANSWER]<answer>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"a56503b8-00ff-4ab9-875b-0b8395c96291\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

@@ -1,0 +1,74 @@
+{
+  "idx": 2,
+  "uuid": "chemllm-property-7b06fcb81e26799c",
+  "global_idx": 322,
+  "source_id": "chemllm-property-7b06fcb81e26799c",
+  "topic": "property_prediction/BBBP",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_chemllmbench_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T17:19:38.159587Z",
+  "finished_at": "2026-06-06T17:19:39.917224Z",
+  "latency_ms": 1758,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 306
+  },
+  "final_text": "[ANSWER]Yes[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]Yes[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 99,
+    "completion_tokens": 7,
+    "total_tokens": 106,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 99
+  },
+  "error": null,
+  "raw_response": {
+    "id": "050e0390-0bc5-4a92-92dc-cb15a1149606",
+    "object": "chat.completion",
+    "created": 1780766380,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]Yes[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 99,
+      "completion_tokens": 7,
+      "total_tokens": 106,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 99
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_record_file": "",
+  "_source_kind": "deepseek_flash_api_only"
+}

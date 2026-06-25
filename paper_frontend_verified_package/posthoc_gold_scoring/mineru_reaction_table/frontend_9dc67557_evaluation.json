@@ -1,0 +1,14 @@
+{
+  "metric_definition": "Exact match after Unicode NFKC, markup removal, whitespace collapse, and dash normalization",
+  "gold_source": "Publisher JATS XML table nanomaterials-12-01070-t002",
+  "gold_rows": 21,
+  "predicted_rows": 21,
+  "gold_cells": 105,
+  "predicted_cells": 105,
+  "true_positive_cells": 103,
+  "exact_match_precision": 0.9809523809523809,
+  "exact_match_recall": 0.9809523809523809,
+  "exact_match_f1": 0.9809523809523809,
+  "exact_rows": 19,
+  "exact_row_accuracy": 0.9047619047619048
+}

@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="563.472pt" height="452.728682pt" viewBox="0 0 563.472 452.728682" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-06-22T19:22:47.287901</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 452.728682 
+L 563.472 452.728682 
+L 563.472 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 13.788864 69.283321 
+L 547.486848 69.283321 
+L 547.486848 49.227738 
+L 13.788864 49.227738 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 18.18144 64.110254 
+L 24.770304 64.110254 
+L 24.770304 54.750982 
+L 18.18144 54.750982 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 13.788864 91.567303 
+L 547.486848 91.567303 
+L 547.486848 71.51172 
+L 13.788864 71.51172 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #f8fafc"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 18.18144 86.394236 
+L 24.770304 86.394236 
+L 24.770304 77.034964 
+L 18.18144 77.034964 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 13.788864 113.851284 
+L 547.486848 113.851284 
+L 547.486848 93.795701 
+L 13.788864 93.795701 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 18.18144 108.678217 
+L 24.770304 108.678217 
+L 24.770304 99.318945 
+L 18.18144 99.318945 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #009e73"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 13.788864 136.135265 
+L 547.486848 136.135265 
+L 547.486848 116.079682 
+L 13.788864 116.079682 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #f8fafc"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 18.18144 130.962198 
+L 24.770304 130.962198 
+L 24.770304 121.602926 
+L 18.18144 121.602926 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #e69f00"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 13.788864 158.419247 
+L 547.486848 158.419247 
+L 547.486848 138.363664 
+L 13.788864 138.363664 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 18.18144 153.24618 
+L 24.770304 153.24618 
+L 24.770304 143.886908 
+L 18.18144 143.886908 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #cc79a7"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 13.788864 180.703228 
+L 547.486848 180.703228 
+L 547.486848 160.647645 
+L 13.788864 160.647645 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #f8fafc"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 18.18144 175.530161 
+L 24.770304 175.530161 
+L 24.770304 166.170889 
+L 18.18144 166.170889 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #e69f00"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 13.788864 202.98721 
+L 547.486848 202.98721 
+L 547.486848 182.931626 
+L 13.788864 182.931626 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 18.18144 197.814142 
+L 24.770304 197.814142 
+L 24.770304 188.45487 
+L 18.18144 188.45487 
+z
+" clip-path="url(#p3c956709bc)" style="fill: #009e73"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 18.18144 45.805555 
+L 117.0144 45.805555 
+" clip-path="url(#p3c956709bc)" style="fill: none; stroke: #354153; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 136.23192 45.805555 
+L 254.2824 45.805555 
+" clip-path="url(#p3c956709bc)" style="fill: none; stroke: #354153; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 268.0092 45.805555 
+L 380.56896 45.805555 
+" clip-path="url(#p3c956709bc)" style="fill: none; stroke: #354153; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 394.29576 45.805555 
+L 542.5452 45.805555 
+" clip-path="url(#p3c956709bc)" style="fill: none; stroke: #354153; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Times New Roman'; text-anchor: start" x="7.2" y="13.821875" transform="rotate(-0 7.2 13.821875)">a</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Times New Roman'; text-anchor: start" x="18.18144" y="32.145018" transform="rotate(-0 18.18144 32.145018)">Real front-end demonstrations with public or externally defined gold standards</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Times New Roman'; text-anchor: start; fill: #354153" x="18.18144" y="40.23456" transform="rotate(-0 18.18144 40.23456)">Demo</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Times New Roman'; text-anchor: start; fill: #354153" x="136.23192" y="40.23456" transform="rotate(-0 136.23192 40.23456)">Scientific task</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Times New Roman'; text-anchor: start; fill: #354153" x="268.0092" y="40.23456" transform="rotate(-0 268.0092 40.23456)">Gold standard</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 6.9px; font-family: 'Times New Roman'; text-anchor: start; fill: #354153" x="394.29576" y="40.23456" transform="rotate(-0 394.29576 40.23456)">Objective endpoint</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'; text-anchor: start" x="29.16288" y="59.631382" transform="rotate(-0 29.16288 59.631382)">ESOL solubility</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 56.8093)">Molecular property</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 62.452268)">prediction</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; text-anchor: start" x="268.0092" y="59.630784" transform="rotate(-0 268.0092 59.630784)">MoleculeNet ESOL</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 53.99944)">MAE 0.603</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 59.630784)">RMSE 0.741</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 65.262128)">R² 0.739</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'" transform="translate(29.16288 79.045617)">Matbench steels</text>
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'" transform="translate(29.16288 84.696421)">fold 0</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 79.093281)">Alloy strength</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 84.73625)">prediction</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(268.0092 79.093281)">Official fold 0;</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(268.0092 84.724625)">withheld-label scoring</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 79.099093)">Test MAE 111.444 MPa</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 84.730437)">Test R² 0.684</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'; text-anchor: start" x="29.16288" y="104.148954" transform="rotate(-0 29.16288 104.148954)">Matbench band gap</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 101.37145)">Property prediction</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 107.014418)">+ screening</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; text-anchor: start" x="268.0092" y="104.192934" transform="rotate(-0 268.0092 104.192934)">Matbench expt_gap</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 101.377262)">MAE 0.451±0.017 eV</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 107.008606)">Recall@150 0.263</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'" transform="translate(29.16288 123.613579)">MinerU reaction</text>
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'" transform="translate(29.16288 129.264384)">tables</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 123.667056)">Literature table</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 129.2984)">extraction</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; text-anchor: start" x="268.0092" y="126.482728" transform="rotate(-0 268.0092 126.482728)">Publisher JATS XML</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 123.661244)">Exact F1 0.981</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 129.292587)">Row accuracy 0.905</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'; text-anchor: start" x="29.16288" y="148.722963" transform="rotate(-0 29.16288 148.722963)">MS/MS retrieval</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 145.951037)">Candidate molecule</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 151.582381)">retrieval</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(268.0092 145.945225)">MassBank identity</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(268.0092 151.588194)">labels</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 143.135366)">Top-1 0.800</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 148.766709)">Top-3 1.000</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 154.398053)">MRR 0.900</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'; text-anchor: start" x="29.16288" y="171.006945" transform="rotate(-0 29.16288 171.006945)">ChEMU entities</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; text-anchor: start" x="136.23192" y="171.050691" transform="rotate(-0 136.23192 171.050691)">Chemical NER</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(268.0092 168.235019)">ChEMU 2020 Task 1</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(268.0092 173.866362)">sample</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 168.235019)">Exact F1 0.817</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 173.866362)">Relaxed F1 0.841</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'" transform="translate(29.16288 190.409086)">BACE active</text>
+    <text style="font-weight: 700; font-size: 6.45px; font-family: 'Times New Roman'" transform="translate(29.16288 196.160672)">discovery</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 190.513188)">Retrospective active</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(136.23192 196.144531)">discovery</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(268.0092 190.513188)">Public BACE activity</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(268.0092 196.156156)">labels</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 190.513188)">UCB Recall@150 0.363</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'" transform="translate(394.29576 196.156156)">EF 3.664</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 6.4px; font-family: 'Times New Roman'; text-anchor: start; fill: #5f6d7c" x="18.18144" y="216.528518" transform="rotate(-0 18.18144 216.528518)">Endpoint metrics: MAE/RMSE/R², precision/recall/F1, Top-k accuracy, MRR, Recall@k, and enrichment factor.</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_16">
+    <path d="M 20.204337 313.989818 
+L 52.715179 313.989818 
+L 52.715179 307.280453 
+L 20.204337 307.280453 
+z
+" clip-path="url(#pe7f1e28568)" style="fill: #0072b2; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 20.204337 332.528852 
+L 36.459758 332.528852 
+L 36.459758 325.819488 
+L 20.204337 325.819488 
+z
+" clip-path="url(#pe7f1e28568)" style="fill: #009e73; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 20.204337 351.067887 
+L 52.715179 351.067887 
+L 52.715179 344.358522 
+L 20.204337 344.358522 
+z
+" clip-path="url(#pe7f1e28568)" style="fill: #e69f00; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 20.204337 369.606921 
+L 36.459758 369.606921 
+L 36.459758 362.897557 
+L 20.204337 362.897557 
+z
+" clip-path="url(#pe7f1e28568)" style="fill: #cc79a7; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 20.204337 388.145956 
+L 36.459758 388.145956 
+L 36.459758 381.436591 
+L 20.204337 381.436591 
+z
+" clip-path="url(#pe7f1e28568)" style="fill: #009e73; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 21.071293 417.278724 
+L 86.526455 417.278724 
+Q 89.5608 417.278724 89.5608 414.806853 
+L 89.5608 395.031883 
+Q 89.5608 392.560012 86.526455 392.560012 
+L 21.071293 392.560012 
+Q 18.036947 392.560012 18.036947 395.031883 
+L 18.036947 414.806853 
+Q 18.036947 417.278724 21.071293 417.278724 
+z
+" clip-path="url(#pe7f1e28568)" style="fill: #e8f2fb; stroke: #b9cfe3; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 112.101651 417.278724 
+L 177.556813 417.278724 
+Q 180.591158 417.278724 180.591158 414.806853 
+L 180.591158 395.031883 
+Q 180.591158 392.560012 177.556813 392.560012 
+L 112.101651 392.560012 
+Q 109.067305 392.560012 109.067305 395.031883 
+L 109.067305 414.806853 
+Q 109.067305 417.278724 112.101651 417.278724 
+z
+" clip-path="url(#pe7f1e28568)" style="fill: #eaf5f0; stroke: #b9d7ca; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 21.071293 441.114626 
+L 177.556813 441.114626 
+Q 180.591158 441.114626 180.591158 438.642755 
+L 180.591158 425.047463 
+Q 180.591158 422.575591 177.556813 422.575591 
+L 21.071293 422.575591 
+Q 18.036947 422.575591 18.036947 425.047463 
+L 18.036947 438.642755 
+Q 18.036947 441.114626 21.071293 441.114626 
+z
+" clip-path="url(#pe7f1e28568)" style="fill: #fff5df; stroke: #e6c36a; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Times New Roman'; text-anchor: start" x="7.2" y="260.647708" transform="rotate(-0 7.2 260.647708)">b</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman'; text-anchor: start" x="11.534779" y="278.598006" transform="rotate(-0 11.534779 278.598006)">Coverage of scientific capabilities</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 6.8px; font-family: 'Times New Roman'; text-anchor: start" x="58.133653" y="312.262354" transform="rotate(-0 58.133653 312.262354)">Regression (2)</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 6.8px; font-family: 'Times New Roman'; text-anchor: start" x="41.878232" y="330.801389" transform="rotate(-0 41.878232 330.801389)">Regression/discovery (1)</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 6.8px; font-family: 'Times New Roman'; text-anchor: start" x="58.133653" y="349.346798" transform="rotate(-0 58.133653 349.346798)">Extraction (2)</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 6.8px; font-family: 'Times New Roman'; text-anchor: start" x="41.878232" y="367.885833" transform="rotate(-0 41.878232 367.885833)">Retrieval (1)</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 6.8px; font-family: 'Times New Roman'; text-anchor: start" x="41.878232" y="386.418492" transform="rotate(-0 41.878232 386.418492)">Discovery (1)</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(40.257546 403.410048)">Chemistry</text>
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(42.875827 409.551735)">5 demos</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(132.555403 403.416141)">Materials</text>
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(133.906185 409.545641)">2 demos</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; text-anchor: middle; fill: #1f2937" x="99.314053" y="433.328749" transform="rotate(-0 99.314053 433.328749)">Front end -&gt; planning -&gt; tools/code -&gt; files -&gt; metrics</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_24">
+    <path d="M 303.024581 346.653831 
+L 340.640829 346.653831 
+Q 344.349474 346.653831 344.349474 344.18196 
+L 344.349474 319.110123 
+Q 344.349474 316.638251 340.640829 316.638251 
+L 303.024581 316.638251 
+Q 299.315937 316.638251 299.315937 319.110123 
+L 299.315937 344.18196 
+Q 299.315937 346.653831 303.024581 346.653831 
+z
+" clip-path="url(#p20def47c26)" style="fill: #e8f2fb; stroke: #cdd5df; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 371.899402 346.653831 
+L 409.515651 346.653831 
+Q 413.224295 346.653831 413.224295 344.18196 
+L 413.224295 319.110123 
+Q 413.224295 316.638251 409.515651 316.638251 
+L 371.899402 316.638251 
+Q 368.190758 316.638251 368.190758 319.110123 
+L 368.190758 344.18196 
+Q 368.190758 346.653831 371.899402 346.653831 
+z
+" clip-path="url(#p20def47c26)" style="fill: #eaf5f0; stroke: #cdd5df; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 440.774223 346.653831 
+L 478.390472 346.653831 
+Q 482.099116 346.653831 482.099116 344.18196 
+L 482.099116 319.110123 
+Q 482.099116 316.638251 478.390472 316.638251 
+L 440.774223 316.638251 
+Q 437.065579 316.638251 437.065579 319.110123 
+L 437.065579 344.18196 
+Q 437.065579 346.653831 440.774223 346.653831 
+z
+" clip-path="url(#p20def47c26)" style="fill: #fff5df; stroke: #cdd5df; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 509.649044 346.653831 
+L 547.265293 346.653831 
+Q 550.973937 346.653831 550.973937 344.18196 
+L 550.973937 319.110123 
+Q 550.973937 316.638251 547.265293 316.638251 
+L 509.649044 316.638251 
+Q 505.9404 316.638251 505.9404 319.110123 
+L 505.9404 344.18196 
+Q 505.9404 346.653831 509.649044 346.653831 
+z
+" clip-path="url(#p20def47c26)" style="fill: #f3e8f2; stroke: #cdd5df; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 306.998128 399.622501 
+L 352.561472 399.622501 
+Q 356.270116 399.622501 356.270116 397.15063 
+L 356.270116 383.555338 
+Q 356.270116 381.083467 352.561472 381.083467 
+L 306.998128 381.083467 
+Q 303.289484 381.083467 303.289484 383.555338 
+L 303.289484 397.15063 
+Q 303.289484 399.622501 306.998128 399.622501 
+z
+" clip-path="url(#p20def47c26)" style="fill: #f4f7fa; stroke: #d2d8e1; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 366.601339 399.622501 
+L 412.164682 399.622501 
+Q 415.873326 399.622501 415.873326 397.15063 
+L 415.873326 383.555338 
+Q 415.873326 381.083467 412.164682 381.083467 
+L 366.601339 381.083467 
+Q 362.892695 381.083467 362.892695 383.555338 
+L 362.892695 397.15063 
+Q 362.892695 399.622501 366.601339 399.622501 
+z
+" clip-path="url(#p20def47c26)" style="fill: #f4f7fa; stroke: #d2d8e1; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 426.204549 399.622501 
+L 471.767893 399.622501 
+Q 475.476537 399.622501 475.476537 397.15063 
+L 475.476537 383.555338 
+Q 475.476537 381.083467 471.767893 381.083467 
+L 426.204549 381.083467 
+Q 422.495905 381.083467 422.495905 383.555338 
+L 422.495905 397.15063 
+Q 422.495905 399.622501 426.204549 399.622501 
+z
+" clip-path="url(#p20def47c26)" style="fill: #f4f7fa; stroke: #d2d8e1; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 485.80776 399.622501 
+L 531.371103 399.622501 
+Q 535.079747 399.622501 535.079747 397.15063 
+L 535.079747 383.555338 
+Q 535.079747 381.083467 531.371103 381.083467 
+L 485.80776 381.083467 
+Q 482.099116 381.083467 482.099116 383.555338 
+L 482.099116 397.15063 
+Q 482.099116 399.622501 485.80776 399.622501 
+z
+" clip-path="url(#p20def47c26)" style="fill: #f4f7fa; stroke: #d2d8e1; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_46">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Times New Roman'; text-anchor: start" x="291.368842" y="260.647708" transform="rotate(-0 291.368842 260.647708)">c</text>
+   </g>
+   <g id="text_47">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Times New Roman'; text-anchor: start" x="296.666905" y="278.598006" transform="rotate(-0 296.666905 278.598006)">Auditable output chain</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(309.197315 330.142815)">Uploaded</text>
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(313.886963 336.272315)">inputs</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(382.041198 330.142815)">GVIM</text>
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(378.07112 336.272315)">workflow</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(446.229418 330.142815)">Generated</text>
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(449.116332 336.272315)">artifacts</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(519.793887 330.142815)">Metric</text>
+    <text style="font-size: 6.5px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(514.199825 336.272315)">calculation</text>
+   </g>
+   <g id="patch_32">
+    <path d="M 346.878794 331.646041 
+Q 356.269072 331.646041 364.653119 331.646041 
+" style="fill: none; stroke: #354153; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 361.853119 330.246041 
+L 364.653119 331.646041 
+L 361.853119 333.046041 
+z
+" style="fill: #354153; stroke: #354153; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 415.753615 331.646041 
+Q 425.143893 331.646041 433.52794 331.646041 
+" style="fill: none; stroke: #354153; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 430.72794 330.246041 
+L 433.52794 331.646041 
+L 430.72794 333.046041 
+z
+" style="fill: #354153; stroke: #354153; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 484.628436 331.646041 
+Q 494.018714 331.646041 502.402761 331.646041 
+" style="fill: none; stroke: #354153; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 499.602761 330.246041 
+L 502.402761 331.646041 
+L 499.602761 333.046041 
+z
+" style="fill: #354153; stroke: #354153; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; text-anchor: middle; fill: #1f2937" x="329.7798" y="391.842437" transform="rotate(-0 329.7798 391.842437)">predictions.csv</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; text-anchor: middle; fill: #1f2937" x="389.383011" y="391.838078" transform="rotate(-0 389.383011 391.838078)">metrics.json</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; text-anchor: middle; fill: #1f2937" x="448.986221" y="391.842437" transform="rotate(-0 448.986221 391.842437)">report.md</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(497.45801 388.913324)">figures +</text>
+    <text style="font-size: 6.2px; font-family: 'Times New Roman'; fill: #1f2937" transform="translate(494.559994 394.771549)">source data</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 6.4px; font-family: 'Times New Roman'; text-anchor: start; fill: #5f6d7c" x="303.289484" y="430.022703" transform="rotate(-0 303.289484 430.022703)">Metrics are computed from generated files rather than subjective response scores.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3c956709bc">
+   <rect x="7.2" y="22.924682" width="549.072" height="198.964119"/>
+  </clipPath>
+  <clipPath id="pe7f1e28568">
+   <rect x="7.2" y="268.966449" width="216.738947" height="176.562233"/>
+  </clipPath>
+  <clipPath id="p20def47c26">
+   <rect x="291.368842" y="268.966449" width="264.903158" height="176.562233"/>
+  </clipPath>
+ </defs>
+</svg>

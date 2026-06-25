@@ -1,0 +1,29 @@
+{
+  "idx": 47,
+  "uuid": "G-META-12-33",
+  "topic": "Thermodynamics",
+  "mini_split": "mascqa",
+  "question_type": "MCQS-NUM",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T14:57:00.251Z",
+  "finished_at": "2026-06-06T14:57:20.698Z",
+  "latency_ms": 20447,
+  "page_url": "http://localhost:3000/workspace/chats/cc393934-dccd-4532-8d04-0b83f391d137",
+  "thread_id": "cc393934-dccd-4532-8d04-0b83f391d137",
+  "run_id": "02f3d26d-2103-4a50-8f6f-611bd5681e94",
+  "final_text": "Let me solve this using the Arrhenius equation.\n\nThe ratio of reaction rates at two different temperatures is given by:\n\n\\[\n\\frac{k_2}{k_1} = \\exp\\left[\\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)\\right]\n\\]\n\nGiven:\n- \\(E_a = 8.314\\) kJ/mol = 8314 J/mol\n- \\(R = 8.314\\) J/(mol·K)\n- \\(T_1 = 300\\) K\n- \\(k_2/k_1 = 3\\)\n\nSo:\n\\[\n3 = \\exp\\left[\\frac{8314}{8.314}\\left(\\frac{1}{300} - \\frac{1}{T_2}\\right)\\right]\n\\]\n\n\\[\n3 = \\exp\\left[1000\\left(\\frac{1}{300} - \\frac{1}{T_2}\\right)\\right]\n\\]\n\n\\[\n\\ln 3 = 1000\\left(\\frac{1}{300} - \\frac{1}{T_2}\\right)\n\\]\n\n\\[\n1.0986 = 1000\\left(\\frac{1}{300} - \\frac{1}{T_2}\\right)\n\\]\n\n\\[\n0.0010986 = \\frac{1}{300} - \\frac{1}{T_2}\n\\]\n\n\\[\n\\frac{1}{T_2} = \\frac{1}{300} - 0.0010986 = 0.003333 - 0.0010986 = 0.0022347\n\\]\n\n\\[\nT_2 = \\frac{1}{0.0022347} = 447.5 \\text{ K}\n\\]\n\nThe answer is **447.5 K**, which corresponds to option (B).\n\n[ANSWER]B[/ANSWER]",
+  "stream_final_text": "Let me solve this using the Arrhenius equation.\n\nThe ratio of reaction rates at two different temperatures is given by:\n\n\\[\n\\frac{k_2}{k_1} = \\exp\\left[\\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)\\right]\n\\]\n\nGiven:\n- \\(E_a = 8.314\\) kJ/mol = 8314 J/mol\n- \\(R = 8.314\\) J/(mol·K)\n- \\(T_1 = 300\\) K\n- \\(k_2/k_1 = 3\\)\n\nSo:\n\\[\n3 = \\exp\\left[\\frac{8314}{8.314}\\left(\\frac{1}{300} - \\frac{1}{T_2}\\right)\\right]\n\\]\n\n\\[\n3 = \\exp\\left[1000\\left(\\frac{1}{300} - \\frac{1}{T_2}\\right)\\right]\n\\]\n\n\\[\n\\ln 3 = 1000\\left(\\frac{1}{300} - \\frac{1}{T_2}\\right)\n\\]\n\n\\[\n1.0986 = 1000\\left(\\frac{1}{300} - \\frac{1}{T_2}\\right)\n\\]\n\n\\[\n0.0010986 = \\frac{1}{300} - \\frac{1}{T_2}\n\\]\n\n\\[\n\\frac{1}{T_2} = \\frac{1}{300} - 0.0010986 = 0.003333 - 0.0010986 = 0.0022347\n\\]\n\n\\[\nT_2 = \\frac{1}{0.0022347} = 447.5 \\text{ K}\n\\]\n\nThe answer is **447.5 K**, which corresponds to option (B).\n\n[ANSWER]B[/ANSWER]",
+  "ui_final_text": "Let me solve this using the Arrhenius equation.The ratio of reaction rates at two different temperatures is given by:\\frac{k_2}{k_1} = \\exp\\left[\\frac{E_a}{R}\\left($\\frac{1}{T_1} - \\frac{1}{T_2}\\right$)\\right]Given:\nEa​=8.314 kJ/mol = 8314 J/mol\nR=8.314 J/(mol·K)\nT1​=300 K\n(k_2/k_1 = 3\nSo:3 = \\exp\\left[\\frac{8314}{8.314}\\left($\\frac{1}{300} - \\frac{1}{T_2}\\right$)\\right]3 = \\exp\\left[1000\\left($\\frac{1}{300} - \\frac{1}{T_2}\\right$)\\right]\\ln 3 = 1000\\left($\\frac{1}{300} - \\frac{1}{T_2}\\right$)1.0986 = 1000\\left($\\frac{1}{300} - \\frac{1}{T_2}\\right$)0.0010986=3001​−T2​1​T2​1​=3001​−0.0010986=0.003333−0.0010986=0.0022347T2​=0.00223471​=447.5 KThe answer is 447.5 K, which corresponds to option (B).Answer: B",
+  "stream_event_count": 430,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/cc393934-dccd-4532-8d04-0b83f391d137/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a MaScQA materials science benchmark question (MCQS-NUM).\\nAnswer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.\\n\\nQuestion: Consider a reaction with activation energy of 8.314 kJ/mol that takes place at 300 K. If the reaction rate is to be tripled, the temperature of the reaction should be  (A) 174.5 K (B) 447.5 K (C) 600.5 K (D) 847.5 K\\n\\nUse exactly this final format: [ANSWER]<answer>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"cc393934-dccd-4532-8d04-0b83f391d137\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

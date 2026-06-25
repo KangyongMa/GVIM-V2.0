@@ -1,0 +1,72 @@
+{
+  "idx": 13,
+  "uuid": "46ad7b58-775e-1059-4d81-ffbbd06ddc7c",
+  "topic": "inorganic_chemistry",
+  "mini_split": "chembench-full",
+  "question_type": "open_numeric",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-09T08:52:44.517998Z",
+  "finished_at": "2026-06-09T08:52:47.014285Z",
+  "latency_ms": 2496,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 491
+  },
+  "final_text": "NO₂ is known to dimerize to form dinitrogen tetroxide, N₂O₄.  \nThus, x = 4.\n\n[ANSWER]4[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "NO₂ is known to dimerize to form dinitrogen tetroxide, N₂O₄.  \nThus, x = 4.\n\n[ANSWER]4[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 114,
+    "completion_tokens": 37,
+    "total_tokens": 151,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 114
+  },
+  "error": null,
+  "raw_response": {
+    "id": "105c0759-0ce8-4def-bed8-9e9bf573ee86",
+    "object": "chat.completion",
+    "created": 1780995168,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "NO₂ is known to dimerize to form dinitrogen tetroxide, N₂O₄.  \nThus, x = 4.\n\n[ANSWER]4[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 114,
+      "completion_tokens": 37,
+      "total_tokens": 151,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 114
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-runs\\2026-06-09T08-51-54-442088Z\\013-46ad7b58-775e-1059-4d81-ffbbd06ddc7c.json",
+  "_source_segment": "main_api_run"
+}

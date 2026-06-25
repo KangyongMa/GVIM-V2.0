@@ -1,0 +1,72 @@
+{
+  "idx": 70,
+  "uuid": "G-META-19-30",
+  "global_idx": 306,
+  "source_id": "G-META-19-30",
+  "topic": "Material characterization",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:23:59.781059Z",
+  "finished_at": "2026-06-06T16:24:02.850884Z",
+  "latency_ms": 3070,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 636
+  },
+  "final_text": "In a typical SEM, secondary electrons provide topographical contrast, while back-scattered electrons provide atomic number (compositional) contrast.\n\n[ANSWER]C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "In a typical SEM, secondary electrons provide topographical contrast, while back-scattered electrons provide atomic number (compositional) contrast.\n\n[ANSWER]C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 133,
+    "completion_tokens": 33,
+    "total_tokens": 166,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 133
+  },
+  "error": null,
+  "raw_response": {
+    "id": "b256e5d8-2a60-4dd2-be09-22ea01780d3f",
+    "object": "chat.completion",
+    "created": 1780763042,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "In a typical SEM, secondary electrons provide topographical contrast, while back-scattered electrons provide atomic number (compositional) contrast.\n\n[ANSWER]C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 133,
+      "completion_tokens": 33,
+      "total_tokens": 166,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 133
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

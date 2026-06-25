@@ -1,0 +1,72 @@
+{
+  "idx": 1,
+  "uuid": "G-META-13-22",
+  "global_idx": 237,
+  "source_id": "G-META-13-22",
+  "topic": "Atomic structure",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:20:10.977795Z",
+  "finished_at": "2026-06-06T16:20:12.830314Z",
+  "latency_ms": 1853,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 312
+  },
+  "final_text": "[ANSWER]0.34[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]0.34[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 67,
+    "completion_tokens": 9,
+    "total_tokens": 76,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 67
+  },
+  "error": null,
+  "raw_response": {
+    "id": "14b25287-95e1-4332-bdf6-435be9fed0cf",
+    "object": "chat.completion",
+    "created": 1780762812,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]0.34[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 9,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 67
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

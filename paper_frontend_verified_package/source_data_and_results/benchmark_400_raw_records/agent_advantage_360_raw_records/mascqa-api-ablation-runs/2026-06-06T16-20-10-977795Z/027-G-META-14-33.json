@@ -1,0 +1,72 @@
+{
+  "idx": 27,
+  "uuid": "G-META-14-33",
+  "global_idx": 263,
+  "source_id": "G-META-14-33",
+  "topic": "Thermodynamics",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:21:08.066188Z",
+  "finished_at": "2026-06-06T16:21:09.840675Z",
+  "latency_ms": 1774,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 447
+  },
+  "final_text": "[ANSWER]952.38[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]952.38[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 116,
+    "completion_tokens": 9,
+    "total_tokens": 125,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 116
+  },
+  "error": null,
+  "raw_response": {
+    "id": "8786d3b6-4f41-4a61-bc25-aea189a157fc",
+    "object": "chat.completion",
+    "created": 1780762869,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]952.38[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 116,
+      "completion_tokens": 9,
+      "total_tokens": 125,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 116
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

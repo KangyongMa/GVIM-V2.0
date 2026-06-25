@@ -1,0 +1,74 @@
+{
+  "idx": 28,
+  "uuid": "chemllm-selection-17d646edf5f7d930",
+  "global_idx": 348,
+  "source_id": "chemllm-selection-17d646edf5f7d930",
+  "topic": "reagent_selection/solvent_sample",
+  "mini_split": "chemllmbench",
+  "question_type": "candidate_selection",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_chemllmbench_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T17:20:31.495477Z",
+  "finished_at": "2026-06-06T17:20:33.077999Z",
+  "latency_ms": 1583,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 1051
+  },
+  "final_text": "[ANSWER]CN(C)C=O[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]CN(C)C=O[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 300,
+    "completion_tokens": 11,
+    "total_tokens": 311,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 300
+  },
+  "error": null,
+  "raw_response": {
+    "id": "7d0d0932-2382-482e-bf9a-68cc1917e493",
+    "object": "chat.completion",
+    "created": 1780766433,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]CN(C)C=O[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 300,
+      "completion_tokens": 11,
+      "total_tokens": 311,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 300
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_record_file": "",
+  "_source_kind": "deepseek_flash_api_only"
+}

@@ -1,0 +1,72 @@
+{
+  "idx": 18,
+  "uuid": "G-META-13-24",
+  "global_idx": 254,
+  "source_id": "G-META-13-24",
+  "topic": "Mechanical",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:20:48.444671Z",
+  "finished_at": "2026-06-06T16:20:50.139686Z",
+  "latency_ms": 1695,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 412
+  },
+  "final_text": "[ANSWER]0.25[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]0.25[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 100,
+    "completion_tokens": 9,
+    "total_tokens": 109,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 100
+  },
+  "error": null,
+  "raw_response": {
+    "id": "1419def2-5e60-4c3e-a3bc-a7a40f4663b5",
+    "object": "chat.completion",
+    "created": 1780762850,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]0.25[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 100,
+      "completion_tokens": 9,
+      "total_tokens": 109,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 100
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

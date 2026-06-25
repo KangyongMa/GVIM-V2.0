@@ -1,0 +1,72 @@
+{
+  "idx": 45,
+  "uuid": "G-META-19-5",
+  "global_idx": 281,
+  "source_id": "G-META-19-5",
+  "topic": "Phase transition",
+  "mini_split": "mascqa",
+  "question_type": "MCQS-NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:22:40.550920Z",
+  "finished_at": "2026-06-06T16:22:42.957330Z",
+  "latency_ms": 2406,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 503
+  },
+  "final_text": "The activity of carbon with respect to graphite as the standard state is 1.0 when the liquid steel is in equilibrium with graphite, because the activity of a pure substance in its standard state is defined as 1.\n\n[ANSWER]C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "The activity of carbon with respect to graphite as the standard state is 1.0 when the liquid steel is in equilibrium with graphite, because the activity of a pure substance in its standard state is defined as 1.\n\n[ANSWER]C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 130,
+    "completion_tokens": 51,
+    "total_tokens": 181,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 130
+  },
+  "error": null,
+  "raw_response": {
+    "id": "4e8b5f1a-db81-4dd0-acdf-78fd2c897e27",
+    "object": "chat.completion",
+    "created": 1780762962,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The activity of carbon with respect to graphite as the standard state is 1.0 when the liquid steel is in equilibrium with graphite, because the activity of a pure substance in its standard state is defined as 1.\n\n[ANSWER]C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 130,
+      "completion_tokens": 51,
+      "total_tokens": 181,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 130
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

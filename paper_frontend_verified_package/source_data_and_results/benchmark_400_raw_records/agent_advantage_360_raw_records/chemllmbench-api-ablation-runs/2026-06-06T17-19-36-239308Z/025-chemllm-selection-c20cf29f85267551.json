@@ -1,0 +1,74 @@
+{
+  "idx": 25,
+  "uuid": "chemllm-selection-c20cf29f85267551",
+  "global_idx": 345,
+  "source_id": "chemllm-selection-c20cf29f85267551",
+  "topic": "reagent_selection/reagent_sample",
+  "mini_split": "chemllmbench",
+  "question_type": "candidate_selection",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_chemllmbench_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T17:20:24.810592Z",
+  "finished_at": "2026-06-06T17:20:26.673089Z",
+  "latency_ms": 1862,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 1137
+  },
+  "final_text": "[ANSWER]Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 338,
+    "completion_tokens": 33,
+    "total_tokens": 371,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 338
+  },
+  "error": null,
+  "raw_response": {
+    "id": "b3e87479-f7f1-4f3d-beb6-250015599ee1",
+    "object": "chat.completion",
+    "created": 1780766426,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 338,
+      "completion_tokens": 33,
+      "total_tokens": 371,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 338
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_record_file": "",
+  "_source_kind": "deepseek_flash_api_only"
+}

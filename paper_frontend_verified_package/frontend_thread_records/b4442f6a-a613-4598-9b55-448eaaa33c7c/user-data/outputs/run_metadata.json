@@ -1,0 +1,257 @@
+{
+  "task": "matbench_steels",
+  "fold": 0,
+  "random_seed": 42,
+  "baseline": {
+    "name": "MeanBaseline",
+    "description": "Training-mean predictor",
+    "training_mean_mpa": 1415.34
+  },
+  "validation": {
+    "strategy": "KFold(n_splits=5, shuffle=True)",
+    "results": {
+      "MeanBaseline": {
+        "MAE_mean": 225.83537535637373,
+        "MAE_std": 35.8896693123116,
+        "RMSE_mean": 299.0561320392726,
+        "RMSE_std": 62.75022327835915,
+        "R2_mean": -0.02140976633370495,
+        "R2_std": 0.01628925461243744,
+        "fold_scores": {
+          "fold_0": {
+            "MAE": 244.8732,
+            "RMSE": 337.1919,
+            "R2": -0.024913
+          },
+          "fold_1": {
+            "MAE": 179.5002,
+            "RMSE": 211.0319,
+            "R2": -0.04812
+          },
+          "fold_2": {
+            "MAE": 274.8241,
+            "RMSE": 375.8588,
+            "R2": -0.015532
+          },
+          "fold_3": {
+            "MAE": 213.0226,
+            "RMSE": 297.5768,
+            "R2": -0.007665
+          },
+          "fold_4": {
+            "MAE": 216.9568,
+            "RMSE": 273.6213,
+            "R2": -0.01082
+          }
+        }
+      },
+      "Ridge": {
+        "MAE_mean": 202.75941916302057,
+        "MAE_std": 37.221018949901236,
+        "RMSE_mean": 272.88310916358597,
+        "RMSE_std": 53.49072533196376,
+        "R2_mean": 0.13929865435780053,
+        "R2_std": 0.10170546310600957,
+        "fold_scores": {
+          "fold_0": {
+            "MAE": 222.4586,
+            "RMSE": 306.1257,
+            "R2": 0.155242
+          },
+          "fold_1": {
+            "MAE": 160.2737,
+            "RMSE": 209.4287,
+            "R2": -0.032255
+          },
+          "fold_2": {
+            "MAE": 256.344,
+            "RMSE": 345.2944,
+            "R2": 0.142917
+          },
+          "fold_3": {
+            "MAE": 188.5745,
+            "RMSE": 261.2625,
+            "R2": 0.223266
+          },
+          "fold_4": {
+            "MAE": 186.1462,
+            "RMSE": 242.3042,
+            "R2": 0.207323
+          }
+        }
+      },
+      "RandomForest": {
+        "MAE_mean": 94.31648404081636,
+        "MAE_std": 12.866197830914103,
+        "RMSE_mean": 132.48728680131632,
+        "RMSE_std": 18.660188060008018,
+        "R2_mean": 0.7809278552921779,
+        "R2_std": 0.08280045166843049,
+        "fold_scores": {
+          "fold_0": {
+            "MAE": 106.9237,
+            "RMSE": 136.0582,
+            "R2": 0.833128
+          },
+          "fold_1": {
+            "MAE": 74.8548,
+            "RMSE": 112.6647,
+            "R2": 0.701262
+          },
+          "fold_2": {
+            "MAE": 96.5266,
+            "RMSE": 123.8237,
+            "R2": 0.889782
+          },
+          "fold_3": {
+            "MAE": 104.0139,
+            "RMSE": 162.2897,
+            "R2": 0.700291
+          },
+          "fold_4": {
+            "MAE": 89.2635,
+            "RMSE": 127.6001,
+            "R2": 0.780175
+          }
+        }
+      },
+      "GradientBoosting": {
+        "MAE_mean": 87.78801066093838,
+        "MAE_std": 16.570100853075168,
+        "RMSE_mean": 123.77924334498462,
+        "RMSE_std": 21.674564414432524,
+        "R2_mean": 0.8192009036326009,
+        "R2_std": 0.03925178166563527,
+        "fold_scores": {
+          "fold_0": {
+            "MAE": 113.3974,
+            "RMSE": 152.0891,
+            "R2": 0.791489
+          },
+          "fold_1": {
+            "MAE": 68.7323,
+            "RMSE": 94.8264,
+            "R2": 0.788372
+          },
+          "fold_2": {
+            "MAE": 90.3159,
+            "RMSE": 134.9513,
+            "R2": 0.869082
+          },
+          "fold_3": {
+            "MAE": 79.2671,
+            "RMSE": 113.0747,
+            "R2": 0.854505
+          },
+          "fold_4": {
+            "MAE": 87.2274,
+            "RMSE": 123.9547,
+            "R2": 0.792557
+          }
+        }
+      }
+    },
+    "selected_model": "GradientBoosting",
+    "selection_criterion": "lowest RMSE_mean"
+  },
+  "selected_model": "GradientBoosting",
+  "model_params": {
+    "MeanBaseline": "{}",
+    "Ridge": "{'alpha': 1.0, 'copy_X': True, 'fit_intercept': True, 'max_iter': None, 'positive': False, 'random_state': 42, 'solver': 'auto', 'tol': 0.0001}",
+    "RandomForest": "{'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 200, 'n_jobs': 1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}",
+    "GradientBoosting": "{'alpha': 0.9, 'ccp_alpha': 0.0, 'criterion': 'friedman_mse', 'init': None, 'learning_rate': 0.1, 'loss': 'squared_error', 'max_depth': 3, 'max_features': None, 'max_leaf_nodes': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'n_estimators': 200, 'n_iter_no_change': None, 'random_state': 42, 'subsample': 1.0, 'tol': 0.0001, 'validation_fraction': 0.1, 'verbose': 0, 'warm_start': False}"
+  },
+  "training": {
+    "n_train": 249,
+    "n_test": 63,
+    "n_features": 14,
+    "element_columns": [
+      "Al",
+      "C",
+      "Co",
+      "Cr",
+      "Fe",
+      "Mn",
+      "Mo",
+      "N",
+      "Nb",
+      "Ni",
+      "Si",
+      "Ti",
+      "V",
+      "W"
+    ],
+    "target_column": "yield_strength_mpa"
+  },
+  "sanity_checks": {
+    "n_train_rows": 249,
+    "n_test_rows": 63,
+    "feature_dimension": 14,
+    "feature_cols": [
+      "Al",
+      "C",
+      "Co",
+      "Cr",
+      "Fe",
+      "Mn",
+      "Mo",
+      "N",
+      "Nb",
+      "Ni",
+      "Si",
+      "Ti",
+      "V",
+      "W"
+    ],
+    "train_target_range_mpa": [
+      1005.9,
+      2510.3
+    ],
+    "train_target_mean_mpa": 1415.34,
+    "train_target_std_mpa": 304.0,
+    "predictions_all_finite": true,
+    "predictions_in_reasonable_range": true,
+    "composition_parse_samples": [
+      {
+        "row_id": 0,
+        "composition": "Fe0.620C0.000953Mn0.000521Si0.00102Cr0.000110Ni0.192Mo0.0176V0.000112Nb0.0000616Co0.146Al0.00318Ti0.0185",
+        "n_elements": 12,
+        "sum_fractions": 1.000058
+      },
+      {
+        "row_id": 1,
+        "composition": "Fe0.623C0.00854Mn0.000104Si0.000203Cr0.147Ni0.0000971Mo0.0179V0.00515N0.00163Nb0.0000614Co0.188W0.00729Al0.000845",
+        "n_elements": 13,
+        "sum_fractions": 0.99982
+      },
+      {
+        "row_id": 3,
+        "composition": "Fe0.634C0.000478Mn0.000523Si0.00102Cr0.000111Ni0.173Mo0.0237V0.000113Nb0.0000619Co0.146Al0.00277Ti0.0176",
+        "n_elements": 12,
+        "sum_fractions": 0.999377
+      },
+      {
+        "row_id": 5,
+        "composition": "Fe0.636C0.00881Mn0.000203Si0.00972Cr0.135Ni0.00892Mo0.0114V0.000109Nb0.0000600Co0.190Al0.000620",
+        "n_elements": 11,
+        "sum_fractions": 1.000842
+      },
+      {
+        "row_id": 6,
+        "composition": "Fe0.644Mn0.000521Si0.00102Cr0.000110Ni0.177Mo0.0215V0.000112Nb0.0000617Co0.126Al0.00234Ti0.0269",
+        "n_elements": 11,
+        "sum_fractions": 0.999565
+      }
+    ],
+    "sum_of_fractions_close_to_1": true
+  },
+  "execution": {
+    "wall_time_seconds": 4.843,
+    "cpu_time_seconds": 2.203,
+    "timestamp": "2026-06-14T20:43:15+0800",
+    "python_version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+    "numpy_version": "2.4.6",
+    "pandas_version": "2.3.3",
+    "sklearn_version": "1.8.0"
+  }
+}

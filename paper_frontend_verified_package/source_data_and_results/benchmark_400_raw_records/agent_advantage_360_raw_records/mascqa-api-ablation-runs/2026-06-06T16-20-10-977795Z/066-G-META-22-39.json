@@ -1,0 +1,72 @@
+{
+  "idx": 66,
+  "uuid": "G-META-22-39",
+  "global_idx": 302,
+  "source_id": "G-META-22-39",
+  "topic": "Magnetism",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:23:50.769285Z",
+  "finished_at": "2026-06-06T16:23:53.595385Z",
+  "latency_ms": 2826,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 834
+  },
+  "final_text": "The correct mapping based on typical dipole arrangements in the absence of an external field is:  \n- Ferromagnetism: aligned parallel (P)  \n- Antiferromagnetism: alternating opposite (Q)  \n- Diamagnetism: no permanent dipoles (R)  \n- Paramagnetism: random dipoles (S)  \n\nThis matches option (B).  \n\n[ANSWER]B[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "The correct mapping based on typical dipole arrangements in the absence of an external field is:  \n- Ferromagnetism: aligned parallel (P)  \n- Antiferromagnetism: alternating opposite (Q)  \n- Diamagnetism: no permanent dipoles (R)  \n- Paramagnetism: random dipoles (S)  \n\nThis matches option (B).  \n\n[ANSWER]B[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 209,
+    "completion_tokens": 78,
+    "total_tokens": 287,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 209
+  },
+  "error": null,
+  "raw_response": {
+    "id": "acffb59e-c665-47e5-8f72-16355120312a",
+    "object": "chat.completion",
+    "created": 1780763032,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "The correct mapping based on typical dipole arrangements in the absence of an external field is:  \n- Ferromagnetism: aligned parallel (P)  \n- Antiferromagnetism: alternating opposite (Q)  \n- Diamagnetism: no permanent dipoles (R)  \n- Paramagnetism: random dipoles (S)  \n\nThis matches option (B).  \n\n[ANSWER]B[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 209,
+      "completion_tokens": 78,
+      "total_tokens": 287,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 209
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

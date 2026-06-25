@@ -1,0 +1,10 @@
+{
+  "benchmark": "MoleculeNet ESOL",
+  "metrics": {
+    "mae": 1.982773622047244,
+    "r2": -1.5393139995864606,
+    "rmse": 2.3083987729422444
+  },
+  "n_test": 254,
+  "task": "aqueous solubility regression"
+}

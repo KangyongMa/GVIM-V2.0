@@ -1,0 +1,72 @@
+{
+  "idx": 39,
+  "uuid": "chemllm-selection-ext-467f1178068dee80",
+  "topic": "reagent_selection/ligand_sample",
+  "mini_split": "chemllmbench",
+  "question_type": "candidate_selection",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-09T08:54:14.115940Z",
+  "finished_at": "2026-06-09T08:54:16.741921Z",
+  "latency_ms": 2626,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 1492
+  },
+  "final_text": "[ANSWER]CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 567,
+    "completion_tokens": 51,
+    "total_tokens": 618,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 567
+  },
+  "error": null,
+  "raw_response": {
+    "id": "8aff6f10-41e4-45a9-8d27-93f3438e819c",
+    "object": "chat.completion",
+    "created": 1780995257,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 567,
+      "completion_tokens": 51,
+      "total_tokens": 618,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 567
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-runs\\2026-06-09T08-51-54-442088Z\\039-chemllm-selection-ext-467f1178068dee80.json",
+  "_source_segment": "main_api_run"
+}

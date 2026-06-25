@@ -1,0 +1,72 @@
+{
+  "idx": 62,
+  "uuid": "G-META-12-20",
+  "global_idx": 298,
+  "source_id": "G-META-12-20",
+  "topic": "Atomic structure",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:23:38.835970Z",
+  "finished_at": "2026-06-06T16:23:42.732801Z",
+  "latency_ms": 3897,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 618
+  },
+  "final_text": "In an FCC crystal, a perfect dislocation with Burgers vector (a/2)[1 -1 0] dissociates into two Shockley partials according to the reaction:\n\n(a/2)[1 -1 0] → (a/6)[2 -1 -1] + (a/6)[1 1 -2].\n\nChecking the given options, this matches option (C).\n\n[ANSWER]C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "In an FCC crystal, a perfect dislocation with Burgers vector (a/2)[1 -1 0] dissociates into two Shockley partials according to the reaction:\n\n(a/2)[1 -1 0] → (a/6)[2 -1 -1] + (a/6)[1 1 -2].\n\nChecking the given options, this matches option (C).\n\n[ANSWER]C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 211,
+    "completion_tokens": 89,
+    "total_tokens": 300,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 211
+  },
+  "error": null,
+  "raw_response": {
+    "id": "a7491350-8ef8-47e2-819b-7f823086b00f",
+    "object": "chat.completion",
+    "created": 1780763021,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "In an FCC crystal, a perfect dislocation with Burgers vector (a/2)[1 -1 0] dissociates into two Shockley partials according to the reaction:\n\n(a/2)[1 -1 0] → (a/6)[2 -1 -1] + (a/6)[1 1 -2].\n\nChecking the given options, this matches option (C).\n\n[ANSWER]C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 211,
+      "completion_tokens": 89,
+      "total_tokens": 300,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 211
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "execution_mode": "DeerFlow LocalSandboxProvider, CPU-only",
+  "hardware": {
+    "cpu": "Intel Core i5-10210U",
+    "physical_cores": 4,
+    "logical_processors": 8,
+    "memory_gib_approx": 16
+  },
+  "python": "3.12.9",
+  "verified_packages": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "pymatgen": "2026.5.4",
+    "matminer": "0.10.1",
+    "matplotlib": "3.10.9",
+    "joblib": "1.5.3"
+  },
+  "preflight": {
+    "workflow": "pymatgen Composition parsing + matminer Magpie ElementProperty features + scikit-learn ExtraTreesRegressor",
+    "samples": 100,
+    "feature_count": 132,
+    "elapsed_seconds": 0.559,
+    "result": "passed"
+  }
+}

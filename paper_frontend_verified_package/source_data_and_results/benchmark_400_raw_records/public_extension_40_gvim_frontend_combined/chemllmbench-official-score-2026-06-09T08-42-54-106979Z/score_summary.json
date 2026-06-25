@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-06-09T08:42:54.101981Z",
+  "source_kind": "frontend_agent",
+  "source_run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined",
+  "suite": "chemllmbench",
+  "subset": "ChemLLMBench public-extension-40 subset",
+  "scoring_rule": "ChemLLMBench task-specific answer-key metric; property prediction uses Yes/No accuracy; Suzuki component selection uses exact match to the optimal candidate SMILES. Deterministic parser fixed before evaluation.",
+  "total": 13,
+  "correct": 7,
+  "accuracy": 0.5384615384615384,
+  "parse_empty": 0,
+  "by_type": {
+    "binary_property_prediction": {
+      "correct": 4,
+      "total": 6,
+      "accuracy": 0.6666666666666666
+    },
+    "candidate_selection": {
+      "correct": 3,
+      "total": 7,
+      "accuracy": 0.42857142857142855
+    }
+  },
+  "by_topic": {
+    "property_prediction/BACE": {
+      "correct": 0,
+      "total": 1,
+      "accuracy": 0.0
+    },
+    "property_prediction/BBBP": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "property_prediction/ClinTox": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "property_prediction/HIV": {
+      "correct": 0,
+      "total": 1,
+      "accuracy": 0.0
+    },
+    "reagent_selection/ligand_sample": {
+      "correct": 1,
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "reagent_selection/reagent_sample": {
+      "correct": 1,
+      "total": 3,
+      "accuracy": 0.3333333333333333
+    },
+    "reagent_selection/solvent_sample": {
+      "correct": 1,
+      "total": 2,
+      "accuracy": 0.5
+    }
+  },
+  "wrong_indices": [
+    30,
+    31,
+    34,
+    36,
+    38,
+    39
+  ],
+  "output_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\chemllmbench-official-score-2026-06-09T08-42-54-106979Z"
+}

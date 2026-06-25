@@ -1,0 +1,29 @@
+{
+  "idx": 31,
+  "uuid": "chemllm-selection-3ecc9a6450c3961e",
+  "topic": "reagent_selection/solvent_sample",
+  "mini_split": "chemllmbench",
+  "question_type": "candidate_selection",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T17:05:57.041Z",
+  "finished_at": "2026-06-06T17:06:18.658Z",
+  "latency_ms": 21617,
+  "page_url": "http://localhost:3000/workspace/chats/e15bc8ef-9253-4315-9859-f67c0f877480",
+  "thread_id": "e15bc8ef-9253-4315-9859-f67c0f877480",
+  "run_id": "ca9a538e-ad4d-44da-8883-cc0033ea3cbf",
+  "final_text": "Let me analyze this Suzuki reaction to select the optimal solvent.\n\n**Reactant 1 (aryl halide):** 5-iodoisoquinoline — an electron-deficient heteroaryl iodide\n**Reactant 2 (boronic ester):** An N-protected pyrazole boronic acid\n**Ligand:** CataCXium A-type (bulky, electron-rich trialkylphosphine on ferrocene backbone)\n**Base:** KOH\n\nNow, the solvent options:\n- **C1CCOC1** = Tetrahydrofuran (THF) — polar aprotic, excellent for Suzuki couplings with bulky phosphine ligands\n- **CN(C)C=O** = Dimethylformamide (DMF) — polar aprotic, high boiling\n- **CO** = Methanol — polar protic\n\nFor this system: bulky electron-rich phosphine ligand + KOH base + heteroaryl iodide. THF is the classic solvent for cataCXium A-type ligands in Suzuki couplings — it provides good solubility, is compatible with KOH, and is ideal for these bulky electron-rich phosphine systems. DMF could work but is less optimal with KOH. Methanol is too protic and can compete with transmetallation.\n\n[ANSWER]C1CCOC1[/ANSWER]",
+  "stream_final_text": "Let me analyze this Suzuki reaction to select the optimal solvent.\n\n**Reactant 1 (aryl halide):** 5-iodoisoquinoline — an electron-deficient heteroaryl iodide\n**Reactant 2 (boronic ester):** An N-protected pyrazole boronic acid\n**Ligand:** CataCXium A-type (bulky, electron-rich trialkylphosphine on ferrocene backbone)\n**Base:** KOH\n\nNow, the solvent options:\n- **C1CCOC1** = Tetrahydrofuran (THF) — polar aprotic, excellent for Suzuki couplings with bulky phosphine ligands\n- **CN(C)C=O** = Dimethylformamide (DMF) — polar aprotic, high boiling\n- **CO** = Methanol — polar protic\n\nFor this system: bulky electron-rich phosphine ligand + KOH base + heteroaryl iodide. THF is the classic solvent for cataCXium A-type ligands in Suzuki couplings — it provides good solubility, is compatible with KOH, and is ideal for these bulky electron-rich phosphine systems. DMF could work but is less optimal with KOH. Methanol is too protic and can compete with transmetallation.\n\n[ANSWER]C1CCOC1[/ANSWER]",
+  "ui_final_text": "Let me analyze this Suzuki reaction to select the optimal solvent.Reactant 1 (aryl halide): 5-iodoisoquinoline — an electron-deficient heteroaryl iodide\nReactant 2 (boronic ester): An N-protected pyrazole boronic acid\nLigand: CataCXium A-type (bulky, electron-rich trialkylphosphine on ferrocene backbone)\nBase: KOHNow, the solvent options:\nC1CCOC1 = Tetrahydrofuran (THF) — polar aprotic, excellent for Suzuki couplings with bulky phosphine ligands\nCN(C)C=O = Dimethylformamide (DMF) — polar aprotic, high boiling\nCO = Methanol — polar protic\nFor this system: bulky electron-rich phosphine ligand + KOH base + heteroaryl iodide. THF is the classic solvent for cataCXium A-type ligands in Suzuki couplings — it provides good solubility, is compatible with KOH, and is ideal for these bulky electron-rich phosphine systems. DMF could work but is less optimal with KOH. Methanol is too protic and can compete with transmetallation.Answer: C1CCOC1",
+  "stream_event_count": 310,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/e15bc8ef-9253-4315-9859-f67c0f877480/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench Suzuki reaction component-selection task.\\nReturn only the selected candidate SMILES inside [ANSWER] and [/ANSWER].\\n\\nYou are an expert chemist. Given selected two reactants, two reagents of a Suzuki reaction, predict the optimal solvent that maximize the yield with the rest of reaction components by using your experienced chemical solvent selection knowledge. No explanations and other information. Only return the solvent smiles from the given list. Please strictly follow the format, the template are provided as follows:\\r\\nGiven the rest of reaction components:\\r\\nreactant: reactant 1\\r\\nreactant: reactant 2\\r\\nligand: ligand 1\\r\\nbase: base 1 \\r\\nsolvent list: solvent 1,solvent 2,solvent 3,.etc\\r\\nOptimal solvent: solvent 2 \\r\\n\\r\\nGiven the rest of reaction components:\\r\\nreactant 1: Ic1ccc2ncccc2c1\\r\\nreactant 2: Cc1ccc2c(cnn2C2CCCCO2)c1B(O)O\\r\\nligand: CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C\\r\\nbase: [OH-].[K+]  \\r\\nSolvent list for selection:\\r\\nC1CCOC1,CN(C)C=O,CO\\r\\nOptimal solvent:\\n\\nUse exactly this final format: [ANSWER]<selected SMILES>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"e15bc8ef-9253-4315-9859-f67c0f877480\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

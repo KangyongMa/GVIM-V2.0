@@ -1,0 +1,14 @@
+idx,global_idx,source_id,topic,question_type,status,prediction,prediction_raw,gold_answer,correct,thread_id,run_id,latency_ms,record_file
+1,15,G-META-16-38,Material manufacturing,NUM,ok,2.14,2.14,2.0 TO 2.5,True,,,2339,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\015-G-META-16-38.json
+2,16,G-META-16-39,Material manufacturing,NUM,ok,93.5,93.5,97.5 TO 98.3,False,,,2347,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\016-G-META-16-39.json
+3,17,G-META-16-52,Material manufacturing,NUM,ok,0.55,0.55,1.7 TO 1.9,False,,,2333,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\017-G-META-16-52.json
+4,18,G-META-17-34,Material manufacturing,NUM,ok,0.172,0.172,0.170 TO 0.175,True,,,2258,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\018-G-META-17-34.json
+5,19,G-META-17-37,Material manufacturing,NUM,ok,0.0018,0.0018,0.0010 TO 0.0050,True,,,2409,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\019-G-META-17-37.json
+6,20,G-META-17-53,Material manufacturing,NUM,ok,5.04,5.04,11.00 TO 12.50,False,,,2207,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\020-G-META-17-53.json
+7,21,G-META-17-54,Material manufacturing,NUM,ok,3.41,3.41,6.60 TO 7.40,False,,,2345,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\021-G-META-17-54.json
+8,22,G-META-13-51,Thermodynamics,MCQS-NUM,ok,A,A,A,True,,,3136,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\022-G-META-13-51.json
+9,23,G-META-16-54,Thermodynamics,MCQS-NUM,ok,C,C,C,True,,,4027,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\023-G-META-16-54.json
+10,24,G-META-17-55,Thermodynamics,MCQS-NUM,ok,A,A,C,False,,,4814,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\024-G-META-17-55.json
+11,25,G-XEC-2012-11,Material characterization,MATCH,ok,A,A,A,True,,,2428,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\025-G-XEC-2012-11.json
+12,26,G-XEC-2013-12,Material characterization,MATCH,ok,C,C,C,True,,,2274,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\026-G-XEC-2013-12.json
+13,27,G-META-16-23,Material testing,MCQS,ok,D,D,D,True,,,2236,E:\Demo of GVIM\deer-flow-mainnew\benchmarks\public-extension-40\api-ablation-combined\2026-06-09T08-55-49Z-combined\027-G-META-16-23.json

@@ -1,0 +1,12 @@
+{
+  "included_run_dirs": [
+    "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T14-34-58-883Z",
+    "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T14-36-37-579Z",
+    "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T15-45-07-784Z",
+    "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T15-57-51-946Z",
+    "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T15-58-38-593Z",
+    "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T16-00-54-793Z"
+  ],
+  "retry_policy": "For failed/empty captures, use a new front-end conversation and select the latest successful record with a non-empty extracted answer for scoring.",
+  "all_indices_present": true
+}

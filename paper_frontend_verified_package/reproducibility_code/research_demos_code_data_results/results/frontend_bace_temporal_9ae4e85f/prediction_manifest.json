@@ -1,0 +1,33 @@
+{
+  "workflow": "BACE1 Stage 1 \u2013 model selection on early training data only",
+  "task_manifest": "task_manifest.json (bace1_temporal_external_validation)",
+  "training_file": "bace1_early_training.csv",
+  "training_n_compounds": 5296,
+  "external_feature_file": "bace1_late_external_features.csv",
+  "external_n_compounds": 1598,
+  "external_predictions_csv_sha256": "f2589c916135b0a934ac4ed23ec18b73b7cec99d2d94c686113fe325fece6e24",
+  "external_predictions_csv_columns": [
+    "compound_id",
+    "prediction_selected",
+    "prediction_ridge",
+    "prediction_mean",
+    "scaffold_novel"
+  ],
+  "external_predictions_csv_n_rows": 1598,
+  "selected_model": "RandomForest",
+  "selected_model_params": "{'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': 1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}",
+  "random_seed": 42,
+  "cv_strategy": "3-fold GroupKFold by murcko_scaffold",
+  "selection_metric": "lowest mean validation MAE",
+  "features": "Morgan FP radius=2, 1024bits + 8 RDKit descriptors",
+  "package_versions": {
+    "python": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.8.0",
+    "rdkit": "2026.03.2"
+  },
+  "runtime_seconds": 436.16,
+  "run_date_utc": "2026-06-21T07:14:49Z",
+  "claim_boundary": "Model selection using ONLY early training data. External-set metrics intentionally excluded in Stage 1."
+}

@@ -1,0 +1,72 @@
+{
+  "idx": 35,
+  "uuid": "G-META-17-47",
+  "global_idx": 271,
+  "source_id": "G-META-17-47",
+  "topic": "Electrical",
+  "mini_split": "mascqa",
+  "question_type": "MCQS-NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:21:39.987874Z",
+  "finished_at": "2026-06-06T16:21:43.924862Z",
+  "latency_ms": 3937,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 619
+  },
+  "final_text": "For an intrinsic semiconductor, conductivity is given by:\n\n\\[\n\\sigma = n_i e (\\mu_e + \\mu_h)\n\\]\n\nWhere:\n- \\(\\sigma = 10^{-6} \\, \\Omega^{-1} m^{-1}\\)\n- \\(e = 1.6 \\times 10^{-19} \\, C\\)\n- \\(\\mu_e = 0.75 \\, m^2 V^{-1} s^{-1}\\)\n- \\(\\mu_h = 0.06 \\, m^2 V^{-1} s^{-1}\\)\n\nSum of mobilities:\n\\[\n\\mu_e + \\mu_h = 0.75 + 0.06 = 0.81\n\\]\n\nThen:\n\\[\nn_i = \\frac{\\sigma}{e (\\mu_e + \\mu_h)} = \\frac{10^{-6}}{(1.6 \\times 10^{-19}) \\times 0.81}\n\\]\n\n\\[\nn_i = \\frac{10^{-6}}{1.296 \\times 10^{-19}} \\approx 7.716 \\times 10^{12}\n\\]\n\nThis matches option (B).\n\n[ANSWER]B[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "For an intrinsic semiconductor, conductivity is given by:\n\n\\[\n\\sigma = n_i e (\\mu_e + \\mu_h)\n\\]\n\nWhere:\n- \\(\\sigma = 10^{-6} \\, \\Omega^{-1} m^{-1}\\)\n- \\(e = 1.6 \\times 10^{-19} \\, C\\)\n- \\(\\mu_e = 0.75 \\, m^2 V^{-1} s^{-1}\\)\n- \\(\\mu_h = 0.06 \\, m^2 V^{-1} s^{-1}\\)\n\nSum of mobilities:\n\\[\n\\mu_e + \\mu_h = 0.75 + 0.06 = 0.81\n\\]\n\nThen:\n\\[\nn_i = \\frac{\\sigma}{e (\\mu_e + \\mu_h)} = \\frac{10^{-6}}{(1.6 \\times 10^{-19}) \\times 0.81}\n\\]\n\n\\[\nn_i = \\frac{10^{-6}}{1.296 \\times 10^{-19}} \\approx 7.716 \\times 10^{12}\n\\]\n\nThis matches option (B).\n\n[ANSWER]B[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 187,
+    "completion_tokens": 237,
+    "total_tokens": 424,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 187
+  },
+  "error": null,
+  "raw_response": {
+    "id": "bd3255e6-65ac-4ad7-aa24-9c0711a1323a",
+    "object": "chat.completion",
+    "created": 1780762901,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "For an intrinsic semiconductor, conductivity is given by:\n\n\\[\n\\sigma = n_i e (\\mu_e + \\mu_h)\n\\]\n\nWhere:\n- \\(\\sigma = 10^{-6} \\, \\Omega^{-1} m^{-1}\\)\n- \\(e = 1.6 \\times 10^{-19} \\, C\\)\n- \\(\\mu_e = 0.75 \\, m^2 V^{-1} s^{-1}\\)\n- \\(\\mu_h = 0.06 \\, m^2 V^{-1} s^{-1}\\)\n\nSum of mobilities:\n\\[\n\\mu_e + \\mu_h = 0.75 + 0.06 = 0.81\n\\]\n\nThen:\n\\[\nn_i = \\frac{\\sigma}{e (\\mu_e + \\mu_h)} = \\frac{10^{-6}}{(1.6 \\times 10^{-19}) \\times 0.81}\n\\]\n\n\\[\nn_i = \\frac{10^{-6}}{1.296 \\times 10^{-19}} \\approx 7.716 \\times 10^{12}\n\\]\n\nThis matches option (B).\n\n[ANSWER]B[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 187,
+      "completion_tokens": 237,
+      "total_tokens": 424,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 187
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

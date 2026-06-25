@@ -1,0 +1,72 @@
+{
+  "idx": 52,
+  "uuid": "G-META-20-39",
+  "global_idx": 288,
+  "source_id": "G-META-20-39",
+  "topic": "Magnetism",
+  "mini_split": "mascqa",
+  "question_type": "MATCH",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:23:13.632771Z",
+  "finished_at": "2026-06-06T16:23:16.959974Z",
+  "latency_ms": 3327,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 605
+  },
+  "final_text": "Copper is diamagnetic, iron is ferromagnetic, mercury becomes superconducting at low temperatures, and silicon is a semiconductor.  \nThus the correct match is: P-4, Q-1, R-2, S-3.  \n\n[ANSWER]C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "Copper is diamagnetic, iron is ferromagnetic, mercury becomes superconducting at low temperatures, and silicon is a semiconductor.  \nThus the correct match is: P-4, Q-1, R-2, S-3.  \n\n[ANSWER]C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 206,
+    "completion_tokens": 55,
+    "total_tokens": 261,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 206
+  },
+  "error": null,
+  "raw_response": {
+    "id": "aa8df111-fe57-4767-9527-d442e9e76844",
+    "object": "chat.completion",
+    "created": 1780762996,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Copper is diamagnetic, iron is ferromagnetic, mercury becomes superconducting at low temperatures, and silicon is a semiconductor.  \nThus the correct match is: P-4, Q-1, R-2, S-3.  \n\n[ANSWER]C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 206,
+      "completion_tokens": 55,
+      "total_tokens": 261,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 206
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

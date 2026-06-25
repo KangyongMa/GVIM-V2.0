@@ -1,0 +1,72 @@
+{
+  "idx": 34,
+  "uuid": "chemllm-selection-ext-4fb298ce83774186",
+  "topic": "reagent_selection/reagent_sample",
+  "mini_split": "chemllmbench",
+  "question_type": "candidate_selection",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-09T08:53:58.718885Z",
+  "finished_at": "2026-06-09T08:54:00.942560Z",
+  "latency_ms": 2224,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 1116
+  },
+  "final_text": "[ANSWER]Brc1ccc2ncccc2c1[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]Brc1ccc2ncccc2c1[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 322,
+    "completion_tokens": 16,
+    "total_tokens": 338,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 322
+  },
+  "error": null,
+  "raw_response": {
+    "id": "3ecbf921-b856-4d34-91e8-b2d30ec79e87",
+    "object": "chat.completion",
+    "created": 1780995242,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]Brc1ccc2ncccc2c1[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 322,
+      "completion_tokens": 16,
+      "total_tokens": 338,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 322
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-runs\\2026-06-09T08-51-54-442088Z\\034-chemllm-selection-ext-4fb298ce83774186.json",
+  "_source_segment": "main_api_run"
+}

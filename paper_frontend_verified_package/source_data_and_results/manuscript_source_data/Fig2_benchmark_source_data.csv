@@ -1,0 +1,5 @@
+benchmark,n,gvim_correct,gvim_percent,api_correct,api_percent,scoring_note
+ChemBench,250,204,81.6,189,75.6,official ChemBench all_correct
+MaScQA,97,94,96.91,73,75.26,published answer-key accuracy
+ChemLLMBench,53,27,50.94,23,43.4,task-specific answer-key metrics
+Descriptive total,400,325,81.25,285,71.25,descriptive only; scoring rules differ

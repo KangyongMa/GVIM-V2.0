@@ -1,0 +1,72 @@
+{
+  "idx": 8,
+  "uuid": "G-META-16-35",
+  "global_idx": 244,
+  "source_id": "G-META-16-35",
+  "topic": "Fluid",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:20:26.750325Z",
+  "finished_at": "2026-06-06T16:20:28.619719Z",
+  "latency_ms": 1869,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 652
+  },
+  "final_text": "[ANSWER]111.36[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]111.36[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 163,
+    "completion_tokens": 9,
+    "total_tokens": 172,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 163
+  },
+  "error": null,
+  "raw_response": {
+    "id": "473740bb-f6d5-4057-a4fa-ac82938bc991",
+    "object": "chat.completion",
+    "created": 1780762828,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]111.36[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 163,
+      "completion_tokens": 9,
+      "total_tokens": 172,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 163
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

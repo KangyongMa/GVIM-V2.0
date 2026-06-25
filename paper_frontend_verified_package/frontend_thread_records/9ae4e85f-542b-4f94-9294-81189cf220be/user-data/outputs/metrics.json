@@ -1,0 +1,59 @@
+{
+  "regression_metrics": [
+    {
+      "model": "RandomForest",
+      "MAE": 0.8215,
+      "RMSE": 1.0278,
+      "R2": 0.3687,
+      "Pearson_r": 0.669
+    },
+    {
+      "model": "Ridge",
+      "MAE": 0.9534,
+      "RMSE": 1.2235,
+      "R2": 0.1055,
+      "Pearson_r": 0.5938
+    },
+    {
+      "model": "Mean Baseline",
+      "MAE": 1.1845,
+      "RMSE": 1.3712,
+      "R2": -0.1234,
+      "Pearson_r": -0.0
+    }
+  ],
+  "ranking_metrics": [
+    {
+      "subset": "all_external",
+      "n": 1598,
+      "k": 160,
+      "n_actives": 161,
+      "active_threshold": 8.68,
+      "hits_in_top_k": 42,
+      "recall_at_k": 0.2609,
+      "enrichment_factor": 2.6054
+    },
+    {
+      "subset": "scaffold_novel_0",
+      "n": 323,
+      "k": 33,
+      "n_actives": 33,
+      "active_threshold": 8.387,
+      "hits_in_top_k": 14,
+      "recall_at_k": 0.4242,
+      "enrichment_factor": 4.1524
+    },
+    {
+      "subset": "scaffold_novel_1",
+      "n": 1275,
+      "k": 128,
+      "n_actives": 142,
+      "active_threshold": 8.7,
+      "hits_in_top_k": 35,
+      "recall_at_k": 0.2465,
+      "enrichment_factor": 2.4552
+    }
+  ],
+  "n_external": 1598,
+  "n_scaffold_novel": 1275
+}

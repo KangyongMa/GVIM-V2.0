@@ -1,0 +1,29 @@
+{
+  "idx": 3,
+  "uuid": "chemllm-property-c1fad947b56beb09",
+  "topic": "property_prediction/BBBP",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T16:49:40.253Z",
+  "finished_at": "2026-06-06T16:50:04.013Z",
+  "latency_ms": 23760,
+  "page_url": "http://localhost:3000/workspace/chats/cf5dd86e-9452-48eb-aa5f-cafdea6ffdeb",
+  "thread_id": "cf5dd86e-9452-48eb-aa5f-cafdea6ffdeb",
+  "run_id": "57e7b0a2-e7e7-458f-b223-66fb4ac8a2ac",
+  "final_text": "Let me analyze this molecule for blood-brain barrier (BBB) penetration.\n\nThe SMILES `CC[N+](C)(C)Cc1ccccc1Br.Cc2ccc(cc2)[S]([O-])(=O)=O` represents a salt: a quaternary ammonium cation (ethyltrimethylammonium with a bromobenzyl group) and a tosylate anion.\n\nKey observations:\n1. **Quaternary ammonium cation** — the nitrogen has a permanent positive charge (4 bonds, no lone pair). Permanently charged molecules generally **cannot cross the BBB** via passive diffusion.\n2. The molecule is ionic overall—a salt with both positive and negative charges.\n3. BBB requires either passive diffusion (lipophilic, neutral/small molecules) or active transport. Quaternary ammonium compounds are known substrates for efflux transporters and have very poor CNS penetration.\n\nTherefore, this molecule does **not** penetrate the blood-brain barrier.\n\n[ANSWER]No[/ANSWER]",
+  "stream_final_text": "Let me analyze this molecule for blood-brain barrier (BBB) penetration.\n\nThe SMILES `CC[N+](C)(C)Cc1ccccc1Br.Cc2ccc(cc2)[S]([O-])(=O)=O` represents a salt: a quaternary ammonium cation (ethyltrimethylammonium with a bromobenzyl group) and a tosylate anion.\n\nKey observations:\n1. **Quaternary ammonium cation** — the nitrogen has a permanent positive charge (4 bonds, no lone pair). Permanently charged molecules generally **cannot cross the BBB** via passive diffusion.\n2. The molecule is ionic overall—a salt with both positive and negative charges.\n3. BBB requires either passive diffusion (lipophilic, neutral/small molecules) or active transport. Quaternary ammonium compounds are known substrates for efflux transporters and have very poor CNS penetration.\n\nTherefore, this molecule does **not** penetrate the blood-brain barrier.\n\n[ANSWER]No[/ANSWER]",
+  "ui_final_text": "Let me analyze this molecule for blood-brain barrier (BBB) penetration.The SMILES CC[N+](C)(C)Cc1ccccc1Br.Cc2ccc(cc2)[S]([O-])(=O)=O represents a salt: a quaternary ammonium cation (ethyltrimethylammonium with a bromobenzyl group) and a tosylate anion.Key observations:\nQuaternary ammonium cation — the nitrogen has a permanent positive charge (4 bonds, no lone pair). Permanently charged molecules generally cannot cross the BBB via passive diffusion.\nThe molecule is ionic overall—a salt with both positive and negative charges.\nBBB requires either passive diffusion (lipophilic, neutral/small molecules) or active transport. Quaternary ammonium compounds are known substrates for efflux transporters and have very poor CNS penetration.\nTherefore, this molecule does not penetrate the blood-brain barrier.Answer: No",
+  "stream_event_count": 237,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/cf5dd86e-9452-48eb-aa5f-cafdea6ffdeb/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench property-prediction task.\\nAnswer only Yes or No inside [ANSWER] and [/ANSWER].\\n\\nTask: Does this molecule penetrate the blood-brain barrier?\\nSMILES: CC[N+](C)(C)Cc1ccccc1Br.Cc2ccc(cc2)[S]([O-])(=O)=O\\n\\nUse exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"cf5dd86e-9452-48eb-aa5f-cafdea6ffdeb\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

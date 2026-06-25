@@ -1,0 +1,72 @@
+{
+  "idx": 28,
+  "uuid": "G-META-14-37",
+  "global_idx": 264,
+  "source_id": "G-META-14-37",
+  "topic": "Transport phenomena",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:21:10.043093Z",
+  "finished_at": "2026-06-06T16:21:11.895817Z",
+  "latency_ms": 1853,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 476
+  },
+  "final_text": "[ANSWER]2[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]2[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 103,
+    "completion_tokens": 7,
+    "total_tokens": 110,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 103
+  },
+  "error": null,
+  "raw_response": {
+    "id": "58cfe6a9-4742-45da-839a-e2725b315f7b",
+    "object": "chat.completion",
+    "created": 1780762871,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]2[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 103,
+      "completion_tokens": 7,
+      "total_tokens": 110,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 103
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

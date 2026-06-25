@@ -1,0 +1,11 @@
+{
+  "benchmark": "Matbench v0.1",
+  "fold": 0,
+  "metrics": {
+    "mae": 111.44365079365083,
+    "r2": 0.6841542256291508,
+    "rmse": 164.31955998012987
+  },
+  "n_test": 63,
+  "task": "matbench_steels"
+}

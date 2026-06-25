@@ -1,0 +1,198 @@
+{
+  "benchmark": "Matbench v0.1",
+  "task": "matbench_steels",
+  "protocol": {
+    "outer_cv": "KFold(n_splits=5, shuffle=True, random_state=18012019)",
+    "official_split_source": "https://raw.githubusercontent.com/materialsproject/matbench/main/matbench/matbench_v0.1_validation.json",
+    "inner_model_selection": "KFold(n_splits=5, shuffle=True, random_state=42)",
+    "primary_metric": "mean outer-fold MAE"
+  },
+  "fold_results": [
+    {
+      "fold": 0,
+      "n_train": 249,
+      "n_test": 63,
+      "n_features": 14,
+      "selected_model": "GradientBoosting",
+      "validation_results": {
+        "MeanBaseline": {
+          "mae": 225.8710321789672,
+          "rmse": 304.3941381002955,
+          "r2": -0.00663147490077165
+        },
+        "Ridge": {
+          "mae": 202.8261390098619,
+          "rmse": 277.1762231311056,
+          "r2": 0.1653394608729467
+        },
+        "RandomForest": {
+          "mae": 94.3367771084338,
+          "rmse": 133.55772815498423,
+          "r2": 0.80620793870056
+        },
+        "GradientBoosting": {
+          "mae": 87.79026223903399,
+          "rmse": 125.2935165871904,
+          "r2": 0.8294486609633114
+        }
+      },
+      "test_metrics": {
+        "mae": 111.44341074122258,
+        "rmse": 164.31952565062616,
+        "r2": 0.6841543576016019
+      }
+    },
+    {
+      "fold": 1,
+      "n_train": 249,
+      "n_test": 63,
+      "n_features": 14,
+      "selected_model": "RandomForest",
+      "validation_results": {
+        "MeanBaseline": {
+          "mae": 232.98390198986905,
+          "rmse": 304.9592309717912,
+          "r2": -0.0035198625476771106
+        },
+        "Ridge": {
+          "mae": 210.79238571725003,
+          "rmse": 279.20084693310804,
+          "r2": 0.15884531535854718
+        },
+        "RandomForest": {
+          "mae": 99.4141827309236,
+          "rmse": 146.2871736269246,
+          "r2": 0.7690835333763139
+        },
+        "GradientBoosting": {
+          "mae": 104.15815574018829,
+          "rmse": 153.70880812958345,
+          "r2": 0.7450588647816381
+        }
+      },
+      "test_metrics": {
+        "mae": 83.20119047619052,
+        "rmse": 114.71876777871475,
+        "r2": 0.8424873129172823
+      }
+    },
+    {
+      "fold": 2,
+      "n_train": 250,
+      "n_test": 62,
+      "n_features": 14,
+      "selected_model": "GradientBoosting",
+      "validation_results": {
+        "MeanBaseline": {
+          "mae": 232.83294,
+          "rmse": 306.2559405418938,
+          "r2": -0.015911794650003808
+        },
+        "Ridge": {
+          "mae": 212.050203961175,
+          "rmse": 284.0544792415713,
+          "r2": 0.12604264153570144
+        },
+        "RandomForest": {
+          "mae": 103.98921200000008,
+          "rmse": 159.58621479411678,
+          "r2": 0.7241470027977889
+        },
+        "GradientBoosting": {
+          "mae": 100.36352895740309,
+          "rmse": 152.60070628671016,
+          "r2": 0.7477680794931059
+        }
+      },
+      "test_metrics": {
+        "mae": 80.30605027673145,
+        "rmse": 118.63266609471542,
+        "r2": 0.8334475690672252
+      }
+    },
+    {
+      "fold": 3,
+      "n_train": 250,
+      "n_test": 62,
+      "n_features": 14,
+      "selected_model": "RandomForest",
+      "validation_results": {
+        "MeanBaseline": {
+          "mae": 225.31032000000002,
+          "rmse": 291.35775772287235,
+          "r2": -0.009132873826303234
+        },
+        "Ridge": {
+          "mae": 206.78041353191483,
+          "rmse": 274.40748528751527,
+          "r2": 0.10486798637089145
+        },
+        "RandomForest": {
+          "mae": 105.46975400000005,
+          "rmse": 157.9281546882095,
+          "r2": 0.7035070961474403
+        },
+        "GradientBoosting": {
+          "mae": 105.5880243387509,
+          "rmse": 159.30392162103053,
+          "r2": 0.6983188909753779
+        }
+      },
+      "test_metrics": {
+        "mae": 95.9887903225808,
+        "rmse": 128.7281886718756,
+        "r2": 0.8579897915490811
+      }
+    },
+    {
+      "fold": 4,
+      "n_train": 250,
+      "n_test": 62,
+      "n_features": 14,
+      "selected_model": "GradientBoosting",
+      "validation_results": {
+        "MeanBaseline": {
+          "mae": 236.02832,
+          "rmse": 308.55196052739643,
+          "r2": -0.024608231279613424
+        },
+        "Ridge": {
+          "mae": 214.22806460284085,
+          "rmse": 284.1219794544061,
+          "r2": 0.13121786183221684
+        },
+        "RandomForest": {
+          "mae": 103.34674599999995,
+          "rmse": 145.47010776817007,
+          "r2": 0.77225505765383
+        },
+        "GradientBoosting": {
+          "mae": 98.63883468954198,
+          "rmse": 138.80118877097814,
+          "r2": 0.7926578529690382
+        }
+      },
+      "test_metrics": {
+        "mae": 91.97983944951442,
+        "rmse": 159.27572341439745,
+        "r2": 0.6885817201936876
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "mae": {
+      "mean": 92.58385625324794,
+      "std": 12.312799686520616
+    },
+    "rmse": {
+      "mean": 137.1349743220659,
+      "std": 23.155498114956487
+    },
+    "r2": {
+      "mean": 0.7813321502657756,
+      "std": 0.0871471893243567
+    }
+  },
+  "n_samples": 312,
+  "execution_time_seconds": 42.828153133392334
+}

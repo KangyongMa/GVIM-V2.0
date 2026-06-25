@@ -1,0 +1,29 @@
+{
+  "both_correct": 20,
+  "full_only_correct": 8,
+  "api_only_correct": 4,
+  "both_wrong": 8,
+  "discordant_pairs": 12,
+  "mcnemar_exact_two_sided_p": 0.3876953125,
+  "paired_accuracy_delta_percentage_points": 10.0,
+  "paired_bootstrap_95_ci_percentage_points": [
+    -7.5,
+    27.500000000000004
+  ],
+  "full_only_indices": [
+    6,
+    16,
+    20,
+    21,
+    24,
+    28,
+    29,
+    40
+  ],
+  "api_only_indices": [
+    3,
+    10,
+    30,
+    31
+  ]
+}

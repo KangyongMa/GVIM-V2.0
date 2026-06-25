@@ -1,0 +1,109 @@
+{
+  "run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T15-45-07-784Z",
+  "base_url": "http://localhost:3000",
+  "start": 49,
+  "limit": 36,
+  "new_chat_every": 1,
+  "user_data_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\chembench-mini-236\\.browser-profile",
+  "browser_channel": "chrome",
+  "finished_at": "2026-06-06T15:57:19.213Z",
+  "count": 36,
+  "ok": 36,
+  "errors": 0,
+  "by_topic": {
+    "Thermodynamics": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Transport phenomena": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Atomic structure": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Magnetism": {
+      "count": 2,
+      "ok": 2,
+      "errors": 0
+    },
+    "Material Applications": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Material characterization": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Material manufacturing": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Material processing": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Mechanical": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Miscellaneous": {
+      "count": 2,
+      "ok": 2,
+      "errors": 0
+    },
+    "Phase transition": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Electrical": {
+      "count": 2,
+      "ok": 2,
+      "errors": 0
+    },
+    "Fluid": {
+      "count": 1,
+      "ok": 1,
+      "errors": 0
+    },
+    "Material testing": {
+      "count": 2,
+      "ok": 2,
+      "errors": 0
+    }
+  },
+  "by_split": {
+    "mascqa": {
+      "count": 36,
+      "ok": 36,
+      "errors": 0
+    }
+  },
+  "by_type": {
+    "MCQS-NUM": {
+      "count": 2,
+      "ok": 2,
+      "errors": 0
+    },
+    "MATCH": {
+      "count": 10,
+      "ok": 10,
+      "errors": 0
+    },
+    "MCQS": {
+      "count": 24,
+      "ok": 24,
+      "errors": 0
+    }
+  }
+}

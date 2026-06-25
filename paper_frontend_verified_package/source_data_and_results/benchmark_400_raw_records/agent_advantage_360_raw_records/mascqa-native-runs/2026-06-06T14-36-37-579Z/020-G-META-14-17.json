@@ -1,0 +1,29 @@
+{
+  "idx": 20,
+  "uuid": "G-META-14-17",
+  "topic": "Mechanical",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T14:47:02.504Z",
+  "finished_at": "2026-06-06T14:47:16.986Z",
+  "latency_ms": 14482,
+  "page_url": "http://localhost:3000/workspace/chats/f80d2b65-5445-4b47-b580-fcea6ae97099",
+  "thread_id": "f80d2b65-5445-4b47-b580-fcea6ae97099",
+  "run_id": "3f9b168b-97e3-4d66-9579-9bb6584ea144",
+  "final_text": "[ANSWER]350[/ANSWER]",
+  "stream_final_text": "[ANSWER]350[/ANSWER]",
+  "ui_final_text": "Answer: 350",
+  "stream_event_count": 45,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/f80d2b65-5445-4b47-b580-fcea6ae97099/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a MaScQA materials science benchmark question (NUM).\\nAnswer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.\\n\\nQuestion: A steel rod was subjected to a fluctuating stress cycle that varied between a maximum of 400 MPa in tension to a minimum of 300 MPa in compression. What is the stress amplitude, in MPa?\\n\\nUse exactly this final format: [ANSWER]<answer>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"f80d2b65-5445-4b47-b580-fcea6ae97099\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

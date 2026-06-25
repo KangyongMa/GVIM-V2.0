@@ -1,0 +1,72 @@
+{
+  "idx": 69,
+  "uuid": "G-META-14-25",
+  "global_idx": 305,
+  "source_id": "G-META-14-25",
+  "topic": "Material characterization",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:23:57.711147Z",
+  "finished_at": "2026-06-06T16:23:59.578459Z",
+  "latency_ms": 1867,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 494
+  },
+  "final_text": "[ANSWER]C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 108,
+    "completion_tokens": 7,
+    "total_tokens": 115,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 108
+  },
+  "error": null,
+  "raw_response": {
+    "id": "f792ffb0-58f4-4bee-a4b4-838ea179445f",
+    "object": "chat.completion",
+    "created": 1780763039,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 108,
+      "completion_tokens": 7,
+      "total_tokens": 115,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 108
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1180" viewBox="0 0 1800 1180">
+  <defs>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #10243e; }
+      .subtitle { font: 400 15px Arial, sans-serif; fill: #4f6478; }
+      .section { font: 700 20px Arial, sans-serif; fill: #16324f; }
+      .label { font: 700 16px Arial, sans-serif; fill: #16324f; }
+      .text { font: 400 14px Arial, sans-serif; fill: #243647; }
+      .small { font: 400 12px Arial, sans-serif; fill: #516173; }
+      .mono { font: 400 12px 'Courier New', monospace; fill: #243647; }
+      .box { fill: #ffffff; stroke: #52708d; stroke-width: 2; rx: 18; ry: 18; }
+      .soft { fill: #f7fafc; stroke: #90a8bf; stroke-width: 1.8; rx: 16; ry: 16; }
+      .blue { fill: #eaf3fb; stroke: #5d88b4; stroke-width: 2; rx: 18; ry: 18; }
+      .green { fill: #edf7f1; stroke: #5e9b72; stroke-width: 2; rx: 18; ry: 18; }
+      .gold { fill: #fff8ea; stroke: #b49354; stroke-width: 2; rx: 18; ry: 18; }
+      .gray { fill: #f4f6f8; stroke: #7e909f; stroke-width: 2; rx: 18; ry: 18; }
+      .dashed { fill: none; stroke: #6287ab; stroke-width: 2.2; stroke-dasharray: 10 8; rx: 22; ry: 22; }
+      .arrow { stroke: #4a6784; stroke-width: 2.4; fill: none; marker-end: url(#arrow); }
+      .arrow2 { stroke: #4d8a66; stroke-width: 2.4; fill: none; marker-end: url(#arrow2); }
+      .arrow3 { stroke: #a07a35; stroke-width: 2.4; fill: none; marker-end: url(#arrow3); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4a6784"/>
+    </marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4d8a66"/>
+    </marker>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#a07a35"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="1180" fill="#fbfdff"/>
+  <text x="70" y="60" class="title">GVIM 2.0 System Architecture for Chemistry and Materials Design</text>
+  <text x="70" y="88" class="subtitle">Drawn strictly from the current repository code and active local configuration; no inferred services beyond verified modules, processes, and files.</text>
+
+  <rect x="60" y="130" width="1680" height="980" class="dashed"/>
+  <text x="84" y="160" class="section">A. End-to-End Deployment and Agent Runtime</text>
+
+  <rect x="100" y="200" width="220" height="115" class="gray"/>
+  <text x="125" y="233" class="label">Users and Entry Points</text>
+  <text x="125" y="260" class="text">Web browser workspace</text>
+  <text x="125" y="282" class="text">Optional IM channels</text>
+  <text x="125" y="304" class="small">Feishu / Slack / Telegram / WeChat / WeCom / DingTalk / Discord</text>
+
+  <rect x="390" y="190" width="250" height="135" class="blue"/>
+  <text x="415" y="223" class="label">Unified Reverse Proxy</text>
+  <text x="415" y="250" class="text">Nginx</text>
+  <text x="415" y="272" class="mono">docker/docker-compose*.yaml</text>
+  <text x="415" y="294" class="mono">Port 2026</text>
+  <text x="415" y="316" class="small">Routes non-API traffic to frontend and /api* traffic to gateway</text>
+
+  <rect x="730" y="190" width="350" height="155" class="blue"/>
+  <text x="755" y="223" class="label">Frontend Application Layer</text>
+  <text x="755" y="250" class="text">Next.js 16 + React 19 workspace UI</text>
+  <text x="755" y="272" class="mono">frontend/src/app/workspace/*</text>
+  <text x="755" y="294" class="mono">frontend/src/core/*</text>
+  <text x="755" y="316" class="small">Rewrites /api, /api/langgraph, /api/v1/auth to the gateway</text>
+
+  <rect x="1140" y="180" width="540" height="355" class="box"/>
+  <text x="1165" y="215" class="label">Gateway and Embedded Agent Runtime</text>
+  <text x="1165" y="240" class="text">FastAPI gateway with LangGraph runtime</text>
+  <text x="1165" y="262" class="mono">backend/app/gateway/app.py</text>
+
+  <rect x="1175" y="280" width="235" height="220" class="soft"/>
+  <text x="1195" y="307" class="label">Gateway Routers</text>
+  <text x="1195" y="332" class="small">models, mcp, memory, skills</text>
+  <text x="1195" y="354" class="small">agents, threads, uploads, artifacts</text>
+  <text x="1195" y="376" class="small">runs, thread_runs, suggestions</text>
+  <text x="1195" y="398" class="small">channels, auth, feedback</text>
+  <text x="1195" y="426" class="mono">backend/app/gateway/routers/*.py</text>
+
+  <rect x="1430" y="280" width="220" height="220" class="soft"/>
+  <text x="1450" y="307" class="label">Lead Agent Stack</text>
+  <text x="1450" y="332" class="small">Lead agent factory</text>
+  <text x="1450" y="354" class="small">Dynamic prompt + skills</text>
+  <text x="1450" y="376" class="small">Tool system + MCP + subagents</text>
+  <text x="1450" y="398" class="small">Memory and token accounting</text>
+  <text x="1450" y="426" class="mono">backend/packages/harness/deerflow/agents/lead_agent/agent.py</text>
+
+  <rect x="1140" y="585" width="540" height="210" class="gold"/>
+  <text x="1165" y="620" class="label">Thread Runtime State and Local Persistence</text>
+  <text x="1165" y="647" class="text">Per-thread workspace, uploads, outputs, and DeerFlow home</text>
+  <text x="1165" y="671" class="mono">.deer-flow/</text>
+  <text x="1165" y="695" class="text">SQLite database backend enabled in config.yaml</text>
+  <text x="1165" y="719" class="mono">database.backend: sqlite</text>
+  <text x="1165" y="743" class="text">Enabled skills and MCP servers loaded from extensions_config.json</text>
+
+  <rect x="115" y="405" width="920" height="325" class="dashed"/>
+  <text x="140" y="435" class="section">B. Chemistry and Materials Intelligence Augmentation Path</text>
+
+  <rect x="145" y="470" width="270" height="220" class="green"/>
+  <text x="168" y="500" class="label">Scientific Request Surface</text>
+  <text x="168" y="527" class="text">Natural-language chemistry/materials tasks</text>
+  <text x="168" y="549" class="text">Structure drawing, 3D conformers</text>
+  <text x="168" y="571" class="text">Materials Project queries</text>
+  <text x="168" y="593" class="text">XRD and spectrum analysis</text>
+  <text x="168" y="621" class="mono">lead_agent prompt + science artifact middleware</text>
+
+  <rect x="455" y="470" width="260" height="220" class="green"/>
+  <text x="478" y="500" class="label">Enabled Science MCP Server</text>
+  <text x="478" y="527" class="text">Configured external stdio server</text>
+  <text x="478" y="549" class="mono">mcpServers.gvim-science</text>
+  <text x="478" y="571" class="mono">extensions_config.json</text>
+  <text x="478" y="593" class="small">Python entrypoint outside this repo, but explicitly enabled by the local system configuration</text>
+  <text x="478" y="621" class="small">Gateway keeps MCP sessions in its lifecycle</text>
+
+  <rect x="755" y="470" width="245" height="220" class="green"/>
+  <text x="778" y="500" class="label">Chemistry Compute Backends</text>
+  <text x="778" y="527" class="small">Ketcher command preparation</text>
+  <text x="778" y="549" class="small">Structure resolution</text>
+  <text x="778" y="571" class="small">RDKit descriptors / similarity</text>
+  <text x="778" y="593" class="small">Reaction QC / fragmentation / 3D conformer</text>
+  <text x="778" y="621" class="mono">backend/packages/harness/gvim_v2/chemistry/*</text>
+
+  <rect x="145" y="770" width="855" height="180" class="green"/>
+  <text x="170" y="803" class="label">Materials Compute Backends</text>
+  <text x="170" y="830" class="small">Formula analysis, composition features, structure analysis, structure QC, structure transform</text>
+  <text x="170" y="852" class="small">PyXtal generation, local environment analysis, high-symmetry k-path, XRD simulation and matching</text>
+  <text x="170" y="874" class="small">Spectrum baseline correction, peak detection, peak fitting, precursor planning</text>
+  <text x="170" y="896" class="small">Materials Project search/profile/deep profile, OPTIMADE search, X-ray and scattering reference data</text>
+  <text x="170" y="924" class="mono">backend/packages/harness/gvim_v2/materials/*</text>
+
+  <rect x="60" y="980" width="1680" height="120" class="dashed"/>
+  <text x="84" y="1010" class="section">C. Native Scientific Visualization and Deliverable Layer</text>
+
+  <rect x="120" y="1035" width="420" height="50" class="soft"/>
+  <text x="145" y="1066" class="text">Ketcher canvas artifact renderer in workspace messages</text>
+  <text x="145" y="1084" class="mono">frontend/src/components/workspace/messages/science-artifact.tsx</text>
+
+  <rect x="610" y="1035" width="420" height="50" class="soft"/>
+  <text x="635" y="1066" class="text">3D molecular viewer artifact via 3Dmol.js</text>
+  <text x="635" y="1084" class="mono">science-artifact.tsx + /vendor/3dmol/3Dmol-min.js</text>
+
+  <rect x="1100" y="1035" width="580" height="50" class="soft"/>
+  <text x="1125" y="1066" class="text">Materials artifact table and structured payload inspection in the workspace UI</text>
+  <text x="1125" y="1084" class="mono">science-artifact.tsx + frontend/src/core/science/*</text>
+
+  <path d="M320 257 L390 257" class="arrow"/>
+  <path d="M640 257 L730 257" class="arrow"/>
+  <path d="M1080 257 L1140 257" class="arrow"/>
+  <path d="M1510 535 L1510 585" class="arrow"/>
+
+  <path d="M415 580 L455 580" class="arrow2"/>
+  <path d="M715 580 L755 580" class="arrow2"/>
+  <path d="M720 580 C745 580, 745 860, 755 860" class="arrow2"/>
+  <path d="M680 420 C830 370, 1180 370, 1290 370" class="arrow2"/>
+
+  <path d="M835 690 C835 760, 835 880, 835 980" class="arrow3"/>
+  <path d="M300 950 C300 985, 300 1010, 300 1035" class="arrow3"/>
+  <path d="M835 950 C835 985, 835 1010, 835 1035" class="arrow3"/>
+  <path d="M1390 795 C1390 900, 1390 980, 1390 1035" class="arrow3"/>
+
+  <text x="1320" y="557" class="small">state, files, extensions, skills</text>
+  <text x="530" y="446" class="small">chemistry/materials requests enter the normal agent loop</text>
+  <text x="920" y="728" class="small">science_artifacts payloads returned to frontend for native visualization</text>
+</svg>

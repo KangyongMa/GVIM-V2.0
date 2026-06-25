@@ -1,0 +1,2 @@
+n,both_correct,gvim_only_correct,api_only_correct,both_wrong,delta_percentage_points,bootstrap_ci_low_pp,bootstrap_ci_high_pp,mcnemar_exact_two_sided_p
+400,268,57,17,58,10.0,6.0,14.25,3.3971668169915196e-06

@@ -1,0 +1,164 @@
+{
+  "run_label": "public-extension-40 DeepSeek Flash API-only ablation",
+  "created_at_utc": "2026-06-09T08:58:26.443296Z",
+  "input_results_jsonl": "benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined\\results.chembench.jsonl",
+  "question_count": 14,
+  "chembench_scoring": {
+    "package_version": "0.3.0",
+    "prompter": "chembench.prompter.InstructionPrompter",
+    "report_method": "InstructionPrompter.report_batch",
+    "metrics_source": "chembench.metrics and BasePrompter._calculate_metrics",
+    "parser_source": "ChemBench official regex/parser functions used by InstructionPrompter._process_single_result",
+    "llm_extractor_fallback": "disabled_for_strict_reproducible_scoring",
+    "custom_answer_parser_used": false,
+    "custom_scoring_used": false
+  },
+  "scores": {
+    "overall": {
+      "n": 14,
+      "all_correct_count": 10,
+      "all_correct_mean": 0.7142857142857143,
+      "parse_empty_count": 0,
+      "official_calculate_topic_metrics": {
+        "exact_str_match": {
+          "mean": 0.07142857142857142,
+          "std": 0.25753937681885636,
+          "count": 14
+        },
+        "all_correct": {
+          "mean": 0.7142857142857143,
+          "std": 0.45175395145262565,
+          "count": 14
+        },
+        "multiple_choice_grade": {
+          "mean": 1.3333333333333333,
+          "std": 0.6666666666666666,
+          "count": 14
+        },
+        "correct_classes": {
+          "mean": 1.3333333333333333,
+          "std": 0.6666666666666666,
+          "count": 14
+        },
+        "incorrect_classes": {
+          "mean": 0.0,
+          "std": 0.0,
+          "count": 14
+        },
+        "missed_classes": {
+          "mean": 0.5555555555555556,
+          "std": 1.257078722109418,
+          "count": 14
+        },
+        "extra_classes": {
+          "mean": 0.0,
+          "std": 0.0,
+          "count": 14
+        },
+        "precision": {
+          "mean": 1.0,
+          "std": 0.0,
+          "count": 14
+        },
+        "recall": {
+          "mean": 0.8994708994708994,
+          "std": 0.19626705810572917,
+          "count": 14
+        },
+        "f1": {
+          "mean": 0.9333333333333333,
+          "std": 0.13333333333333333,
+          "count": 14
+        },
+        "hamming": {
+          "mean": 0.10052910052910052,
+          "std": 0.19626705810572917,
+          "count": 14
+        },
+        "mae": {
+          "mean": 1.0,
+          "std": 2.0,
+          "count": 14
+        },
+        "mse": {
+          "mean": 5.0,
+          "std": 10.0,
+          "count": 14
+        }
+      }
+    },
+    "by_question_type": {
+      "multiple_choice": {
+        "n": 9,
+        "all_correct_count": 7,
+        "all_correct_mean": 0.7777777777777778,
+        "parse_empty_count": 0
+      },
+      "open_numeric": {
+        "n": 5,
+        "all_correct_count": 3,
+        "all_correct_mean": 0.6,
+        "parse_empty_count": 0
+      }
+    },
+    "by_split": {
+      "chembench-full": {
+        "n": 14,
+        "all_correct_count": 10,
+        "all_correct_mean": 0.7142857142857143,
+        "parse_empty_count": 0
+      }
+    },
+    "by_topic": {
+      "analytical_chemistry": {
+        "n": 2,
+        "all_correct_count": 2,
+        "all_correct_mean": 1.0,
+        "parse_empty_count": 0
+      },
+      "inorganic_chemistry": {
+        "n": 1,
+        "all_correct_count": 1,
+        "all_correct_mean": 1.0,
+        "parse_empty_count": 0
+      },
+      "materials_science": {
+        "n": 4,
+        "all_correct_count": 3,
+        "all_correct_mean": 0.75,
+        "parse_empty_count": 0
+      },
+      "organic_chemistry": {
+        "n": 1,
+        "all_correct_count": 0,
+        "all_correct_mean": 0.0,
+        "parse_empty_count": 0
+      },
+      "physical_chemistry": {
+        "n": 1,
+        "all_correct_count": 0,
+        "all_correct_mean": 0.0,
+        "parse_empty_count": 0
+      },
+      "technical_chemistry": {
+        "n": 2,
+        "all_correct_count": 2,
+        "all_correct_mean": 1.0,
+        "parse_empty_count": 0
+      },
+      "toxicity_and_safety": {
+        "n": 3,
+        "all_correct_count": 2,
+        "all_correct_mean": 0.6666666666666666,
+        "parse_empty_count": 0
+      }
+    }
+  },
+  "usage_total": {
+    "prompt_tokens": 2473,
+    "completion_tokens": 2597,
+    "total_tokens": 5070,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 2473
+  }
+}

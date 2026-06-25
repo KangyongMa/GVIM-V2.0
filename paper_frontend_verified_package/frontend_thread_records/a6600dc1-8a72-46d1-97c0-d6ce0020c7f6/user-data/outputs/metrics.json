@@ -1,0 +1,141 @@
+{
+  "case_id": "chemical_science_main_case_matbench_expt_gap_fast_features",
+  "dataset": "Matbench v0.1 matbench_expt_gap",
+  "n_samples": 4604,
+  "n_features": 98,
+  "regression_model": "HistGradientBoostingRegressor",
+  "model_parameters": {
+    "random_state": 0,
+    "max_iter": 200,
+    "max_depth": 10,
+    "min_samples_leaf": 5,
+    "learning_rate": 0.1,
+    "loss": "squared_error",
+    "early_stopping": false
+  },
+  "cv_method": "KFold(n_splits=5, shuffle=True, random_state=18012019)",
+  "regression_metrics": {
+    "MAE_mean": 0.45134965451101977,
+    "MAE_std": 0.01697477523950231,
+    "RMSE_mean": 0.8049023396540406,
+    "RMSE_std": 0.0455787658657692,
+    "R2_mean": 0.6854155014030346,
+    "R2_std": 0.044537755291058224,
+    "per_fold_scores": [
+      {
+        "fold": 0,
+        "MAE": 0.4585381016305834,
+        "RMSE": 0.8223488857479162,
+        "R2": 0.6224103564685279
+      },
+      {
+        "fold": 1,
+        "MAE": 0.4261025957476762,
+        "RMSE": 0.7487575588386621,
+        "R2": 0.7547063166246548
+      },
+      {
+        "fold": 2,
+        "MAE": 0.47555534606363936,
+        "RMSE": 0.8818888657123001,
+        "R2": 0.6659092668837573
+      },
+      {
+        "fold": 3,
+        "MAE": 0.4397081969354906,
+        "RMSE": 0.7741267864062423,
+        "R2": 0.7104554881438059
+      },
+      {
+        "fold": 4,
+        "MAE": 0.45684403217770914,
+        "RMSE": 0.797389601565082,
+        "R2": 0.6735960788944273
+      }
+    ]
+  },
+  "active_discovery_target": "top_5_percent_highest_gap",
+  "top5_threshold_eV": 3.738499999999995,
+  "n_top5_materials": 231,
+  "active_discovery_settings": {
+    "n_seeds": 3,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "initial_random_size": 30,
+    "batch_size": 10,
+    "query_budget": 150,
+    "policies": [
+      "random",
+      "greedy_surrogate"
+    ]
+  },
+  "active_discovery_results": {
+    "random": {
+      "recall_mean": 0.03318903318903319,
+      "recall_std": 0.018023082246460022,
+      "hit_rate_mean": 0.05111111111111111,
+      "hit_rate_std": 0.02775554665954844,
+      "best_gap_mean": 7.013333333333333,
+      "best_gap_std": 3.603891415308365,
+      "per_seed": {
+        "0": {
+          "recall": 0.03896103896103896,
+          "hit_rate": 0.06,
+          "best_gap": 11.1
+        },
+        "1": {
+          "recall": 0.012987012987012988,
+          "hit_rate": 0.02,
+          "best_gap": 4.29
+        },
+        "2": {
+          "recall": 0.047619047619047616,
+          "hit_rate": 0.07333333333333333,
+          "best_gap": 5.65
+        }
+      }
+    },
+    "greedy_surrogate": {
+      "recall_mean": 0.2626262626262626,
+      "recall_std": 0.02499351814673705,
+      "hit_rate_mean": 0.40444444444444444,
+      "hit_rate_std": 0.03849001794597508,
+      "best_gap_mean": 9.033333333333333,
+      "best_gap_std": 1.7897858344878397,
+      "per_seed": {
+        "0": {
+          "recall": 0.27705627705627706,
+          "hit_rate": 0.4266666666666667,
+          "best_gap": 8.0
+        },
+        "1": {
+          "recall": 0.23376623376623376,
+          "hit_rate": 0.36,
+          "best_gap": 8.0
+        },
+        "2": {
+          "recall": 0.27705627705627706,
+          "hit_rate": 0.4266666666666667,
+          "best_gap": 11.1
+        }
+      }
+    },
+    "recall_diff_greedy_minus_random": {
+      "mean": 0.2294395382395382,
+      "ci95_lower": 0.22077922077922077,
+      "ci95_upper": 0.23809523809523808
+    }
+  },
+  "python_version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+  "package_versions": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.9"
+  },
+  "runtime_seconds": 73.80520749092102,
+  "data_hash": "178a3b4a4009"
+}

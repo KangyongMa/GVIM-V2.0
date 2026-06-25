@@ -1,0 +1,5 @@
+model,run_dir,n,correct,accuracy_percent,status,ChemBench_n,ChemBench_correct,ChemBench_accuracy_percent,MaScQA_n,MaScQA_correct,MaScQA_accuracy_percent,ChemLLMBench_n,ChemLLMBench_correct,ChemLLMBench_accuracy_percent
+meta-llama/llama-4-scout-17b-16e-instruct,benchmarks\groq-api-only-400\runs\llama-4-scout-17b-16e-instruct,400,291,72.75,{'ok': 400},250,179,71.6,97,85,87.63,53,27,50.94
+llama-3.3-70b-versatile,benchmarks\groq-api-only-400\runs\llama-3.3-70b-versatile,400,260,65.0,{'ok': 400},250,165,66.0,97,63,64.95,53,32,60.38
+qwen/qwen3-32b,benchmarks\groq-api-only-400\runs\qwen-qwen3-32b,400,245,61.25,"{'ok': 399, 'truncated': 1}",250,160,64.0,97,65,67.01,53,20,37.74
+llama-3.1-8b-instant,benchmarks\groq-api-only-400\runs\llama-3.1-8b-instant,400,169,42.25,"{'ok': 393, 'truncated': 7}",250,120,48.0,97,31,31.96,53,18,33.96

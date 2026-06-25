@@ -1,0 +1,10 @@
+# MinerU API mode dependency.
+# No local mineru package is required for GVIM/DeerFlow desktop deployment.
+requests>=2.32.0
+
+# Optional downstream analysis packages. The default extractor does not require
+# them, but advanced chemistry workflows may install them separately.
+# pandas>=2.0.0
+# numpy>=1.24.0
+# rdkit>=2023.9.0
+# chemdataextractor>=1.3.0

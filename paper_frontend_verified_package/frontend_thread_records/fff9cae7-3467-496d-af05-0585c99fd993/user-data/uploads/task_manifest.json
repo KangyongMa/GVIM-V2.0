@@ -1,0 +1,59 @@
+{
+  "demo_id": "experiment5_bace_active_discovery",
+  "title": "Retrospective active discovery of high-activity BACE inhibitor candidates",
+  "domain": "chemical molecular discovery",
+  "input_file": "bace_active_discovery.csv",
+  "public_gold_label": "pIC50",
+  "smiles_column": "mol",
+  "row_id_column": "row_id",
+  "target_definition": "top 5% molecules by public pIC50",
+  "initial_random_queries": 30,
+  "query_budget": 150,
+  "batch_size": 10,
+  "random_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "required_policies": [
+    "random",
+    "surrogate_active_search"
+  ],
+  "optional_policies": [
+    "greedy_surrogate",
+    "ucb_surrogate"
+  ],
+  "required_metrics": [
+    "recall_at_150",
+    "hit_rate_at_150",
+    "enrichment_factor_at_150",
+    "best_pIC50_at_150",
+    "bootstrap_95_percent_ci_for_active_minus_random_recall"
+  ],
+  "required_outputs": [
+    "metrics.json",
+    "trajectories.csv",
+    "final_selected_candidates.csv",
+    "source_data_budget_metrics.csv",
+    "report.md",
+    "active_discovery_recall_curve.png"
+  ],
+  "evaluation_note": "This is a retrospective virtual-screening experiment. The pIC50 labels are public gold labels. During each simulated active-search run, unqueried pIC50 values must not be used for model training or candidate selection; they are revealed only when a molecule is queried and used globally only for final metric computation."
+}

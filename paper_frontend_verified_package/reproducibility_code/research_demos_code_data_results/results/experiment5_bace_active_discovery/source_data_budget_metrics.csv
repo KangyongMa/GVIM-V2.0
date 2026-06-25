@@ -1,0 +1,4 @@
+policy,success_at_budget,queries_to_first_hit_mean,target_recall_at_budget_mean,target_recall_at_budget_std,hit_rate_at_budget_mean,enrichment_factor_at_budget_mean,best_pIC50_at_budget_mean,top_20_gold_targets_ever_selected
+random,1.0,31.5,0.09620253164556963,0.03191755205652372,0.05066666666666667,0.9703628691983124,9.141533475,19.0
+greedy_surrogate,1.0,31.0,0.3284810126582278,0.0867780084822028,0.173,3.3132784810126585,9.238356725,18.0
+ucb_surrogate,1.0,31.0,0.3177215189873418,0.06505211734297565,0.1673333333333333,3.204751054852321,9.294434794999999,19.0

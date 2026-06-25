@@ -1,0 +1,78 @@
+{
+  "experiment": "frontend_agent_chemllmbench_40",
+  "generated_at": "2026-06-06T17:18:55.989703Z",
+  "native_run_dir": "benchmarks\\agent-advantage-400\\chemllmbench-native-runs\\2026-06-06T16-46-12-242Z",
+  "questions": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\chemllmbench-40-questions.native.jsonl",
+  "answer_key": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\answer_key.jsonl",
+  "record_count": 40,
+  "scoring_rule": "ChemLLMBench task-specific answer-key metric; property prediction uses Yes/No accuracy; Suzuki component selection uses exact match to the optimal candidate SMILES. Deterministic parser fixed before evaluation.",
+  "native_run_summary": {
+    "run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\chemllmbench-native-runs\\2026-06-06T16-46-12-242Z",
+    "base_url": "http://localhost:3000",
+    "start": 1,
+    "limit": 40,
+    "new_chat_every": 1,
+    "user_data_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\.browser-profile-chemllmbench-kangyongmachem",
+    "browser_channel": "chrome",
+    "finished_at": "2026-06-06T17:10:43.086Z",
+    "count": 40,
+    "ok": 40,
+    "errors": 0,
+    "by_topic": {
+      "property_prediction/BBBP": {
+        "count": 8,
+        "ok": 8,
+        "errors": 0
+      },
+      "property_prediction/BACE": {
+        "count": 4,
+        "ok": 4,
+        "errors": 0
+      },
+      "property_prediction/HIV": {
+        "count": 4,
+        "ok": 4,
+        "errors": 0
+      },
+      "property_prediction/ClinTox": {
+        "count": 4,
+        "ok": 4,
+        "errors": 0
+      },
+      "reagent_selection/reagent_sample": {
+        "count": 7,
+        "ok": 7,
+        "errors": 0
+      },
+      "reagent_selection/solvent_sample": {
+        "count": 7,
+        "ok": 7,
+        "errors": 0
+      },
+      "reagent_selection/ligand_sample": {
+        "count": 6,
+        "ok": 6,
+        "errors": 0
+      }
+    },
+    "by_split": {
+      "chemllmbench": {
+        "count": 40,
+        "ok": 40,
+        "errors": 0
+      }
+    },
+    "by_type": {
+      "binary_property_prediction": {
+        "count": 20,
+        "ok": 20,
+        "errors": 0
+      },
+      "candidate_selection": {
+        "count": 20,
+        "ok": 20,
+        "errors": 0
+      }
+    }
+  }
+}

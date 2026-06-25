@@ -1,0 +1,72 @@
+{
+  "idx": 23,
+  "uuid": "G-META-17-12",
+  "global_idx": 259,
+  "source_id": "G-META-17-12",
+  "topic": "Phase transition",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:20:59.656802Z",
+  "finished_at": "2026-06-06T16:21:01.535149Z",
+  "latency_ms": 1878,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 500
+  },
+  "final_text": "[ANSWER]0.52[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]0.52[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 124,
+    "completion_tokens": 9,
+    "total_tokens": 133,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 124
+  },
+  "error": null,
+  "raw_response": {
+    "id": "0acda98f-43a7-49a2-94bf-0d992cc39f5c",
+    "object": "chat.completion",
+    "created": 1780762861,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]0.52[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 124,
+      "completion_tokens": 9,
+      "total_tokens": 133,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 124
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

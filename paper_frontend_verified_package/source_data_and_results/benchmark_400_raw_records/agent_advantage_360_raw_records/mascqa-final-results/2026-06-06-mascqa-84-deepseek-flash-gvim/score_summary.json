@@ -1,0 +1,113 @@
+{
+  "dataset": "MaScQA selected 84-question subset",
+  "model_system": "GVIM/DeerFlow full front-end Agent system with DeepSeek Flash",
+  "scoring_protocol": "MaScQA published answer-key accuracy reproduced from public answer sheet; deterministic parser fixed before evaluation; MaScQA repository does not provide a ChemBench-style official scorer package.",
+  "source_answer_key": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\answer_key.jsonl",
+  "run_root": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs",
+  "generated_at_utc": "2026-06-06T16:12:40Z",
+  "total": 84,
+  "successful_records": 84,
+  "missing_records": 0,
+  "correct": 82,
+  "accuracy_percent": 97.62,
+  "by_type": {
+    "MATCH": {
+      "correct": 10,
+      "total": 10,
+      "accuracy_percent": 100.0
+    },
+    "MCQS": {
+      "correct": 24,
+      "total": 24,
+      "accuracy_percent": 100.0
+    },
+    "MCQS-NUM": {
+      "correct": 19,
+      "total": 20,
+      "accuracy_percent": 95.0
+    },
+    "NUM": {
+      "correct": 29,
+      "total": 30,
+      "accuracy_percent": 96.67
+    }
+  },
+  "by_topic": {
+    "Atomic structure": {
+      "correct": 9,
+      "total": 9,
+      "accuracy_percent": 100.0
+    },
+    "Electrical": {
+      "correct": 7,
+      "total": 7,
+      "accuracy_percent": 100.0
+    },
+    "Fluid": {
+      "correct": 5,
+      "total": 5,
+      "accuracy_percent": 100.0
+    },
+    "Magnetism": {
+      "correct": 5,
+      "total": 6,
+      "accuracy_percent": 83.33
+    },
+    "Material Applications": {
+      "correct": 6,
+      "total": 6,
+      "accuracy_percent": 100.0
+    },
+    "Material characterization": {
+      "correct": 3,
+      "total": 3,
+      "accuracy_percent": 100.0
+    },
+    "Material manufacturing": {
+      "correct": 8,
+      "total": 8,
+      "accuracy_percent": 100.0
+    },
+    "Material processing": {
+      "correct": 5,
+      "total": 5,
+      "accuracy_percent": 100.0
+    },
+    "Material testing": {
+      "correct": 2,
+      "total": 2,
+      "accuracy_percent": 100.0
+    },
+    "Mechanical": {
+      "correct": 7,
+      "total": 8,
+      "accuracy_percent": 87.5
+    },
+    "Miscellaneous": {
+      "correct": 4,
+      "total": 4,
+      "accuracy_percent": 100.0
+    },
+    "Phase transition": {
+      "correct": 7,
+      "total": 7,
+      "accuracy_percent": 100.0
+    },
+    "Thermodynamics": {
+      "correct": 8,
+      "total": 8,
+      "accuracy_percent": 100.0
+    },
+    "Transport phenomena": {
+      "correct": 6,
+      "total": 6,
+      "accuracy_percent": 100.0
+    }
+  },
+  "wrong_indices": [
+    19,
+    39
+  ],
+  "empty_prediction_indices": [],
+  "not_ok_indices": []
+}

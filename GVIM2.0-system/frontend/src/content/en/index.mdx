@@ -1,0 +1,95 @@
+---
+title: GVIM Documentation
+description: Understand GVIM, build with the Harness, and deploy the App.
+---
+
+# GVIM Documentation
+
+GVIM is an AI Agent Platform designed specifically for Chemistry and Materials Science. It provides a runtime harness for composing scientific agents with advanced capabilities—including RDKit molecular analytics, pymatgen structural calculation, Materials Project database retrieval, Ketcher chemistry canvas, and safe sandbox execution. It also provides an application layer that turns these scientific capabilities into a usable and collaborative web product experience.
+
+This documentation is organized around those two parts:
+
+- **GVIM Harness**: the core SDK and runtime layer for building your own scientific agent system.
+- **GVIM App**: a reference application built on top of the Harness for science workflows, chemistry analytics, and researcher collaboration.
+
+If you want to understand how GVIM works, start with the Introduction. If you want to build on the core runtime, go to the Harness docs. If you want to deploy and use GVIM as an application, go to the App docs.
+
+## Start here
+
+### If you are new to GVIM
+
+Start with the conceptual overview first.
+
+- [Introduction](./docs/introduction)
+- [Why GVIM](./docs/introduction/why-gvim)
+- [Harness vs App](./docs/introduction/harness-vs-app)
+
+### If you want to build with GVIM
+
+Start with the Harness section. This path is for teams who want to integrate GVIM capabilities into their own system or build a custom agent product on top of the GVIM runtime.
+
+- [GVIM Harness](./docs/harness)
+- [Quick Start](./docs/harness/quick-start)
+- [Configuration](./docs/harness/configuration)
+- [Customization](./docs/harness/customization)
+
+### If you want to deploy and use GVIM
+
+Start with the App section. This path is for teams who want to run GVIM as a complete application and understand how to configure, operate, and use it in practice.
+
+- [GVIM App](./docs/application)
+- [Quick Start](./docs/application/quick-start)
+- [Deployment Guide](./docs/application/deployment-guide)
+- [Workspace Usage](./docs/application/workspace-usage)
+
+## Documentation structure
+
+### Introduction
+
+The Introduction section helps you build the right mental model before you look at implementation details.
+
+- **What is GVIM** explains what GVIM is and what problems it is designed to solve.
+- **Why GVIM** explains the motivation behind the project.
+- **Core Concepts** introduces the concepts that appear across the documentation.
+- **Harness vs App** explains the relationship between the runtime layer and the application layer.
+
+### GVIM Harness
+
+The Harness section is the core of the technical documentation. It is written for developers who want to build their own GVIM-based system.
+
+- **Quick Start** shows how to create your first harness with the core GVIM API.
+- **Design Principles** explains the architectural ideas behind the Harness.
+- **Configuration** covers the main configuration surface of the SDK/runtime.
+- **Memory**, **Tools**, **Skills**, and **Sandbox** explain the major system capabilities separately.
+- **Customization** shows how to adapt GVIM to your own product requirements.
+- **Integration Guide** explains how to integrate the Harness into a larger system.
+
+### GVIM App
+
+The App section is written for teams who want to deploy GVIM as a usable product.
+
+- **Quick Start** helps you run the application locally.
+- **Deployment Guide** explains how to deploy GVIM in your own environment.
+- **Configuration** covers the application-level configuration model.
+- **Workspace Usage** explains the main user workflows.
+- **Agents and Threads** explains how users interact with GVIM in practice.
+- **Operations and Troubleshooting** covers maintenance and production usage.
+
+### Tutorials
+
+The Tutorials section is for hands-on, task-oriented learning.
+
+- [Tutorials](./docs/tutorials)
+
+### Reference
+
+The Reference section is for detailed lookup material, including configuration, runtime modes, APIs, and source-oriented mapping.
+
+- [Reference](./docs/reference)
+
+## Choose the right path
+
+- If you are **evaluating the project**, start with [Introduction](./docs/introduction).
+- If you are **building your own agent system**, start with [GVIM Harness](./docs/harness).
+- If you are **deploying GVIM for users**, start with [GVIM App](./docs/application).
+- If you want to **learn by doing**, go to [Tutorials](./docs/tutorials).

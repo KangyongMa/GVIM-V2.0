@@ -1,0 +1,35 @@
+{
+  "gold_source": "MassBank InChIKey identity from public MassBank-data records",
+  "n_queries": 5,
+  "top1_accuracy": 0.8,
+  "top3_accuracy": 1.0,
+  "top5_accuracy": 1.0,
+  "mrr": 0.9,
+  "per_query": [
+    {
+      "query_id": "query_1",
+      "true_inchikey": "MPGIDXBHXRMMSY-UHFFFAOYSA-N",
+      "hit_rank": 1
+    },
+    {
+      "query_id": "query_2",
+      "true_inchikey": "IURIYLBJXOYFRR-CFLUNQOMSA-N",
+      "hit_rank": 2
+    },
+    {
+      "query_id": "query_3",
+      "true_inchikey": "XCGGFKXEWPNQFS-ABXPXLQLSA-N",
+      "hit_rank": 1
+    },
+    {
+      "query_id": "query_4",
+      "true_inchikey": "YLSOIPHOXMRWGW-UHFFFAOYSA-N",
+      "hit_rank": 1
+    },
+    {
+      "query_id": "query_5",
+      "true_inchikey": "QACTZPSCGSGUNG-GYWLOTNVSA-N",
+      "hit_rank": 1
+    }
+  ]
+}

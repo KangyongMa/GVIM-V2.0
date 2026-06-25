@@ -1,0 +1,74 @@
+{
+  "idx": 33,
+  "uuid": "chemllm-selection-9c9f9c233e11fa82",
+  "global_idx": 353,
+  "source_id": "chemllm-selection-9c9f9c233e11fa82",
+  "topic": "reagent_selection/solvent_sample",
+  "mini_split": "chemllmbench",
+  "question_type": "candidate_selection",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_chemllmbench_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T17:20:42.878273Z",
+  "finished_at": "2026-06-06T17:20:44.704439Z",
+  "latency_ms": 1826,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 1078
+  },
+  "final_text": "[ANSWER]C1CCOC1[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]C1CCOC1[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 319,
+    "completion_tokens": 12,
+    "total_tokens": 331,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 319
+  },
+  "error": null,
+  "raw_response": {
+    "id": "f15bbb4f-c4f8-428a-a8b6-faff61ee0bfc",
+    "object": "chat.completion",
+    "created": 1780766444,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]C1CCOC1[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 319,
+      "completion_tokens": 12,
+      "total_tokens": 331,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 319
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_record_file": "",
+  "_source_kind": "deepseek_flash_api_only"
+}

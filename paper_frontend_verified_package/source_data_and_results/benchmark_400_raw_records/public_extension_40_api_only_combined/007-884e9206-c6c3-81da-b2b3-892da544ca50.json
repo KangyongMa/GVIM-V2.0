@@ -1,0 +1,72 @@
+{
+  "idx": 7,
+  "uuid": "884e9206-c6c3-81da-b2b3-892da544ca50",
+  "topic": "toxicity_and_safety",
+  "mini_split": "chembench-full",
+  "question_type": "multiple_choice",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-09T08:52:16.413698Z",
+  "finished_at": "2026-06-09T08:52:18.799733Z",
+  "latency_ms": 2386,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 786
+  },
+  "final_text": "[ANSWER]A[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]A[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 166,
+    "completion_tokens": 7,
+    "total_tokens": 173,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 166
+  },
+  "error": null,
+  "raw_response": {
+    "id": "5e1b7b44-a6c8-42ba-a750-6717a4a9606a",
+    "object": "chat.completion",
+    "created": 1780995140,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]A[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 166,
+      "completion_tokens": 7,
+      "total_tokens": 173,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 166
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-runs\\2026-06-09T08-51-54-442088Z\\007-884e9206-c6c3-81da-b2b3-892da544ca50.json",
+  "_source_segment": "main_api_run"
+}

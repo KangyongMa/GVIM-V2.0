@@ -1,0 +1,6 @@
+matplotlib>=3.8
+numpy>=1.26
+pandas>=2.0
+rdkit>=2024.3
+scikit-learn>=1.4
+

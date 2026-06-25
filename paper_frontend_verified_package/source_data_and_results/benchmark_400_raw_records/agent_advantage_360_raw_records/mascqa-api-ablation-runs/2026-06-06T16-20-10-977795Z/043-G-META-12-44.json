@@ -1,0 +1,72 @@
+{
+  "idx": 43,
+  "uuid": "G-META-12-44",
+  "global_idx": 279,
+  "source_id": "G-META-12-44",
+  "topic": "Mechanical",
+  "mini_split": "mascqa",
+  "question_type": "MCQS-NUM",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:22:31.008196Z",
+  "finished_at": "2026-06-06T16:22:34.504219Z",
+  "latency_ms": 3496,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 475
+  },
+  "final_text": "For a brittle material, fracture stress is inversely proportional to the square root of crack length (Griffith’s criterion):\n\n\\[\n\\sigma_f \\propto \\frac{1}{\\sqrt{a}}\n\\]\n\nGiven:\n- \\( a_1 = 1 \\, \\mu m \\), \\( \\sigma_{f1} = 200 \\, MPa \\)\n- \\( a_2 = 4 \\, \\mu m \\)\n\n\\[\n\\frac{\\sigma_{f2}}{\\sigma_{f1}} = \\sqrt{\\frac{a_1}{a_2}} = \\sqrt{\\frac{1}{4}} = \\frac{1}{2}\n\\]\n\n\\[\n\\sigma_{f2} = 200 \\times \\frac{1}{2} = 100 \\, MPa\n\\]\n\nCorrect option: (C)\n\n[ANSWER]C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "For a brittle material, fracture stress is inversely proportional to the square root of crack length (Griffith’s criterion):\n\n\\[\n\\sigma_f \\propto \\frac{1}{\\sqrt{a}}\n\\]\n\nGiven:\n- \\( a_1 = 1 \\, \\mu m \\), \\( \\sigma_{f1} = 200 \\, MPa \\)\n- \\( a_2 = 4 \\, \\mu m \\)\n\n\\[\n\\frac{\\sigma_{f2}}{\\sigma_{f1}} = \\sqrt{\\frac{a_1}{a_2}} = \\sqrt{\\frac{1}{4}} = \\frac{1}{2}\n\\]\n\n\\[\n\\sigma_{f2} = 200 \\times \\frac{1}{2} = 100 \\, MPa\n\\]\n\nCorrect option: (C)\n\n[ANSWER]C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 125,
+    "completion_tokens": 170,
+    "total_tokens": 295,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 125
+  },
+  "error": null,
+  "raw_response": {
+    "id": "392b871b-f77c-40db-ba7d-e3859d749789",
+    "object": "chat.completion",
+    "created": 1780762952,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "For a brittle material, fracture stress is inversely proportional to the square root of crack length (Griffith’s criterion):\n\n\\[\n\\sigma_f \\propto \\frac{1}{\\sqrt{a}}\n\\]\n\nGiven:\n- \\( a_1 = 1 \\, \\mu m \\), \\( \\sigma_{f1} = 200 \\, MPa \\)\n- \\( a_2 = 4 \\, \\mu m \\)\n\n\\[\n\\frac{\\sigma_{f2}}{\\sigma_{f1}} = \\sqrt{\\frac{a_1}{a_2}} = \\sqrt{\\frac{1}{4}} = \\frac{1}{2}\n\\]\n\n\\[\n\\sigma_{f2} = 200 \\times \\frac{1}{2} = 100 \\, MPa\n\\]\n\nCorrect option: (C)\n\n[ANSWER]C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 125,
+      "completion_tokens": 170,
+      "total_tokens": 295,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 125
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

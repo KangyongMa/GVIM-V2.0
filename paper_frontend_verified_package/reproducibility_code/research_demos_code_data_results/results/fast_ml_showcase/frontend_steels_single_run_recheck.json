@@ -1,0 +1,33 @@
+{
+  "aggregate_metrics": {
+    "mae": {
+      "mean": 111.44365079365083,
+      "std": 0.0
+    },
+    "r2": {
+      "mean": 0.6841542256291508,
+      "std": 0.0
+    },
+    "rmse": {
+      "mean": 164.31955998012987,
+      "std": 0.0
+    }
+  },
+  "benchmark": "Matbench v0.1",
+  "folds": [
+    0
+  ],
+  "n_test": 63,
+  "per_fold": [
+    {
+      "fold": 0,
+      "metrics": {
+        "mae": 111.44365079365083,
+        "r2": 0.6841542256291508,
+        "rmse": 164.31955998012987
+      },
+      "n_test": 63
+    }
+  ],
+  "task": "matbench_steels"
+}

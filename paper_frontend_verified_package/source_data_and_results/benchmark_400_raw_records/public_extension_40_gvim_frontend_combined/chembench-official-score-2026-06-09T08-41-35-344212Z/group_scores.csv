@@ -1,0 +1,11 @@
+group,value,n,all_correct_count,all_correct_mean,parse_empty_count
+question_type,multiple_choice,9,7,0.7777777777777778,0
+question_type,open_numeric,5,2,0.4,0
+mini_split,chembench-full,14,9,0.6428571428571429,0
+topic,analytical_chemistry,2,1,0.5,0
+topic,inorganic_chemistry,1,1,1.0,0
+topic,materials_science,4,2,0.5,0
+topic,organic_chemistry,1,0,0.0,0
+topic,physical_chemistry,1,0,0.0,0
+topic,technical_chemistry,2,2,1.0,0
+topic,toxicity_and_safety,3,3,1.0,0

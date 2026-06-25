@@ -1,0 +1,164 @@
+{
+  "idx": 6,
+  "uuid": "chemllm-property-0d00401f5b88172d",
+  "topic": "property_prediction/BBBP",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T16:51:20.012Z",
+  "finished_at": "2026-06-06T16:51:53.211Z",
+  "latency_ms": 33199,
+  "page_url": "http://localhost:3000/workspace/chats/d7f72c83-b558-4849-8aac-8972d747bbaf",
+  "thread_id": "d7f72c83-b558-4849-8aac-8972d747bbaf",
+  "run_id": "36c9bbf8-4afd-4386-b942-4fe7a6d10456",
+  "final_text": "Now let me assess BBB penetration:\n\n**Molecular Properties:**\n- **MW**: 295.1 Da — below 450 Da ✓\n- **clogP**: 2.89 — favorable range ✓\n- **TPSA**: 47.56 Å² — below 90 Å² ✓\n- **HBD**: 1 — favorable (HBD = 0 is best, but 1 is acceptable) ✓\n- **HBA**: 3 — acceptable ✓\n- **RotB**: 2 — favorable ✓\n- **Formal Charge**: 0 — neutral molecule ✓\n\nAll properties are favorable for BBB penetration. The molecule has no permanent charge, moderate lipophilicity (clogP ~2.9), low TPSA (47.6 Å²), low molecular weight, and only 1 H-bond donor — all consistent with CNS-penetrant small molecules.\n\n[ANSWER]Yes[/ANSWER]",
+  "stream_final_text": "Now let me assess BBB penetration:\n\n**Molecular Properties:**\n- **MW**: 295.1 Da — below 450 Da ✓\n- **clogP**: 2.89 — favorable range ✓\n- **TPSA**: 47.56 Å² — below 90 Å² ✓\n- **HBD**: 1 — favorable (HBD = 0 is best, but 1 is acceptable) ✓\n- **HBA**: 3 — acceptable ✓\n- **RotB**: 2 — favorable ✓\n- **Formal Charge**: 0 — neutral molecule ✓\n\nAll properties are favorable for BBB penetration. The molecule has no permanent charge, moderate lipophilicity (clogP ~2.9), low TPSA (47.6 Å²), low molecular weight, and only 1 H-bond donor — all consistent with CNS-penetrant small molecules.\n\n[ANSWER]Yes[/ANSWER]",
+  "ui_final_text": "Now let me assess BBB penetration:Molecular Properties:\nMW: 295.1 Da — below 450 Da ✓\nclogP: 2.89 — favorable range ✓\nTPSA: 47.56 Å² — below 90 Å² ✓\nHBD: 1 — favorable (HBD = 0 is best, but 1 is acceptable) ✓\nHBA: 3 — acceptable ✓\nRotB: 2 — favorable ✓\nFormal Charge: 0 — neutral molecule ✓\nAll properties are favorable for BBB penetration. The molecule has no permanent charge, moderate lipophilicity (clogP ~2.9), low TPSA (47.6 Å²), low molecular weight, and only 1 H-bond donor — all consistent with CNS-penetrant small molecules.Answer: Yes",
+  "stream_event_count": 299,
+  "tool_events": [
+    {
+      "event": "on_tool_end",
+      "name": "gvim-science_gvim_rdkit_descriptors",
+      "run_id": "019e9dd8-d244-72c0-872a-95fcb7457408",
+      "parent_ids": [
+        "019e9dd8-d239-7303-867c-eb8a1e041865"
+      ],
+      "tags": [
+        "seq:step:1"
+      ],
+      "metadata": {},
+      "data": {
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"success\": true,\n  \"tool_key\": \"rdkit_descriptors\",\n  \"domain\": \"chemistry\",\n  \"tool_result\": {\n    \"success\": true,\n    \"version\": \"3.0\",\n    \"analysis_type\": \"rdkit_descriptors\",\n    \"source\": \"rdkit_native_descriptors\",\n    \"smiles\": \"C3=C(OC2C1(NC(=O)C(O1)C)CCCC2)C=CC=C3Cl\",\n    \"canonical_smiles\": \"CC1OC2(CCCCC2Oc2cccc(Cl)c2)NC1=O\",\n    \"descriptors\": {\n      \"molecular_formula\": \"C15H18ClNO3\",\n      \"molecular_weight\": 295.0975,\n      \"average_molecular_weight\": 295.766,\n      \"logp\": 2.8926,\n      \"tpsa\": 47.56,\n      \"hba\": 3,\n      \"hbd\": 1,\n      \"rotatable_bonds\": 2,\n      \"num_rings\": 3,\n      \"num_aromatic_rings\": 1,\n      \"heavy_atom_count\": 20,\n      \"formal_charge\": 0,\n      \"fraction_csp3\": 0.533333\n    },\n    \"data_quality\": {\n      \"computed_from\": \"smiles\",\n      \"engine\": \"rdkit\",\n      \"external_database_lookup\": false,\n      \"experimental\": false\n    }\n  },\n  \"science_artifacts\": []\n}",
+              "id": "lc_978d40f6-a5cd-4cd2-a4bf-53bc7a86b3cd"
+            }
+          ],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "gvim-science_gvim_rdkit_descriptors",
+          "id": null,
+          "tool_call_id": "call_00_IjBM232lc9NqYYCvt67a5149",
+          "artifact": {
+            "structured_content": {
+              "success": true,
+              "tool_key": "rdkit_descriptors",
+              "domain": "chemistry",
+              "tool_result": {
+                "success": true,
+                "version": "3.0",
+                "analysis_type": "rdkit_descriptors",
+                "source": "rdkit_native_descriptors",
+                "smiles": "C3=C(OC2C1(NC(=O)C(O1)C)CCCC2)C=CC=C3Cl",
+                "canonical_smiles": "CC1OC2(CCCCC2Oc2cccc(Cl)c2)NC1=O",
+                "descriptors": {
+                  "molecular_formula": "C15H18ClNO3",
+                  "molecular_weight": 295.0975,
+                  "average_molecular_weight": 295.766,
+                  "logp": 2.8926,
+                  "tpsa": 47.56,
+                  "hba": 3,
+                  "hbd": 1,
+                  "rotatable_bonds": 2,
+                  "num_rings": 3,
+                  "num_aromatic_rings": 1,
+                  "heavy_atom_count": 20,
+                  "formal_charge": 0,
+                  "fraction_csp3": 0.533333
+                },
+                "data_quality": {
+                  "computed_from": "smiles",
+                  "engine": "rdkit",
+                  "external_database_lookup": false,
+                  "experimental": false
+                }
+              },
+              "science_artifacts": []
+            }
+          },
+          "status": "success"
+        }
+      }
+    },
+    {
+      "event": "on_tool_end",
+      "name": "gvim-science_gvim_rdkit_descriptors",
+      "run_id": "019e9dd8-d244-72c0-872a-95fcb7457408",
+      "parent_ids": [
+        "019e9dd8-d239-7303-867c-eb8a1e041865"
+      ],
+      "tags": [
+        "seq:step:1"
+      ],
+      "metadata": {},
+      "data": {
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"success\": true,\n  \"tool_key\": \"rdkit_descriptors\",\n  \"domain\": \"chemistry\",\n  \"tool_result\": {\n    \"success\": true,\n    \"version\": \"3.0\",\n    \"analysis_type\": \"rdkit_descriptors\",\n    \"source\": \"rdkit_native_descriptors\",\n    \"smiles\": \"C3=C(OC2C1(NC(=O)C(O1)C)CCCC2)C=CC=C3Cl\",\n    \"canonical_smiles\": \"CC1OC2(CCCCC2Oc2cccc(Cl)c2)NC1=O\",\n    \"descriptors\": {\n      \"molecular_formula\": \"C15H18ClNO3\",\n      \"molecular_weight\": 295.0975,\n      \"average_molecular_weight\": 295.766,\n      \"logp\": 2.8926,\n      \"tpsa\": 47.56,\n      \"hba\": 3,\n      \"hbd\": 1,\n      \"rotatable_bonds\": 2,\n      \"num_rings\": 3,\n      \"num_aromatic_rings\": 1,\n      \"heavy_atom_count\": 20,\n      \"formal_charge\": 0,\n      \"fraction_csp3\": 0.533333\n    },\n    \"data_quality\": {\n      \"computed_from\": \"smiles\",\n      \"engine\": \"rdkit\",\n      \"external_database_lookup\": false,\n      \"experimental\": false\n    }\n  },\n  \"science_artifacts\": []\n}",
+              "id": "lc_978d40f6-a5cd-4cd2-a4bf-53bc7a86b3cd"
+            }
+          ],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "gvim-science_gvim_rdkit_descriptors",
+          "id": null,
+          "tool_call_id": "call_00_IjBM232lc9NqYYCvt67a5149",
+          "artifact": {
+            "structured_content": {
+              "success": true,
+              "tool_key": "rdkit_descriptors",
+              "domain": "chemistry",
+              "tool_result": {
+                "success": true,
+                "version": "3.0",
+                "analysis_type": "rdkit_descriptors",
+                "source": "rdkit_native_descriptors",
+                "smiles": "C3=C(OC2C1(NC(=O)C(O1)C)CCCC2)C=CC=C3Cl",
+                "canonical_smiles": "CC1OC2(CCCCC2Oc2cccc(Cl)c2)NC1=O",
+                "descriptors": {
+                  "molecular_formula": "C15H18ClNO3",
+                  "molecular_weight": 295.0975,
+                  "average_molecular_weight": 295.766,
+                  "logp": 2.8926,
+                  "tpsa": 47.56,
+                  "hba": 3,
+                  "hbd": 1,
+                  "rotatable_bonds": 2,
+                  "num_rings": 3,
+                  "num_aromatic_rings": 1,
+                  "heavy_atom_count": 20,
+                  "formal_charge": 0,
+                  "fraction_csp3": 0.533333
+                },
+                "data_quality": {
+                  "computed_from": "smiles",
+                  "engine": "rdkit",
+                  "external_database_lookup": false,
+                  "experimental": false
+                }
+              },
+              "science_artifacts": []
+            }
+          },
+          "status": "success"
+        }
+      }
+    }
+  ],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/d7f72c83-b558-4849-8aac-8972d747bbaf/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench property-prediction task.\\nAnswer only Yes or No inside [ANSWER] and [/ANSWER].\\n\\nTask: Does this molecule penetrate the blood-brain barrier?\\nSMILES: C3=C(OC2C1(NC(=O)C(O1)C)CCCC2)C=CC=C3Cl\\n\\nUse exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"d7f72c83-b558-4849-8aac-8972d747bbaf\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

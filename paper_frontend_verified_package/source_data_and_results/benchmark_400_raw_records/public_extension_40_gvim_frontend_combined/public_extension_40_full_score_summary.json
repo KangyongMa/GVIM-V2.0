@@ -1,0 +1,127 @@
+{
+  "generated_at_utc": "2026-06-09T08:44:04.280202Z",
+  "submission": {
+    "account": "kangyongma40@gmail.com",
+    "method": "formal full-system visible browser front-end submission via GVIM/DeerFlow UI",
+    "base_url": "http://localhost:3000",
+    "combined_run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined",
+    "raw_segments": {
+      "first_segment": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-runs\\2026-06-09T07-05-32-885Z",
+      "continuation_segment": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-continuation-runs\\2026-06-09T07-26-49-193Z"
+    },
+    "total_records": 40,
+    "ok_records": 40,
+    "recovered_from_backend_audit_indices": [
+      10,
+      26
+    ],
+    "note": "Recovered records were submitted through the browser front end and later completed successfully in backend audit logs after the native browser script timed out waiting for the stream body to close."
+  },
+  "scores_by_official_source": {
+    "ChemBench": {
+      "n": 14,
+      "official_strict_all_correct": 9,
+      "official_strict_all_correct_percent": 64.29,
+      "parse_empty_count": 0,
+      "by_question_type": {
+        "multiple_choice": {
+          "n": 9,
+          "all_correct_count": 7,
+          "all_correct_mean": 0.7777777777777778,
+          "parse_empty_count": 0
+        },
+        "open_numeric": {
+          "n": 5,
+          "all_correct_count": 2,
+          "all_correct_mean": 0.4,
+          "parse_empty_count": 0
+        }
+      },
+      "score_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\chembench-official-score-2026-06-09T08-41-35-344212Z",
+      "scoring_rule": {
+        "package_version": "0.3.0",
+        "prompter": "chembench.prompter.InstructionPrompter",
+        "report_method": "InstructionPrompter.report_batch",
+        "metrics_source": "chembench.metrics and BasePrompter._calculate_metrics",
+        "parser_source": "ChemBench official regex/parser functions used by InstructionPrompter._process_single_result",
+        "llm_extractor_fallback": "disabled_for_strict_reproducible_scoring",
+        "custom_answer_parser_used": false,
+        "custom_scoring_used": false
+      }
+    },
+    "MaScQA": {
+      "n": 13,
+      "correct": 12,
+      "accuracy_percent": 92.31,
+      "parse_empty_count": 0,
+      "wrong_indices": [
+        17
+      ],
+      "by_type": {
+        "MATCH": {
+          "correct": 2,
+          "total": 2,
+          "accuracy_percent": 100.0
+        },
+        "MCQS": {
+          "correct": 1,
+          "total": 1,
+          "accuracy_percent": 100.0
+        },
+        "MCQS-NUM": {
+          "correct": 3,
+          "total": 3,
+          "accuracy_percent": 100.0
+        },
+        "NUM": {
+          "correct": 6,
+          "total": 7,
+          "accuracy_percent": 85.71
+        }
+      },
+      "score_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\mascqa-official-score-2026-06-09T08-42-54-102976Z",
+      "scoring_rule": "MaScQA published answer-key accuracy reproduced from public answer sheet; deterministic parser fixed before evaluation; numeric answers use published exact/range targets and option questions use letter accuracy."
+    },
+    "ChemLLMBench": {
+      "n": 13,
+      "correct": 7,
+      "accuracy_percent": 53.85,
+      "parse_empty_count": 0,
+      "wrong_indices": [
+        30,
+        31,
+        34,
+        36,
+        38,
+        39
+      ],
+      "by_type": {
+        "binary_property_prediction": {
+          "correct": 4,
+          "total": 6,
+          "accuracy": 0.6666666666666666
+        },
+        "candidate_selection": {
+          "correct": 3,
+          "total": 7,
+          "accuracy": 0.42857142857142855
+        }
+      },
+      "score_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\chemllmbench-official-score-2026-06-09T08-42-54-106979Z",
+      "scoring_rule": "ChemLLMBench task-specific answer-key metric; property prediction uses Yes/No accuracy; Suzuki component selection uses exact match to the optimal candidate SMILES. Deterministic parser fixed before evaluation."
+    }
+  },
+  "descriptive_cross_suite_aggregate": {
+    "warning": "This aggregate is descriptive only because the three public benchmarks use different official scoring rules.",
+    "correct": 28,
+    "total": 40,
+    "accuracy_percent": 70.0
+  },
+  "artifacts": {
+    "results_jsonl": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\results.jsonl",
+    "chembench_results_jsonl": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\results.chembench.jsonl",
+    "chembench_score_summary": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\chembench-official-score-2026-06-09T08-41-35-344212Z\\score_summary.json",
+    "mascqa_score_summary": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\mascqa-official-score-2026-06-09T08-42-54-102976Z\\score_summary.json",
+    "chemllmbench_score_summary": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\chemllmbench-official-score-2026-06-09T08-42-54-106979Z\\score_summary.json"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Five front-end initiated chemistry/materials research workflow demos that complement the existing 400-question benchmark.",
+  "principles": {
+    "frontend_required": true,
+    "expert_review_required": false,
+    "wet_lab_required": false,
+    "score_policy": "Use public benchmark metrics or broadly accepted scientific ML / extraction / retrieval metrics; avoid subjective custom scores.",
+    "report_separately_from_400_questions": true,
+    "agent_role": "The agent is evaluated as a planner, tool caller, workflow organizer, and artifact generator; scientific value is judged by final task-native metrics."
+  },
+  "evaluation_layers": {
+    "workflow_reliability": [
+      "frontend_submission_success",
+      "tool_call_coverage",
+      "tool_selection_f1",
+      "artifact_generation_success_rate",
+      "json_csv_parse_rate",
+      "execution_success_rate",
+      "repair_success_rate",
+      "latency"
+    ],
+    "scientific_result_quality": [
+      "mae",
+      "rmse",
+      "r2",
+      "pearson_r",
+      "roc_auc",
+      "pr_auc",
+      "accuracy",
+      "f1",
+      "precision",
+      "recall",
+      "top_k_accuracy",
+      "numeric_mae",
+      "record_exact_match"
+    ]
+  },
+  "public_metric_sources": [
+    {
+      "name": "d5sc08794e spectral-structure paper",
+      "use": "Spectra-to-dihedral prediction is judged with MAE and correlation/Pearson r, with ablations or transfer tests used to support reliability."
+    },
+    {
+      "name": "d5sc09921h DIVE paper",
+      "use": "Literature extraction is judged by accuracy, completeness, and precision/recall/F1 after matching extracted records to annotated records."
+    },
+    {
+      "name": "ScienceAgentBench",
+      "use": "Workflow-level execution, generated artifact correctness, result correctness, latency/cost, and failure analysis."
+    },
+    {
+      "name": "Matbench",
+      "use": "Materials property prediction with MAE for regression tasks and ROC-AUC for classification tasks under fixed folds."
+    },
+    {
+      "name": "MoleculeNet",
+      "use": "Molecular property prediction using ROC-AUC or PR-AUC for classification and RMSE/MAE for regression."
+    },
+    {
+      "name": "DIVE / chemical information extraction literature",
+      "use": "Field-level precision, recall, F1, numeric error, and completeness for literature/table/figure extraction."
+    },
+    {
+      "name": "ChemToolBench / CheMatAgent",
+      "use": "Tool-selection precision/recall/F1, parameter-filling precision/recall/F1, and result F1 for chemistry/materials tool workflows."
+    }
+  ],
+  "demos": [
+    {
+      "id": "materials_xrd_phase_identification",
+      "title": "Unknown-material XRD phase identification from uploaded peaks and CIFs",
+      "domain": "materials",
+      "public_task_family": "Materials characterization / XRD phase retrieval",
+      "frontend_input": [
+        "Upload one observed XRD peak table as CSV.",
+        "Upload several candidate CIF files from a public crystallographic source or a frozen local benchmark set.",
+        "Ask DeerFlow to identify the best matching phase and generate a short evidence report."
+      ],
+      "agent_workflow": [
+        "Inspect uploaded files and detect peak-table and CIF formats.",
+        "Run structure parsing and quality checks for each CIF.",
+        "Simulate theoretical powder XRD for each candidate.",
+        "Match observed and simulated peaks with a fixed two-theta tolerance.",
+        "Rank candidates and generate an XRD overlay / peak-match table.",
+        "State that the result is phase-triage evidence, not proof of phase purity."
+      ],
+      "expected_artifacts": [
+        "candidate_ranking.csv",
+        "xrd_match_report.md",
+        "xrd_overlay.png",
+        "metrics.json"
+      ],
+      "standard_metrics": [
+        "top_1_accuracy",
+        "top_k_accuracy",
+        "precision",
+        "recall",
+        "peak_position_mae",
+        "artifact_success_rate",
+        "tool_selection_f1"
+      ],
+      "primary_scientific_metrics": [
+        "top_1_accuracy",
+        "top_k_accuracy",
+        "peak_position_mae",
+        "precision",
+        "recall"
+      ],
+      "workflow_reliability_metrics": [
+        "frontend_submission_success",
+        "tool_selection_f1",
+        "artifact_success_rate",
+        "json_csv_parse_rate"
+      ],
+      "why_it_shows_deerflow": [
+        "Uses real front-end file upload.",
+        "Combines data recognition, materials structure tools, XRD simulation, ranking, plotting, and scientific caveats.",
+        "Produces auditable artifacts rather than a short answer."
+      ]
+    },
+    {
+      "id": "matbench_materials_property_modeling",
+      "title": "Materials property modeling on a Matbench-style task",
+      "domain": "materials",
+      "public_task_family": "Matbench materials ML",
+      "frontend_input": [
+        "Run five isolated front-end sessions, one per predefined Matbench fold.",
+        "For each session, upload only that fold's manifest, labeled training CSV, and unlabeled test CSV."
+      ],
+      "agent_workflow": [
+        "Inspect the uploaded fold manifest and data schema.",
+        "Select and justify composition descriptors and a regression model.",
+        "Train only on the uploaded labeled training rows.",
+        "Predict every row in the uploaded unlabeled test fold.",
+        "Save predictions, run metadata, and a scientific report."
+      ],
+      "expected_artifacts": [
+        "predictions.csv",
+        "run_metadata.json",
+        "report.md"
+      ],
+      "standard_metrics": [
+        "mae",
+        "rmse",
+        "r2"
+      ],
+      "primary_scientific_metrics": [
+        "mae"
+      ],
+      "why_it_shows_deerflow": [
+        "Demonstrates autonomous materials ML from uploaded data rather than memorized QA.",
+        "Exercises planning, code execution, materials featurization, modeling, and reproducibility controls."
+      ]
+    },
+    {
+      "id": "moleculenet_molecular_property_workflow",
+      "title": "MoleculeNet molecular property prediction and error analysis",
+      "domain": "chemistry",
+      "public_task_family": "MoleculeNet / ChemLLMBench molecular property prediction",
+      "frontend_input": [
+        "Upload a small held-out BBBP, HIV, ClinTox, Tox21, ESOL, or FreeSolv subset.",
+        "Ask DeerFlow to featurize molecules, train a baseline, evaluate, and explain common error cases."
+      ],
+      "agent_workflow": [
+        "Validate SMILES and report invalid molecules.",
+        "Compute RDKit descriptors and/or Morgan fingerprints.",
+        "Use scaffold-aware or fixed split metadata when available.",
+        "Train a reproducible classifier or regressor.",
+        "Save probabilities/predictions and standard metrics.",
+        "Generate an error-analysis table with structures or descriptor summaries."
+      ],
+      "expected_artifacts": [
+        "molecular_predictions.csv",
+        "molecular_metrics.json",
+        "error_analysis.md",
+        "roc_pr_or_parity_plot.png"
+      ],
+      "standard_metrics": [
+        "roc_auc",
+        "pr_auc",
+        "accuracy",
+        "f1",
+        "rmse",
+        "mae",
+        "valid_smiles_rate"
+      ],
+      "primary_scientific_metrics": [
+        "roc_auc",
+        "pr_auc",
+        "rmse",
+        "mae"
+      ],
+      "workflow_reliability_metrics": [
+        "frontend_submission_success",
+        "valid_smiles_rate",
+        "execution_success_rate",
+        "artifact_success_rate"
+      ],
+      "why_it_shows_deerflow": [
+        "Shows chemistry-specific ML using RDKit, not only language reasoning.",
+        "Produces standard machine-learning outputs that reviewers can reproduce."
+      ]
+    },
+    {
+      "id": "spectra_to_structure_regression",
+      "title": "IR/Raman spectra to molecular structure parameter regression",
+      "domain": "chemistry",
+      "public_task_family": "Spectroscopy-to-structure regression from the azobenzene paper",
+      "frontend_input": [
+        "Upload paired IR/Raman spectra and target dihedral angles.",
+        "Ask DeerFlow to build a regression workflow and identify predictive spectral regions."
+      ],
+      "agent_workflow": [
+        "Inspect spectral matrix and target distribution.",
+        "Run preprocessing such as scaling, optional baseline correction, and train/test split.",
+        "Fit a regression baseline such as PLS, random forest, or ridge regression.",
+        "Generate held-out predictions and residual analysis.",
+        "Create a parity plot and spectral-feature importance summary."
+      ],
+      "expected_artifacts": [
+        "spectra_predictions.csv",
+        "spectra_metrics.json",
+        "parity_plot.png",
+        "spectral_regions_report.md"
+      ],
+      "standard_metrics": [
+        "mae",
+        "rmse",
+        "r2",
+        "pearson_r",
+        "execution_success_rate"
+      ],
+      "primary_scientific_metrics": [
+        "mae",
+        "rmse",
+        "r2",
+        "pearson_r"
+      ],
+      "workflow_reliability_metrics": [
+        "frontend_submission_success",
+        "execution_success_rate",
+        "repair_success_rate",
+        "artifact_success_rate"
+      ],
+      "why_it_shows_deerflow": [
+        "Directly connects uploaded experimental/simulated spectra to molecular structure.",
+        "Highlights full scientific data analysis with standard regression metrics."
+      ]
+    },
+    {
+      "id": "literature_extraction_to_dataset",
+      "title": "Chemistry/materials paper extraction into a structured dataset",
+      "domain": "chemistry_materials_cross",
+      "public_task_family": "Chemical/materials information extraction from articles, tables, and figures",
+      "frontend_input": [
+        "Upload a paper PDF, supplementary Markdown, or a small batch of converted article snippets.",
+        "Ask DeerFlow to extract target fields such as compound, formula, property, unit, method, condition, and source location."
+      ],
+      "agent_workflow": [
+        "Convert or read the document and identify sections, tables, captions, and units.",
+        "Extract records into JSON/CSV with source spans or page/table identifiers.",
+        "Normalize formulas, units, and numeric values.",
+        "Run chemistry/materials validation where applicable.",
+        "Optionally train a small downstream prediction model from the extracted table.",
+        "Generate an extraction audit report."
+      ],
+      "expected_artifacts": [
+        "extracted_records.csv",
+        "extracted_records.json",
+        "extraction_audit.md",
+        "extraction_metrics.json"
+      ],
+      "standard_metrics": [
+        "field_precision",
+        "field_recall",
+        "field_f1",
+        "record_exact_match",
+        "numeric_mae",
+        "unit_normalization_accuracy",
+        "source_span_hit_rate"
+      ],
+      "primary_scientific_metrics": [
+        "field_precision",
+        "field_recall",
+        "field_f1",
+        "record_exact_match",
+        "numeric_mae"
+      ],
+      "workflow_reliability_metrics": [
+        "frontend_submission_success",
+        "artifact_success_rate",
+        "json_csv_parse_rate",
+        "source_span_hit_rate"
+      ],
+      "why_it_shows_deerflow": [
+        "Demonstrates long-context document handling, extraction, normalization, validation, and dataset construction.",
+        "Connects directly to materials/chemistry literature-mining papers and uses standard information extraction metrics."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-combined\\2026-06-09T08-55-49Z-combined",
+  "generated_at_utc": "2026-06-09T08:56:58.111733Z",
+  "experiment": "deepseek_flash_api_only_public_extension_40_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "temperature": 0.0,
+  "thinking": "disabled",
+  "source_segments": {
+    "main_api_run": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-runs\\2026-06-09T08-51-54-442088Z",
+    "rerun_non_truncated": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-reruns\\2026-06-09T08-55-37-725827Z"
+  },
+  "total": 40,
+  "ok": 40,
+  "errors": 0,
+  "empty_responses": 0,
+  "finish_reason_counts": {
+    "stop": 40
+  },
+  "non_stop_indices": [],
+  "replaced_indices": [
+    14
+  ],
+  "usage_total": {
+    "prompt_tokens": 8060,
+    "completion_tokens": 3638,
+    "total_tokens": 11698,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 8060
+  },
+  "source_by_idx": {
+    "1": "main_api_run",
+    "2": "main_api_run",
+    "3": "main_api_run",
+    "4": "main_api_run",
+    "5": "main_api_run",
+    "6": "main_api_run",
+    "7": "main_api_run",
+    "8": "main_api_run",
+    "9": "main_api_run",
+    "10": "main_api_run",
+    "11": "main_api_run",
+    "12": "main_api_run",
+    "13": "main_api_run",
+    "14": "rerun_non_truncated",
+    "15": "main_api_run",
+    "16": "main_api_run",
+    "17": "main_api_run",
+    "18": "main_api_run",
+    "19": "main_api_run",
+    "20": "main_api_run",
+    "21": "main_api_run",
+    "22": "main_api_run",
+    "23": "main_api_run",
+    "24": "main_api_run",
+    "25": "main_api_run",
+    "26": "main_api_run",
+    "27": "main_api_run",
+    "28": "main_api_run",
+    "29": "main_api_run",
+    "30": "main_api_run",
+    "31": "main_api_run",
+    "32": "main_api_run",
+    "33": "main_api_run",
+    "34": "main_api_run",
+    "35": "main_api_run",
+    "36": "main_api_run",
+    "37": "main_api_run",
+    "38": "main_api_run",
+    "39": "main_api_run",
+    "40": "main_api_run"
+  }
+}

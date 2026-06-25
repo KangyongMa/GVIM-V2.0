@@ -1,0 +1,34 @@
+{
+  "run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T14-34-58-883Z",
+  "base_url": "http://localhost:3000",
+  "start": 1,
+  "limit": 1,
+  "new_chat_every": 1,
+  "user_data_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\chembench-mini-236\\.browser-profile",
+  "browser_channel": "chrome",
+  "finished_at": "2026-06-06T14:35:41.255Z",
+  "count": 1,
+  "ok": 1,
+  "errors": 0,
+  "by_topic": {
+    "Atomic structure": {
+      "count": 1,
+      "ok": 1,
+      "errors": 0
+    }
+  },
+  "by_split": {
+    "mascqa": {
+      "count": 1,
+      "ok": 1,
+      "errors": 0
+    }
+  },
+  "by_type": {
+    "NUM": {
+      "count": 1,
+      "ok": 1,
+      "errors": 0
+    }
+  }
+}

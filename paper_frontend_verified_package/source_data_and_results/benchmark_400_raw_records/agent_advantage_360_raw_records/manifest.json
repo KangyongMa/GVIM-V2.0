@@ -1,0 +1,98 @@
+{
+  "name": "agent-advantage-native-public-360",
+  "created_at_utc": "2026-06-08T10:27:41.206321+00:00",
+  "purpose": "Front-end GVIM/DeerFlow chemistry/materials evaluation using published public benchmark tasks only. The former local custom scoring layer has been removed.",
+  "total_count": 360,
+  "target_counts": {
+    "chembench-mini": 236,
+    "mascqa": 84,
+    "chemllmbench": 40
+  },
+  "actual_counts": {
+    "chembench-mini": 236,
+    "mascqa": 84,
+    "chemllmbench": 40
+  },
+  "source_repositories": {
+    "ChemBench-Mini": {
+      "dataset": "jablonkagroup/ChemBench",
+      "revision": "6e1d25748952393f44e35b8e85bbe567246a6430",
+      "paper_or_source": "ChemBench, Nature Chemistry / official ChemBench benchmark",
+      "url": "https://www.chembench.org/about",
+      "native_scoring_rule": "official ChemBench package/parser/metrics only; no local custom parser"
+    },
+    "MaScQA": {
+      "repository": "https://github.com/M3RG-IITD/MaScQA",
+      "revision": "f524889b9cbcec15f4d6216a3c66f9e6c57f0712",
+      "paper_or_source": "MaScQA materials science QA benchmark, Digital Discovery 2024, DOI: 10.1039/D3DD00188A",
+      "url": "https://doi.org/10.1039/D3DD00188A",
+      "native_scoring_rule": "published answer-key accuracy for MCQS/MATCH/MCQS-NUM/NUM; deterministic parser fixed before evaluation"
+    },
+    "ChemLLMBench": {
+      "repository": "https://github.com/ChemFoundationModels/ChemLLMBench",
+      "revision": "b8cfb59fe1bc8500c6916cdf00c12e457f6c0720",
+      "paper_or_source": "ChemLLMBench, NeurIPS 2023 Datasets and Benchmarks Track",
+      "url": "https://github.com/ChemFoundationModels/ChemLLMBench",
+      "native_scoring_rule": "task-specific answer-key metrics following official task definitions"
+    }
+  },
+  "selection_policy": {
+    "high_level_counts": "236 ChemBench-Mini + 84 MaScQA + 40 ChemLLMBench = 360 published benchmark tasks",
+    "removed": "The previous 40 local custom workflow tasks and scoring rubric were deleted and are not part of this queue.",
+    "scoring_policy": "Report each source benchmark separately using its native published scoring rule. Do not compute a new weighted aggregate unless a source benchmark itself defines it."
+  },
+  "topic_counts": {
+    "chembench-mini/analytical_chemistry": 24,
+    "chembench-mini/general_chemistry": 26,
+    "chembench-mini/inorganic_chemistry": 32,
+    "chembench-mini/materials_science": 32,
+    "chembench-mini/organic_chemistry": 46,
+    "chembench-mini/physical_chemistry": 33,
+    "chembench-mini/technical_chemistry": 23,
+    "chembench-mini/toxicity_and_safety": 20,
+    "chemllmbench/property_prediction/BACE": 4,
+    "chemllmbench/property_prediction/BBBP": 8,
+    "chemllmbench/property_prediction/ClinTox": 4,
+    "chemllmbench/property_prediction/HIV": 4,
+    "chemllmbench/reagent_selection/ligand_sample": 6,
+    "chemllmbench/reagent_selection/reagent_sample": 7,
+    "chemllmbench/reagent_selection/solvent_sample": 7,
+    "mascqa/Atomic structure": 9,
+    "mascqa/Electrical": 7,
+    "mascqa/Fluid": 5,
+    "mascqa/Magnetism": 6,
+    "mascqa/Material Applications": 6,
+    "mascqa/Material characterization": 3,
+    "mascqa/Material manufacturing": 8,
+    "mascqa/Material processing": 5,
+    "mascqa/Material testing": 2,
+    "mascqa/Mechanical": 8,
+    "mascqa/Miscellaneous": 4,
+    "mascqa/Phase transition": 7,
+    "mascqa/Thermodynamics": 8,
+    "mascqa/Transport phenomena": 6
+  },
+  "question_type_counts": {
+    "chembench-mini/multiple_choice": 193,
+    "chembench-mini/open_numeric": 43,
+    "chemllmbench/binary_property_prediction": 20,
+    "chemllmbench/candidate_selection": 20,
+    "mascqa/MATCH": 10,
+    "mascqa/MCQS": 24,
+    "mascqa/MCQS-NUM": 20,
+    "mascqa/NUM": 30
+  },
+  "submission_policy": {
+    "entrypoint": "front-end browser automation through logged-in GVIM/DeerFlow UI",
+    "do_not_read_answer_key_during_submission": true,
+    "conversation_policy": "Use fresh conversations or a pre-registered bounded batch size. Keep the native-published-40 run separate from earlier local-custom runs.",
+    "required_logs": [
+      "final_text",
+      "thread_id",
+      "run_id",
+      "latency",
+      "errors/timeouts",
+      "token usage when available"
+    ]
+  }
+}

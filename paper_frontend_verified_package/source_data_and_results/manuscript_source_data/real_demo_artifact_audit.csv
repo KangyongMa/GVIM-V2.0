@@ -1,0 +1,9 @@
+demo,artifact_source,gold_or_dataset,objective_metrics
+ESOL solubility prediction,research-demos/results/fast_ml_showcase/frontend_esol_scaffold_aware.json,MoleculeNet ESOL,"MAE=0.603, RMSE=0.741, R2=0.739; n_test=254"
+Matbench steels fold 0,research-demos/results/fast_ml_showcase/frontend_steels_single_run_recheck.json,Matbench v0.1 matbench_steels,"MAE=111.444 MPa, RMSE=164.320 MPa, R2=0.684; n_test=63"
+Matbench steels official 5-fold,research-demos/results/matbench_steels_5fold/independent_evaluation.json,Matbench v0.1 official five-fold split,"MAE=92.584+/-12.313 MPa, RMSE=137.135+/-23.155 MPa, R2=0.781+/-0.087; n_test=312"
+MinerU reaction-table extraction,research-demos/results/mineru_reaction_table/frontend_9dc67557_evaluation.json,Publisher JATS XML table nanomaterials-12-01070-t002,"Exact precision=0.981, recall=0.981, F1=0.981, row accuracy=0.905"
+MS/MS candidate retrieval,research-demos/results/msms_retrieval/frontend_abe44a97_evaluation.json,MassBank InChIKey identity from public MassBank-data records,"Top-1=0.800, Top-3=1.000, Top-5=1.000, MRR=0.900; n_queries=5"
+ChEMU entity extraction,research-demos/results/chemu/frontend_dbb54347_evaluation.json,ChEMU 2020 Task 1 sample v3,Exact P/R/F1=0.931/0.728/0.817; relaxed F1=0.841; gold spans=92
+BACE active discovery,research-demos/results/frontend_bace_fff9cae7/metrics.json,bace_active_discovery.csv,"Random Recall@150=0.109, UCB Recall@150=0.363, EF@150=3.664, 95% CI=0.225-0.284"
+Matbench band-gap main case,research-demos/results/frontend_fast_features_a6600dc1/metrics.json,Matbench v0.1 matbench_expt_gap,"MAE=0.4513+/-0.0170 eV, RMSE=0.8049+/-0.0456 eV, R2=0.6854+/-0.0445; greedy Recall@150=0.2626"

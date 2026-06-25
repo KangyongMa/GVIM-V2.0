@@ -1,0 +1,29 @@
+{
+  "idx": 79,
+  "uuid": "G-META-14-13",
+  "topic": "Miscellaneous",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T15:55:41.238Z",
+  "finished_at": "2026-06-06T15:55:56.223Z",
+  "latency_ms": 14985,
+  "page_url": "http://localhost:3000/workspace/chats/88466322-a69a-4b42-990b-c5d3a663849d",
+  "thread_id": "88466322-a69a-4b42-990b-c5d3a663849d",
+  "run_id": "addf5277-05b9-4759-a23e-90999677e1e1",
+  "final_text": "[ANSWER]B[/ANSWER]",
+  "stream_final_text": "[ANSWER]B[/ANSWER]",
+  "ui_final_text": "Answer: B",
+  "stream_event_count": 44,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/88466322-a69a-4b42-990b-c5d3a663849d/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a MaScQA materials science benchmark question (MCQS).\\nAnswer with the letter of the correct option inside [ANSWER] and [/ANSWER]. For matching questions, answer with the option letter.\\n\\nQuestion: In the trapezoidal rule for numerical integration of a function, the nature of approximation used for the function in each interval is  (A) constant (B) linear (C) parabolic (D) cubic\\n\\nUse exactly this final format: [ANSWER]<answer>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"88466322-a69a-4b42-990b-c5d3a663849d\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

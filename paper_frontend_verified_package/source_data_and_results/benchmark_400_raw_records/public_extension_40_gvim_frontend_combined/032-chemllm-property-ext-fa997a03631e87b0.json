@@ -1,0 +1,31 @@
+{
+  "idx": 32,
+  "uuid": "chemllm-property-ext-fa997a03631e87b0",
+  "topic": "property_prediction/ClinTox",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-09T08:31:24.561Z",
+  "finished_at": "2026-06-09T08:31:47.291Z",
+  "latency_ms": 22730,
+  "page_url": "http://localhost:3000/workspace/chats/19815bb8-1cce-407f-84cf-2018441a615e",
+  "thread_id": "19815bb8-1cce-407f-84cf-2018441a615e",
+  "run_id": "bd929f8e-8167-453e-8363-6b080ede5e71",
+  "final_text": "Let me analyze the molecule for clinical toxicity.\n\nThe molecule has the SMILES: `CCc1c([nH]c2c1C(=O)C(CC2)C[NH+]3CCOCC3)C`\n\nLet me examine this structure:\n- It contains an indole core (fused benzene-pyrrole system)\n- Has a ketone group (C=O) on the fused ring\n- Contains a morpholine ring (CCOCC) with a positively charged nitrogen ([NH+])\n- It's noted as FDA approved\n\nGiven that this molecule is FDA-approved, this indicates it has passed clinical safety evaluations. The presence of a quaternary-like ammonium cation (the [NH+] group) and the fact that it's an FDA-approved drug suggests it's a known pharmaceutical compound, likely an antiemetic or similar drug.\n\nBased on the FDA approved status and the molecular structure being a known drug scaffold, this molecule is not considered clinically toxic at therapeutic doses.\n\n[ANSWER]No[/ANSWER]",
+  "stream_final_text": "Let me analyze the molecule for clinical toxicity.\n\nThe molecule has the SMILES: `CCc1c([nH]c2c1C(=O)C(CC2)C[NH+]3CCOCC3)C`\n\nLet me examine this structure:\n- It contains an indole core (fused benzene-pyrrole system)\n- Has a ketone group (C=O) on the fused ring\n- Contains a morpholine ring (CCOCC) with a positively charged nitrogen ([NH+])\n- It's noted as FDA approved\n\nGiven that this molecule is FDA-approved, this indicates it has passed clinical safety evaluations. The presence of a quaternary-like ammonium cation (the [NH+] group) and the fact that it's an FDA-approved drug suggests it's a known pharmaceutical compound, likely an antiemetic or similar drug.\n\nBased on the FDA approved status and the molecular structure being a known drug scaffold, this molecule is not considered clinically toxic at therapeutic doses.\n\n[ANSWER]No[/ANSWER]",
+  "ui_final_text": "Let me analyze the molecule for clinical toxicity.The molecule has the SMILES: CCc1c([nH]c2c1C(=O)C(CC2)C[NH+]3CCOCC3)CLet me examine this structure:\nIt contains an indole core (fused benzene-pyrrole system)\nHas a ketone group (C=O) on the fused ring\nContains a morpholine ring (CCOCC) with a positively charged nitrogen ([NH+])\nIt's noted as FDA approved\nGiven that this molecule is FDA-approved, this indicates it has passed clinical safety evaluations. The presence of a quaternary-like ammonium cation (the [NH+] group) and the fact that it's an FDA-approved drug suggests it's a known pharmaceutical compound, likely an antiemetic or similar drug.Based on the FDA approved status and the molecular structure being a known drug scaffold, this molecule is not considered clinically toxic at therapeutic doses.[ANSWER]No[/ANSWER]",
+  "stream_event_count": 244,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/19815bb8-1cce-407f-84cf-2018441a615e/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench property-prediction task.\\nAnswer only Yes or No inside [ANSWER] and [/ANSWER].\\n\\nTask: Is this molecule clinically toxic?\\nSMILES: CCc1c([nH]c2c1C(=O)C(CC2)C[NH+]3CCOCC3)C\\nFDA approved field: Yes\\n\\nUse exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"19815bb8-1cce-407f-84cf-2018441a615e\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": [],
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-continuation-runs\\2026-06-09T07-26-49-193Z\\032-chemllm-property-ext-fa997a03631e87b0.json",
+  "_source_segment": "continuation_segment"
+}

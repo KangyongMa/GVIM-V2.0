@@ -1,0 +1,62 @@
+{
+  "case_id": "bace1_temporal_external_validation",
+  "retrieved_utc_date": "2026-06-20",
+  "source": "ChEMBL web services",
+  "target": {
+    "target_chembl_id": "CHEMBL4822",
+    "name": "Beta-secretase 1",
+    "organism": "Homo sapiens",
+    "target_type": "SINGLE PROTEIN"
+  },
+  "endpoint": "https://www.ebi.ac.uk/chembl/api/data/activity.json",
+  "activity_records_downloaded": 13777,
+  "assay_records_downloaded": 1226,
+  "measurements_after_quality_filters": 10631,
+  "training_compounds": 5296,
+  "external_compounds_before_overlap_removal": 1705,
+  "external_compounds_after_overlap_removal": 1598,
+  "external_scaffold_novel_compounds": 1275,
+  "gap_period_measurements_excluded": 1796,
+  "time_split": {
+    "training_document_year_max": 2015,
+    "gap_years": [
+      2016,
+      2017
+    ],
+    "external_document_year_min": 2018
+  },
+  "quality_filters": {
+    "standard_type": "IC50",
+    "standard_relation": "=",
+    "standard_units": "nM",
+    "assay_type": "B",
+    "assay_confidence_score_min": 8,
+    "standard_flag": 1,
+    "target_organism": "Homo sapiens",
+    "data_validity_comment": "must be empty",
+    "potential_duplicate": 0
+  },
+  "excluded_record_counts_by_rule": {
+    "potential_duplicate": 2072,
+    "missing_pchembl": 1056,
+    "non_binding_assay": 18
+  },
+  "files": {
+    "bace1_early_training.csv": {
+      "sha256": "e3bbed04a6df011bf47bfffea81555b504071e9534aa6d0335be483e93b868dc",
+      "bytes": 976813
+    },
+    "bace1_late_external_features.csv": {
+      "sha256": "81c33a061ac7fdeaf6db563a1a9577745ea0c3d84bfe25b3a92f148e4e784805",
+      "bytes": 281527
+    },
+    "bace1_late_external_gold.csv": {
+      "sha256": "8118e0a6e87c89e34750d9032675774529f33c0556e4f2a4c89d0a1e36b9f46d",
+      "bytes": 25584
+    },
+    "bace1_filtered_measurement_provenance.csv": {
+      "sha256": "fa8106eb403d53b977e050536db30817cc1adc6dbea7caf3bc2c8502052d27a7",
+      "bytes": 2108622
+    }
+  }
+}

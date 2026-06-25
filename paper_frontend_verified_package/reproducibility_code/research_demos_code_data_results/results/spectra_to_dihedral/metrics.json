@@ -1,0 +1,16 @@
+{
+  "data_path": "research-demos/data/azobenzenes-spectra/IR_Raman_azo.csv",
+  "demo_id": "spectra_to_dihedral",
+  "metrics": {
+    "mae_deg": 13.66610685407245,
+    "pearson_r": 0.9157237956206425,
+    "r2": 0.8226094997464704,
+    "rmse_deg": 21.857652316930533
+  },
+  "model": "standardized PLSRegression",
+  "n_features": 8000,
+  "n_samples": 20,
+  "problem": "IR/Raman spectra to azobenzene dihedral angle regression",
+  "source_paper": "d5sc08794e",
+  "validation": "leave-one-out cross-validation"
+}

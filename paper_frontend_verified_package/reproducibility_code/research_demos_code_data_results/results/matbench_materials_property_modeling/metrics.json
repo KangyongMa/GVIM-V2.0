@@ -1,0 +1,82 @@
+{
+  "data_path": "E:\\Demo of GVIM\\deer-flow-mainnew\\research-demos\\data\\matbench_expt_gap\\matbench_expt_gap.json.gz",
+  "data_url": "https://ml.materialsproject.org/projects/matbench_expt_gap.json.gz",
+  "demo_id": "matbench_materials_property_modeling",
+  "fold_rule": "KFold(n_splits=5, shuffle=True, random_state=18012019)",
+  "frontend_package": {
+    "fold_manifest_json": "E:\\Demo of GVIM\\deer-flow-mainnew\\research-demos\\showcase-5\\runtime\\matbench_materials_property_modeling\\input\\matbench_expt_gap_5fold_manifest.json",
+    "gold_csv": "E:\\Demo of GVIM\\deer-flow-mainnew\\research-demos\\showcase-5\\runtime\\matbench_materials_property_modeling\\gold\\matbench_expt_gap_5fold_gold.csv",
+    "input_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\research-demos\\showcase-5\\runtime\\matbench_materials_property_modeling\\input",
+    "isolated_folds_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\research-demos\\showcase-5\\runtime\\matbench_materials_property_modeling\\isolated_folds",
+    "prompt_md": "E:\\Demo of GVIM\\deer-flow-mainnew\\research-demos\\showcase-5\\runtime\\matbench_materials_property_modeling\\frontend_prompt.md",
+    "schema_json": "E:\\Demo of GVIM\\deer-flow-mainnew\\research-demos\\showcase-5\\runtime\\matbench_materials_property_modeling\\expected_output_schema\\required_files.json"
+  },
+  "metrics": {
+    "evaluation_protocol": {
+      "benchmark": "Matbench v0.1",
+      "n_splits": 5,
+      "official_score": "mean_fold.mae",
+      "random_state": 18012019,
+      "shuffle": true,
+      "splitter": "sklearn.model_selection.KFold",
+      "standard_metrics": [
+        "mae",
+        "rmse",
+        "r2"
+      ],
+      "task": "matbench_expt_gap",
+      "task_type": "regression"
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "mae": 0.47300519001085783,
+        "n_test": 921,
+        "n_train": 3683,
+        "r2": 0.6262441980231975,
+        "rmse": 0.8181633908370453
+      },
+      {
+        "fold": 1,
+        "mae": 0.47189687296416954,
+        "n_test": 921,
+        "n_train": 3683,
+        "r2": 0.6729591653528229,
+        "rmse": 0.8645677441996852
+      },
+      {
+        "fold": 2,
+        "mae": 0.49596716612377856,
+        "n_test": 921,
+        "n_train": 3683,
+        "r2": 0.6485820539364724,
+        "rmse": 0.904468846748611
+      },
+      {
+        "fold": 3,
+        "mae": 0.45431198697068403,
+        "n_test": 921,
+        "n_train": 3683,
+        "r2": 0.6621364037281283,
+        "rmse": 0.8362288114391891
+      },
+      {
+        "fold": 4,
+        "mae": 0.4677947608695651,
+        "n_test": 920,
+        "n_train": 3684,
+        "r2": 0.6415961014277026,
+        "rmse": 0.8355630890439144
+      }
+    ],
+    "mean_fold": {
+      "mae": 0.47259519538781103,
+      "r2": 0.6503035844936648,
+      "rmse": 0.8517983764536889
+    }
+  },
+  "model": "formula features + ExtraTreesRegressor",
+  "n_samples": 4604,
+  "target": "experimental band gap in eV",
+  "task": "matbench_expt_gap"
+}

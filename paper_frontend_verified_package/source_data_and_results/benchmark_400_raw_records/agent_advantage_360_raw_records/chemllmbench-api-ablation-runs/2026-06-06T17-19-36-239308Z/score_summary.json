@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-06-06T17:21:04.446244Z",
+  "source_kind": "deepseek_flash_api_only",
+  "source_run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\chemllmbench-api-ablation-runs\\2026-06-06T17-19-36-239308Z",
+  "suite": "chemllmbench",
+  "subset": "ChemLLMBench 40",
+  "scoring_rule": "ChemLLMBench task-specific answer-key metric; property prediction uses Yes/No accuracy; Suzuki component selection uses exact match to the optimal candidate SMILES. Deterministic parser fixed before evaluation.",
+  "total": 40,
+  "correct": 17,
+  "accuracy": 0.425,
+  "parse_empty": 0,
+  "by_type": {
+    "binary_property_prediction": {
+      "count": 20,
+      "correct": 11,
+      "accuracy": 0.55
+    },
+    "candidate_selection": {
+      "count": 20,
+      "correct": 6,
+      "accuracy": 0.3
+    }
+  },
+  "by_topic": {
+    "property_prediction/BBBP": {
+      "count": 8,
+      "correct": 5,
+      "accuracy": 0.625
+    },
+    "property_prediction/BACE": {
+      "count": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    },
+    "property_prediction/HIV": {
+      "count": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    },
+    "property_prediction/ClinTox": {
+      "count": 4,
+      "correct": 2,
+      "accuracy": 0.5
+    },
+    "reagent_selection/reagent_sample": {
+      "count": 7,
+      "correct": 5,
+      "accuracy": 0.7142857142857143
+    },
+    "reagent_selection/solvent_sample": {
+      "count": 7,
+      "correct": 1,
+      "accuracy": 0.14285714285714285
+    },
+    "reagent_selection/ligand_sample": {
+      "count": 6,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  },
+  "wrong_indices": [
+    1,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    23,
+    24,
+    28,
+    29,
+    30,
+    31,
+    32,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "output_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\chemllmbench-api-ablation-runs\\2026-06-06T17-19-36-239308Z"
+}

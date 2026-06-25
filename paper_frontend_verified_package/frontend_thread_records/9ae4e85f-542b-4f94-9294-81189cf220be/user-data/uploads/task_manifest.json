@@ -1,0 +1,45 @@
+{
+  "case_id": "bace1_temporal_external_validation",
+  "scientific_question": "Can a model selected only on historical BACE1 measurements generalize to later, non-overlapping chemical matter and recover the most active late-period compounds?",
+  "public_source": "ChEMBL target CHEMBL4822 (Beta-secretase 1, Homo sapiens, SINGLE PROTEIN)",
+  "training_file": "bace1_early_training.csv",
+  "external_feature_file": "bace1_late_external_features.csv",
+  "external_gold_file": "bace1_late_external_gold.csv",
+  "target_column": "pIC50",
+  "time_split": {
+    "training_document_year_max": 2015,
+    "gap_years_excluded": [2016, 2017],
+    "external_document_year_min": 2018
+  },
+  "model_selection": {
+    "data": "training_file only",
+    "cross_validation": "3-fold GroupKFold grouped by murcko_scaffold",
+    "selection_metric": "mean validation MAE",
+    "candidate_models": [
+      "Ridge regression",
+      "RandomForestRegressor with at most 100 trees and n_jobs=1",
+      "ExtraTreesRegressor with at most 100 trees and n_jobs=1"
+    ],
+    "features": "RDKit Morgan fingerprint (radius 2, 1024 bits) plus lightweight RDKit descriptors"
+  },
+  "external_evaluation": {
+    "required_primary_metrics": ["MAE", "RMSE", "R2"],
+    "required_ranking_metrics": [
+      "Recall of external top-10% actives at k=10%",
+      "Enrichment factor at k=10%"
+    ],
+    "required_subsets": ["all external compounds", "scaffold_novel=1 subset"],
+    "baselines": ["DummyRegressor(mean)", "Ridge regression"]
+  },
+  "required_outputs": [
+    "external_predictions.csv",
+    "cv_results.csv",
+    "metrics.json",
+    "top_candidates.csv",
+    "structure_activity_summary.csv",
+    "figure_temporal_validation.png",
+    "figure_scaffold_generalization.png",
+    "report.md"
+  ],
+  "claim_boundary": "Retrospective temporal external validation using public labels; not prospective wet-lab validation and not a claim of a newly discovered inhibitor."
+}

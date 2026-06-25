@@ -1,0 +1,72 @@
+{
+  "idx": 35,
+  "uuid": "chemllm-selection-ext-344b758d2af86e66",
+  "topic": "reagent_selection/reagent_sample",
+  "mini_split": "chemllmbench",
+  "question_type": "candidate_selection",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-09T08:54:01.446335Z",
+  "finished_at": "2026-06-09T08:54:04.147470Z",
+  "latency_ms": 2701,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 1099
+  },
+  "final_text": "[ANSWER]CC1(C)OB(c2ccc3ncccc3c2)OC1(C)C[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]CC1(C)OB(c2ccc3ncccc3c2)OC1(C)C[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 312,
+    "completion_tokens": 25,
+    "total_tokens": 337,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 312
+  },
+  "error": null,
+  "raw_response": {
+    "id": "21c462a4-8584-475e-b0ca-ff72ba004d54",
+    "object": "chat.completion",
+    "created": 1780995244,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]CC1(C)OB(c2ccc3ncccc3c2)OC1(C)C[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 312,
+      "completion_tokens": 25,
+      "total_tokens": 337,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 312
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  },
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\api-ablation-runs\\2026-06-09T08-51-54-442088Z\\035-chemllm-selection-ext-344b758d2af86e66.json",
+  "_source_segment": "main_api_run"
+}

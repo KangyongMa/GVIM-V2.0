@@ -1,0 +1,13 @@
+{
+  "benchmark": "Matbench v0.1",
+  "fold": 4,
+  "fold_rule": "KFold(n_splits=5, shuffle=True, random_state=18012019)",
+  "id_column": "row_id",
+  "input_column": "composition",
+  "n_test": 920,
+  "n_train": 3684,
+  "target_column": "gap_expt",
+  "task": "matbench_expt_gap",
+  "test_csv": "matbench_expt_gap_fold4_test_unlabeled.csv",
+  "train_csv": "matbench_expt_gap_fold4_train.csv"
+}

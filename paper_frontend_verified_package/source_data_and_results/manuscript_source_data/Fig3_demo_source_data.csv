@@ -1,0 +1,19 @@
+demo,domain,benchmark_or_gold,metric,value,n_or_scope
+ESOL solubility prediction,chemistry ML,MoleculeNet ESOL,MAE,0.6028445624467436,n_test=254
+ESOL solubility prediction,chemistry ML,MoleculeNet ESOL,RMSE,0.7406907826664041,n_test=254
+ESOL solubility prediction,chemistry ML,MoleculeNet ESOL,R2,0.7385620569691838,n_test=254
+Matbench steels,materials ML,Matbench v0.1 fold 0,MAE_MPa,111.44365079365083,n_test=63
+Matbench steels,materials ML,Matbench v0.1 fold 0,RMSE_MPa,164.31955998012987,n_test=63
+Matbench steels,materials ML,Matbench v0.1 fold 0,R2,0.6841542256291508,n_test=63
+Reaction table extraction,literature extraction,Publisher JATS XML,Exact precision,0.9809523809523809,105 cells
+Reaction table extraction,literature extraction,Publisher JATS XML,Exact recall,0.9809523809523809,105 cells
+Reaction table extraction,literature extraction,Publisher JATS XML,Exact F1,0.9809523809523809,105 cells
+Reaction table extraction,literature extraction,Publisher JATS XML,Exact row accuracy,0.9047619047619048,21 rows
+MS/MS retrieval,spectral retrieval,MassBank InChIKey gold,Top-1 accuracy,0.8,5 queries
+MS/MS retrieval,spectral retrieval,MassBank InChIKey gold,Top-3 accuracy,1.0,5 queries
+MS/MS retrieval,spectral retrieval,MassBank InChIKey gold,Top-5 accuracy,1.0,5 queries
+MS/MS retrieval,spectral retrieval,MassBank InChIKey gold,MRR,0.9,5 queries
+ChEMU entity extraction,information extraction,ChEMU 2020 Task 1 sample v3,Exact precision,0.9305555555555556,92 gold spans
+ChEMU entity extraction,information extraction,ChEMU 2020 Task 1 sample v3,Exact recall,0.7282608695652174,92 gold spans
+ChEMU entity extraction,information extraction,ChEMU 2020 Task 1 sample v3,Exact F1,0.8170731707317073,92 gold spans
+ChEMU entity extraction,information extraction,ChEMU 2020 Task 1 sample v3,Relaxed F1,0.8414634146341463,92 gold spans

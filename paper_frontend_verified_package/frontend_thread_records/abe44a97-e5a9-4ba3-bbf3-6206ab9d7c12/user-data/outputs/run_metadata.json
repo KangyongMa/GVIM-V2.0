@@ -1,0 +1,12 @@
+{
+  "benchmark": "MassBank MS/MS candidate retrieval mini-benchmark",
+  "algorithm": "matchms CosineGreedy (normalized cosine similarity)",
+  "fragment_mz_tolerance": 0.1,
+  "n_queries": 5,
+  "n_library_spectra": 15,
+  "n_candidate_pairs": 75,
+  "top1_accuracy": 0.8,
+  "top3_accuracy": 1.0,
+  "top5_accuracy": 1.0,
+  "MRR": 0.9
+}

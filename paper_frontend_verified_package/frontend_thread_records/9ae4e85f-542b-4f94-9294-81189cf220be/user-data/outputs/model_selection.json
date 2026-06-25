@@ -1,0 +1,12 @@
+{
+  "best_model": "RandomForest",
+  "mean_val_MAE_by_model": {
+    "Ridge": 0.6761746180019644,
+    "RandomForest": 0.5787089537690062,
+    "ExtraTrees": 0.6280404124518633
+  },
+  "cv_splits": 3,
+  "cv_strategy": "GroupKFold, grouped by murcko_scaffold",
+  "random_seed": 42,
+  "features": "Morgan FP (radius 2, 1024 bits) + 8 lightweight RDKit descriptors"
+}

@@ -1,0 +1,292 @@
+{
+  "generated_at": "2026-06-06T17:21:23.694340Z",
+  "suite": "chemllmbench",
+  "subset": "ChemLLMBench 40",
+  "scoring_rule": "ChemLLMBench task-specific answer-key metric; property prediction uses Yes/No accuracy; Suzuki component selection uses exact match to the optimal candidate SMILES. Deterministic parser fixed before evaluation.",
+  "agent_score_csv": "benchmarks\\agent-advantage-400\\chemllmbench-final-results\\2026-06-06-chemllmbench-40-deepseek-flash-gvim\\scored_rows.csv",
+  "api_score_csv": "benchmarks\\agent-advantage-400\\chemllmbench-api-ablation-runs\\2026-06-06T17-19-36-239308Z\\scored_rows.csv",
+  "shared_count": 40,
+  "agent_correct": 20,
+  "agent_accuracy": 0.5,
+  "api_correct": 17,
+  "api_accuracy": 0.425,
+  "delta_accuracy_agent_minus_api": 0.075,
+  "confusion": {
+    "agent_True_api_False": 7,
+    "agent_True_api_True": 13,
+    "agent_False_api_True": 4,
+    "agent_False_api_False": 16
+  },
+  "disagreements_or_errors": [
+    {
+      "idx": 1,
+      "topic": "property_prediction/BBBP",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "No",
+      "agent_correct": true,
+      "agent_prediction": "no",
+      "api_correct": false,
+      "api_prediction": "yes"
+    },
+    {
+      "idx": 6,
+      "topic": "property_prediction/BBBP",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "Yes",
+      "agent_correct": true,
+      "agent_prediction": "yes",
+      "api_correct": false,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 8,
+      "topic": "property_prediction/BBBP",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "Yes",
+      "agent_correct": true,
+      "agent_prediction": "yes",
+      "api_correct": false,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 9,
+      "topic": "property_prediction/BACE",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "No",
+      "agent_correct": false,
+      "agent_prediction": "yes",
+      "api_correct": true,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 10,
+      "topic": "property_prediction/BACE",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "Yes",
+      "agent_correct": true,
+      "agent_prediction": "yes",
+      "api_correct": false,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 11,
+      "topic": "property_prediction/BACE",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "No",
+      "agent_correct": false,
+      "agent_prediction": "yes",
+      "api_correct": true,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 12,
+      "topic": "property_prediction/BACE",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "Yes",
+      "agent_correct": false,
+      "agent_prediction": "no",
+      "api_correct": false,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 14,
+      "topic": "property_prediction/HIV",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "Yes",
+      "agent_correct": true,
+      "agent_prediction": "yes",
+      "api_correct": false,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 16,
+      "topic": "property_prediction/HIV",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "Yes",
+      "agent_correct": false,
+      "agent_prediction": "no",
+      "api_correct": false,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 18,
+      "topic": "property_prediction/ClinTox",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "Yes",
+      "agent_correct": true,
+      "agent_prediction": "yes",
+      "api_correct": false,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 20,
+      "topic": "property_prediction/ClinTox",
+      "question_type": "binary_property_prediction",
+      "gold_answer": "Yes",
+      "agent_correct": false,
+      "agent_prediction": "no",
+      "api_correct": false,
+      "api_prediction": "no"
+    },
+    {
+      "idx": 22,
+      "topic": "reagent_selection/reagent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "Brc1ccc2ncccc2c1",
+      "agent_correct": false,
+      "agent_prediction": "Ic1ccc2ncccc2c1",
+      "api_correct": true,
+      "api_prediction": "Brc1ccc2ncccc2c1"
+    },
+    {
+      "idx": 23,
+      "topic": "reagent_selection/reagent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "Cc1ccc2c(cnn2C2CCCCO2)c1[B-](F)(F)F.[K+]",
+      "agent_correct": true,
+      "agent_prediction": "Cc1ccc2c(cnn2C2CCCCO2)c1[B-](F)(F)F.[K+]",
+      "api_correct": false,
+      "api_prediction": "Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1"
+    },
+    {
+      "idx": 24,
+      "topic": "reagent_selection/reagent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "Cc1ccc2c(cnn2C2CCCCO2)c1Br",
+      "agent_correct": false,
+      "agent_prediction": "Cc1ccc2c(cnn2C2CCCCO2)c1[B-](F)(F)F.[K+]",
+      "api_correct": false,
+      "api_prediction": "Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1"
+    },
+    {
+      "idx": 27,
+      "topic": "reagent_selection/reagent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1",
+      "agent_correct": false,
+      "agent_prediction": "Cc1ccc2c(cnn2C2CCCCO2)c1[B-](F)(F)F.[K+]",
+      "api_correct": true,
+      "api_prediction": "Cc1ccc2c(cnn2C2CCCCO2)c1B1OC(C)(C)C(C)(C)O1"
+    },
+    {
+      "idx": 28,
+      "topic": "reagent_selection/solvent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "CC#N",
+      "agent_correct": false,
+      "agent_prediction": "CN(C)C=O",
+      "api_correct": false,
+      "api_prediction": "CN(C)C=O"
+    },
+    {
+      "idx": 29,
+      "topic": "reagent_selection/solvent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "CO",
+      "agent_correct": false,
+      "agent_prediction": "C1CCOC1",
+      "api_correct": false,
+      "api_prediction": "C1CCOC1"
+    },
+    {
+      "idx": 30,
+      "topic": "reagent_selection/solvent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "CO",
+      "agent_correct": false,
+      "agent_prediction": "C1CCOC1",
+      "api_correct": false,
+      "api_prediction": "C1CCOC1"
+    },
+    {
+      "idx": 31,
+      "topic": "reagent_selection/solvent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "CO",
+      "agent_correct": false,
+      "agent_prediction": "C1CCOC1",
+      "api_correct": false,
+      "api_prediction": "C1CCOC1"
+    },
+    {
+      "idx": 32,
+      "topic": "reagent_selection/solvent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "CO",
+      "agent_correct": false,
+      "agent_prediction": "CN(C)C=O",
+      "api_correct": false,
+      "api_prediction": "C1CCOC1"
+    },
+    {
+      "idx": 34,
+      "topic": "reagent_selection/solvent_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "CO",
+      "agent_correct": false,
+      "agent_prediction": "C1CCOC1",
+      "api_correct": false,
+      "api_prediction": "C1CCOC1"
+    },
+    {
+      "idx": 35,
+      "topic": "reagent_selection/ligand_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "c1ccc(P(c2ccccc2)c2ccccc2)cc1",
+      "agent_correct": false,
+      "agent_prediction": "C1CCC(P(C2CCCCC2)C2CCCCC2)CC1",
+      "api_correct": false,
+      "api_prediction": "CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C"
+    },
+    {
+      "idx": 36,
+      "topic": "reagent_selection/ligand_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "c1ccc(P(c2ccccc2)c2ccccc2)cc1",
+      "agent_correct": false,
+      "agent_prediction": "COc1cccc(OC)c1-c1ccccc1P(C1CCCCC1)C1CCCCC1",
+      "api_correct": false,
+      "api_prediction": "CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C"
+    },
+    {
+      "idx": 37,
+      "topic": "reagent_selection/ligand_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "c1ccc(P(c2ccccc2)c2ccccc2)cc1",
+      "agent_correct": false,
+      "agent_prediction": "COc1cccc(OC)c1-c1ccccc1P(C1CCCCC1)C1CCCCC1",
+      "api_correct": false,
+      "api_prediction": "CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C"
+    },
+    {
+      "idx": 38,
+      "topic": "reagent_selection/ligand_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "CCCCP(C12CC3CC(CC(C3)C1)C2)C12CC3CC(CC(C3)C1)C2",
+      "agent_correct": false,
+      "agent_prediction": "c1ccc(P(c2ccccc2)c2ccccc2)cc1",
+      "api_correct": false,
+      "api_prediction": "CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C"
+    },
+    {
+      "idx": 39,
+      "topic": "reagent_selection/ligand_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "Cc1ccccc1P(c1ccccc1C)c1ccccc1C",
+      "agent_correct": false,
+      "agent_prediction": "CCCCP(C12CC3CC(CC(C3)C1)C2)C12CC3CC(CC(C3)C1)C2",
+      "api_correct": false,
+      "api_prediction": "CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C"
+    },
+    {
+      "idx": 40,
+      "topic": "reagent_selection/ligand_sample",
+      "question_type": "candidate_selection",
+      "gold_answer": "c1ccc(P(c2ccccc2)c2ccccc2)cc1",
+      "agent_correct": false,
+      "agent_prediction": "COc1cccc(OC)c1-c1ccccc1P(C1CCCCC1)C1CCCCC1",
+      "api_correct": false,
+      "api_prediction": "CC(C)(C)P([C]1C=C[CH][C@@H]1[Fe]C1C=CC=C1P(C(C)(C)C)C(C)(C)C)C(C)(C)C"
+    }
+  ]
+}

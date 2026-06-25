@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "constraints": {
+    "expert_review_required": false,
+    "wet_lab_required": false,
+    "objective_metrics_only": true
+  },
+  "demos": [
+    {
+      "id": "spectra_to_dihedral",
+      "problem": "Predict the C-N=N-C dihedral angle from paired IR and Raman spectra.",
+      "input": "research-demos/data/azobenzenes-spectra/IR_Raman_azo.csv",
+      "workflow": [
+        "load paired spectra",
+        "standardize features",
+        "fit a PLS regression model under leave-one-out cross-validation",
+        "write held-out predictions",
+        "compute regression metrics"
+      ],
+      "output": "research-demos/results/spectra_to_dihedral/predictions.csv",
+      "metrics": ["mae", "rmse", "r2", "pearson_r"]
+    },
+    {
+      "id": "bbbp_property_prediction",
+      "problem": "Predict blood-brain barrier penetration from molecular structure.",
+      "input": "benchmarks/_sources/ChemLLMBench/data/property_prediction/BBBP.csv",
+      "workflow": [
+        "parse SMILES with RDKit",
+        "build Morgan fingerprints",
+        "create a deterministic class-balanced Bemis-Murcko scaffold split",
+        "fit logistic regression",
+        "write held-out probabilities",
+        "compute classification metrics"
+      ],
+      "output": "research-demos/results/bbbp_property_prediction/predictions.csv",
+      "metrics": ["accuracy", "f1", "roc_auc", "pr_auc"]
+    },
+    {
+      "id": "bace_active_search",
+      "problem": "Efficiently identify top-1% pIC50 BACE inhibitor candidates in a closed pool.",
+      "input": "benchmarks/_sources/ChemLLMBench/data/property_prediction/BACE.csv",
+      "workflow": [
+        "hide candidate activities",
+        "initialize with a small random observed set",
+        "fit an uncertainty-aware ensemble surrogate",
+        "select the next candidate batch using upper confidence bound",
+        "reveal labels and repeat",
+        "compare against random search"
+      ],
+      "output": "research-demos/results/bace_active_search/trajectories.csv",
+      "metrics": [
+        "success_at_budget",
+        "queries_to_first_hit",
+        "target_recall_at_budget",
+        "enrichment_factor_at_budget"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "dataset": "MaScQA public-extension-40 subset",
+  "model_system": "GVIM/DeerFlow full front-end Agent system with DeepSeek Flash",
+  "scoring_protocol": "MaScQA published answer-key accuracy reproduced from public answer sheet; deterministic parser fixed before evaluation; numeric answers use published exact/range targets and option questions use letter accuracy.",
+  "source_answer_key": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\answer_key.jsonl",
+  "source_run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined",
+  "generated_at_utc": "2026-06-09T08:42:54.101981Z",
+  "total": 13,
+  "successful_records": 13,
+  "missing_records": 0,
+  "correct": 12,
+  "accuracy_percent": 92.31,
+  "by_type": {
+    "MATCH": {
+      "correct": 2,
+      "total": 2,
+      "accuracy_percent": 100.0
+    },
+    "MCQS": {
+      "correct": 1,
+      "total": 1,
+      "accuracy_percent": 100.0
+    },
+    "MCQS-NUM": {
+      "correct": 3,
+      "total": 3,
+      "accuracy_percent": 100.0
+    },
+    "NUM": {
+      "correct": 6,
+      "total": 7,
+      "accuracy_percent": 85.71
+    }
+  },
+  "by_topic": {
+    "Material characterization": {
+      "correct": 2,
+      "total": 2,
+      "accuracy_percent": 100.0
+    },
+    "Material manufacturing": {
+      "correct": 6,
+      "total": 7,
+      "accuracy_percent": 85.71
+    },
+    "Material testing": {
+      "correct": 1,
+      "total": 1,
+      "accuracy_percent": 100.0
+    },
+    "Thermodynamics": {
+      "correct": 3,
+      "total": 3,
+      "accuracy_percent": 100.0
+    }
+  },
+  "wrong_indices": [
+    17
+  ],
+  "empty_prediction_indices": [],
+  "not_ok_indices": [],
+  "output_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-combined\\2026-06-09T08-34-51Z-combined\\mascqa-official-score-2026-06-09T08-42-54-102976Z"
+}

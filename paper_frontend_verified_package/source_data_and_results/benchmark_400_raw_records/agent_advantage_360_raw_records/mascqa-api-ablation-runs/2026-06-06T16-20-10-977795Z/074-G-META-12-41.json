@@ -1,0 +1,72 @@
+{
+  "idx": 74,
+  "uuid": "G-META-12-41",
+  "global_idx": 310,
+  "source_id": "G-META-12-41",
+  "topic": "Material processing",
+  "mini_split": "mascqa",
+  "question_type": "MCQS",
+  "status": "ok",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "started_at": "2026-06-06T16:24:09.266969Z",
+  "finished_at": "2026-06-06T16:24:11.074161Z",
+  "latency_ms": 1807,
+  "http_status": 200,
+  "attempts": 1,
+  "request": {
+    "temperature": 0.0,
+    "max_tokens": 1024,
+    "thinking": "disabled",
+    "message_count": 1,
+    "prompt_chars": 666
+  },
+  "final_text": "[ANSWER]D[/ANSWER]",
+  "reasoning_content": "",
+  "finish_reason": "stop",
+  "message": {
+    "role": "assistant",
+    "content": "[ANSWER]D[/ANSWER]"
+  },
+  "usage": {
+    "prompt_tokens": 143,
+    "completion_tokens": 7,
+    "total_tokens": 150,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 143
+  },
+  "error": null,
+  "raw_response": {
+    "id": "1d43b1ca-de03-4358-85f8-14e261d914dd",
+    "object": "chat.completion",
+    "created": 1780763051,
+    "model": "deepseek-v4-flash",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "[ANSWER]D[/ANSWER]"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 143,
+      "completion_tokens": 7,
+      "total_tokens": 150,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 143
+    },
+    "system_fingerprint": "fp_8b330d02d0_prod0820_fp8_kvcache_20260402"
+  }
+}

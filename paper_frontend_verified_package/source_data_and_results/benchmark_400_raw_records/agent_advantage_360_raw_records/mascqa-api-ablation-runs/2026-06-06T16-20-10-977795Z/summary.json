@@ -1,0 +1,135 @@
+{
+  "run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-api-ablation-runs\\2026-06-06T16-20-10-977795Z",
+  "experiment": "deepseek_flash_api_only_mascqa_ablation",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "base_url": "https://api.deepseek.com",
+  "env_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\deer-flow-main\\.env",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "api_key_present": true,
+  "questions": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-84-questions.native.jsonl",
+  "answer_key": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\answer_key.jsonl",
+  "start": 1,
+  "limit": 84,
+  "temperature": 0.0,
+  "max_tokens": 1024,
+  "thinking": "disabled",
+  "timeout_ms": 180000,
+  "pause_ms": 200,
+  "max_retries": 2,
+  "finished_at": "2026-06-06T16:24:33.198597Z",
+  "frontend_used": false,
+  "agent_tools_used": false,
+  "count": 84,
+  "ok": 84,
+  "errors": 0,
+  "empty_responses": 0,
+  "usage_total": {
+    "prompt_tokens": 12457,
+    "completion_tokens": 7942,
+    "total_tokens": 20399,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 12457
+  },
+  "by_topic": {
+    "Atomic structure": {
+      "count": 9,
+      "ok": 9,
+      "errors": 0
+    },
+    "Electrical": {
+      "count": 7,
+      "ok": 7,
+      "errors": 0
+    },
+    "Fluid": {
+      "count": 5,
+      "ok": 5,
+      "errors": 0
+    },
+    "Magnetism": {
+      "count": 6,
+      "ok": 6,
+      "errors": 0
+    },
+    "Material Applications": {
+      "count": 6,
+      "ok": 6,
+      "errors": 0
+    },
+    "Material manufacturing": {
+      "count": 8,
+      "ok": 8,
+      "errors": 0
+    },
+    "Material processing": {
+      "count": 5,
+      "ok": 5,
+      "errors": 0
+    },
+    "Mechanical": {
+      "count": 8,
+      "ok": 8,
+      "errors": 0
+    },
+    "Miscellaneous": {
+      "count": 4,
+      "ok": 4,
+      "errors": 0
+    },
+    "Phase transition": {
+      "count": 7,
+      "ok": 7,
+      "errors": 0
+    },
+    "Thermodynamics": {
+      "count": 8,
+      "ok": 8,
+      "errors": 0
+    },
+    "Transport phenomena": {
+      "count": 6,
+      "ok": 6,
+      "errors": 0
+    },
+    "Material characterization": {
+      "count": 3,
+      "ok": 3,
+      "errors": 0
+    },
+    "Material testing": {
+      "count": 2,
+      "ok": 2,
+      "errors": 0
+    }
+  },
+  "by_split": {
+    "mascqa": {
+      "count": 84,
+      "ok": 84,
+      "errors": 0
+    }
+  },
+  "by_type": {
+    "NUM": {
+      "count": 30,
+      "ok": 30,
+      "errors": 0
+    },
+    "MCQS-NUM": {
+      "count": 20,
+      "ok": 20,
+      "errors": 0
+    },
+    "MATCH": {
+      "count": 10,
+      "ok": 10,
+      "errors": 0
+    },
+    "MCQS": {
+      "count": 24,
+      "ok": 24,
+      "errors": 0
+    }
+  }
+}

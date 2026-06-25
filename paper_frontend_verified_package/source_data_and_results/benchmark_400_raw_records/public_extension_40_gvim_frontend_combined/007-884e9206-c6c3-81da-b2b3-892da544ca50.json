@@ -1,0 +1,31 @@
+{
+  "idx": 7,
+  "uuid": "884e9206-c6c3-81da-b2b3-892da544ca50",
+  "topic": "toxicity_and_safety",
+  "mini_split": "chembench-full",
+  "question_type": "multiple_choice",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-09T07:08:19.843Z",
+  "finished_at": "2026-06-09T07:08:41.818Z",
+  "latency_ms": 21975,
+  "page_url": "http://localhost:3000/workspace/chats/e07ace72-72f6-4b67-bbde-bf0502ce6f51",
+  "thread_id": "e07ace72-72f6-4b67-bbde-bf0502ce6f51",
+  "run_id": "931a9c96-8a48-42ad-8863-79c93494d180",
+  "final_text": "For detecting flammable residues in a laboratory, **Gas Chromatography (GC)** is the most sensitive and reliable method, as it can separate and quantify volatile organic compounds (flammable residues) with high precision and low detection limits.\n\n[ANSWER]A[/ANSWER]",
+  "stream_final_text": "For detecting flammable residues in a laboratory, **Gas Chromatography (GC)** is the most sensitive and reliable method, as it can separate and quantify volatile organic compounds (flammable residues) with high precision and low detection limits.\n\n[ANSWER]A[/ANSWER]",
+  "ui_final_text": "For detecting flammable residues in a laboratory, Gas Chromatography (GC) is the most sensitive and reliable method, as it can separate and quantify volatile organic compounds (flammable residues) with high precision and low detection limits.[ANSWER]A[/ANSWER]",
+  "stream_event_count": 88,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/e07ace72-72f6-4b67-bbde-bf0502ce6f51/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a multiple choice question about chemistry.\\nPlease answer by responding with the letter of the correct answer.\\n\\nQuestion: Which of the following instruments is most sensitive and reliable for detecting flammable residues in the laboratory?\\n\\nOptions:\\nA. Gas chromatography\\nB. IR spectroscopy\\nC. Neutron activation analysis\\nD. Thin layer chromatography\\n\\nYou MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].\\nFor example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing.\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"e07ace72-72f6-4b67-bbde-bf0502ce6f51\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": [],
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-runs\\2026-06-09T07-05-32-885Z\\007-884e9206-c6c3-81da-b2b3-892da544ca50.json",
+  "_source_segment": "first_segment"
+}

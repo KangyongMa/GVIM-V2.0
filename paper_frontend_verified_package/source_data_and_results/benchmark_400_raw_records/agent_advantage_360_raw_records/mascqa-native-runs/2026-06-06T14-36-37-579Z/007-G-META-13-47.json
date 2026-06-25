@@ -1,0 +1,26 @@
+{
+  "idx": 7,
+  "uuid": "G-META-13-47",
+  "topic": "Fluid",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "error",
+  "started_at": "2026-06-06T14:39:13.621Z",
+  "finished_at": "2026-06-06T14:42:40.064Z",
+  "latency_ms": 206443,
+  "page_url": "http://localhost:3000/workspace/chats/a5344697-f31a-4f98-accc-52da6c612184",
+  "final_text": "",
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/a5344697-f31a-4f98-accc-52da6c612184/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a MaScQA materials science benchmark question (NUM).\\nAnswer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.\\n\\nQuestion: [Given: density of steel = 7000 kg/$m^3$ , density of alumina = 3650 kg/$m^3$ , viscosity of steel = 6*$10^(-3)$ kg/m/s]. Ladle deoxidation of liquid steel is done at 1600°C by adding ferro-aluminium. By assuming Stokes law behaviour, time (in s) required for alumina particles of 50 µm diameter to float to the surface from a depth of 2m would be?\\n\\nUse exactly this final format: [ANSWER]<answer>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"a5344697-f31a-4f98-accc-52da6c612184\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": [],
+  "error": {
+    "message": "response.text: Protocol error (Network.getResponseBody): Request content was evicted from inspector cache",
+    "stack": "response.text: Protocol error (Network.getResponseBody): Request content was evicted from inspector cache\n    at submitOne (E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\chembench-mini-236\\native_submit.mjs:351:33)\n    at async main (E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\chembench-mini-236\\native_submit.mjs:473:22)"
+  }
+}

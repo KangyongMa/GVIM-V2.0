@@ -1,0 +1,34 @@
+{
+  "run_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\agent-advantage-400\\mascqa-native-runs\\2026-06-06T16-00-54-793Z",
+  "base_url": "http://localhost:3000",
+  "start": 22,
+  "limit": 1,
+  "new_chat_every": 1,
+  "user_data_dir": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\chembench-mini-236\\.browser-profile",
+  "browser_channel": "chrome",
+  "finished_at": "2026-06-06T16:11:01.193Z",
+  "count": 1,
+  "ok": 1,
+  "errors": 0,
+  "by_topic": {
+    "Miscellaneous": {
+      "count": 1,
+      "ok": 1,
+      "errors": 0
+    }
+  },
+  "by_split": {
+    "mascqa": {
+      "count": 1,
+      "ok": 1,
+      "errors": 0
+    }
+  },
+  "by_type": {
+    "NUM": {
+      "count": 1,
+      "ok": 1,
+      "errors": 0
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "idx": 8,
+  "uuid": "chemllm-property-d9d34257f8f7f894",
+  "topic": "property_prediction/BBBP",
+  "mini_split": "chemllmbench",
+  "question_type": "binary_property_prediction",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T16:52:32.130Z",
+  "finished_at": "2026-06-06T16:53:08.923Z",
+  "latency_ms": 36793,
+  "page_url": "http://localhost:3000/workspace/chats/2fd6a3c0-9bdc-436a-813d-3e0ed725d61f",
+  "thread_id": "2fd6a3c0-9bdc-436a-813d-3e0ed725d61f",
+  "run_id": "625dfbb4-1e18-41da-bb06-f538cbf56d66",
+  "final_text": "Now let me assess these properties against CNS BBB penetration rules:\n\n| Property | Value | CNS Threshold | Status |\n|---|---|---|---|\n| **MW** | 412.2 Da | < 450 Da | ✅ Pass |\n| **clogP** | 3.98 | 1–5 (favorable) | ✅ Pass |\n| **TPSA** | 54.37 Å² | < 90 Å² | ✅ Pass |\n| **HBD** | 1 | ≤ 3 | ✅ Pass |\n| **HBA** | 3 | ≤ 7 | ✅ Pass |\n| **RotB** | 2 | ≤ 8 | ✅ Pass |\n| **Formal Charge** | 0 | Neutral | ✅ Pass |\n| **fraction csp³** | 0.73 | > 0.5 (favorable) | ✅ Pass |\n\nAll key CNS drug-like rules are satisfied. The molecule has:\n- MW well below 450 Da ✓\n- TPSA well under 90 Å² ✓\n- Low HBD (1) and HBA (3) ✓\n- Only 2 rotatable bonds ✓\n- Neutral charge ✓\n- High fraction sp³ (0.73), indicating good three-dimensionality favorable for CNS penetration ✓\n\nThis molecule is a corticosteroid derivative with fluorine and chlorine substituents — a structural class consistent with compounds that can penetrate the CNS.\n\n[ANSWER]Yes[/ANSWER]",
+  "stream_final_text": "Now let me assess these properties against CNS BBB penetration rules:\n\n| Property | Value | CNS Threshold | Status |\n|---|---|---|---|\n| **MW** | 412.2 Da | < 450 Da | ✅ Pass |\n| **clogP** | 3.98 | 1–5 (favorable) | ✅ Pass |\n| **TPSA** | 54.37 Å² | < 90 Å² | ✅ Pass |\n| **HBD** | 1 | ≤ 3 | ✅ Pass |\n| **HBA** | 3 | ≤ 7 | ✅ Pass |\n| **RotB** | 2 | ≤ 8 | ✅ Pass |\n| **Formal Charge** | 0 | Neutral | ✅ Pass |\n| **fraction csp³** | 0.73 | > 0.5 (favorable) | ✅ Pass |\n\nAll key CNS drug-like rules are satisfied. The molecule has:\n- MW well below 450 Da ✓\n- TPSA well under 90 Å² ✓\n- Low HBD (1) and HBA (3) ✓\n- Only 2 rotatable bonds ✓\n- Neutral charge ✓\n- High fraction sp³ (0.73), indicating good three-dimensionality favorable for CNS penetration ✓\n\nThis molecule is a corticosteroid derivative with fluorine and chlorine substituents — a structural class consistent with compounds that can penetrate the CNS.\n\n[ANSWER]Yes[/ANSWER]",
+  "ui_final_text": "Now let me assess these properties against CNS BBB penetration rules:PropertyValueCNS ThresholdStatusMW412.2 Da< 450 Da✅ PassclogP3.981–5 (favorable)✅ PassTPSA54.37 Å²< 90 Å²✅ PassHBD1≤ 3✅ PassHBA3≤ 7✅ PassRotB2≤ 8✅ PassFormal Charge0Neutral✅ Passfraction csp³0.73> 0.5 (favorable)✅ PassAll key CNS drug-like rules are satisfied. The molecule has:\nMW well below 450 Da ✓\nTPSA well under 90 Å² ✓\nLow HBD (1) and HBA (3) ✓\nOnly 2 rotatable bonds ✓\nNeutral charge ✓\nHigh fraction sp³ (0.73), indicating good three-dimensionality favorable for CNS penetration ✓\nThis molecule is a corticosteroid derivative with fluorine and chlorine substituents — a structural class consistent with compounds that can penetrate the CNS.Answer: Yes",
+  "stream_event_count": 440,
+  "tool_events": [
+    {
+      "event": "on_tool_end",
+      "name": "gvim-science_gvim_rdkit_descriptors",
+      "run_id": "019e9dd9-f0ad-7f01-ac5a-ae3b153c0df7",
+      "parent_ids": [
+        "019e9dd9-f0a9-7490-9bd6-a27dc08177d0"
+      ],
+      "tags": [
+        "seq:step:1"
+      ],
+      "metadata": {},
+      "data": {
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"success\": true,\n  \"tool_key\": \"rdkit_descriptors\",\n  \"domain\": \"chemistry\",\n  \"tool_result\": {\n    \"success\": true,\n    \"version\": \"3.0\",\n    \"analysis_type\": \"rdkit_descriptors\",\n    \"source\": \"rdkit_native_descriptors\",\n    \"smiles\": \"[C@H]23C(Cl)([C@@]1(C(=CC(=O)C=C1)[C@@H](F)C2)C)[C@@H](F)C[C@]4([C@H]3C[C@H]([C@@H]4C(=O)CO)C)C\",\n    \"canonical_smiles\": \"C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)C3(Cl)[C@@H](F)C[C@]2(C)[C@H]1C(=O)CO\",\n    \"descriptors\": {\n      \"molecular_formula\": \"C22H27ClF2O3\",\n      \"molecular_weight\": 412.1617,\n      \"average_molecular_weight\": 412.904,\n      \"logp\": 3.9753,\n      \"tpsa\": 54.37,\n      \"hba\": 3,\n      \"hbd\": 1,\n      \"rotatable_bonds\": 2,\n      \"num_rings\": 4,\n      \"num_aromatic_rings\": 0,\n      \"heavy_atom_count\": 28,\n      \"formal_charge\": 0,\n      \"fraction_csp3\": 0.727273\n    },\n    \"data_quality\": {\n      \"computed_from\": \"smiles\",\n      \"engine\": \"rdkit\",\n      \"external_database_lookup\": false,\n      \"experimental\": false\n    }\n  },\n  \"science_artifacts\": []\n}",
+              "id": "lc_85035759-aaa5-4003-89e7-6731ea0e5bbf"
+            }
+          ],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "gvim-science_gvim_rdkit_descriptors",
+          "id": null,
+          "tool_call_id": "call_00_89OlAKe3gDXEQGU1SVoL4721",
+          "artifact": {
+            "structured_content": {
+              "success": true,
+              "tool_key": "rdkit_descriptors",
+              "domain": "chemistry",
+              "tool_result": {
+                "success": true,
+                "version": "3.0",
+                "analysis_type": "rdkit_descriptors",
+                "source": "rdkit_native_descriptors",
+                "smiles": "[C@H]23C(Cl)([C@@]1(C(=CC(=O)C=C1)[C@@H](F)C2)C)[C@@H](F)C[C@]4([C@H]3C[C@H]([C@@H]4C(=O)CO)C)C",
+                "canonical_smiles": "C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)C3(Cl)[C@@H](F)C[C@]2(C)[C@H]1C(=O)CO",
+                "descriptors": {
+                  "molecular_formula": "C22H27ClF2O3",
+                  "molecular_weight": 412.1617,
+                  "average_molecular_weight": 412.904,
+                  "logp": 3.9753,
+                  "tpsa": 54.37,
+                  "hba": 3,
+                  "hbd": 1,
+                  "rotatable_bonds": 2,
+                  "num_rings": 4,
+                  "num_aromatic_rings": 0,
+                  "heavy_atom_count": 28,
+                  "formal_charge": 0,
+                  "fraction_csp3": 0.727273
+                },
+                "data_quality": {
+                  "computed_from": "smiles",
+                  "engine": "rdkit",
+                  "external_database_lookup": false,
+                  "experimental": false
+                }
+              },
+              "science_artifacts": []
+            }
+          },
+          "status": "success"
+        }
+      }
+    },
+    {
+      "event": "on_tool_end",
+      "name": "gvim-science_gvim_rdkit_descriptors",
+      "run_id": "019e9dd9-f0ad-7f01-ac5a-ae3b153c0df7",
+      "parent_ids": [
+        "019e9dd9-f0a9-7490-9bd6-a27dc08177d0"
+      ],
+      "tags": [
+        "seq:step:1"
+      ],
+      "metadata": {},
+      "data": {
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\n  \"success\": true,\n  \"tool_key\": \"rdkit_descriptors\",\n  \"domain\": \"chemistry\",\n  \"tool_result\": {\n    \"success\": true,\n    \"version\": \"3.0\",\n    \"analysis_type\": \"rdkit_descriptors\",\n    \"source\": \"rdkit_native_descriptors\",\n    \"smiles\": \"[C@H]23C(Cl)([C@@]1(C(=CC(=O)C=C1)[C@@H](F)C2)C)[C@@H](F)C[C@]4([C@H]3C[C@H]([C@@H]4C(=O)CO)C)C\",\n    \"canonical_smiles\": \"C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)C3(Cl)[C@@H](F)C[C@]2(C)[C@H]1C(=O)CO\",\n    \"descriptors\": {\n      \"molecular_formula\": \"C22H27ClF2O3\",\n      \"molecular_weight\": 412.1617,\n      \"average_molecular_weight\": 412.904,\n      \"logp\": 3.9753,\n      \"tpsa\": 54.37,\n      \"hba\": 3,\n      \"hbd\": 1,\n      \"rotatable_bonds\": 2,\n      \"num_rings\": 4,\n      \"num_aromatic_rings\": 0,\n      \"heavy_atom_count\": 28,\n      \"formal_charge\": 0,\n      \"fraction_csp3\": 0.727273\n    },\n    \"data_quality\": {\n      \"computed_from\": \"smiles\",\n      \"engine\": \"rdkit\",\n      \"external_database_lookup\": false,\n      \"experimental\": false\n    }\n  },\n  \"science_artifacts\": []\n}",
+              "id": "lc_85035759-aaa5-4003-89e7-6731ea0e5bbf"
+            }
+          ],
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "tool",
+          "name": "gvim-science_gvim_rdkit_descriptors",
+          "id": null,
+          "tool_call_id": "call_00_89OlAKe3gDXEQGU1SVoL4721",
+          "artifact": {
+            "structured_content": {
+              "success": true,
+              "tool_key": "rdkit_descriptors",
+              "domain": "chemistry",
+              "tool_result": {
+                "success": true,
+                "version": "3.0",
+                "analysis_type": "rdkit_descriptors",
+                "source": "rdkit_native_descriptors",
+                "smiles": "[C@H]23C(Cl)([C@@]1(C(=CC(=O)C=C1)[C@@H](F)C2)C)[C@@H](F)C[C@]4([C@H]3C[C@H]([C@@H]4C(=O)CO)C)C",
+                "canonical_smiles": "C[C@@H]1C[C@H]2[C@@H]3C[C@H](F)C4=CC(=O)C=C[C@]4(C)C3(Cl)[C@@H](F)C[C@]2(C)[C@H]1C(=O)CO",
+                "descriptors": {
+                  "molecular_formula": "C22H27ClF2O3",
+                  "molecular_weight": 412.1617,
+                  "average_molecular_weight": 412.904,
+                  "logp": 3.9753,
+                  "tpsa": 54.37,
+                  "hba": 3,
+                  "hbd": 1,
+                  "rotatable_bonds": 2,
+                  "num_rings": 4,
+                  "num_aromatic_rings": 0,
+                  "heavy_atom_count": 28,
+                  "formal_charge": 0,
+                  "fraction_csp3": 0.727273
+                },
+                "data_quality": {
+                  "computed_from": "smiles",
+                  "engine": "rdkit",
+                  "external_database_lookup": false,
+                  "experimental": false
+                }
+              },
+              "science_artifacts": []
+            }
+          },
+          "status": "success"
+        }
+      }
+    }
+  ],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/2fd6a3c0-9bdc-436a-813d-3e0ed725d61f/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a ChemLLMBench property-prediction task.\\nAnswer only Yes or No inside [ANSWER] and [/ANSWER].\\n\\nTask: Does this molecule penetrate the blood-brain barrier?\\nSMILES: [C@H]23C(Cl)([C@@]1(C(=CC(=O)C=C1)[C@@H](F)C2)C)[C@@H](F)C[C@]4([C@H]3C[C@H]([C@@H]4C(=O)CO)C)C\\n\\nUse exactly this final format: [ANSWER]Yes[/ANSWER] or [ANSWER]No[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"2fd6a3c0-9bdc-436a-813d-3e0ed725d61f\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}

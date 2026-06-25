@@ -1,0 +1,3 @@
+# MinerU API mode dependency.
+# No local mineru package is required for GVIM/DeerFlow desktop deployment.
+requests>=2.32.0

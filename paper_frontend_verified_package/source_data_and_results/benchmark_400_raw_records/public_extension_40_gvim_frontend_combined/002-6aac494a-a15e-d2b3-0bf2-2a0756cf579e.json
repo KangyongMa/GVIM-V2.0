@@ -1,0 +1,31 @@
+{
+  "idx": 2,
+  "uuid": "6aac494a-a15e-d2b3-0bf2-2a0756cf579e",
+  "topic": "materials_science",
+  "mini_split": "chembench-full",
+  "question_type": "multiple_choice",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-09T07:06:15.523Z",
+  "finished_at": "2026-06-09T07:06:35.716Z",
+  "latency_ms": 20193,
+  "page_url": "http://localhost:3000/workspace/chats/db2ae143-46a3-4ebc-aa55-23ed02f35c0b",
+  "thread_id": "db2ae143-46a3-4ebc-aa55-23ed02f35c0b",
+  "run_id": "dccd49c8-bbbc-46d5-956b-0daac7630d73",
+  "final_text": "The monomer of polystyrene is styrene (C₈H₈), which has a molar mass of approximately 104 g/mol. With a degree of polymerization of 10,000, the approximate molecular mass is:\n\n10,000 × 104 ≈ 1,040,000 g/mol ≈ **1 × 10⁶ g/mol**\n\n[ANSWER]B[/ANSWER]",
+  "stream_final_text": "The monomer of polystyrene is styrene (C₈H₈), which has a molar mass of approximately 104 g/mol. With a degree of polymerization of 10,000, the approximate molecular mass is:\n\n10,000 × 104 ≈ 1,040,000 g/mol ≈ **1 × 10⁶ g/mol**\n\n[ANSWER]B[/ANSWER]",
+  "ui_final_text": "The monomer of polystyrene is styrene (C₈H₈), which has a molar mass of approximately 104 g/mol. With a degree of polymerization of 10,000, the approximate molecular mass is:10,000 × 104 ≈ 1,040,000 g/mol ≈ 1 × 10⁶ g/mol[ANSWER]B[/ANSWER]",
+  "stream_event_count": 111,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/db2ae143-46a3-4ebc-aa55-23ed02f35c0b/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a multiple choice question about chemistry.\\nPlease answer by responding with the letter of the correct answer.\\n\\nQuestion: The degree of polymerization of a polystyrene is given as 10000. What is the approximate molecular mass of this polymer?\\n\\nOptions:\\nA. 1E4 g mol^{-1}\\nB. 1E6 g mol^{-1}\\nC. 1E9 g mol^{-1}\\n\\nYou MUST include the letter(s) of the correct answer (separated by comma if there are many) within the following tags: [ANSWER] and [/ANSWER].\\nFor example, '[ANSWER]<answer>[/ANSWER]', where <answer> is comma- or space-separated list of the correct letters. Always answer in exactly this format of comma-separated letters between the two tags, even if you are unsure. We require this because we use automatic parsing.\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"db2ae143-46a3-4ebc-aa55-23ed02f35c0b\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": [],
+  "_source_record_file": "E:\\Demo of GVIM\\deer-flow-mainnew\\benchmarks\\public-extension-40\\native-new-account-visible-full-rerun-runs\\2026-06-09T07-05-32-885Z\\002-6aac494a-a15e-d2b3-0bf2-2a0756cf579e.json",
+  "_source_segment": "first_segment"
+}

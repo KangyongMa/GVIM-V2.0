@@ -1,0 +1,29 @@
+{
+  "idx": 11,
+  "uuid": "G-META-13-43",
+  "topic": "Material Applications",
+  "mini_split": "mascqa",
+  "question_type": "NUM",
+  "status": "ok",
+  "http_status": 200,
+  "started_at": "2026-06-06T14:44:12.207Z",
+  "finished_at": "2026-06-06T14:44:30.146Z",
+  "latency_ms": 17939,
+  "page_url": "http://localhost:3000/workspace/chats/086cc3f2-0252-4bfd-961d-50b66342caff",
+  "thread_id": "086cc3f2-0252-4bfd-961d-50b66342caff",
+  "run_id": "84993466-56e3-46a6-a0d8-61db19c8d365",
+  "final_text": "Let me solve this.\n\nA 200 mesh sieve means there are 200 openings per linear inch (25.4 mm).\n\nThe aperture size is calculated as:\n- Total distance per inch = 25.4 mm = 25400 µm\n- Number of openings per inch = 200\n- Space per opening + wire = 25400 / 200 = 127 µm\n- Aperture size = 127 - wire diameter = 127 - 53 = 74 µm\n\n[ANSWER]74[/ANSWER]",
+  "stream_final_text": "Let me solve this.\n\nA 200 mesh sieve means there are 200 openings per linear inch (25.4 mm).\n\nThe aperture size is calculated as:\n- Total distance per inch = 25.4 mm = 25400 µm\n- Number of openings per inch = 200\n- Space per opening + wire = 25400 / 200 = 127 µm\n- Aperture size = 127 - wire diameter = 127 - 53 = 74 µm\n\n[ANSWER]74[/ANSWER]",
+  "ui_final_text": "Let me solve this.A 200 mesh sieve means there are 200 openings per linear inch (25.4 mm).The aperture size is calculated as:\nTotal distance per inch = 25.4 mm = 25400 µm\nNumber of openings per inch = 200\nSpace per opening + wire = 25400 / 200 = 127 µm\nAperture size = 127 - wire diameter = 127 - 53 = 74 µm\nAnswer: 74",
+  "stream_event_count": 147,
+  "tool_events": [],
+  "stream_requests": [
+    {
+      "url": "http://localhost:3000/api/langgraph/threads/086cc3f2-0252-4bfd-961d-50b66342caff/runs/stream",
+      "method": "POST",
+      "postData": "{\"input\":{\"messages\":[{\"type\":\"human\",\"content\":[{\"type\":\"text\",\"text\":\"The following is a MaScQA materials science benchmark question (NUM).\\nAnswer with the final numeric value only inside [ANSWER] and [/ANSWER]. Do not include reasoning inside the tags.\\n\\nQuestion: The aperture size (in µm) of a 200 mesh sieve having a wire diameter of 53 µm is?\\n\\nUse exactly this final format: [ANSWER]<answer>[/ANSWER].\"}],\"additional_kwargs\":{}}]},\"config\":{\"recursion_limit\":1000},\"context\":{\"model_name\":\"deepseek\",\"mode\":\"flash\",\"thinking_enabled\":false,\"is_plan_mode\":false,\"subagent_enabled\":false,\"thread_id\":\"086cc3f2-0252-4bfd-961d-50b66342caff\"},\"stream_mode\":[\"messages-tuple\",\"values\",\"updates\",\"custom\",\"events\"],\"stream_subgraphs\":true,\"stream_resumable\":true,\"assistant_id\":\"lead_agent\",\"on_disconnect\":\"continue\"}"
+    }
+  ],
+  "console_messages": [],
+  "page_errors": []
+}
