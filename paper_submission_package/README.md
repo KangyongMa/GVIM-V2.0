@@ -1,14 +1,20 @@
-﻿# GVIM2.0 Front-End Verified Submission Package
+# GVIM 2.0 Submission and Reproducibility Package
 
-This folder is the consolidated submission and reproducibility package for the GVIM2.0 manuscript. It is organized to keep manuscript files, public figures, front-end execution records, post-hoc public-label scoring, source data, and reproducibility scripts in one auditable location.
+This folder is the consolidated submission and reproducibility package for the GVIM 2.0 manuscript. It is organized to keep manuscript files, publication figures, front-end execution records, post-hoc public-label scoring, source data, and reproducibility scripts in one auditable location.
 
 ## Main Submission Files
 
-- `submission_files/GVIM2.0_frontend_verified.docx`  
-  Front-end-verified manuscript draft. Claims about demonstrations are restricted to recorded DeerFlow/GVIM front-end runs or clearly labeled post-hoc scoring of frozen front-end outputs.
+- `submission_files/GVIM2.0.docx`  
+  Manuscript draft. Claims about demonstrations are restricted to recorded DeerFlow/GVIM front-end runs or clearly labeled post-hoc scoring of frozen front-end outputs.
 
-- `submission_files/GVIM2.0_Supporting_Information_frontend_verified.docx`  
+- `submission_files/GVIM2.0.pdf`  
+  PDF rendering of the manuscript draft.
+
+- `submission_files/GVIM2.0 Support Information.docx`  
   Supporting Information draft, including methodological details, evidence boundaries, and reproducibility information.
+
+- `submission_files/GVIM2.0 Support Information.pdf`  
+  PDF rendering of the Supporting Information.
 
 - `publication_figures_600dpi/`  
   Corrected publication figures exported at 600 DPI, with PNG, TIFF, and SVG deliverables for Figures 2 and 6 and SVG counterparts for the other figures. `publication_figures_600dpi/README.md` maps each figure to its data source and reproduction script. The data-provenance corrections currently applied are:
@@ -33,16 +39,14 @@ This folder is the consolidated submission and reproducibility package for the G
 ## Reproducibility Code and Data
 
 - `reproducibility_code/manuscript_and_figure_scripts/`  
-  Python and PowerShell scripts used to build the verified package, update the Word/SI files, redraw corrected figures, and perform document/figure checks.
-  In particular, `redraw_publication_figures.py` reproduces Figure 2 and
-  `draw_bace_temporal_publication_figure.py` reproduces Figure 6 from the
-  packaged source data and front-end artifacts.
+  Python and PowerShell scripts used to build the submission package, update the Word/SI files, redraw corrected figures, and perform document/figure checks. In particular, `redraw_publication_figures.py` reproduces Figure 2 and `draw_bace_temporal_publication_figure.py` reproduces Figure 6 from the packaged source data and front-end artifacts.
 
 - `reproducibility_code/research_demos_code_data_results/`  
   Full copy of the `research-demos` workspace, including demo task code, evaluators, input data, test utilities, generated result folders, and prompt/demo materials.
 
 - `source_data_and_results/`  
   Manuscript source data, working figures, publication figure intermediates, and QA records copied from `manuscript_assets`.
+
 - `source_data_and_results/benchmark_400_raw_records/`  
   Raw and scored records supporting the Figure 2 paired 400-task benchmark, including the earlier 360-task chemistry/materials benchmark records and the public-extension-40 GVIM/API-only paired records used to compute the final n=400 contingency table.
 
@@ -68,4 +72,3 @@ No expert subjective grading, hidden manual relabeling, prospective wet-lab vali
 The front-end Matbench steels run corresponds to official fold 0 only: 249 labeled training rows and 63 unlabeled test rows were submitted through the front end. The front-end workflow performed internal cross-validation on the fold-0 training partition for model selection. The fold-0 test metrics were computed post hoc by comparing frozen front-end predictions with withheld public labels.
 
 The separate official Matbench steels five-fold result is not a GVIM front-end run and is stored only under `excluded_non_frontend/` for audit transparency.
-

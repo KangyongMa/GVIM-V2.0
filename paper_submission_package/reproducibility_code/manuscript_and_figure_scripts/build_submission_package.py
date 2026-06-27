@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import csv
 import hashlib
@@ -12,7 +12,7 @@ from docx import Document
 ROOT = Path(r"E:\Demo of GVIM\deer-flow-mainnew")
 SOURCE_DOC = ROOT / "GVIM2.0.docx"
 SOURCE_SI = ROOT / "Supporting_Information" / "GVIM2.0_Supporting_Information.docx"
-PACKAGE = ROOT / "GVIM2.0_Frontend_Verified_Package_2026-06-22"
+PACKAGE = ROOT / "GVIM2.0_Submission_Package_2026-06-22"
 
 THREADS = [
     {
@@ -159,7 +159,7 @@ def correct_main_document(source: Path, destination: Path) -> None:
     replace_paragraph_start(
         doc,
         "To test whether GVIM can execute complete scientific workflows",
-        "To test whether GVIM can execute complete scientific workflows rather than only answer questions, we audited front-end thread records spanning chemistry, materials science, literature extraction, spectral retrieval, and chemical information extraction. For ESOL and Matbench steels fold 0, the front end generated frozen predictions from unlabeled test inputs; held-out metrics were calculated only afterward by joining those predictions to withheld public labels. The other demonstrations were scored from archived front-end artifacts using public or publisher-defined references and standard task-family metrics: MAE, RMSE, and R² for regression; precision, recall, and F1 for extraction; and top-k accuracy and mean reciprocal rank for retrieval.",
+        "To test whether GVIM can execute complete scientific workflows rather than only answer questions, we audited front-end thread records spanning chemistry, materials science, literature extraction, spectral retrieval, and chemical information extraction. For ESOL and Matbench steels fold 0, the front end generated frozen predictions from unlabeled test inputs; held-out metrics were calculated only afterward by joining those predictions to withheld public labels. The other demonstrations were scored from archived front-end artifacts using public or publisher-defined references and standard task-family metrics: MAE, RMSE, and R虏 for regression; precision, recall, and F1 for extraction; and top-k accuracy and mean reciprocal rank for retrieval.",
     )
     replace_paragraph_start(
         doc,
@@ -174,7 +174,7 @@ def correct_main_document(source: Path, destination: Path) -> None:
     replace_paragraph_start(
         doc,
         "Figure 3.",
-        "Figure 3. Task-native chemistry and materials demonstrations initiated through the GVIM front end. (a) MoleculeNet ESOL: frozen predictions for 254 unlabeled test molecules were scored afterward against withheld public labels (MAE = 0.603, RMSE = 0.741, R² = 0.739). (b) Matbench steels official fold 0: frozen predictions for 63 unlabeled test alloys were scored afterward against withheld labels (MAE = 111.444 MPa, RMSE = 164.320 MPa, R² = 0.684). This is not a complete official five-fold Matbench front-end evaluation. (c) Publisher-JATS reaction-table extraction over 105 cells. (d) MassBank candidate retrieval over five queries. (e) ChEMU entity extraction over 92 gold spans. (f) Coverage of the five workflow types. Metrics are task-native and are not pooled into a custom aggregate score.",
+        "Figure 3. Task-native chemistry and materials demonstrations initiated through the GVIM front end. (a) MoleculeNet ESOL: frozen predictions for 254 unlabeled test molecules were scored afterward against withheld public labels (MAE = 0.603, RMSE = 0.741, R虏 = 0.739). (b) Matbench steels official fold 0: frozen predictions for 63 unlabeled test alloys were scored afterward against withheld labels (MAE = 111.444 MPa, RMSE = 164.320 MPa, R虏 = 0.684). This is not a complete official five-fold Matbench front-end evaluation. (c) Publisher-JATS reaction-table extraction over 105 cells. (d) MassBank candidate retrieval over five queries. (e) ChEMU entity extraction over 92 gold spans. (f) Coverage of the five workflow types. Metrics are task-native and are not pooled into a custom aggregate score.",
     )
     replace_paragraph_start(
         doc,
@@ -184,12 +184,12 @@ def correct_main_document(source: Path, destination: Path) -> None:
     replace_paragraph_start(
         doc,
         "Figure 4.",
-        "Figure 4. Retrospective BACE active discovery under a fixed query budget using public pIC50 labels. High-activity targets were the top 5% of 1,513 molecules (n = 79). Each run began with 30 random queries and selected batches of 10 up to 150 queries using an ExtraTrees surrogate; 20 random seeds were used. (a) Recall@150, (b) enrichment factor@150, and (c) best recovered pIC50 for random, greedy-surrogate and upper-confidence-bound policies. Bars show means, points show individual seeds, and error bars show ±1 SD; the dashed line in (b) denotes random-prevalence enrichment (EF = 1). (d) Mean recall improvement over random with 95% confidence intervals from 10,000 paired per-seed bootstrap resamples. Public labels were revealed only when queried and for final retrospective evaluation; no wet-lab validation is claimed.",
+        "Figure 4. Retrospective BACE active discovery under a fixed query budget using public pIC50 labels. High-activity targets were the top 5% of 1,513 molecules (n = 79). Each run began with 30 random queries and selected batches of 10 up to 150 queries using an ExtraTrees surrogate; 20 random seeds were used. (a) Recall@150, (b) enrichment factor@150, and (c) best recovered pIC50 for random, greedy-surrogate and upper-confidence-bound policies. Bars show means, points show individual seeds, and error bars show 卤1 SD; the dashed line in (b) denotes random-prevalence enrichment (EF = 1). (d) Mean recall improvement over random with 95% confidence intervals from 10,000 paired per-seed bootstrap resamples. Public labels were revealed only when queried and for final retrospective evaluation; no wet-lab validation is claimed.",
     )
     replace_paragraph_start(
         doc,
         "The real GVIM output shows that the lightweight composition-only model",
-        "The archived GVIM output shows that the lightweight composition-only model achieved a shuffled five-fold KFold MAE of 0.4513 eV and R² of 0.6854 on all 4,604 records. This was executed by the front-end thread and is distinct from the Matbench steels fold-0 case. In the retrospective active-discovery simulation, greedy_surrogate increased Recall@150 from 0.0332 to 0.2626. Because only three seeds were run, the reported paired bootstrap interval of 0.2208-0.2381 is treated as exploratory and descriptive rather than as strong inferential evidence.",
+        "The archived GVIM output shows that the lightweight composition-only model achieved a shuffled five-fold KFold MAE of 0.4513 eV and R虏 of 0.6854 on all 4,604 records. This was executed by the front-end thread and is distinct from the Matbench steels fold-0 case. In the retrospective active-discovery simulation, greedy_surrogate increased Recall@150 from 0.0332 to 0.2626. Because only three seeds were run, the reported paired bootstrap interval of 0.2208-0.2381 is treated as exploratory and descriptive rather than as strong inferential evidence.",
     )
 
     # Remove any surviving official-five-fold steels statements from body or tables.
@@ -216,7 +216,7 @@ def correct_si_document(source: Path, destination: Path) -> None:
     replace_paragraph_start(
         doc,
         "ESOL used the MoleculeNet ESOL held-out test set",
-        "For ESOL, the front end performed scaffold-aware five-fold cross-validation, selected RandomForest, and generated frozen predictions for 254 unlabeled test molecules; post-hoc scoring against withheld public labels gave MAE = 0.603, RMSE = 0.741 and R² = 0.739. For Matbench steels, the front end processed official fold 0 only and generated frozen predictions for 63 unlabeled test alloys; post-hoc scoring gave MAE = 111.444 MPa, RMSE = 164.320 MPa and R² = 0.684. No complete official Matbench steels five-fold front-end result is claimed.",
+        "For ESOL, the front end performed scaffold-aware five-fold cross-validation, selected RandomForest, and generated frozen predictions for 254 unlabeled test molecules; post-hoc scoring against withheld public labels gave MAE = 0.603, RMSE = 0.741 and R虏 = 0.739. For Matbench steels, the front end processed official fold 0 only and generated frozen predictions for 63 unlabeled test alloys; post-hoc scoring gave MAE = 111.444 MPa, RMSE = 164.320 MPa and R虏 = 0.684. No complete official Matbench steels five-fold front-end result is claimed.",
     )
     for table in doc.tables:
         for row in list(table.rows):
@@ -261,8 +261,8 @@ def copy_evidence() -> None:
     (PACKAGE / "posthoc_gold_scoring").mkdir(parents=True)
     (PACKAGE / "excluded_non_frontend").mkdir(parents=True)
 
-    correct_main_document(SOURCE_DOC, PACKAGE / "manuscript/GVIM2.0_frontend_verified.docx")
-    correct_si_document(SOURCE_SI, PACKAGE / "supporting_information/GVIM2.0_Supporting_Information_frontend_verified.docx")
+    correct_main_document(SOURCE_DOC, PACKAGE / "manuscript/GVIM2.0.docx")
+    correct_si_document(SOURCE_SI, PACKAGE / "supporting_information/GVIM2.0 Support Information.docx")
 
     # Only replace figures with confirmed data/provenance defects. Their aspect
     # ratios match the existing Word placements, so pagination is preserved.
@@ -271,14 +271,14 @@ def copy_evidence() -> None:
         "word/media/image5.png": ROOT / "manuscript_assets/figures/Fig4_experiment5_bace_active_discovery.png",
         "word/media/image6.png": ROOT / "manuscript_assets/figures/Fig5_matbench_bandgap_main_case.png",
     }
-    replace_docx_media(PACKAGE / "manuscript/GVIM2.0_frontend_verified.docx", corrected_figures)
+    replace_docx_media(PACKAGE / "manuscript/GVIM2.0.docx", corrected_figures)
 
     figure_dir = PACKAGE / "publication_figures_600dpi"
     figure_dir.mkdir(parents=True, exist_ok=True)
     publication_figures = [
-        ("Figure3_task_native_demos_frontend_verified", ROOT / "manuscript_assets/figures/Figure2_demo_landscape"),
-        ("Figure4_BACE_active_discovery_frontend_verified", ROOT / "manuscript_assets/figures/Fig4_experiment5_bace_active_discovery"),
-        ("Figure5_matbench_bandgap_frontend_verified", ROOT / "manuscript_assets/figures/Fig5_matbench_bandgap_main_case"),
+        ("Figure3_task_native_demos", ROOT / "manuscript_assets/figures/Figure2_demo_landscape"),
+        ("Figure4_BACE_active_discovery", ROOT / "manuscript_assets/figures/Fig4_experiment5_bace_active_discovery"),
+        ("Figure5_matbench_bandgap", ROOT / "manuscript_assets/figures/Fig5_matbench_bandgap_main_case"),
     ]
     for output_stem, source_stem in publication_figures:
         for extension in (".png", ".svg"):
@@ -314,7 +314,7 @@ def copy_evidence() -> None:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
 
-    readme = """# GVIM front-end verified evidence package
+    readme = """# GVIM 2.0 evidence package
 
 This package applies a strict claim boundary: a workflow is described as a GVIM
 front-end run only when its DeerFlow thread directory contains the uploaded
@@ -362,3 +362,4 @@ steels official-five-fold evaluation was a separate local independent rerun.
 if __name__ == "__main__":
     copy_evidence()
     print(PACKAGE)
+

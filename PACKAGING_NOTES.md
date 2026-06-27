@@ -5,7 +5,7 @@ Created on 2026-06-25.
 ## Source roots
 
 - System source: `E:\Demo of GVIM\deer-flow-mainnew\deer-flow-main`
-- Paper evidence package: `E:\Demo of GVIM\deer-flow-mainnew\GVIM2.0_Frontend_Verified_Package_2026-06-22`
+- Paper submission package: `E:\Demo of GVIM\deer-flow-mainnew\GVIM2.0_Submission_Package_2026-06-22`
 - Colab MCP source: `E:\Demo of GVIM\deer-flow-mainnew\colab-mcp-main`
 
 ## Inclusion policy

@@ -41,9 +41,9 @@ After removing one stale BACE policy alias from the Supporting Information, the 
 - image1.jpeg: size=(1069, 1069), dpi=(220, 220), sha=736130aaa492, publication_figure_match=not in publication_figures_600dpi
 - image2.png: size=(2640, 2996), dpi=(329.9968, 329.9968), sha=0c74fd884acc, publication_figure_match=not in publication_figures_600dpi
 - image3.png: size=(4547, 3132), dpi=(599.9988, 599.9988), sha=e24525c7959d, publication_figure_match=not in publication_figures_600dpi
-- image4.png: size=(4695, 3772), dpi=(599.9988, 599.9988), sha=a8e10095a969, publication_figure_match=Figure3_task_native_demos_frontend_verified.png
-- image5.png: size=(4290, 2457), dpi=(599.9988, 599.9988), sha=661715b94c19, publication_figure_match=Figure4_BACE_active_discovery_frontend_verified.png
-- image6.png: size=(5517, 3347), dpi=(599.9988, 599.9988), sha=c1cd827707dd, publication_figure_match=Figure5_matbench_bandgap_frontend_verified.png
+- image4.png: size=(4695, 3772), dpi=(599.9988, 599.9988), sha=a8e10095a969, publication_figure_match=Figure3_task_native_demos.png
+- image5.png: size=(4290, 2457), dpi=(599.9988, 599.9988), sha=661715b94c19, publication_figure_match=Figure4_BACE_active_discovery.png
+- image6.png: size=(5517, 3347), dpi=(599.9988, 599.9988), sha=c1cd827707dd, publication_figure_match=Figure5_matbench_bandgap.png
 - image7.png: size=(4367, 3141), dpi=(599.9988, 599.9988), sha=120f607a1928, publication_figure_match=not in publication_figures_600dpi
 
 ## Render QA
@@ -56,4 +56,5 @@ After removing one stale BACE policy alias from the Supporting Information, the 
 - Matbench steels is not a complete official five-fold front-end evaluation; only fold 0 was run through the front end.
 - Matbench band-gap uses recorded shuffled KFold CV from the front-end artifact; it should not be described as official Matbench split semantics unless rerun that way.
 - BACE active discovery and BACE1 temporal validation are retrospective public-label computational validations, not wet-lab or prospective experimental validation.
+
 
