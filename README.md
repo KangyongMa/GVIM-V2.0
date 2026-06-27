@@ -16,6 +16,12 @@ A local packaged copy is also retained in the prepared release folder:
 media/Demo_Of_GVIM2.0.mp4
 ```
 
+## Preprint
+
+The current preprint is available on ChemRxiv:
+
+[GVIM 2.0: A Multi-Agent Research System for Chemistry and Materials Science](https://chemrxiv.org/doi/full/10.26434/chemrxiv.15005228/v1)
+
 ## Visual Summary
 
 ![GVIM 2.0 visual abstract](figures/TOC.png)
@@ -164,4 +170,9 @@ The original local deployment contained private API keys in a local `.env` file.
 
 ## Citation
 
-If you use this repository, please cite the associated GVIM 2.0 manuscript once the paper or preprint is available.
+If you use this repository, please cite the associated ChemRxiv preprint:
+
+```text
+Ma, K. GVIM 2.0: A Multi-Agent Research System for Chemistry and Materials Science. ChemRxiv, 2026.
+DOI: 10.26434/chemrxiv.15005228/v1
+```
